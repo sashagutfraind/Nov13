@@ -47,7 +47,7 @@ OmarMostefai      = createNode(nov13, "Person", name="Omar Ismaïl Mostefaï", a
 SalahAbdeslam     = createNode(nov13, "Person", name="Salah Abdeslam",       age=26, gender="Male", ref1=references[["DM1"]])
 SamyAmimour       = createNode(nov13, "Person", name="Samy Amimour",         age=28, gender="Male", ref1=references[["DM1"]])
 
-UnknownAttacker1 = createNode(nov13, "Person", name="UnknownAttacker1",  age=20, gender="Male", citizenship="France", ref1=references[["DM1"]])
+UnknownAttacker1 = createNode(nov13, "Person", name="UnknownAttacker1",  age=20, gender="Male", ref1=references[["DM1"]])
 UnknownAttacker2 = createNode(nov13, "Person", name="UnknownAttacker2",  gender="Male", ref1=references[["DM1"]])  #possibly, Abbdulakbak B
 UnknownAttacker3 = createNode(nov13, "Person", name="UnknownAttacker3",  gender="Male", ref1=references[["DM1"]])
 UnknownAttacker4 = createNode(nov13, "Person", name="UnknownAttacker4",  gender="Male", ref1=references[["DM1"]])
@@ -160,12 +160,14 @@ write.csv(nov13relationships, file="~/nov13_relationships.csv" )
 #requires neo4j database
 #browse(nov13)
 
-# query = "
-# MATCH (p:Person)-[:ATTACKED]->()
-# WHERE (p)-[:CITIZEN_OF]->(c:Country)
-# WHERE c.name="France"
-# RETURN p.name"
-# 
-# nameOfAttackersFromFrance = cypher(graph, query)
+#advanced query
+query = '  
+MATCH (p:Person)-[:ATTACKED]->()
+WITH p MATCH (p)-[:CITIZEN_OF]->(c:Country)
+WHERE c.name="France"
+RETURN DISTINCT(p.name)'
+
+nameOfAttackersFromFrance = cypher(nov13, query)
+print(nameOfAttackersFromFrance)
 
 #detailed export: https://github.com/jexp/neo4j-shell-tools
