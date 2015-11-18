@@ -10,6 +10,7 @@ The file below creates the dataset using the neo4j Database
 http://localhost:7474/browser/  (check)
 
 4. From https://www.r-project.org/, 
+Download and install R, then install
 install.packages("RNeo4j")
 
 5. Run this file in R.  Output will be saved as CSV files under your home dir
@@ -17,9 +18,9 @@ install.packages("RNeo4j")
 6. After the file has been created, you can export it into GraphML (loaded into Gephi) using
 ./bin/neo4j-shell
 
-and then:
+and then something like:
 
-export-graphml -o outputTest.graphml -t
+export-graphml -o nov13.graphml -t
 
 '
 
@@ -138,6 +139,8 @@ createRel(UnknownAttacker1, "ATTACKED", StadeDeFrance, attack_type="Suicide", no
 createRel(UnknownAttacker2, "ATTACKED", LeCarillonBarAndLePetitCambodge, attack_type="Shooting", ref1=references[["DM1"]])  
 createRel(UnknownAttacker3, "ATTACKED", LeCarillonBarAndLePetitCambodge, attack_type="Shooting", ref1=references[["DM1"]])  
 
+#+7 arrested in Saint Dennis with force 2015-11-18, http://www.nydailynews.com/news/world/paris-raid-killed-2-terror-suspects-time-article-1.2438743
+#TARGETED Airport, Shopping Mall
 
 #arrests
 createRel(MohammadAbdeslam, "ARRESTED_IN", Belgium, date="2015-11-16", ref1=references[["IN1"]])
