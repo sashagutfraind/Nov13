@@ -71,6 +71,8 @@ Alfortsville  = createNode(nov13, "Locality", name="Alfortsville")
 Bobigny       = createNode(nov13, "Locality", name="Bobigny")
 Molenbeek     = createNode(nov13, "Locality", name="Molenbeek, Brussels")
 
+#TODO: more people from Molenbeek
+#TODO: residence from around Paris
 
 #attack sites #TODO: added citations
 Bataclan         = createNode(nov13, "AttackSite", name="Bataclan", killed=89, wounded=200)
@@ -82,13 +84,12 @@ LeCarillonBarAndLePetitCambodge    = createNode(nov13, "AttackSite", name="Le Ca
 #MacDonalds       = createNode(nov13, "AttackSite", name="MacDonalds Rue de la Coquerie")  #related to Stade attacks
 StadeDeFrance    = createNode(nov13, "AttackSite", name="Stade de France", killed=1)
 
-
-#transited
+#locations where the network might have formed
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", Molenbeek, ref1=references[["DM1"]])
-createRel(BilalHadfi,   "BEEN_IN", Syria, ref1=references[["DM1"]])
-createRel(OmarMostefai, "BEEN_IN", Turkey, date="2010", ref1=references[["DM1"]])
-createRel(OmarMostefai, "BEEN_IN", Syria, date="2013", ref1=references[["DM1"]])
-createRel(AbdelhamidAbaaoud, "BEEN_IN", Syria, ref1=references[["DM1"]])
+createRel(BilalHadfi,         "BEEN_IN", Syria, ref1=references[["DM1"]])
+createRel(OmarMostefai,       "BEEN_IN", Turkey, date="2010", ref1=references[["DM1"]])
+createRel(OmarMostefai,       "BEEN_IN", Syria, date="2013", ref1=references[["DM1"]])
+createRel(AbdelhamidAbaaoud,  "BEEN_IN", Syria, ref1=references[["DM1"]])
 #TODO: expand
 
 #staging for attack
@@ -99,16 +100,13 @@ createRel(SalahAbdeslam, "STAGED_IN", Bobigny, ref1=references[["DM1"]])
 createRel(SamyAmimour, "STAGED_IN", Bobigny, ref1=references[["DM1"]])
 
 
-#relationships
+#friend and familiar relationships
 createRel(SalahAbdeslam, "RELATED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
 createRel(SalahAbdeslam, "RELATED_TO", MohammadAbdeslam, note="brother", ref1=references[["DM1"]])
 createRel(MohammadAbdeslam, "RELATED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
-
 createRel(MohamedAmimour, "RELATED_TO", SamyAmimour, note="father_of", ref1=references[["DM1"]])
 
-createRel(MohamedAmri, "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
-createRel(HamzaAttou,  "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
-
+#citizenship.  we allow multiple citizenships.  weak indicator of affinity between individuals
 createRel(AbdelhamidAbaaoud, "CITIZEN_OF", Belgium, ref1=references[["DM1"]])
 createRel(AhmedAlmuhamed,    "CITIZEN_OF", Belgium, ref1=references[["DM1"]])
 createRel(BilalHadfi,        "CITIZEN_OF", Belgium, ref1=references[["DM1"]])
@@ -118,6 +116,10 @@ createRel(OmarMostefai,      "CITIZEN_OF", France, ref1=references[["DM1"]])
 createRel(SalahAbdeslam,     "CITIZEN_OF", Belgium, ref1=references[["DM1"]])
 createRel(SamyAmimour,       "CITIZEN_OF", France, ref1=references[["DM1"]])
 
+
+#probable involvement in the plot
+createRel(MohamedAmri, "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
+createRel(HamzaAttou,  "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
 
 #attacks
 createRel(IbrahimAbdeslam, "ATTACKED", ComptoirVoltaire, attack_type="Suicide", ref1=references[["DM1"]])
@@ -170,7 +172,16 @@ WITH p MATCH (p)-[:CITIZEN_OF]->(c:Country)
 WHERE c.name="France"
 RETURN DISTINCT(p.name)'
 
-nameOfAttackersFromFrance = cypher(nov13, query)
-print(nameOfAttackersFromFrance)
+namesOfAttackersFromFrance = cypher(nov13, query)
+print(namesOfAttackersFromFrance)
+
+#TODO: 
+query = '  
+MATCH (p:Person)-[:ATTACKED]->(s:AttackSite)
+RETURN p.name, s.name'
+attackersAndSites = cypher(nov13, query)
+print(attackersAndSites)  #TODO: filter duplicates
+write.csv(attackersAndSites, file="~/nov13_attackersAndSites.csv" )
+
 
 #detailed export: https://github.com/jexp/neo4j-shell-tools
