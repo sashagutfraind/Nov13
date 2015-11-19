@@ -155,12 +155,19 @@ createRel(StDArrested5,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
 createRel(StDArrested6,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
 createRel(StDArrested7,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
 
-
 #staging for attack
 createRel(SalahAbdeslam, "BEEN_IN", Alfortsville, ref1=references[["DM1"]])
 createRel(IbrahimAbdeslam, "BEEN_IN", Bobigny, ref1=references[["DM1"]])
 createRel(SalahAbdeslam, "BEEN_IN", Bobigny, ref1=references[["DM1"]])
 createRel(SamyAmimour, "BEEN_IN", Bobigny, ref1=references[["DM1"]])
+
+#residence by country
+createRel(AbdelhamidAbaaoud,  "LIVED_IN", Belgium, ref1=references[["LOB1"]])
+createRel(BilalHadfi, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
+createRel(IbrahimAbdeslam, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
+createRel(OmarMostefai, "LIVED_IN", France, ref1=references[["NYT2"]])
+createRel(SalahAbdeslam, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
+createRel(SamyAmimour, "LIVED_IN", France, ref1=references[["NYT2"]])
 
 #friend and familiar affiliations
 createRel(SalahAbdeslam,     "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
@@ -170,8 +177,10 @@ createRel(MohamedAmimour,    "LINKED_TO", SamyAmimour, note="father_of", ref1=re
 createRel(HasnaAitboulahcen, "LINKED_TO", AbdelhamidAbaaoud, note="cousin", ref1=references[["IBT2"]])
 createRel(SalahAbdeslam,     "LINKED_TO", AbdelhamidAbaaoud, note="friends", ref1=references[["CNN1"]])
 
-#additional links
-#NYT2
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", OmarMostefai, note="uncharacterized", ref1=references[["NYT2"]])
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", BilalHadfi, note="led in Syria", ref1=references[["NYT2"]])
+
+#
 
 #citizenship.  we allow multiple citizenships.  weak indicator of affinity between individuals
 createRel(AbdelhamidAbaaoud, "CITIZEN_OF", Belgium, ref1=references[["DM1"]])
@@ -319,6 +328,6 @@ terrorNetworkUndirected <- rbind(terrorNetwork, data.frame(n1=terrorNetwork[["n2
 terrorNetworkUndirected <- unique(terrorNetworkUndirected)
 
 print(terrorNetworkUndirected) 
-write.csv(terrorNetworkUndirected, file="~/nov13_terrorNetwork.csv", row.names=F)
+write.csv(terrorNetworkUndirected, file="~/nov13/nov13_terrorNetwork.csv", row.names=F)
 
 #browse(nov13)

@@ -23,7 +23,9 @@ terrorMembers <- unique(c(terrorNetworkUndirected[["n1"]], terrorNetworkUndirect
 
 print(summary(TN))
 
-simpleNetwork(terrorNetworkUndirected)
+#nice plot
+networkJS <- simpleNetwork(terrorNetworkUndirected)
+saveNetwork(networkJS, "~/nov13/nov13_interactive_network.html")
 
 query = '  
 MATCH (p:Person)-[:CITIZEN_OF]->(c:Country)
