@@ -56,8 +56,11 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,NYT2="http://www.nytimes.com/interactive/2015/11/15/world/europe/manhunt-for-paris-attackers.html"
                   ,EXP1="http://www.expatica.com/fr/news/country-news/Big-questions-remain-over-Paris-attacks_540890.html"
                   ,TEL1="http://www.telegraph.co.uk/news/worldnews/europe/france/12004756/Paris-attacks-Abdelhamid-Abaaoud-police-France-terrorist-Islamic-State-flight-live.html#update-20151120-1528"
+                  ,SC1="http://www.un.org/press/en/2014/sc11521.doc.htm"
+                  ,NYT3="http://www.nytimes.com/2015/11/20/world/europe/paris-attacks.html"
                   )
 
+AbuMuhammadAlAdnani = createNode(nov13, "Person", name="Abu Muhammad al-Adnani", age=38, gender="Male", status="wanted", ref1=references[["SC1"]])
 
 AbdelhamidAbaaoud = createNode(nov13, "Person", name="Abdelhamid Abaaoud", age=27, gender="Male", nickname="Abu Omar al-Belgiki", ref1=references[["DM1"]], status="dead", ref2=references[["WP1"]],  ref3=references[["FT1"]])
 AhmedAlmuhamed    = createNode(nov13, "Person", name="Ahmed Almuhamed",    age=25, gender="Male", ref1=references[["DM1"]], status="dead")
@@ -144,6 +147,7 @@ LeCarillonBarAndLePetitCambodge    = createNode(nov13, "AttackSite", name="Le Ca
 StadeDeFrance    = createNode(nov13, "AttackSite", name="Stade de France", killed=1, wounded=0)
 
 #locations where the network might have formed
+createRel(AbuMuhammadAlAdnani,  "BEEN_IN", Syria, ref1=references[["DM1"]])
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", Syria, ref1=references[["DM1"]])
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", Molenbeek, ref1=references[["DM1"]])
 createRel(IbrahimAbdeslam,    "BEEN_IN", Molenbeek, ref1=references[["NBC2"]])
@@ -176,16 +180,18 @@ createRel(SamyAmimour, "BEEN_IN", Bobigny, ref1=references[["DM1"]])
 #createRel(HasnaAitboulahcen,  "BEEN_IN", AulnaySousBois, ref1=references[["CNN2"]]) #http://www.cnn.com/2015/11/19/europe/paris-attacks-at-a-glance/
 #createRel(MohamedKhoualed,  "BEEN_IN", Roubaix, ref1=references[["TEL1"]])
 
-#residence by country
-createRel(AbdelhamidAbaaoud,  "LIVED_IN", Belgium, ref1=references[["LOB1"]])
-createRel(BilalHadfi, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
-createRel(IbrahimAbdeslam, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
-createRel(MohamedKhoualed, "LIVED_IN", Belgium, ref1=references[["TEL1"]])
-createRel(OmarMostefai, "LIVED_IN", France, ref1=references[["NYT2"]])
-createRel(SalahAbdeslam, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
-createRel(SamyAmimour, "LIVED_IN", France, ref1=references[["NYT2"]])
+## complicates plotting a bit
+# #residence by country
+# createRel(AbdelhamidAbaaoud,  "LIVED_IN", Belgium, ref1=references[["LOB1"]])
+# createRel(BilalHadfi, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
+# createRel(IbrahimAbdeslam, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
+# createRel(MohamedKhoualed, "LIVED_IN", Belgium, ref1=references[["TEL1"]])
+# createRel(OmarMostefai, "LIVED_IN", France, ref1=references[["NYT2"]])
+# createRel(SalahAbdeslam, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
+# createRel(SamyAmimour, "LIVED_IN", France, ref1=references[["NYT2"]])
+# 
 
-#transit countries
+# #transit countries
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", Greece, ref1=references[["EXP1"]])
 createRel(AhmedAlmuhamed,     "BEEN_IN", Greece, ref1=references[["EXP1"]])
 
@@ -201,26 +207,28 @@ createRel(SalahAbdeslam,     "LINKED_TO", AbdelhamidAbaaoud, note="friends", ref
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", OmarMostefai, note="uncharacterized", ref1=references[["NYT2"]])
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", BilalHadfi, note="led in Syria", ref1=references[["NYT2"]])
 
-#
 
-#citizenship.  we allow multiple citizenships.  weak indicator of affinity between individuals
-createRel(AbdelhamidAbaaoud, "CITIZEN_OF", Belgium, ref1=references[["DM1"]])
-createRel(AbdelhamidAbaaoud, "CITIZEN_OF", Morocco, ref1=references[["NEW1"]])
-createRel(BilalHadfi,        "CITIZEN_OF", France, ref1=references[["DM1"]])
-createRel(StDEgyptianA,      "CITIZEN_OF", Egypt, ref1=references[["DM1"]])
-createRel(StDEgyptianB,      "CITIZEN_OF", Egypt, ref1=references[["DM1"]])
-createRel(IbrahimAbdeslam,   "CITIZEN_OF", France, ref1=references[["DM1"]])
-createRel(MohamedAmri,       "CITIZEN_OF", France, ref1=references[["DM1"]])
-createRel(OmarMostefai,      "CITIZEN_OF", France, ref1=references[["DM1"]])
-createRel(SalahAbdeslam,     "CITIZEN_OF", France, ref1=references[["NYT2"]])
-createRel(SamyAmimour,       "CITIZEN_OF", France, ref1=references[["DM1"]])
-
+## complicates plotting a bit
+# #citizenship.  we allow multiple citizenships.  weak indicator of affinity between individuals
+# createRel(AbdelhamidAbaaoud, "CITIZEN_OF", Belgium, ref1=references[["DM1"]])
+# createRel(AbdelhamidAbaaoud, "CITIZEN_OF", Morocco, ref1=references[["NEW1"]])
+# createRel(BilalHadfi,        "CITIZEN_OF", France, ref1=references[["DM1"]])
+# createRel(StDEgyptianA,      "CITIZEN_OF", Egypt, ref1=references[["DM1"]])
+# createRel(StDEgyptianB,      "CITIZEN_OF", Egypt, ref1=references[["DM1"]])
+# createRel(IbrahimAbdeslam,   "CITIZEN_OF", France, ref1=references[["DM1"]])
+# createRel(MohamedAmri,       "CITIZEN_OF", France, ref1=references[["DM1"]])
+# createRel(OmarMostefai,      "CITIZEN_OF", France, ref1=references[["DM1"]])
+# createRel(SalahAbdeslam,     "CITIZEN_OF", France, ref1=references[["NYT2"]])
+# createRel(SamyAmimour,       "CITIZEN_OF", France, ref1=references[["DM1"]])
+# 
 
 #probable involvement in the plot
 createRel(MohamedAmri, "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
 createRel(HamzaAttou,  "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
 
+#Daech core
 createRel(FabianClain,  "ASSISTED", AbdelhamidAbaaoud, note="publicized", ref1=references[["DM1"]])
+createRel(AbuMuhammadAlAdnani, "ASSISTED", AbdelhamidAbaaoud, note="directed", ref1=references[["NYT3"]])
 
 createRel(MohamedKhoualed,  "ASSISTED", SalahAbdeslam, note="explosives", ref1=references[["TEL1"]])
 
@@ -310,14 +318,14 @@ linkedToWanted = cypher(nov13, query)
 linkedToWanted = unique(linkedToWanted)
 
 query = '  
-MATCH (p:Person)-[:ASSISTED]->(attacker1:Person)-[:ATTACKED]->(l:AttackSite)
+MATCH (p:Person)-[:ASSISTED*]->(attacker1:Person)-[:ATTACKED]->(l:AttackSite)
 WHERE p.status <> "free"
 RETURN p.name, attacker1.name'
 assistedAttacker = cypher(nov13, query)
 assistedAttacker = unique(assistedAttacker)
 
 query = '  
-MATCH (p1:Person)-[:ASSISTED]->(p2:Person)
+MATCH (p1:Person)-[:ASSISTED*]->(p2:Person)
 WHERE (p1.status <> "free") AND (p2.status <> "free")
 RETURN p1.name, p2.name'
 assistedSuspect = cypher(nov13, query)

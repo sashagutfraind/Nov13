@@ -8,12 +8,13 @@ references = list(
   ,LIR1="http://www.lesinrocks.com/2015/11/18/actualite/qui-est-fabien-clain-la-voix-de-daesh-11788443/"
 )
 
-
+#NYT2
 #Abdelhamid Abaaoud -> Katibat al-Battar al Libi
 
 
+
 #https://en.wikipedia.org/wiki/2015_anti-terrorism_operations_in_Belgium
-RedouaneHagaoui     = createNode(nov13, "Person", name="Redouane Hagaoui",      gender="Male", ref1=references[["NYT2"]], status="dead")
+RedouaneHagaoui  = createNode(nov13, "Person", name="Redouane Hagaoui",      gender="Male", ref1=references[["NYT2"]], status="dead")
 TarikJadaoun     = createNode(nov13, "Person", name="Tarik Jadaoun",            gender="Male", ref1=references[["NYT2"]], status="dead")
 
 AmedyCoulibaly     = createNode(nov13, "Person", name="Amedy Coulibaly",      gender="Male", ref1=references[["NYT2"]], status="dead")
@@ -38,10 +39,24 @@ createRel(AmedyCoulibaly,  "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
 createRel(MehdiNemmouche,  "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
 createRel(AyoubElKhazzani,  "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
 
-createRel(AbdelhamidAbaaoud,  "LINKED_TO", OmarMostefai, note="uncharacterized", ref1=references[["NYT2"]])
-createRel(AbdelhamidAbaaoud,  "LINKED_TO", OmarMostefai, note="uncharacterized", ref1=references[["NYT2"]])
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", RedouaneHagaoui, note="recruited", ref1=references[["NYT2"]])
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", TarikJadaoun,    note="recruited", ref1=references[["NYT2"]])
+
+#+different names?
+#http://www.nytimes.com/2015/01/25/world/europe/belgium-confronts-the-jihadist-danger-within.html
+#The Belgian prosecutor’s office on Wednesday partially identified the dead men for the first time, 
+#naming them as Sofiane A., a Belgian and Moroccan citizen born in 1988, and Khalid B., a Belgian national born in 1991.
+
+#Verviers was the safeway house.  the origin was in Molenbeek
+#http://www.nytimes.com/2015/01/25/world/europe/belgium-confronts-the-jihadist-danger-within.html
 
 #+additional Hebdo attackers
+#Hebdo attackers apparently AlQ in Yemen (http://www.nytimes.com/2015/11/20/world/europe/paris-attacks.html)
+#SuperCosher are more self-radicalized (http://www.nytimes.com/2015/11/20/world/europe/paris-attacks.html)
+
+#ChurchPlot jointly with AbdelhamidAbaaoud
+#http://abcnews.go.com/International/plots-tied-abdelhamid-abaaoud-alleged-mastermind-paris-attacks/story?id=35307009
+#That incident involved Sid Ahmed Glham, a 24-year-old Algerian who moved to France in 2009. Glham is believed to have killed a French woman in her car, but then did not continue the rest of his alleged plan after he contacted authorities to call for an ambulance because he had injured himself.
 
 #http://www.rawstory.com/2015/11/the-voice-of-paris-terror-revealed-to-be-seasoned-french-jihadist-fabien-clain/
 #Jean-Michel Clain
