@@ -4,3 +4,5 @@ The Network of the Nov 13, 2015 attacks in Paris
 create_network.R
 
 2. Selected output is in the .csv files
+
+3. To run the interactive network dataset, download the HTML file.
