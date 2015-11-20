@@ -25,7 +25,7 @@ print(summary(TN))
 
 #nice plot
 networkJS <- simpleNetwork(terrorNetworkUndirected)
-saveNetwork(networkJS, "~/nov13/nov13_interactive_network.html")
+saveNetwork(networkJS, "~/nov13/nov13_interactive_network.html", selfcontained=TRUE)
 
 query = '  
 MATCH (p:Person)-[:CITIZEN_OF]->(c:Country)

@@ -54,6 +54,8 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,CNN1="http://www.cnn.com/2015/11/18/europe/paris-attacks-at-a-glance/"
                   ,WP2="https://www.washingtonpost.com/graphics/world/paris-attacks/"
                   ,NYT2="http://www.nytimes.com/interactive/2015/11/15/world/europe/manhunt-for-paris-attackers.html"
+                  ,EXP1="http://www.expatica.com/fr/news/country-news/Big-questions-remain-over-Paris-attacks_540890.html"
+                  ,TEL1="http://www.telegraph.co.uk/news/worldnews/europe/france/12004756/Paris-attacks-Abdelhamid-Abaaoud-police-France-terrorist-Islamic-State-flight-live.html#update-20151120-1528"
                   )
 
 
@@ -67,6 +69,7 @@ JawadBenDow       = createNode(nov13, "Person", name="Jawad Ben Dow",      age=2
 MohammadAbdeslam  = createNode(nov13, "Person", name="Mohammad Abdeslam",          gender="Male",  ref1=references[["DM1"]], status="free")
 MohamedAmimour    = createNode(nov13, "Person", name="Mohamed Amimour",     age=67, gender="Male", ref1=references[["DM1"]], status="free")
 MohamedAmri       = createNode(nov13, "Person", name="Mohamed Amri",         age=27, gender="Male", ref1=references[["DM1"]], status="arrested")
+MohamedKhoualed   = createNode(nov13, "Person", name="Mohamed Khoualed",         age=19, gender="Male", ref1=references[["TEL1"]], status="arrested")
 OmarMostefai      = createNode(nov13, "Person", name="Omar Ismaïl Mostefaï", age=29, gender="Male", ref1=references[["DM1"]], status="dead")
 SalahAbdeslam     = createNode(nov13, "Person", name="Salah Abdeslam",       age=26, gender="Male", ref1=references[["DM1"]], status="wanted")
 SamyAmimour       = createNode(nov13, "Person", name="Samy Amimour",         age=28, gender="Male", ref1=references[["DM1"]], status="dead")
@@ -82,7 +85,7 @@ UnknownMontenegran = createNode(nov13, "Person", name="UnknownMontenegran",  age
 #http://www.lefigaro.fr/actualites/2015/11/18/01001-20151118LIVWWW00266-en-direct-attentats-de-paris-assaut-saint-denis-terrorisme.php
 #3 at the beginning of the intervention, 3 on the street (incl. Jawad), 2 in the rubble
 #StDennis group Rue de Cabrillon
-HasnaAitboulahcen  = createNode(nov13, "Person", name="Hasna Aitboulahcen",      gender="Female", ref1=references[["LOB1"]], ref2=references[["NP1"]], status="dead")
+HasnaAitboulahcen  = createNode(nov13, "Person", name="Hasna Aitboulahcen",  age=26,   gender="Female", ref1=references[["LOB1"]], ref2=references[["NP1"]], status="dead", ref2=references[["EXP1"]])
 
 #StDennis group Boul. Carnot?
 StDEgyptianA       = createNode(nov13, "Person", name="StDEgyptianA",      gender="Male", ref1=references[["LOB1"]], status="arrested")
@@ -96,9 +99,16 @@ StDArrested5       = createNode(nov13, "Person", name="StDArrested5",      gende
 StDArrested6       = createNode(nov13, "Person", name="StDArrested6",      gender="Male", ref1=references[["LOB1"]], status="arrested")
 StDArrested7       = createNode(nov13, "Person", name="StDArrested7",      gender="Male", ref1=references[["LOB1"]], status="arrested")
 
+#+explosion in Charleville-Mezieres
+#http://www.cnn.com/2015/11/19/europe/paris-attacks-at-a-glance/
 
 #+a 30-year-old man who was detained on his way back from Syria tiped
 #http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-Paris-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html
+
+#TOI1: 9 linked to Bilal
+#http://www.timesofisrael.com/nine-arrested-in-brussels-linked-to-paris-attacks/
+#Mr. Hadfi, who is a French citizen, lived in the Neder-over-Heembeek district of Brussels with his mother and three other siblings.
+#http://www.nytimes.com/2015/11/20/world/europe/paris-attacks.html
 
 #+addition connections to Reunion/Toulouse group and Mohamed Merah
 #http://www.lesinrocks.com/2015/11/18/actualite/qui-est-fabien-clain-la-voix-de-daesh-11788443/
@@ -108,8 +118,9 @@ StDArrested7       = createNode(nov13, "Person", name="StDArrested7",      gende
 
 #countries
 Belgium = createNode(nov13, "Country", name="Belgium")
-France = createNode(nov13, "Country", name="France")
 Egypt  = createNode(nov13, "Country", name="Egypt")
+Greece  = createNode(nov13, "Country", name="Greece")
+France = createNode(nov13, "Country", name="France")
 Morocco = createNode(nov13, "Country", name="Morocco")
 Syria = createNode(nov13, "Country", name="Syria")
 Turkey = createNode(nov13, "Country", name="Turkey")
@@ -142,7 +153,7 @@ createRel(OmarMostefai,       "BEEN_IN", Syria, date="2013", ref1=references[["D
 createRel(SalahAbdeslam,      "BEEN_IN", Molenbeek, ref1=references[["NBC2"]])
 createRel(SamyAmimour,        "BEEN_IN", Syria, ref1=references[["NEW2"]])
 
-
+#StDennis
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
 createRel(HasnaAitboulahcen,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
 
@@ -161,13 +172,23 @@ createRel(IbrahimAbdeslam, "BEEN_IN", Bobigny, ref1=references[["DM1"]])
 createRel(SalahAbdeslam, "BEEN_IN", Bobigny, ref1=references[["DM1"]])
 createRel(SamyAmimour, "BEEN_IN", Bobigny, ref1=references[["DM1"]])
 
+#lesser sites
+#createRel(HasnaAitboulahcen,  "BEEN_IN", AulnaySousBois, ref1=references[["CNN2"]]) #http://www.cnn.com/2015/11/19/europe/paris-attacks-at-a-glance/
+#createRel(MohamedKhoualed,  "BEEN_IN", Roubaix, ref1=references[["TEL1"]])
+
 #residence by country
 createRel(AbdelhamidAbaaoud,  "LIVED_IN", Belgium, ref1=references[["LOB1"]])
 createRel(BilalHadfi, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
 createRel(IbrahimAbdeslam, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
+createRel(MohamedKhoualed, "LIVED_IN", Belgium, ref1=references[["TEL1"]])
 createRel(OmarMostefai, "LIVED_IN", France, ref1=references[["NYT2"]])
 createRel(SalahAbdeslam, "LIVED_IN", Belgium, ref1=references[["NYT2"]])
 createRel(SamyAmimour, "LIVED_IN", France, ref1=references[["NYT2"]])
+
+#transit countries
+createRel(AbdelhamidAbaaoud,  "BEEN_IN", Greece, ref1=references[["EXP1"]])
+createRel(AhmedAlmuhamed,     "BEEN_IN", Greece, ref1=references[["EXP1"]])
+
 
 #friend and familiar affiliations
 createRel(SalahAbdeslam,     "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
@@ -200,6 +221,8 @@ createRel(MohamedAmri, "ASSISTED", SalahAbdeslam, note="drove", ref1=references[
 createRel(HamzaAttou,  "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
 
 createRel(FabianClain,  "ASSISTED", AbdelhamidAbaaoud, note="publicized", ref1=references[["DM1"]])
+
+createRel(MohamedKhoualed,  "ASSISTED", SalahAbdeslam, note="explosives", ref1=references[["TEL1"]])
 
 #attacks
 createRel(IbrahimAbdeslam, "ATTACKED", ComptoirVoltaire, attack_type="Suicide", ref1=references[["DM1"]])
