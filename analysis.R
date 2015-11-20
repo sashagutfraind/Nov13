@@ -25,6 +25,7 @@ print(summary(TN))
 
 #nice plot
 networkJS <- simpleNetwork(terrorNetworkUndirected)
+show(networkJS)
 saveNetwork(networkJS, "~/nov13/nov13_interactive_network.html", selfcontained=TRUE)
 
 query = '  
