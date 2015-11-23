@@ -49,12 +49,11 @@ RETURN p.name, p.age, p.gender'
 nameAgeGender = cypher(nov13, query, terrorMembers=terrorMembers)
 
 print(mean(nameAgeGender$p.age, na.rm=T))
-summary(nameAgeGender$p.age)
+print(summary(nameAgeGender$p.age))
 
 print(table(nameAgeGender$p.gender))
 print(prop.table(table(nameAgeGender$p.gender)))
 
 print((table(nameAgeGender$p.gender)))
 print(prop.table(table(nameAgeGender$p.gender)))
-barplot(prop.table(table(nameAgeGender$p.gender)))
 

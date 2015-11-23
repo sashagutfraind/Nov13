@@ -259,6 +259,7 @@ createRel(AbdelhamidAbaaoud,  "LINKED_TO", BilalHadfi, note="led in Syria", ref1
 #probable involvement in the plot
 createRel(MohamedAmri, "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
 createRel(HamzaAttou,  "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
+createRel(HamzaAttou,  "ASSISTED", MohamedAmri,   note="drove", ref1=references[["DM1"]])
 createRel(AbraimiLazez,  "ASSISTED", SalahAbdeslam, note="unspecified assistence", ref1=references[["NYT4"]])
 
 #Daech core
