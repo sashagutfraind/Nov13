@@ -6,6 +6,8 @@ Additional Islamist terror networks
 references = list(
   NYT2="http://www.nytimes.com/interactive/2015/11/15/world/europe/manhunt-for-paris-attackers.html"
   ,LIR1="http://www.lesinrocks.com/2015/11/18/actualite/qui-est-fabien-clain-la-voix-de-daesh-11788443/"
+  ,GRD1="http://www.theguardian.com/world/2015/nov/19/abdelhamid-abaaoud-dead-paris-terror-leader-leaves-behind-countless-what-ifs"
+  ,WSJ3="http://www.wsj.com/articles/abdelhamid-abaaoud-alleged-mastermind-of-paris-attacks-is-dead-french-prosecutor-says-1447937255"
 )
 
 #NYT2
@@ -16,6 +18,11 @@ references = list(
 #https://en.wikipedia.org/wiki/2015_anti-terrorism_operations_in_Belgium
 RedouaneHagaoui  = createNode(nov13, "Person", name="Redouane Hagaoui",      gender="Male", ref1=references[["NYT2"]], status="dead")
 TarikJadaoun     = createNode(nov13, "Person", name="Tarik Jadaoun",            gender="Male", ref1=references[["NYT2"]], status="dead")
+YounesAbaaoud     = createNode(nov13, "Person", name="Younes Abaaoud",      age=13,      gender="Male", ref1=references[["GRD1"]], status="wanted")
+YassineAbaaoud     = createNode(nov13, "Person", name="Yassine Abaaoud",        gender="Male", ref1=references[["WSJ3"]], status="wanted")
+RedaH     = createNode(nov13, "Person", name="RedaH",        ref1=references[["Reda H "]], status="wanted")
+
+#father: OmarAbaaoud, http://www.theatlantic.com/international/archive/2015/11/who-was-abdelhamid-abaaoud-isis-paris/416739/
 
 AmedyCoulibaly     = createNode(nov13, "Person", name="Amedy Coulibaly",      gender="Male", ref1=references[["NYT2"]], status="dead")
 MehdiNemmouche       = createNode(nov13, "Person", name="Mehdi Nemmouche",      gender="Male", ref1=references[["LOB1"]], status="arrested")
@@ -29,7 +36,7 @@ BrusselsMuseum = createNode(nov13, "AttackSite", name="Brussels Museum")
 BrusselsParisTrain = createNode(nov13, "AttackSite", name="Brussels Paris Train attempt", killed=0, wounded=2)
 CharlieHebdo = createNode(nov13, "AttackSite", name="Charlie Hebdo", killed=0, wounded=2)
 SuperCocher = createNode(nov13, "AttackSite", name="Super Cocher")
-VerviersPlot = createNode(nov13, "AttackSite", name="Verviers Plot", killed=0, wounded=0, ref1=references[["DM1"]])
+VerviersPlot = createNode(nov13, "AttackSite", name="Police attack plot in Verviers", killed=0, wounded=0, ref1=references[["DM1"]], ref2=references[["GRD1"]])
 
 createRel(AmedyCoulibaly, "ATTACKED", CharlieHebdo, attack_type="Shooting", ref1=references[["NYT2"]])
 createRel(MehdiNemmouche, "ATTACKED", BrusselsMuseum, attack_type="Shooting", ref1=references[["NYT2"]])
@@ -41,8 +48,16 @@ createRel(AyoubElKhazzani,  "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
 
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", RedouaneHagaoui, note="recruited", ref1=references[["NYT2"]])
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", TarikJadaoun,    note="recruited", ref1=references[["NYT2"]])
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", MehdiNemmouche,    note="recruited", ref1=references[["GRD1"]])
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", YounesAbaaoud,    note="recruited", ref1=references[["GRD1"]])
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", YassineAbaaoud,    note="recruited", ref1=references[["GRD1"]])
+createRel(RedaH,  "LINKED_TO", YassineAbaaoud,    note="recruited", ref1=references[["GRD1"]])
 
+" He said that Abaaoud worked in Isis’s internal security unit, known as EMNI, which has the task of sending European jihadis back to their homelands to carry out terrorist attacks. The unit is run by two Tunisians, he said.
+Abaaoud is said to have told the young Frenchman that he had managed to find 25kg of explosives in Belgium, but that it was too difficult for him to return to his home country himself. He was in charge of selecting candidates, who could be paid as much as €50,000 for carrying out attacks, but it was the two unnamed Tunisians who had the final decision on who would be sent."
+#GRD1
 #+different names?
+
 #http://www.nytimes.com/2015/01/25/world/europe/belgium-confronts-the-jihadist-danger-within.html
 #The Belgian prosecutor’s office on Wednesday partially identified the dead men for the first time, 
 #naming them as Sofiane A., a Belgian and Moroccan citizen born in 1988, and Khalid B., a Belgian national born in 1991.
