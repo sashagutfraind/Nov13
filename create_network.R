@@ -62,6 +62,11 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,CNN3="http://www.cnn.com/2015/11/22/world/paris-attacks/"
                   ,GRD1="http://www.theguardian.com/world/2015/nov/19/abdelhamid-abaaoud-dead-paris-terror-leader-leaves-behind-countless-what-ifs"
                   ,NYT4="http://www.nytimes.com/2015/11/23/world/europe/brussels-remains-on-highest-alert-level-as-manhunts-expand.html?_r=0"
+                  ,WSJ2="http://www.wsj.com/articles/brussels-on-edge-as-lockdown-continues-1448280916"
+                  ,ABC1="http://abcnews.go.com/International/paris-ringleader-planned-attack-major-business-district-days/story?id=35398532"
+                  ,FOX1="http://www.foxnews.com/world/2015/11/25/french-authorities-say-paris-terror-mastermind-returned-to-attack-sites-that/"
+                  ,DM2="http://www.dailymail.co.uk/news/article-3331781/Soldiers-stay-streets-Brussels-WEEK-schools-metro-remain-closed-terror-attack-fears-EU-staff-warned-stay-home.html"
+                  ,LI1="http://www.linternaute.com/actualite/societe/1258168-abbdulakbak-b-ahmed-et-mohammed-almuhamed-un-terroriste-de-paris-infiltre-chez-les-migrants/"
                   )
 
 #
@@ -83,19 +88,21 @@ IbrahimAbdeslam   = createNode(nov13, "Person", name="Ibrahim Abdeslam",    age=
 AbraimiLazez      = createNode(nov13, "Person", name="Abraimi Lazez",    age=39, gender="Male", ref1=references[["NYT4"]], status="arrested")
 JawadBenDow       = createNode(nov13, "Person", name="Jawad Ben Dow",      age=27, gender="Male", ref1=references[["LOB1"]], ref2=references[["CNN3"]], status="arrested")
 MohammadAbdeslam  = createNode(nov13, "Person", name="Mohammad Abdeslam",          gender="Male",  ref1=references[["DM1"]], status="free")
+MohamedAbrini     = createNode(nov13, "Person", name="Mohamed Abrini",       age=30, gender="Male", ref1=references[["ABC1"]], status="wanted")
 MohamedAmimour    = createNode(nov13, "Person", name="Mohamed Amimour",     age=67, gender="Male", ref1=references[["DM1"]], status="free")
 MohamedAmri       = createNode(nov13, "Person", name="Mohamed Amri",         age=27, gender="Male", ref1=references[["DM1"]], status="arrested")
 MohamedKhoualed   = createNode(nov13, "Person", name="Mohamed Khoualed",     age=19, gender="Male", ref1=references[["TEL1"]], status="arrested")
+OAli              = createNode(nov13, "Person", name="O. Ali", age=29, gender="Male", ref1=references[["DM2"]], status="arrested")
 OmarMostefai      = createNode(nov13, "Person", name="Omar Ismaïl Mostefaï", age=29, gender="Male", ref1=references[["DM1"]], status="dead")
 SalahAbdeslam     = createNode(nov13, "Person", name="Salah Abdeslam",       age=26, gender="Male", ref1=references[["DM1"]], status="wanted")
 SamyAmimour       = createNode(nov13, "Person", name="Samy Amimour",         age=28, gender="Male", ref1=references[["DM1"]], status="dead")
 
-AbbdulakbakB     = createNode(nov13, "Person", name="AbbdulakbakB",      gender="Male", ref1=references[["DM1"]], status="dead")  #identity reports and role are sketchy
+AbbdulakbakB     = createNode(nov13, "Person", name="AbbdulakbakB",  age=25, gender="Male", ref1=references[["DM1"]], ref2=references[["LI1"]], status="dead", note="possibly fake passport or avictim_s name")
 StadeUnknown     = createNode(nov13, "Person", name="StadeUnknown",  age=20, gender="Male", nickname="Ahmad al Mohammad",  ref1=references[["DM1"]],  ref3=references[["FT1"]], status="dead")
-CafeAttacker3    = createNode(nov13, "Person", name="CafeAttacker3",  ref1=references[["DM1"]], status="wanted", note="possibly Abaood")
 BatUnknown       = createNode(nov13, "Person", name="BatUnknown",  gender="Female", ref1=references[["DM1"]], status="dead")
 
-UnknownMontenegran = createNode(nov13, "Person", name="UnknownMontenegran",  age=51, ref1=references[["FT1"]], status="arrested")
+Montenegran = createNode(nov13, "Person", name="Montenegran",  age=51, ref1=references[["FT1"]], status="arrested")
+BrusselsUnknown = createNode(nov13, "Person", name="BrusselsUnknown", ref1=references[["WSJ2"]], status="arrested")
 
 #http://www.lemonde.fr/attaques-a-paris/article/2015/11/18/un-assaut-policier-en-cours-a-saint-denis-dans-le-cadre-de-l-enquete-sur-les-attentats-du-13-novembre_4812248_4809495.html
 #http://www.lefigaro.fr/actualites/2015/11/18/01001-20151118LIVWWW00266-en-direct-attentats-de-paris-assaut-saint-denis-terrorisme.php
@@ -103,17 +110,6 @@ UnknownMontenegran = createNode(nov13, "Person", name="UnknownMontenegran",  age
 #StDennis group Rue de Cabrillon
 HasnaAitboulahcen  = createNode(nov13, "Person", name="Hasna Aitboulahcen",         age=26,   gender="Female", ref1=references[["LOB1"]], ref2=references[["NP1"]], status="dead", ref2=references[["CNN3"]])
 StDenisUnknown     = createNode(nov13, "Person", name="Unknown dead at St. Denis",   gender="Male", status="dead", ref1=references[["CNN3"]])
-
-#StDennis group Boul. Carnot?
-# StDEgyptianA       = createNode(nov13, "Person", name="StDEgyptianA",      gender="Male", ref1=references[["LOB1"]], status="arrested")
-# StDEgyptianB       = createNode(nov13, "Person", name="StDEgyptianB",      gender="Male", ref1=references[["LOB1"]], status="arrested")
-# StDArrested3       = createNode(nov13, "Person", name="StDArrested3",      gender="Male", ref1=references[["LOB1"]], status="arrested")
-# #likely unrelated: FIG1
-# StDArrested4       = createNode(nov13, "Person", name="StDArrested4",      gender="Male", ref1=references[["LOB1"]], status="arrested")
-# StDArrested5       = createNode(nov13, "Person", name="StDArrested5",      gender="Male", ref1=references[["LOB1"]], status="arrested")
-# StDArrested6       = createNode(nov13, "Person", name="StDArrested6",      gender="Male", ref1=references[["LOB1"]], status="arrested")
-# StDArrested7       = createNode(nov13, "Person", name="StDArrested7",      gender="Male", ref1=references[["LOB1"]], status="arrested")
-# all released: CNN3
 
 #+explosion in Charleville-Mezieres
 #http://www.cnn.com/2015/11/19/europe/paris-attacks-at-a-glance/
@@ -131,6 +127,15 @@ StDenisUnknown     = createNode(nov13, "Person", name="Unknown dead at St. Denis
 
 #+father and brother of Ismaeël
 #http://pamelageller.com/2015/11/french-muslim-ismael-omar-mostefai-and-abbdulakbak-b-suicide-bombers-named-in-paris-terror-attack.html/
+
+#5 people were charged in Belgium.  unnamed
+#http://abcnews.go.com/International/paris-ringleader-planned-attack-major-business-district-days/story?id=35398532
+#5th is unnamed
+#http://www.dailymail.co.uk/news/article-3331781/Soldiers-stay-streets-Brussels-WEEK-schools-metro-remain-closed-terror-attack-fears-EU-staff-warned-stay-home.html
+#ramming attack
+
+#arrests with seizures
+#http://www.ibtimes.com/paris-terror-attacks-france-knew-attacks-were-being-planned-pm-says-police-arrest-2185625
 
 #countries
 Belgium = createNode(nov13, "Country", name="Belgium")
@@ -153,10 +158,10 @@ Arrondisement18  = createNode(nov13, "AttackSite", name="Unknown in Arrondisemen
 Bataclan         = createNode(nov13, "AttackSite", name="Bataclan", killed=89, wounded=200)
 ComptoirVoltaire = createNode(nov13, "AttackSite", name="Comptoir Voltaire", killed=0, wounded=3, ref1=references[["DM1"]])
 LaBonneBiere     = createNode(nov13, "AttackSite", name="La Bonne Biere", killed=0, wounded=0)
-LaCasaNostra     = createNode(nov13, "AttackSite", name="La Casa Nostra", killed=5, wounded=8)
 LaBelleEquipe    = createNode(nov13, "AttackSite", name="La Belle Equipe", killed=19, wounded=9)
+LaCasaNostra     = createNode(nov13, "AttackSite", name="La Casa Nostra", killed=5, wounded=8)
+LaDefense        = createNode(nov13, "AttackSite", name="Unknown in La Defense", outcome="aborted", ref=references[["ABC1"]])
 LeCarillonBarAndLePetitCambodge    = createNode(nov13, "AttackSite", name="Le Carillon Bar and Le Petit Cambodge", killed=15, injured=10)
-#MacDonalds       = createNode(nov13, "AttackSite", name="MacDonalds Rue de la Coquerie")  #related to Stade attacks
 StadeDeFrance    = createNode(nov13, "AttackSite", name="Stade de France", killed=1, wounded=0)
 
 #locations where the network might have formed
@@ -177,13 +182,6 @@ createRel(HasnaAitboulahcen,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
 createRel(StDenisUnknown,     "BEEN_IN", StDenis, ref1=references[["CNN3"]])
 
 createRel(JawadBenDow,        "BEEN_IN", StDenis, ref1=references[["LOB1"]])
-# createRel(StDEgyptianA,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
-# createRel(StDEgyptianB,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
-# createRel(StDArrested3,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
-# createRel(StDArrested4,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
-# createRel(StDArrested5,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
-# createRel(StDArrested6,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
-# createRel(StDArrested7,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
 
 #staging for attack
 createRel(SalahAbdeslam, "BEEN_IN", Alfortsville, ref1=references[["DM1"]])
@@ -219,10 +217,6 @@ createRel(MohammedVerd,     "BEEN_IN", Turkey, ref1=references[["CNN2"]])
 createRel(MohammedVerd,     "BEEN_IN", Syria, ref1=references[["CNN2"]])
 createRel(AhmetTahir,       "BEEN_IN", Turkey, ref1=references[["CNN2"]])
 createRel(AhmetTahir,       "BEEN_IN", Syria, ref1=references[["CNN2"]])
-
-#+CNN2
-#Two other suspects, Syrian nationals Ahmet Tahir, 29, and Mohammed Verd, 23, were arrested after they traveled from Syria to meet Dahmani, authorities said. The two were going to transport him to Syria, authorities said.
-
 
 #friend and familiar affiliations
 createRel(SalahAbdeslam,     "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
@@ -260,14 +254,22 @@ createRel(AbdelhamidAbaaoud,  "LINKED_TO", BilalHadfi, note="led in Syria", ref1
 createRel(MohamedAmri, "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
 createRel(HamzaAttou,  "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
 createRel(HamzaAttou,  "ASSISTED", MohamedAmri,   note="drove", ref1=references[["DM1"]])
-createRel(AbraimiLazez,  "ASSISTED", SalahAbdeslam, note="unspecified assistence", ref1=references[["NYT4"]])
+
+#Stade ride
+createRel(SalahAbdeslam, "ASSISTED", AhmedAlmuhamed,  note="drove", ref1=references[["FOX1"]])
+createRel(SalahAbdeslam, "ASSISTED", BilalHadfi,  note="drove", ref1=references[["FOX1"]])  
+createRel(SalahAbdeslam, "ASSISTED", StadeUnknown,  note="drove", ref1=references[["FOX1"]])  
 
 #Daech core
 createRel(FabianClain,  "ASSISTED", AbdelhamidAbaaoud, note="publicized", ref1=references[["DM1"]])
 createRel(AbuMuhammadAlAdnani, "ASSISTED", AbdelhamidAbaaoud, note="directed", ref1=references[["NYT3"]])
 createRel(AbuMuhammadAlShimali, "ASSISTED", AbdelhamidAbaaoud, note="directed", ref1=references[["GRD1"]])
 
+#in Belgium
 createRel(MohamedKhoualed,  "ASSISTED", SalahAbdeslam, note="explosives", ref1=references[["TEL1"]])
+createRel(AbraimiLazez,     "ASSISTED", SalahAbdeslam, note="unspecified assistence", ref1=references[["NYT4"]])
+createRel(MohamedAbrini,    "ASSISTED",  SalahAbdeslam, note="drove", ref1=references[["ABC1"]])
+createRel(OAli,             "ASSISTED",  SalahAbdeslam, note="drove", ref1=references[["DM2"]])
 
 createRel(MohammedVerd,  "ASSISTED", AhmetDahmani, note="smuggling", ref1=references[["TEL1"]])
 createRel(AhmetTahir,    "ASSISTED", AhmetDahmani, note="smuggling", ref1=references[["TEL1"]])
@@ -289,22 +291,26 @@ createRel(StadeUnknown,   "ATTACKED", StadeDeFrance, attack_type="Suicide", note
 #http://www.lefigaro.fr/actualite-france/2015/11/18/01016-20151118ARTFIG00346-ce-que-l-on-sait-du-commando-qui-a-seme-la-terreur-a-paris.php
 createRel(IbrahimAbdeslam, "ATTACKED", LeCarillonBarAndLePetitCambodge, attack_type="Shooting", ref1=references[["DM1"]])  
 createRel(SalahAbdeslam, "ATTACKED", LeCarillonBarAndLePetitCambodge, attack_type="Shooting", ref1=references[["DM1"]])  
-createRel(CafeAttacker3, "ATTACKED", LeCarillonBarAndLePetitCambodge, attack_type="Shooting", ref1=references[["NEW2"]])  
+createRel(AbdelhamidAbaaoud, "ATTACKED", LeCarillonBarAndLePetitCambodge, attack_type="Shooting", ref1=references[["FOX1"]])  
 #they moved on... DM1
 createRel(IbrahimAbdeslam, "ATTACKED", LaCasaNostra, attack_type="Shooting", ref1=references[["DM1"]])  
 createRel(SalahAbdeslam, "ATTACKED", LaCasaNostra, attack_type="Shooting", ref1=references[["DM1"]])  
-createRel(CafeAttacker3, "ATTACKED", LaCasaNostra, attack_type="Shooting", ref1=references[["NEW2"]])  
+createRel(AbdelhamidAbaaoud, "ATTACKED", LaCasaNostra, attack_type="Shooting", ref1=references[["FOX1"]])  
 #they moved on... DM1
 createRel(IbrahimAbdeslam, "ATTACKED", LaBonneBiere, attack_type="Shooting", ref1=references[["NEW2"]])  
 createRel(SalahAbdeslam, "ATTACKED", LaBonneBiere, attack_type="Shooting", ref1=references[["NEW2"]])  
-createRel(CafeAttacker3, "ATTACKED", LaBonneBiere, attack_type="Shooting", ref1=references[["NEW2"]])  
+createRel(AbdelhamidAbaaoud, "ATTACKED", LaBonneBiere, attack_type="Shooting", ref1=references[["FOX1"]])  
 #they moved on... DM1
 createRel(IbrahimAbdeslam, "ATTACKED", LaBelleEquipe, attack_type="Shooting", ref1=references[["DM1"]])  
 createRel(SalahAbdeslam, "ATTACKED", LaBelleEquipe, attack_type="Shooting", ref1=references[["DM1"]])  
-createRel(CafeAttacker3, "ATTACKED", LaBelleEquipe, attack_type="Shooting", ref1=references[["DM1"]])  
+createRel(AbdelhamidAbaaoud, "ATTACKED", LaBelleEquipe, attack_type="Shooting", ref1=references[["FOX1"]])  
 
-#suspected attack
+#suspected attack 1
 createRel(SalahAbdeslam, "ATTACKED", Arrondisement18, attack_type="Unknown", ref1=references[["DM1"]])
+
+#suspected attack 2
+createRel(AbdelhamidAbaaoud, "ATTACKED", LaDefense, attack_type="Suicide", ref1=references[["ABC1"]])
+createRel(StDenisUnknown,    "ATTACKED", LaDefense, attack_type="Suicide", ref1=references[["ABC1"]])
 
 #suspected attack 2?
 #+8 arrested in Saint Dennis with force 2015-11-18, http://www.nydailynews.com/news/world/paris-raid-killed-2-terror-suspects-time-article-1.2438743
@@ -359,14 +365,14 @@ linkedToWanted = cypher(nov13, query)
 linkedToWanted = unique(linkedToWanted)
 
 query = '  
-MATCH (p:Person)-[:ASSISTED*]->(attacker1:Person)-[:ATTACKED]->(l:AttackSite)
+MATCH (p:Person)-[:ASSISTED]->(attacker1:Person)-[:ATTACKED]->(l:AttackSite)
 WHERE p.status <> "free"
 RETURN p.name, attacker1.name'
 assistedAttacker = cypher(nov13, query)
 assistedAttacker = unique(assistedAttacker)
 
 query = '  
-MATCH (p1:Person)-[:ASSISTED*]->(p2:Person)
+MATCH (p1:Person)-[:ASSISTED]-(p2:Person)
 WHERE (p1.status <> "free") AND (p2.status <> "free")
 RETURN p1.name, p2.name'
 assistedSuspect = cypher(nov13, query)
