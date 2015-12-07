@@ -8,19 +8,23 @@ references = list(
   ,LIR1="http://www.lesinrocks.com/2015/11/18/actualite/qui-est-fabien-clain-la-voix-de-daesh-11788443/"
   ,GRD1="http://www.theguardian.com/world/2015/nov/19/abdelhamid-abaaoud-dead-paris-terror-leader-leaves-behind-countless-what-ifs"
   ,WSJ3="http://www.wsj.com/articles/abdelhamid-abaaoud-alleged-mastermind-of-paris-attacks-is-dead-french-prosecutor-says-1447937255"
+  ,LMD1="http://www.lemonde.fr/societe/article/2015/11/25/olivier-corel-le-mentor-de-djihadistes-francais-a-ete-place-en-garde-a-vue_4817063_3224.html"
+  ,NYT4="http://www.nytimes.com/2015/12/01/world/europe/how-the-paris-attackers-honed-their-assault-through-trial-and-error.html?partner=rss&emc=rss&_r=0"
+  ,LP2="http://www.leparisien.fr/faits-divers/l-ombre-d-abaaoud-derriere-les-attentats-de-paris-17-11-2015-5285037.php"
 )
 
-#NYT2
-#Abdelhamid Abaaoud -> Katibat al-Battar al Libi
+#by some accounts, the operation was done by ENMI rather than KBTL
+#LP2, http://www.francetvinfo.fr/monde/proche-orient/offensive-jihadiste-en-irak/un-jihadiste-incarcere-en-france-detaille-comment-l-etat-islamique-deploie-son-reseau-d-espionnage_1055939.html
 
-
+#Sabri Essid
+#http://www.marianne.net/sabri-essid-heritier-du-clan-merah-syrie-100232578.html
+#half-brother to Mohamed Merah http://www.weeklystandard.com/keyword/Sabri-Essid
 
 #https://en.wikipedia.org/wiki/2015_anti-terrorism_operations_in_Belgium
 RedouaneHagaoui  = createNode(nov13, "Person", name="Redouane Hagaoui",      gender="Male", ref1=references[["NYT2"]], status="dead")
 TarikJadaoun     = createNode(nov13, "Person", name="Tarik Jadaoun",            gender="Male", ref1=references[["NYT2"]], status="dead")
 YounesAbaaoud     = createNode(nov13, "Person", name="Younes Abaaoud",      age=13,      gender="Male", ref1=references[["GRD1"]], status="wanted")
 YassineAbaaoud     = createNode(nov13, "Person", name="Yassine Abaaoud",        gender="Male", ref1=references[["WSJ3"]], status="wanted")
-RedaH     = createNode(nov13, "Person", name="RedaH",        ref1=references[["Reda H "]], status="wanted")
 
 #father: OmarAbaaoud, http://www.theatlantic.com/international/archive/2015/11/who-was-abdelhamid-abaaoud-isis-paris/416739/
 
@@ -29,9 +33,18 @@ MehdiNemmouche       = createNode(nov13, "Person", name="Mehdi Nemmouche",      
 AyoubElKhazzani       = createNode(nov13, "Person", name="Ayoub El Khazzani",  age=25,    gender="Male", ref1=references[["LOB1"]], status="arrested")  #http://www.cnn.com/2015/08/24/europe/france-train-attack-what-we-know-about-suspect/
 MohammedMerah       = createNode(nov13, "Person", name="Mohammed Merah",      age=23, gender="Male", ref1=references[["LIR1"]], status="arrested")  #http://www.lemonde.fr/societe/live/2012/03/19/direct-la-fusillade-a-toulouse_1671851_3224.html
 
-createRel(MehdiNemmouche, "CITIZEN_OF", France, ref1=references[["NYT2"]])
-createRel(AyoubElKhazzani, "CITIZEN_OF", Morocco, ref1=references[["NYT2"]])
+AugUnknown = createNode(nov13, "Person", name="August Spanish Recruit",   gender="Male", ref1=references[["NYT4"]], ref2=references[["LP2"]], status="arrested")
+RedaHame   = createNode(nov13, "Person", name="Reda Hame", gender="Male", ref1=references[["NYT4"]], ref2=references[["LP2"]], status="arrested")
 
+#interdicted
+createRel(AbdelhamidAbaaoud, "ASSISTED", RedaHame, note="directed", ref1=references[["NYT4"]])
+createRel(AbdelhamidAbaaoud, "ASSISTED", AugUnknown, note="directed", ref1=references[["NYT4"]])
+
+
+# createRel(MehdiNemmouche, "CITIZEN_OF", France, ref1=references[["NYT2"]])
+# createRel(AyoubElKhazzani, "CITIZEN_OF", Morocco, ref1=references[["NYT2"]])
+
+AugustConcert  = createNode(nov13, "AttackSite", name="Unknown concert hall interdicted in August", killed=0, wounded=0, outcome="aborted", ref1=references[["NYT4"]])
 BrusselsMuseum = createNode(nov13, "AttackSite", name="Brussels Museum")
 BrusselsParisTrain = createNode(nov13, "AttackSite", name="Brussels Paris Train attempt", killed=0, wounded=2)
 CharlieHebdo = createNode(nov13, "AttackSite", name="Charlie Hebdo", killed=0, wounded=2)
@@ -42,6 +55,10 @@ createRel(AmedyCoulibaly, "ATTACKED", CharlieHebdo, attack_type="Shooting", ref1
 createRel(MehdiNemmouche, "ATTACKED", BrusselsMuseum, attack_type="Shooting", ref1=references[["NYT2"]])
 createRel(AyoubElKhazzani, "ATTACKED", BrusselsParisTrain, attack_type="Shooting", ref1=references[["NYT2"]])
 
+createRel(AugUnknown, "ATTACKED", AugustConcert, attack_type="Unknown", ref1=references[["NYT4"]])
+createRel(RedaHame,   "ATTACKED", AugustConcert, attack_type="Unknown", ref1=references[["NYT4"]])
+
+
 createRel(AmedyCoulibaly,  "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
 createRel(MehdiNemmouche,  "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
 createRel(AyoubElKhazzani,  "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
@@ -51,7 +68,7 @@ createRel(AbdelhamidAbaaoud,  "LINKED_TO", TarikJadaoun,    note="recruited", re
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", MehdiNemmouche,    note="recruited", ref1=references[["GRD1"]])
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", YounesAbaaoud,    note="recruited", ref1=references[["GRD1"]])
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", YassineAbaaoud,    note="recruited", ref1=references[["GRD1"]])
-createRel(RedaH,  "LINKED_TO", YassineAbaaoud,    note="recruited", ref1=references[["GRD1"]])
+createRel(RedaHame,           "LINKED_TO", YassineAbaaoud,    note="recruited", ref1=references[["GRD1"]])
 
 " He said that Abaaoud worked in Isis’s internal security unit, known as EMNI, which has the task of sending European jihadis back to their homelands to carry out terrorist attacks. The unit is run by two Tunisians, he said.
 Abaaoud is said to have told the young Frenchman that he had managed to find 25kg of explosives in Belgium, but that it was too difficult for him to return to his home country himself. He was in charge of selecting candidates, who could be paid as much as €50,000 for carrying out attacks, but it was the two unnamed Tunisians who had the final decision on who would be sent."
@@ -76,11 +93,16 @@ Abaaoud is said to have told the young Frenchman that he had managed to find 25k
 #http://www.rawstory.com/2015/11/the-voice-of-paris-terror-revealed-to-be-seasoned-french-jihadist-fabien-clain/
 #Jean-Michel Clain
 #Sid Ahmed Ghlam
+
 #Olivier Corel
+#real name: Abdel-Al Ilat Dandachi
+#ref: LMD1
+
+#Thomas Barnouin
+#http://www.marianne.net/sabri-essid-heritier-du-clan-merah-syrie-100232578.html
 
 #Tirad al-Jarba, known by the nom de guerre Abu Muhammad al-Shimali,
 #http://www.telegraph.co.uk/news/worldnews/europe/france/12004667/Paris-attacks-Isil-Mastermind-Abdelhamid-Abaaoud-killed-in-police-raid-on-Saint-Denis-flat-live.html?frame=3503511
-
 
 #other attackers associated with Molenbeek: Ayoub El-Khazzani, Mehdi Nemmouche, Amedy Coulibaly
 #Ref: NBC2, NYT1
