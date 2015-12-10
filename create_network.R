@@ -124,9 +124,9 @@ SamyAmimour       = createNode(nov13, "Person", name="Samy Amimour",         age
 
 #the unknowns from Nov 13
 #AbbdulakbakB     = createNode(nov13, "Person", name="AbbdulakbakB",  age=25, gender="Male", ref1=references[["DM1"]], ref2=references[["LI1"]], status="dead", note="possibly fake passport or avictim_s name")
-MohammedAlmahmod         = createNode(nov13, "Person", name="Mohammed al-Mahmud",  gender="Male",  ref1=references[["BBC1"]], status="dead")
-AhmedAlmuhamed    = createNode(nov13, "Person", name="Fake ID as Ahmed Almuhamed",  gender="Male", ref1=references[["DM1"]], status="dead")
-StDenisUnknown     = createNode(nov13, "Person", name="Unknown dead at St. Denis",   gender="Male", status="dead", ref1=references[["CNN3"]])
+MohammedAlmahmod  = createNode(nov13, "Person", name="Mohammed al-Mahmud",  gender="Male",  ref1=references[["BBC1"]], status="dead")
+AhmedAlmuhamed    = createNode(nov13, "Person", name="Ahmed Almuhamed",      gender="Male", ref1=references[["DM1"]], status="dead")
+StDenisUnknown    = createNode(nov13, "Person", name="Unknown dead at St. Denis",   gender="Male", status="dead", ref1=references[["CNN3"]])
 
 Montenegrin      = createNode(nov13, "Person", name="Montenegrin",  age=51, ref1=references[["FT1"]], status="arrested")
 #two individuals: 
@@ -237,22 +237,49 @@ LaDefense        = createNode(nov13, "AttackSite", name="Unknown in La Defense",
 LeCarillonBarAndLePetitCambodge    = createNode(nov13, "AttackSite", name="Le Carillon Bar and Le Petit Cambodge", killed=15, injured=10)
 StadeDeFrance    = createNode(nov13, "AttackSite", name="Stade de France", killed=1, wounded=0)
 
-#locations where the network might have formed
+
+#Known Syria connections
 createRel(AbuMuhammadAlAdnani,  "BEEN_IN", Syria, ref1=references[["DM1"]])
 createRel(FabianClain,          "BEEN_IN", Syria, ref1=references[["DM1"]])
-createRel(FouedMohamedAggad,          "BEEN_IN", Syria, ref1=references[["GRD2"]])
+createRel(FouedMohamedAggad,    "BEEN_IN", Syria, ref1=references[["GRD2"]])
 createRel(AbuMuhammadAlShimali, "BEEN_IN", Syria, ref1=references[["DM1"]])
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", Syria, ref1=references[["DM1"]])
+createRel(BilalHadfi,         "BEEN_IN", Syria, ref1=references[["DM1"]])
+createRel(OmarMostefai,       "BEEN_IN", Syria, date="2013", ref1=references[["DM1"]])
+createRel(SamyAmimour,        "BEEN_IN", Syria, ref1=references[["NEW2"]])
+createRel(AhmedAlmuhamed,     "BEEN_IN", Syria, ref1=references[["IND1"]])
+createRel(MohammedAlmahmod,   "BEEN_IN", Syria, ref1=references[["IND1"]])
+createRel(AhmetDahmani,     "BEEN_IN", Syria, ref1=references[["CNN2"]])
+createRel(MohammedVerd,     "BEEN_IN", Syria, ref1=references[["CNN2"]])
+createRel(AhmetTahir,       "BEEN_IN", Syria, ref1=references[["CNN2"]])
+
+#Known Turkey connections
+createRel(OmarMostefai,       "BEEN_IN", Turkey, date="2010", ref1=references[["DM1"]])
+createRel(MohammedVerd,     "BEEN_IN", Turkey, ref1=references[["CNN2"]])
+createRel(AhmetDahmani,     "BEEN_IN", Turkey, ref1=references[["CNN2"]])
+createRel(AhmetTahir,       "BEEN_IN", Turkey, ref1=references[["CNN2"]])
+
+#Greece transits
+createRel(AbdelhamidAbaaoud,  "BEEN_IN", Greece, ref1=references[["EXP1"]])
+createRel(AhmedAlmuhamed,     "BEEN_IN", Greece, ref1=references[["EXP1"]])
+createRel(MohammedAlmahmod,     "BEEN_IN", Greece, ref1=references[["IND1"]])
+
+#TODO: link to specific attacker
+#createRel(AhmetDahmani,     "BEEN_IN", France, ref1=references[["CNN2"]])
+
+#known Molenbeek
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", Molenbeek, ref1=references[["DM1"]])
 createRel(IbrahimAbdeslam,    "BEEN_IN", Molenbeek, ref1=references[["NBC2"]])
 createRel(SamirZ,    "BEEN_IN", Molenbeek, ref1=references[["ST1"]])
 createRel(PierreN,    "BEEN_IN", Molenbeek, ref1=references[["ST1"]])
-createRel(MohamedBakkali,     "BEEN_IN", Auvelais, ref1=references[["ST1"]])
-createRel(BilalHadfi,         "BEEN_IN", Syria, ref1=references[["DM1"]])
-createRel(OmarMostefai,       "BEEN_IN", Turkey, date="2010", ref1=references[["DM1"]])
-createRel(OmarMostefai,       "BEEN_IN", Syria, date="2013", ref1=references[["DM1"]])
 createRel(SalahAbdeslam,      "BEEN_IN", Molenbeek, ref1=references[["NBC2"]])
-createRel(SamyAmimour,        "BEEN_IN", Syria, ref1=references[["NEW2"]])
+
+#Auvelias - planning site
+#rented by SamirBouzid, but according to some sources, it was SoufianeKayal http://en.europeonline-magazine.eu/belgium-searching-for-two-new-suspects-linked-to-paris-attacks_427737.html
+createRel(SamirBouzid,     "BEEN_IN", Auvelais,   note="suspected hideout", ref1=references[["TL1"]])
+createRel(MohamedBakkali,  "BEEN_IN", Auvelais, ref1=references[["ST1"]])
+
+
 
 #StDennis
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
@@ -284,19 +311,7 @@ createRel(SamyAmimour, "BEEN_IN", Bobigny, ref1=references[["DM1"]])
 #other KBL fighters
 #https://pietervanostaeyen.wordpress.com/2015/01/21/katibat-al-battar-and-the-belgian-fighters-in-syria/
 
-# #transit countries
-createRel(AbdelhamidAbaaoud,  "BEEN_IN", Greece, ref1=references[["EXP1"]])
-createRel(AhmedAlmuhamed,     "BEEN_IN", Greece, ref1=references[["EXP1"]])
 
-#TODO: link to specific attacker
-createRel(AhmetDahmani,     "BEEN_IN", Turkey, ref1=references[["CNN2"]])
-createRel(AhmetDahmani,     "BEEN_IN", Syria, ref1=references[["CNN2"]])
-#createRel(AhmetDahmani,     "BEEN_IN", France, ref1=references[["CNN2"]])
-
-createRel(MohammedVerd,     "BEEN_IN", Turkey, ref1=references[["CNN2"]])
-createRel(MohammedVerd,     "BEEN_IN", Syria, ref1=references[["CNN2"]])
-createRel(AhmetTahir,       "BEEN_IN", Turkey, ref1=references[["CNN2"]])
-createRel(AhmetTahir,       "BEEN_IN", Syria, ref1=references[["CNN2"]])
 
 #friend and familiar affiliations
 createRel(SalahAbdeslam,     "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
@@ -371,19 +386,17 @@ createRel(SamirBouzid, "ASSISTED", SoufianeKayal,       note="assisted in Hungar
 #mission in Hungary
 createRel(SamirBouzid, "ASSISTED", HasnaAitboulahcen,   note="transfer money after the attack", ref1=references[["TL1"]])
 
-#Auvelias - planning site
-createRel(SamirBouzid, "BEEN_IN", Auvelais,   note="suspected hideout", ref1=references[["TL1"]])
-#according to some source, it was SoufianeKayal http://en.europeonline-magazine.eu/belgium-searching-for-two-new-suspects-linked-to-paris-attacks_427737.html
 
 
 
 #attacks
 createRel(IbrahimAbdeslam, "ATTACKED", ComptoirVoltaire, attack_type="Suicide", ref1=references[["DM1"]])
+
 createRel(OmarMostefai,    "ATTACKED",  Bataclan, attack_type="Suicide", ref1=references[["DM1"]])
 createRel(SamyAmimour,     "ATTACKED", Bataclan, attack_type="Suicide", ref1=references[["DM1"]])
-#createRel(AbbdulakbakB,     "ATTACKED",  Bataclan, attack_type="Suicide", ref1=references[["DM1"]])
 createRel(FouedMohamedAggad, "ATTACKED", Bataclan, attack_type="Suicide", ref1=references[["DM1"]])
 #only 3 detonated.  several (all?) shot.  Volkswagen Polo abandoned at site
+#some early reports from Bataclan report a 4th Female attacker/shooter and also AbbdulakbakB.  No evidence in later reports.
 
 createRel(AhmedAlmuhamed, "ATTACKED", StadeDeFrance, attack_type="Suicide", ref1=references[["DM1"]])
 createRel(BilalHadfi,     "ATTACKED", StadeDeFrance, attack_type="Suicide", ref1=references[["DM1"]])  
