@@ -86,6 +86,8 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,IBT2="http://www.ibtimes.co.in/abdeslam-brothers-known-interpol-eus-security-database-before-paris-attacks-658236"
                   ,CBS1="http://www.cbsnews.com/news/paris-attacks-suspects-arrested-belgium-authorities/"
                   ,CNN4="http://www.cnn.com/2015/12/03/europe/salah-abdeslam-cold-trail-paris-attacks/"
+                  ,GRD2="http://www.theguardian.com/world/2015/dec/09/paris-attacks-third-bataclan-attacker-identified-by-police"
+                  ,TEL2="http://www.telegraph.co.uk/news/worldnews/europe/france/12041026/Third-Bataclan-attacker-identified-as-Foued-Mohamed-Aggad-who-visited-Syria-in-2013.html"
                   )
 
 AbdeilahChouaa = createNode(nov13, "Person", name="Abdeilah Chouaa", gender="Male", status="arrested", ref1=references[["ST1"]])
@@ -102,7 +104,8 @@ MohammedVerd = createNode(nov13, "Person", name="Mohammed Verd", age=23, gender=
 AliOulkadi        = createNode(nov13, "Person", name="Ali Oulkadi",       age=29, gender="Male", ref1=references[["DM2"]], status="arrested")
 BilalHadfi        = createNode(nov13, "Person", name="Bilal Hadfi",        age=20, gender="Male", ref1=references[["DM1"]], status="dead")
 FabianClain       = createNode(nov13, "Person", name="Fabian Clain",      age=36, gender="Male", nickname="Omar", ref1=references[["LIR1"]], status="wanted")
-HamzaAttou        = createNode(nov13, "Person", name="Hamza Attou",                gender="Male", ref1=references[["IBT1"]], status="arrested")
+FouedMohamedAggad = createNode(nov13, "Person", name="Foued Mohamed-Aggad",  age=23, gender="Male", ref1=references[["DM1"]], ref2=references[["GRD2"]], status="dead")
+HamzaAttou        = createNode(nov13, "Person", name="Hamza Attou",         age=21,  gender="Male", ref1=references[["IBT1"]], status="arrested")
 IbrahimAbdeslam   = createNode(nov13, "Person", name="Ibrahim Abdeslam",    age=31, gender="Male", nickname="Brahim", ref1=references[["DM1"]], status="dead")
 AbraimiLazez      = createNode(nov13, "Person", name="Abraimi Lazez",    age=39, gender="Male", ref1=references[["NYT4"]], status="arrested")
 JawadBenDow       = createNode(nov13, "Person", name="Jawad Ben Dow",      age=27, gender="Male", ref1=references[["LOB1"]], ref2=references[["CNN3"]], status="arrested")
@@ -117,13 +120,17 @@ SalahAbdeslam     = createNode(nov13, "Person", name="Salah Abdeslam",       age
 SamyAmimour       = createNode(nov13, "Person", name="Samy Amimour",         age=28, gender="Male", ref1=references[["DM1"]], status="dead")
 
 #the unknowns from Nov 13
-AbbdulakbakB     = createNode(nov13, "Person", name="AbbdulakbakB",  age=25, gender="Male", ref1=references[["DM1"]], ref2=references[["LI1"]], status="dead", note="possibly fake passport or avictim_s name")
+#AbbdulakbakB     = createNode(nov13, "Person", name="AbbdulakbakB",  age=25, gender="Male", ref1=references[["DM1"]], ref2=references[["LI1"]], status="dead", note="possibly fake passport or avictim_s name")
 StadeUnknown     = createNode(nov13, "Person", name="StadeUnknown",  age=20, gender="Male",  ref1=references[["DM1"]],  ref3=references[["FT1"]], status="dead")
-BatUnknown       = createNode(nov13, "Person", name="BatUnknown",  gender="Female", ref1=references[["DM1"]], status="dead")
 AhmedAlmuhamed    = createNode(nov13, "Person", name="Fake ID as Ahmed Almuhamed",  gender="Male", ref1=references[["DM1"]], status="dead")
 StDenisUnknown     = createNode(nov13, "Person", name="Unknown dead at St. Denis",   gender="Male", status="dead", ref1=references[["CNN3"]])
 
-Montenegran      = createNode(nov13, "Person", name="Montenegran",  age=51, ref1=references[["FT1"]], status="arrested")
+Montenegrin      = createNode(nov13, "Person", name="Montenegrin",  age=51, ref1=references[["FT1"]], status="arrested")
+#two individuals: 
+#Sasha V., who was detained in Magstadt
+#Vladan Vuchelichem (51 y.o.) from Podgorica
+#The car navigator endpoint was a public (city) car park in Paris, and in V.Vuchelich's possession were several French operators' phone cards and addresses in France.
+#http://peacekeeper.ru/en/?module=news&action=view&id=28525
 
 BrusselsUnknown  = createNode(nov13, "Person", name="BrusselsUnknown", ref1=references[["WSJ2"]], status="arrested")
 #TODO possibly one of the people below
@@ -183,6 +190,15 @@ PierreN = createNode(nov13, "Person", age=28, name="Pierre N", gender="Male", re
 #female walk-in
 #http://www.cnn.com/2015/12/03/europe/salah-abdeslam-cold-trail-paris-attacks/
 
+#GRD2: cousin and recruiter of FouedMohamedAggad
+#Mourad Fares arrested (recuiter)
+#Karim Aggad
+#French media say two of the Strasbourg group, brothers Mourad and Yassine Boudjellal, were killed at a checkpoint early last year.
+#http://www.bbc.com/news/world-europe-35055304
+#A cell of 9 people: 7 were arrested in Strassbourg
+#http://www.telegraph.co.uk/news/worldnews/europe/france/12041026/Third-Bataclan-attacker-identified-as-Foued-Mohamed-Aggad-who-visited-Syria-in-2013.html
+#(TEL2)
+
 #countries
 #Belgium = createNode(nov13, "Country", name="Belgium")
 #Egypt  = createNode(nov13, "Country", name="Egypt")
@@ -214,6 +230,7 @@ StadeDeFrance    = createNode(nov13, "AttackSite", name="Stade de France", kille
 #locations where the network might have formed
 createRel(AbuMuhammadAlAdnani,  "BEEN_IN", Syria, ref1=references[["DM1"]])
 createRel(FabianClain,          "BEEN_IN", Syria, ref1=references[["DM1"]])
+createRel(FouedMohamedAggad,          "BEEN_IN", Syria, ref1=references[["GRD2"]])
 createRel(AbuMuhammadAlShimali, "BEEN_IN", Syria, ref1=references[["DM1"]])
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", Syria, ref1=references[["DM1"]])
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", Molenbeek, ref1=references[["DM1"]])
@@ -301,6 +318,7 @@ createRel(AhmetDahmani,     "LINKED_TO", SalahAbdeslam, ref1=references[["CNN4"]
 # createRel(SalahAbdeslam,     "CITIZEN_OF", France, ref1=references[["NYT2"]])
 # createRel(SamyAmimour,       "CITIZEN_OF", France, ref1=references[["DM1"]])
 # createRel(AbraimiLazez,       "CITIZEN_OF", Belgium, ref1=references[["NYT4"]])
+# createRel(FouedMohamedAggad,       "CITIZEN_OF", Belgium, ref1=references[["GRD2"]])
 # 
 
 # createRel(AhmetDahmani,       "CITIZEN_OF", Belgium, ref1=references[["CNN2"]])
@@ -351,8 +369,8 @@ createRel(SamirBouzid, "BEEN_IN", Auvelais,   note="suspected hideout", ref1=ref
 createRel(IbrahimAbdeslam, "ATTACKED", ComptoirVoltaire, attack_type="Suicide", ref1=references[["DM1"]])
 createRel(OmarMostefai,    "ATTACKED",  Bataclan, attack_type="Suicide", ref1=references[["DM1"]])
 createRel(SamyAmimour,     "ATTACKED", Bataclan, attack_type="Suicide", ref1=references[["DM1"]])
-createRel(AbbdulakbakB,     "ATTACKED",  Bataclan, attack_type="Suicide", ref1=references[["DM1"]])
-createRel(BatUnknown, "ATTACKED", Bataclan, attack_type="Suicide", ref1=references[["DM1"]])
+#createRel(AbbdulakbakB,     "ATTACKED",  Bataclan, attack_type="Suicide", ref1=references[["DM1"]])
+createRel(FouedMohamedAggad, "ATTACKED", Bataclan, attack_type="Suicide", ref1=references[["DM1"]])
 #only 3 detonated.  several (all?) shot.  Volkswagen Polo abandoned at site
 
 createRel(AhmedAlmuhamed, "ATTACKED", StadeDeFrance, attack_type="Suicide", ref1=references[["DM1"]])
@@ -398,13 +416,13 @@ createRel(MohamedS,          "LINKED_TO", JawadBenDow, note="knew", ref1=referen
 #print("Export")
 ########################################################
 nov13nodes = cypher(nov13, query='MATCH (p) return p.name') 
-write.csv(nov13nodes, file="~/nov13_nodes.csv")
+write.csv(nov13nodes, file="~/nov13/nov13_nodes.csv")
 
 nov13persons = cypher(nov13, query='MATCH (p:Person) return p.name') 
-write.csv(nov13persons, file="~/nov13_persons.csv")
+write.csv(nov13persons, file="~/nov13/nov13_persons.csv")
 
 nov13relationships = cypher(nov13, query='MATCH (n1)-[r]->(n2) return n1.name, type(r), n2.name') 
-write.csv(nov13relationships, file="~/nov13_relationships.csv" )
+write.csv(nov13relationships, file="~/nov13/nov13_relationships.csv" )
 
 #requires neo4j database
 #browse(nov13)
@@ -415,7 +433,7 @@ RETURN p.name, s.name'
 attackersAndSites = cypher(nov13, query)
 attackersAndSites = unique(attackersAndSites)
 print(attackersAndSites)  
-write.csv(attackersAndSites, file="~/nov13_attackersAndSites.csv" )
+write.csv(attackersAndSites, file="~/nov13/nov13_attackersAndSites.csv" )
 
 
 ####################################################################################################
