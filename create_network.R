@@ -199,6 +199,13 @@ PierreN = createNode(nov13, "Person", age=28, name="Pierre N", gender="Male", re
 #http://www.telegraph.co.uk/news/worldnews/europe/france/12041026/Third-Bataclan-attacker-identified-as-Foued-Mohamed-Aggad-who-visited-Syria-in-2013.html
 #(TEL2)
 
+#Nov 12 arrest of a large network
+#http://www.expressandstar.com/news/uk-news/2015/11/12/four-men-held-in-uk-in-italian-led-counter-terror-operation/
+
+######
+# Nodes
+######
+
 #countries
 #Belgium = createNode(nov13, "Country", name="Belgium")
 #Egypt  = createNode(nov13, "Country", name="Egypt")
