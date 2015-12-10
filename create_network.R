@@ -34,6 +34,7 @@ Use Cypher query
 == show links between attackers
 
 - rename network nov13 as KBL
+- download BBC1
 
 Wishlist:
 - homes and citizenship of the attackers, particularly French residents
@@ -88,6 +89,8 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,CNN4="http://www.cnn.com/2015/12/03/europe/salah-abdeslam-cold-trail-paris-attacks/"
                   ,GRD2="http://www.theguardian.com/world/2015/dec/09/paris-attacks-third-bataclan-attacker-identified-by-police"
                   ,TEL2="http://www.telegraph.co.uk/news/worldnews/europe/france/12041026/Third-Bataclan-attacker-identified-as-Foued-Mohamed-Aggad-who-visited-Syria-in-2013.html"
+                  ,BBC1="http://www.bbc.com/news/world-europe-34896521"
+                  ,IND1="http://www.independent.co.uk/news/world/europe/france-attacks-is-this-the-face-of-paris-suicide-bomber-ahmed-almohammad-a6735216.html"
                   )
 
 AbdeilahChouaa = createNode(nov13, "Person", name="Abdeilah Chouaa", gender="Male", status="arrested", ref1=references[["ST1"]])
@@ -121,7 +124,7 @@ SamyAmimour       = createNode(nov13, "Person", name="Samy Amimour",         age
 
 #the unknowns from Nov 13
 #AbbdulakbakB     = createNode(nov13, "Person", name="AbbdulakbakB",  age=25, gender="Male", ref1=references[["DM1"]], ref2=references[["LI1"]], status="dead", note="possibly fake passport or avictim_s name")
-StadeUnknown     = createNode(nov13, "Person", name="StadeUnknown",  age=20, gender="Male",  ref1=references[["DM1"]],  ref3=references[["FT1"]], status="dead")
+MohammedAlmahmod         = createNode(nov13, "Person", name="Mohammed al-Mahmud",  gender="Male",  ref1=references[["BBC1"]], status="dead")
 AhmedAlmuhamed    = createNode(nov13, "Person", name="Fake ID as Ahmed Almuhamed",  gender="Male", ref1=references[["DM1"]], status="dead")
 StDenisUnknown     = createNode(nov13, "Person", name="Unknown dead at St. Denis",   gender="Male", status="dead", ref1=references[["CNN3"]])
 
@@ -303,6 +306,8 @@ createRel(MohamedAmimour,    "LINKED_TO", SamyAmimour, note="father_of", ref1=re
 createRel(HasnaAitboulahcen, "LINKED_TO", AbdelhamidAbaaoud, note="cousin", ref1=references[["IBT2"]])
 createRel(SalahAbdeslam,     "LINKED_TO", AbdelhamidAbaaoud, note="friends", ref1=references[["CNN1"]])
 
+createRel(AhmedAlmuhamed, "LINKED_TO", MohammedAlmahmod, note="traveled together or may be related",  ref=references[["IND1"]])
+
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", OmarMostefai, note="uncharacterized", ref1=references[["NYT2"]])
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", BilalHadfi, note="led in Syria", ref1=references[["NYT2"]])
 
@@ -341,7 +346,7 @@ createRel(HamzaAttou,  "ASSISTED", MohamedAmri,   note="drove", ref1=references[
 #Stade ride
 createRel(SalahAbdeslam, "ASSISTED", AhmedAlmuhamed,  note="drove", ref1=references[["FOX1"]])
 createRel(SalahAbdeslam, "ASSISTED", BilalHadfi,  note="drove", ref1=references[["FOX1"]])  
-createRel(SalahAbdeslam, "ASSISTED", StadeUnknown,  note="drove", ref1=references[["FOX1"]])  
+createRel(SalahAbdeslam, "ASSISTED", MohammedAlmahmod,  note="drove", ref1=references[["FOX1"]])  
 
 #Daesh core
 createRel(FabianClain,  "ASSISTED", AbdelhamidAbaaoud, note="publicized", ref1=references[["DM1"]])
@@ -382,7 +387,7 @@ createRel(FouedMohamedAggad, "ATTACKED", Bataclan, attack_type="Suicide", ref1=r
 
 createRel(AhmedAlmuhamed, "ATTACKED", StadeDeFrance, attack_type="Suicide", ref1=references[["DM1"]])
 createRel(BilalHadfi,     "ATTACKED", StadeDeFrance, attack_type="Suicide", ref1=references[["DM1"]])  
-createRel(StadeUnknown,   "ATTACKED", StadeDeFrance, attack_type="Suicide", note="detonated at nearby MacDonalds",  ref1=references[["DM1"]], ref2=references[["WSJ1"]])  
+createRel(MohammedAlmahmod, "ATTACKED", StadeDeFrance, attack_type="Suicide", note="detonated at nearby MacDonalds",  ref1=references[["DM1"]], ref2=references[["WSJ1"]])  
 
 #gunmen in a black Seat Leon.  possibly Abdeslam brothers + unknown
 #http://www.lefigaro.fr/actualite-france/2015/11/18/01016-20151118ARTFIG00346-ce-que-l-on-sait-du-commando-qui-a-seme-la-terreur-a-paris.php
