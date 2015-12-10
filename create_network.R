@@ -126,7 +126,9 @@ SamyAmimour       = createNode(nov13, "Person", name="Samy Amimour",         age
 #AbbdulakbakB     = createNode(nov13, "Person", name="AbbdulakbakB",  age=25, gender="Male", ref1=references[["DM1"]], ref2=references[["LI1"]], status="dead", note="possibly fake passport or avictim_s name")
 MohammedAlmahmod  = createNode(nov13, "Person", name="Mohammed al-Mahmud",  gender="Male",  ref1=references[["BBC1"]], status="dead")
 AhmedAlmuhamed    = createNode(nov13, "Person", name="Ahmed Almuhamed",      gender="Male", ref1=references[["DM1"]], status="dead")
+
 StDenisUnknown    = createNode(nov13, "Person", name="Unknown dead at St. Denis",   gender="Male", status="dead", ref1=references[["CNN3"]])
+#suspected of attacking bars http://news.yahoo.com/paris-attacks-probe-know-far-211406661.html
 
 Montenegrin      = createNode(nov13, "Person", name="Montenegrin",  age=51, ref1=references[["FT1"]], status="arrested")
 #two individuals: 
@@ -358,7 +360,7 @@ createRel(MohamedAmri, "ASSISTED", SalahAbdeslam, note="drove", ref1=references[
 createRel(HamzaAttou,  "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
 createRel(HamzaAttou,  "ASSISTED", MohamedAmri,   note="drove", ref1=references[["DM1"]])
 
-#Stade ride
+#Stade team ride
 createRel(SalahAbdeslam, "ASSISTED", AhmedAlmuhamed,  note="drove", ref1=references[["FOX1"]])
 createRel(SalahAbdeslam, "ASSISTED", BilalHadfi,  note="drove", ref1=references[["FOX1"]])  
 createRel(SalahAbdeslam, "ASSISTED", MohammedAlmahmod,  note="drove", ref1=references[["FOX1"]])  
