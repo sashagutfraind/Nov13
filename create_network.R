@@ -27,8 +27,10 @@ You can also get the JSON file from the neo4j display
 
 
 library(RNeo4j)
+
+#name of the database
 nov13 = startGraph("http://localhost:7474/db/data/", username="neo4j", password="1")  
-clear(nov13, input=FALSE)
+clear(nov13, input=FALSE)  #wishlist: better called KBL
 
 references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html"
                   ,WSJ1="http://www.wsj.com/articles/attacker-tried-to-enter-paris-stadium-but-was-turned-away-1447520571"
@@ -78,6 +80,13 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,VOA1="http://www.voaafrique.com/content/la-justice-belge-prolonge-la-dentention-provisoire-de-deux-terroristes-presumes-/3099044.html"
                   ,BBC1="http://www.bbc.com/news/world-europe-34896521"
                   ,IND1="http://www.independent.co.uk/news/world/europe/france-attacks-is-this-the-face-of-paris-suicide-bomber-ahmed-almohammad-a6735216.html"
+                  ,TRIB1="http://trib.com/news/national/europe/the-latest-germany-arms-dealer-didn-t-supply-paris-guns/article_5135cc41-4b3c-5921-9107-04049f9f5c0a.html"
+                  
+                  ,WSJ3="http://www.wsj.com/articles/abdelhamid-abaaoud-alleged-mastermind-of-paris-attacks-is-dead-french-prosecutor-says-1447937255"
+                  ,LMD1="http://www.lemonde.fr/societe/article/2015/11/25/olivier-corel-le-mentor-de-djihadistes-francais-a-ete-place-en-garde-a-vue_4817063_3224.html"
+                  ,LP2="http://www.leparisien.fr/faits-divers/l-ombre-d-abaaoud-derriere-les-attentats-de-paris-17-11-2015-5285037.php"
+                  ,DM4="http://www.dailymail.co.uk/news/article-2912966/Belgium-jihadists-killed-anti-terror-officers-planning-kidnap-policeman-judge-decapitate-video.html"
+                  ,TEL3="http://www.telegraph.co.uk/news/worldnews/europe/greece/11353214/Greek-police-detain-suspected-ringleader-of-Belgian-terror-cell-says-source.html"
                   )
 
 AbdeilahChouaa = createNode(nov13, "Person", name="Abdeilah Chouaa", gender="Male", status="arrested", ref1=references[["ST1"]])
@@ -137,7 +146,8 @@ HasnaAitboulahcen  = createNode(nov13, "Person", name="Hasna Aitboulahcen",     
 #+explosion in Charleville-Mezieres
 #http://www.cnn.com/2015/11/19/europe/paris-attacks-at-a-glance/
 
-ArmsDealer = createNode(nov13, "Person", name="German Arms Dealer", age=35, gender="Male", ref1=references[["FOX2"]])
+#ArmsDealer = createNode(nov13, "Person", name="German Arms Dealer", age=35, gender="Male", ref1=references[["FOX2"]])
+#not involved: TRIB1
 #unclear buyer "Arab in Paris" on Nov 7
 
 #linked to Bilal
@@ -146,6 +156,31 @@ PierreN = createNode(nov13, "Person", age=28, name="Pierre N", gender="Male", re
 
 #Abaood was linked to unknown people in the UK
 #http://www.arabtimesonline.com/news/paris-attacker-visited-london-report-belgium-seeks-2-new-dangerous-attack-suspects/
+
+###################
+# PAST PLOTS BY KBL
+###################
+#by some accounts, the operation was done by ENMI rather than KBTL
+#LP2, http://www.francetvinfo.fr/monde/proche-orient/offensive-jihadiste-en-irak/un-jihadiste-incarcere-en-france-detaille-comment-l-etat-islamique-deploie-son-reseau-d-espionnage_1055939.html
+
+#Sabri Essid
+#http://www.marianne.net/sabri-essid-heritier-du-clan-merah-syrie-100232578.html
+#half-brother to Mohamed Merah http://www.weeklystandard.com/keyword/Sabri-Essid
+
+#https://en.wikipedia.org/wiki/2015_anti-terrorism_operations_in_Belgium
+RedouaneHagaoui  = createNode(nov13, "Person", name="Redouane Hagaoui",      gender="Male", ref1=references[["TEL3"]], status="dead")
+TarikJadaoun     = createNode(nov13, "Person", name="Tarik Jadaoun",            gender="Male", ref1=references[["TEL3"]], status="dead")
+YounesAbaaoud     = createNode(nov13, "Person", name="Younes Abaaoud",      age=13,      gender="Male", ref1=references[["GRD1"]], status="wanted")
+YassineAbaaoud     = createNode(nov13, "Person", name="Yassine Abaaoud",        gender="Male", ref1=references[["WSJ3"]], status="wanted")
+
+#father: OmarAbaaoud, http://www.theatlantic.com/international/archive/2015/11/who-was-abdelhamid-abaaoud-isis-paris/416739/
+AugUnknown = createNode(nov13, "Person", name="August Spanish Recruit",   gender="Male", ref1=references[["NYT4"]], ref2=references[["LP2"]], status="arrested")
+RedaHame   = createNode(nov13, "Person", name="Reda Hame", gender="Male", ref1=references[["NYT4"]], ref2=references[["LP2"]], status="arrested")
+
+#plots in Belgium
+MehdiNemmouche       = createNode(nov13, "Person", name="Mehdi Nemmouche",      gender="Male", ref1=references[["LOB1"]], status="arrested")
+AyoubElKhazzani       = createNode(nov13, "Person", name="Ayoub El Khazzani",  age=25,    gender="Male", ref1=references[["LOB1"]], status="arrested")  #http://www.cnn.com/2015/08/24/europe/france-train-attack-what-we-know-about-suspect/
+
 
 ################
 #ADDITION NOTES
@@ -206,11 +241,11 @@ Syria = createNode(nov13, "Country", name="Syria")
 Turkey = createNode(nov13, "Country", name="Turkey")
 
 #localities / sites
-Alfortsville  = createNode(nov13, "Locality", name="Alfortsville")
-Auvelais      = createNode(nov13, "Locality", name="Auvelias", role="suspected planning site and bomb making")
-Bobigny       = createNode(nov13, "Locality", name="Bobigny")
+Alfortsville  = createNode(nov13, "Site", name="Alfortsville apartment")
+Auvelais      = createNode(nov13, "Site", name="Auvelias", role="suspected planning site and bomb making")
+Bobigny       = createNode(nov13, "Site", name="Bobigny apartment")
 Molenbeek     = createNode(nov13, "Locality", name="Molenbeek", location="various")
-StDenis       = createNode(nov13, "Locality", name="St.Denis", location="8 rue du Carillon and rue Carnot", ref1=references[["NBC1"]])
+StDenis       = createNode(nov13, "Site", name="St.Denis", location="8 rue du Carillon and rue Carnot", ref1=references[["NBC1"]])
 #wishlist: second location in St.Denis
 
 #attack sites.  for casualties see WP2
@@ -319,6 +354,11 @@ createRel(SalahAbdeslam,     "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=
 createRel(MohamedAmimour,    "LINKED_TO", SamyAmimour, note="father_of", ref1=references[["DM1"]])
 createRel(HasnaAitboulahcen, "LINKED_TO", AbdelhamidAbaaoud, note="cousin", ref1=references[["IBT2"]])
 createRel(SalahAbdeslam,     "LINKED_TO", AbdelhamidAbaaoud, note="friends", ref1=references[["CNN1"]])
+
+#AbdelhamidAbaaoud family
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", YounesAbaaoud,    note="brother, recruited", ref1=references[["GRD1"]])
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", YassineAbaaoud,    note="brother, recruited", ref1=references[["GRD1"]])
+createRel(RedaHame,           "LINKED_TO", YassineAbaaoud,    note="recruited", ref1=references[["GRD1"]])
 
 createRel(AhmedAlmuhamed, "LINKED_TO", MohammedAlmahmod, note="traveled together or may be related",  ref=references[["IND1"]])
 
@@ -448,6 +488,76 @@ createRel(StDenisUnknown,    "ATTACKED", LaDefense, attack_type="Suicide", ref1=
 #+8 arrested in Saint Dennis with force 2015-11-18, http://www.nydailynews.com/news/world/paris-raid-killed-2-terror-suspects-time-article-1.2438743
 #TARGETED Airport, Shopping Mall
 
+######################
+#PREVIOUS PLOTS BY KBL
+######################
+
+# createRel(MehdiNemmouche, "CITIZEN_OF", France, ref1=references[["NYT2"]])
+# createRel(AyoubElKhazzani, "CITIZEN_OF", Morocco, ref1=references[["NYT2"]])
+
+AugustConcert  = createNode(nov13, "Activity", name="Aborted concert hall plot in August", ref1=references[["NYT4"]])
+JewishMuseum = createNode(nov13, "AttackSite", name="Jewish Museum of Belgium")
+BrusselsParisTrain = createNode(nov13, "AttackSite", name="Brussels Paris Train attempt", killed=0, wounded=2)
+VerviersPlot = createNode(nov13, "AttackSite", name="Police attack plot in Verviers", killed=0, wounded=0, ref1=references[["DM1"]], ref2=references[["GRD1"]])
+
+#AugustConcert
+createRel(AugUnknown, "INVOLVED_IN", AugustConcert, attack_type="Unknown", ref1=references[["NYT4"]])
+createRel(RedaHame,   "INVOLVED_IN", AugustConcert, attack_type="Unknown", ref1=references[["NYT4"]])
+createRel(AbdelhamidAbaaoud, "INVOLVED_IN", AugustConcert, note="directed", ref1=references[["NYT4"]])
+
+#BrusselsParisTrain
+createRel(AyoubElKhazzani, "ATTACKED", BrusselsParisTrain, attack_type="Shooting", ref1=references[["NYT2"]])
+createRel(AyoubElKhazzani, "BEEN_IN", Molenbeek, ref1=references[["NYT1"]])
+createRel(AyoubElKhazzani, "LINKED_TO", AbdelhamidAbaaoud, ref1=references[["NYT4"]])
+
+#VerviersPlot
+createRel(RedouaneHagaoui,  "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
+createRel(TarikJadaoun,     "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
+createRel(AbdelhamidAbaaoud,  "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
+
+createRel(RedouaneHagaoui,  "BEEN_IN", Molenbeek, ref1=references[["NYT3"]])
+createRel(TarikJadaoun,     "BEEN_IN", Molenbeek, ref1=references[["NYT3"]])
+
+#Brussels Jewish Museum
+createRel(MehdiNemmouche, "ATTACKED", JewishMuseum, attack_type="Shooting", ref1=references[["NYT2"]])
+createRel(MehdiNemmouche, "LINKED_TO", AbdelhamidAbaaoud, note="liaised", ref1=references[["NYT2"]])
+createRel(MehdiNemmouche, "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
+
+
+" He said that Abaaoud worked in Isis’s internal security unit, known as EMNI, which has the task of sending European jihadis back to their homelands to carry out terrorist attacks. The unit is run by two Tunisians, he said.
+Abaaoud is said to have told the young Frenchman that he had managed to find 25kg of explosives in Belgium, but that it was too difficult for him to return to his home country himself. He was in charge of selecting candidates, who could be paid as much as €50,000 for carrying out attacks, but it was the two unnamed Tunisians who had the final decision on who would be sent."
+#GRD1
+#+different names?
+
+#http://www.nytimes.com/2015/01/25/world/europe/belgium-confronts-the-jihadist-danger-within.html
+#The Belgian prosecutor’s office on Wednesday partially identified the dead men for the first time, 
+#naming them as Sofiane A., a Belgian and Moroccan citizen born in 1988, and Khalid B., a Belgian national born in 1991.
+
+#Verviers was the safeway house.  the origin was in Molenbeek
+#http://www.nytimes.com/2015/01/25/world/europe/belgium-confronts-the-jihadist-danger-within.html
+
+#+additional Hebdo attackers
+#Hebdo attackers apparently AlQ in Yemen (http://www.nytimes.com/2015/11/20/world/europe/paris-attacks.html)
+#SuperCosher are more self-radicalized (http://www.nytimes.com/2015/11/20/world/europe/paris-attacks.html)
+
+#ChurchPlot jointly with AbdelhamidAbaaoud
+#http://abcnews.go.com/International/plots-tied-abdelhamid-abaaoud-alleged-mastermind-paris-attacks/story?id=35307009
+#That incident involved Sid Ahmed Glham, a 24-year-old Algerian who moved to France in 2009. Glham is believed to have killed a French woman in her car, but then did not continue the rest of his alleged plan after he contacted authorities to call for an ambulance because he had injured himself.
+
+#http://www.rawstory.com/2015/11/the-voice-of-paris-terror-revealed-to-be-seasoned-french-jihadist-fabien-clain/
+#Jean-Michel Clain
+#Sid Ahmed Ghlam
+
+#Olivier Corel
+#real name: Abdel-Al Ilat Dandachi
+#ref: LMD1
+
+#Thomas Barnouin
+#http://www.marianne.net/sabri-essid-heritier-du-clan-merah-syrie-100232578.html
+
+#Tirad al-Jarba, known by the nom de guerre Abu Muhammad al-Shimali,
+#http://www.telegraph.co.uk/news/worldnews/europe/france/12004667/Paris-attacks-Isil-Mastermind-Abdelhamid-Abaaoud-killed-in-police-raid-on-Saint-Denis-flat-live.html?frame=3503511
+
 
 
 ########################################################
@@ -520,18 +630,25 @@ linkedToWanted = unique(linkedToWanted)
 # assistedSuspect = unique(assistedSuspect)
 
 query = '  
-MATCH (p:Person)-[:BEEN_IN]->(l:Locality)<-[:BEEN_IN]-(attacker1:Person)-[:ATTACKED]->()
+MATCH (p:Person)-[:BEEN_IN]->(l:Site)<-[:BEEN_IN]-(attacker1:Person)-[:ATTACKED]->()
 WHERE p.status <> "free"
 RETURN p.name, attacker1.name'
 sharedSpaceWithAttacker = cypher(nov13, query)
 sharedSpaceWithAttacker = unique(sharedSpaceWithAttacker)
 
 query = '  
+MATCH (p1:Person)-[:BEEN_IN]->(l:Site)<-[:BEEN_IN]-(p2:Person)
+WHERE (p1.status <> "free") AND (p2.status <> "free")
+RETURN p1.name, p2.name'
+sharedSiteWithSuspect = cypher(nov13, query)
+sharedSiteWithSuspect = unique(sharedSiteWithSuspect)
+
+query = '  
 MATCH (p1:Person)-[:BEEN_IN]->(l:Locality)<-[:BEEN_IN]-(p2:Person)
 WHERE (p1.status <> "free") AND (p2.status <> "free")
 RETURN p1.name, p2.name'
-sharedSpaceWithSuspect = cypher(nov13, query)
-sharedSpaceWithSuspect = unique(sharedSpaceWithSuspect)
+sharedLocalityWithSuspect = cypher(nov13, query)
+sharedLocalityWithSuspect = unique(sharedLocalityWithSuspect)
 
 #prepare to merge
 names(commonAttack) <- c("n1", "n2")
@@ -541,10 +658,11 @@ names(linkedToWanted) <- c("n1", "n2")
 # names(assistedAttacker) <- c("n1", "n2")
 # names(assistedSuspect) <- c("n1", "n2")
 names(sharedSpaceWithAttacker) <- c("n1", "n2")
-names(sharedSpaceWithSuspect) <- c("n1", "n2")
+names(sharedSiteWithSuspect) <- c("n1", "n2")
+#names(sharedLocalityWithSuspect) <- c("n1", "n2")
 
-#terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, assistedAttacker, assistedSuspect, sharedSpaceWithAttacker, sharedSpaceWithSuspect)
-terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSpaceWithAttacker, sharedSpaceWithSuspect)
+#terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, assistedAttacker, assistedSuspect, sharedSpaceWithAttacker, sharedSiteWithSuspect, sharedLocalityWithSuspect)
+terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSpaceWithAttacker, sharedSiteWithSuspect)
 terrorNetworkUndirected <- rbind(terrorNetwork, data.frame(n1=terrorNetwork[["n2"]], n2=terrorNetwork[["n1"]])) 
 terrorNetworkUndirected <- unique(terrorNetworkUndirected)
 
