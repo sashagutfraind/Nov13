@@ -26,20 +26,6 @@ You can also get the JSON file from the neo4j display
 '
 
 
-' 
-TODO: 
-- separate out the core attackers;  then show the extended links
-Use Cypher query
-== show the attack sites (:AttackSite)
-== show links between attackers
-
-- rename network nov13 as KBL
-
-Wishlist:
-- homes and citizenship of the attackers, particularly French residents
-- write down "missions" like smuggling, driving;  then link people to missions
-
-'
 library(RNeo4j)
 nov13 = startGraph("http://localhost:7474/db/data/", username="neo4j", password="1")  
 clear(nov13, input=FALSE)
@@ -88,6 +74,8 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,CNN4="http://www.cnn.com/2015/12/03/europe/salah-abdeslam-cold-trail-paris-attacks/"
                   ,GRD2="http://www.theguardian.com/world/2015/dec/09/paris-attacks-third-bataclan-attacker-identified-by-police"
                   ,TEL2="http://www.telegraph.co.uk/news/worldnews/europe/france/12041026/Third-Bataclan-attacker-identified-as-Foued-Mohamed-Aggad-who-visited-Syria-in-2013.html"
+                  ,DM3="http://www.dailymail.co.uk/news/article-3355624/Europe-s-wanted-man-escaped-Africa-Police-Morroco-issue-arrest-warrants-Paris-gunman-Salah-Abdeslam-accomplice-tip-spies.html"
+                  ,VOA1="http://www.voaafrique.com/content/la-justice-belge-prolonge-la-dentention-provisoire-de-deux-terroristes-presumes-/3099044.html"
                   )
 
 AbdeilahChouaa = createNode(nov13, "Person", name="Abdeilah Chouaa", gender="Male", status="arrested", ref1=references[["ST1"]])
@@ -101,15 +89,15 @@ AhmetTahir = createNode(nov13, "Person", name="Ahmet Tahir", age=29, gender="Mal
 
 MohammedVerd = createNode(nov13, "Person", name="Mohammed Verd", age=23, gender="Male", ref1=references[["CNN2"]], status="arrested")
 
-AliOulkadi        = createNode(nov13, "Person", name="Ali Oulkadi",       age=29, gender="Male", ref1=references[["DM2"]], status="arrested")
+AliOulkadi        = createNode(nov13, "Person", name="Salah Ali Oulkadi",       age=29, gender="Male", ref1=references[["DM2"]], status="arrested")
 BilalHadfi        = createNode(nov13, "Person", name="Bilal Hadfi",        age=20, gender="Male", ref1=references[["DM1"]], status="dead")
 FabianClain       = createNode(nov13, "Person", name="Fabian Clain",      age=36, gender="Male", nickname="Omar", ref1=references[["LIR1"]], status="wanted")
 FouedMohamedAggad = createNode(nov13, "Person", name="Foued Mohamed-Aggad",  age=23, gender="Male", ref1=references[["DM1"]], ref2=references[["GRD2"]], status="dead")
 HamzaAttou        = createNode(nov13, "Person", name="Hamza Attou",         age=21,  gender="Male", ref1=references[["IBT1"]], status="arrested")
 IbrahimAbdeslam   = createNode(nov13, "Person", name="Ibrahim Abdeslam",    age=31, gender="Male", nickname="Brahim", ref1=references[["DM1"]], status="dead")
 AbraimiLazez      = createNode(nov13, "Person", name="Abraimi Lazez",    age=39, gender="Male", ref1=references[["NYT4"]], status="arrested")
-JawadBenDow       = createNode(nov13, "Person", name="Jawad Ben Dow",      age=27, gender="Male", ref1=references[["LOB1"]], ref2=references[["CNN3"]], status="arrested")
-MohammadAbdeslam  = createNode(nov13, "Person", name="Mohammad Abdeslam",          gender="Male",  ref1=references[["DM1"]], status="free")
+JawadBendaoud       = createNode(nov13, "Person", name="Jawad Bendaoud",      age=27, gender="Male", ref1=references[["LOB1"]], ref2=references[["CNN3"]], status="arrested")
+#MohammadAbdeslam  = createNode(nov13, "Person", name="Mohammad Abdeslam",          gender="Male",  ref1=references[["DM1"]], status="free")
 MohamedAbrini     = createNode(nov13, "Person", name="Mohamed Abrini",       age=30, gender="Male", ref1=references[["ABC1"]], status="wanted")
 MohamedAmimour    = createNode(nov13, "Person", name="Mohamed Amimour",     age=67, gender="Male", ref1=references[["DM1"]], status="free")
 MohamedBakkali    = createNode(nov13, "Person", name="Mohamed Bakkali",       gender="Male", ref1=references[["ST1"]], status="wanted")
@@ -120,7 +108,7 @@ SalahAbdeslam     = createNode(nov13, "Person", name="Salah Abdeslam",       age
 SamyAmimour       = createNode(nov13, "Person", name="Samy Amimour",         age=28, gender="Male", ref1=references[["DM1"]], status="dead")
 
 #the unknowns from Nov 13
-#AbbdulakbakB     = createNode(nov13, "Person", name="AbbdulakbakB",  age=25, gender="Male", ref1=references[["DM1"]], ref2=references[["LI1"]], status="dead", note="possibly fake passport or avictim_s name")
+#AbbdulakbakB     = createNode(nov13, "Person", name="AbbdulakbakB",  age=25, gender="Male", ref1=references[["DM1"]], ref2=references[["LI1"]], status="dead", note="possibly fake passport or a victim's name")
 StadeUnknown     = createNode(nov13, "Person", name="StadeUnknown",  age=20, gender="Male",  ref1=references[["DM1"]],  ref3=references[["FT1"]], status="dead")
 AhmedAlmuhamed    = createNode(nov13, "Person", name="Fake ID as Ahmed Almuhamed",  gender="Male", ref1=references[["DM1"]], status="dead")
 StDenisUnknown     = createNode(nov13, "Person", name="Unknown dead at St. Denis",   gender="Male", status="dead", ref1=references[["CNN3"]])
@@ -132,14 +120,14 @@ Montenegrin      = createNode(nov13, "Person", name="Montenegrin",  age=51, ref1
 #The car navigator endpoint was a public (city) car park in Paris, and in V.Vuchelich's possession were several French operators' phone cards and addresses in France.
 #http://peacekeeper.ru/en/?module=news&action=view&id=28525
 
-BrusselsUnknown  = createNode(nov13, "Person", name="BrusselsUnknown", ref1=references[["WSJ2"]], status="arrested")
-#TODO possibly one of the people below
+#BrusselsUnknown  = createNode(nov13, "Person", name="BrusselsUnknown", ref1=references[["WSJ2"]], status="arrested")
+#possibly one of the people below
 
 MohamedS         = createNode(nov13, "Person", name="MohamedS", age=25, gender="Male", role="petty criminal assisted with finding safe house", ref1=references[["F24a"]], status="arrested")
 #apparently not the BrusselsUnknown
 
-SoufianeKayal    = createNode(nov13, "Person", name="False ID as Soufiane Kayal", gender="Male", role="helped Abaaoud travel to Hungary", ref1=references[["TL1"]], status="wanted")
-SamirBouzid      = createNode(nov13, "Person", name="False ID as Samir Bouzid", gender="Male",    role="helped Abaaoud travel to Hungary", ref1=references[["TL1"]], status="wanted")
+SoufianeKayal    = createNode(nov13, "Person", name="False ID as Soufiane Kayal", gender="Male", ref1=references[["TL1"]], status="wanted")
+SamirBouzid      = createNode(nov13, "Person", name="False ID as Samir Bouzid", gender="Male",  ref1=references[["TL1"]], status="wanted")
 
 
 HasnaAitboulahcen  = createNode(nov13, "Person", name="Hasna Aitboulahcen",         age=26,   gender="Female",  status="dead", ref1=references[["LOB1"]], ref2=references[["NP1"]], ref3=references[["CNN3"]])
@@ -204,7 +192,7 @@ PierreN = createNode(nov13, "Person", age=28, name="Pierre N", gender="Male", re
 #Egypt  = createNode(nov13, "Country", name="Egypt")
 Greece  = createNode(nov13, "Country", name="Greece")
 #France = createNode(nov13, "Country", name="France")
-#Morocco = createNode(nov13, "Country", name="Morocco")
+Morocco = createNode(nov13, "Country", name="Morocco")
 Syria = createNode(nov13, "Country", name="Syria")
 Turkey = createNode(nov13, "Country", name="Turkey")
 
@@ -237,18 +225,19 @@ createRel(AbdelhamidAbaaoud,  "BEEN_IN", Molenbeek, ref1=references[["DM1"]])
 createRel(IbrahimAbdeslam,    "BEEN_IN", Molenbeek, ref1=references[["NBC2"]])
 createRel(SamirZ,    "BEEN_IN", Molenbeek, ref1=references[["ST1"]])
 createRel(PierreN,    "BEEN_IN", Molenbeek, ref1=references[["ST1"]])
-createRel(MohamedBakkali,     "BEEN_IN", Auvelais, ref1=references[["ST1"]])
 createRel(BilalHadfi,         "BEEN_IN", Syria, ref1=references[["DM1"]])
 createRel(OmarMostefai,       "BEEN_IN", Turkey, date="2010", ref1=references[["DM1"]])
 createRel(OmarMostefai,       "BEEN_IN", Syria, date="2013", ref1=references[["DM1"]])
 createRel(SalahAbdeslam,      "BEEN_IN", Molenbeek, ref1=references[["NBC2"]])
 createRel(SamyAmimour,        "BEEN_IN", Syria, ref1=references[["NEW2"]])
 
+createRel(SalahAbdeslam,      "BEEN_IN", Morocco, ref1=references[["DM3"]])
+
 #StDennis
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
 createRel(HasnaAitboulahcen,  "BEEN_IN", StDenis, ref1=references[["LOB1"]])
 createRel(StDenisUnknown,     "BEEN_IN", StDenis, ref1=references[["CNN3"]])
-createRel(JawadBenDow,        "BEEN_IN", StDenis, ref1=references[["LOB1"]])
+createRel(JawadBendaoud,      "BEEN_IN", StDenis, ref1=references[["LOB1"]])
 
 #staging for attack
 createRel(SalahAbdeslam, "BEEN_IN", Alfortsville, ref1=references[["DM1"]])
@@ -278,7 +267,6 @@ createRel(SamyAmimour, "BEEN_IN", Bobigny, ref1=references[["DM1"]])
 createRel(AbdelhamidAbaaoud,  "BEEN_IN", Greece, ref1=references[["EXP1"]])
 createRel(AhmedAlmuhamed,     "BEEN_IN", Greece, ref1=references[["EXP1"]])
 
-#TODO: link to specific attacker
 createRel(AhmetDahmani,     "BEEN_IN", Turkey, ref1=references[["CNN2"]])
 createRel(AhmetDahmani,     "BEEN_IN", Syria, ref1=references[["CNN2"]])
 #createRel(AhmetDahmani,     "BEEN_IN", France, ref1=references[["CNN2"]])
@@ -290,8 +278,8 @@ createRel(AhmetTahir,       "BEEN_IN", Syria, ref1=references[["CNN2"]])
 
 #friend and familiar affiliations
 createRel(SalahAbdeslam,     "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
-createRel(SalahAbdeslam,     "LINKED_TO", MohammadAbdeslam, note="brother", ref1=references[["DM1"]])
-createRel(MohammadAbdeslam , "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
+#createRel(SalahAbdeslam,     "LINKED_TO", MohammadAbdeslam, note="brother", ref1=references[["DM1"]])
+#createRel(MohammadAbdeslam , "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
 createRel(MohamedAmimour,    "LINKED_TO", SamyAmimour, note="father_of", ref1=references[["DM1"]])
 createRel(HasnaAitboulahcen, "LINKED_TO", AbdelhamidAbaaoud, note="cousin", ref1=references[["IBT2"]])
 createRel(SalahAbdeslam,     "LINKED_TO", AbdelhamidAbaaoud, note="friends", ref1=references[["CNN1"]])
@@ -304,6 +292,9 @@ createRel(PierreN, "LINKED_TO", BilalHadfi, ref1=references[["IBT2"]])
 
 
 createRel(AhmetDahmani,     "LINKED_TO", SalahAbdeslam, ref1=references[["CNN4"]])
+
+createRel(AbdeilahChouaa,    "LINKED_TO",  SalahAbdeslam, note="knew family", ref1=references[["VOA1"]])
+createRel(AbdeilahChouaa,    "LINKED_TO",  MohamedAbrini, note="particularly close", ref1=references[["VOA1"]])
 
 ## complicates plotting a bit.  because it's relatively stable, use as attribute.
 # #citizenship.  we allow multiple citizenships.  weak indicator of affinity between individuals
@@ -327,42 +318,55 @@ createRel(AhmetDahmani,     "LINKED_TO", SalahAbdeslam, ref1=references[["CNN4"]
 # createRel(MohammedVerd,       "CITIZEN_OF", Syria, ref1=references[["CNN2"]])
 
 #probable involvement in the plot
-createRel(MohamedAmri, "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
-createRel(HamzaAttou,  "ASSISTED", SalahAbdeslam, note="drove", ref1=references[["DM1"]])
-createRel(HamzaAttou,  "ASSISTED", MohamedAmri,   note="drove", ref1=references[["DM1"]])
+EscapeFromParis = createNode(nov13, "Activity", name="Escape from Paris")
+createRel(MohamedAmri, "INVOLVED_IN", EscapeFromParis, ref1=references[["DM1"]])
+createRel(HamzaAttou,  "INVOLVED_IN", EscapeFromParis,  ref1=references[["DM1"]])
+createRel(SalahAbdeslam,  "INVOLVED_IN", EscapeFromParis,  ref1=references[["DM1"]])
 
 #Stade ride
-createRel(SalahAbdeslam, "ASSISTED", AhmedAlmuhamed,  note="drove", ref1=references[["FOX1"]])
-createRel(SalahAbdeslam, "ASSISTED", BilalHadfi,  note="drove", ref1=references[["FOX1"]])  
-createRel(SalahAbdeslam, "ASSISTED", StadeUnknown,  note="drove", ref1=references[["FOX1"]])  
+DriveToStade = createNode(nov13, "Activity", name="Drive to Stade")
+createRel(SalahAbdeslam, "INVOLVED_IN",  DriveToStade,  ref1=references[["FOX1"]])
+createRel(AhmedAlmuhamed, "INVOLVED_IN", DriveToStade,  ref1=references[["FOX1"]])
+createRel(BilalHadfi, "INVOLVED_IN",     DriveToStade,  ref1=references[["FOX1"]])  
+createRel(StadeUnknown, "INVOLVED_IN",   DriveToStade,  ref1=references[["FOX1"]])  
 
 #Daesh core
-createRel(FabianClain,  "ASSISTED", AbdelhamidAbaaoud, note="publicized", ref1=references[["DM1"]])
-createRel(AbuMuhammadAlAdnani, "ASSISTED", FabianClain, note="directed", ref1=references[["NYT3"]], ref2=references[["NYT4"]])
-createRel(AbuMuhammadAlShimali, "ASSISTED", AbdelhamidAbaaoud, note="directed", ref1=references[["GRD1"]])
+OverallOrganization = createNode(nov13, "Activity", name="Attack Organization")
+createRel(FabianClain,          "INVOLVED_IN", OverallOrganization, ref1=references[["DM1"]])
+createRel(AbuMuhammadAlAdnani,  "INVOLVED_IN", OverallOrganization, ref1=references[["NYT3"]], ref2=references[["NYT4"]])
+createRel(AbuMuhammadAlShimali, "INVOLVED_IN", OverallOrganization, ref1=references[["GRD1"]])
+createRel(AbdelhamidAbaaoud,    "INVOLVED_IN", OverallOrganization, ref1=references[["GRD1"]])
 
-#in Belgium
-createRel(MohamedKhoualed,  "ASSISTED", SalahAbdeslam, note="explosives", ref1=references[["TEL1"]])
-createRel(AbraimiLazez,     "ASSISTED", SalahAbdeslam, note="unspecified assistence", ref1=references[["NYT4"]])
-createRel(MohamedAbrini,    "ASSISTED",  SalahAbdeslam, note="drove", ref1=references[["ABC1"]])
-createRel(AliOulkadi,       "ASSISTED",  SalahAbdeslam, note="drove Salah Abdeslam", ref1=references[["DM2"]], ref2=references[["TL1"]])
+MakingExplosives = createNode(nov13, "Activity", name="Making Explosives")
+createRel(MohamedKhoualed,  "INVOLVED_IN", MakingExplosives, ref1=references[["TEL1"]])
+createRel(SalahAbdeslam,    "INVOLVED_IN", MakingExplosives, ref1=references[["TEL1"]])
 
-createRel(MohammedVerd,  "ASSISTED", AhmetDahmani, note="smuggling", ref1=references[["TEL1"]])
-createRel(AhmetTahir,    "ASSISTED", AhmetDahmani, note="smuggling", ref1=references[["TEL1"]])
-createRel(AhmetTahir,    "ASSISTED", MohammedVerd, note="smuggling", ref1=references[["TEL1"]])
+ExfilitrationThroughBelgium = createNode(nov13, "Activity", name="Exfilitration Through Belgium")
+createRel(SalahAbdeslam, "INVOLVED_IN", ExfilitrationThroughBelgium, ref1=references[["NYT4"]])
+createRel(AbraimiLazez,  "INVOLVED_IN", ExfilitrationThroughBelgium, ref1=references[["NYT4"]])
+createRel(MohamedAbrini, "INVOLVED_IN",  ExfilitrationThroughBelgium, ref1=references[["ABC1"]])
+createRel(AliOulkadi,    "INVOLVED_IN",  ExfilitrationThroughBelgium, ref1=references[["DM2"]], ref2=references[["TL1"]])
+createRel(AbdeilahChouaa,    "INVOLVED_IN",  ExfilitrationThroughBelgium, ref1=references[["VOA1"]])
 
-#mission in Hungary
-createRel(SoufianeKayal, "ASSISTED", AbdelhamidAbaaoud, note="assisted in Hungary", ref1=references[["TL1"]])
-createRel(SamirBouzid, "ASSISTED", AbdelhamidAbaaoud,   note="assisted in Hungary", ref1=references[["TL1"]])
-createRel(SamirBouzid, "ASSISTED", SoufianeKayal,       note="assisted in Hungary", ref1=references[["TL1"]])
+ExfiltrationToSyria = createNode(nov13, "Activity", name="Exfiltration To Syria")
+createRel(MohammedVerd,  "INVOLVED_IN", ExfiltrationToSyria, ref1=references[["TEL1"]])
+createRel(AhmetTahir,    "INVOLVED_IN", ExfiltrationToSyria, ref1=references[["TEL1"]])
+createRel(AhmetDahmani,  "INVOLVED_IN", ExfiltrationToSyria, ref1=references[["TEL1"]])
 
-#mission in Hungary
-createRel(SamirBouzid, "ASSISTED", HasnaAitboulahcen,   note="transfer money after the attack", ref1=references[["TL1"]])
+MissionInHungary = createNode(nov13, "Activity", name="Mission in Hungary")
+createRel(SoufianeKayal,     "INVOLVED_IN", MissionInHungary, ref1=references[["TL1"]])
+createRel(SamirBouzid,       "INVOLVED_IN", MissionInHungary, ref1=references[["TL1"]])
+createRel(AbdelhamidAbaaoud, "INVOLVED_IN", MissionInHungary, ref1=references[["TL1"]])
+
+#StDenis safe house.  apparently pre-existing ties, rather than a joint mission
+createRel(SamirBouzid,       "LINKED_TO", HasnaAitboulahcen,   note="transfer money after the attack", ref1=references[["TL1"]])
+createRel(HasnaAitboulahcen, "LINKED_TO", MohamedS, note="knew", ref1=references[["F24a"]])
+createRel(MohamedS,          "LINKED_TO", JawadBendaoud, note="knew", ref1=references[["F24a"]])
+
 
 #Auvelias - planning site
-createRel(SamirBouzid, "BEEN_IN", Auvelais,   note="suspected hideout", ref1=references[["TL1"]])
-#according to some source, it was SoufianeKayal http://en.europeonline-magazine.eu/belgium-searching-for-two-new-suspects-linked-to-paris-attacks_427737.html
-
+createRel(SoufianeKayal,  "BEEN_IN", Auvelais, ref1=references[["DM3"]])
+createRel(MohamedBakkali, "BEEN_IN", Auvelais, ref1=references[["ST1"]])
 
 
 #attacks
@@ -402,13 +406,9 @@ createRel(SalahAbdeslam, "ATTACKED", Arrondisement18, attack_type="Unknown", ref
 createRel(AbdelhamidAbaaoud, "ATTACKED", LaDefense, attack_type="Suicide", ref1=references[["ABC1"]])
 createRel(StDenisUnknown,    "ATTACKED", LaDefense, attack_type="Suicide", ref1=references[["ABC1"]])
 
-#suspected attack 2?
+#suspected attack 3?
 #+8 arrested in Saint Dennis with force 2015-11-18, http://www.nydailynews.com/news/world/paris-raid-killed-2-terror-suspects-time-article-1.2438743
 #TARGETED Airport, Shopping Mall
-
-#StDenis safe house
-createRel(HasnaAitboulahcen, "LINKED_TO", MohamedS, note="knew", ref1=references[["DM1"]])
-createRel(MohamedS,          "LINKED_TO", JawadBenDow, note="knew", ref1=references[["DM1"]])
 
 
 
@@ -447,6 +447,13 @@ commonAttack = cypher(nov13, query)
 commonAttack = unique(commonAttack)
 
 query = '  
+MATCH (p1:Person)-[:INVOLVED_IN]->(l:Activity)<-[:INVOLVED_IN]-(p2:Person)
+RETURN p1.name, p2.name'
+commonInvolvement = cypher(nov13, query)
+commonInvolvement = unique(commonInvolvement)
+
+
+query = '  
 MATCH (p:Person)-[:LINKED_TO]->(attacker1:Person)-[:ATTACKED]->(l:AttackSite)
 WHERE p.status <> "free"
 RETURN p.name, attacker1.name'
@@ -460,19 +467,19 @@ RETURN p1.name, p2.name'
 linkedToWanted = cypher(nov13, query)
 linkedToWanted = unique(linkedToWanted)
 
-query = '  
-MATCH (p:Person)-[:ASSISTED]->(attacker1:Person)-[:ATTACKED]->(l:AttackSite)
-WHERE p.status <> "free"
-RETURN p.name, attacker1.name'
-assistedAttacker = cypher(nov13, query)
-assistedAttacker = unique(assistedAttacker)
+# query = '  
+# MATCH (p:Person)-[:ASSISTED]->(attacker1:Person)-[:ATTACKED]->(l:AttackSite)
+# WHERE p.status <> "free"
+# RETURN p.name, attacker1.name'
+# assistedAttacker = cypher(nov13, query)
+# assistedAttacker = unique(assistedAttacker)
 
-query = '  
-MATCH (p1:Person)-[:ASSISTED]-(p2:Person)
-WHERE (p1.status <> "free") AND (p2.status <> "free")
-RETURN p1.name, p2.name'
-assistedSuspect = cypher(nov13, query)
-assistedSuspect = unique(assistedSuspect)
+# query = '  
+# MATCH (p1:Person)-[:ASSISTED]-(p2:Person)
+# WHERE (p1.status <> "free") AND (p2.status <> "free")
+# RETURN p1.name, p2.name'
+# assistedSuspect = cypher(nov13, query)
+# assistedSuspect = unique(assistedSuspect)
 
 query = '  
 MATCH (p:Person)-[:BEEN_IN]->(l:Locality)<-[:BEEN_IN]-(attacker1:Person)-[:ATTACKED]->()
@@ -491,13 +498,15 @@ sharedSpaceWithSuspect = unique(sharedSpaceWithSuspect)
 #prepare to merge
 names(commonAttack) <- c("n1", "n2")
 names(linkedToAttacker) <- c("n1", "n2")
+names(commonInvolvement) <- c("n1", "n2")
 names(linkedToWanted) <- c("n1", "n2")
-names(assistedAttacker) <- c("n1", "n2")
-names(assistedSuspect) <- c("n1", "n2")
+# names(assistedAttacker) <- c("n1", "n2")
+# names(assistedSuspect) <- c("n1", "n2")
 names(sharedSpaceWithAttacker) <- c("n1", "n2")
 names(sharedSpaceWithSuspect) <- c("n1", "n2")
 
-terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, assistedAttacker, assistedSuspect, sharedSpaceWithAttacker, sharedSpaceWithSuspect)
+#terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, assistedAttacker, assistedSuspect, sharedSpaceWithAttacker, sharedSpaceWithSuspect)
+terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSpaceWithAttacker, sharedSpaceWithSuspect)
 terrorNetworkUndirected <- rbind(terrorNetwork, data.frame(n1=terrorNetwork[["n2"]], n2=terrorNetwork[["n1"]])) 
 terrorNetworkUndirected <- unique(terrorNetworkUndirected)
 
