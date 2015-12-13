@@ -366,7 +366,6 @@ DriveToStade = createNode(nov13, "Activity", name="Drive to Stade")
 createRel(SalahAbdeslam, "INVOLVED_IN",  DriveToStade,  ref1=references[["FOX1"]])
 createRel(AhmedAlmuhamed, "INVOLVED_IN", DriveToStade,  ref1=references[["FOX1"]])
 createRel(BilalHadfi, "INVOLVED_IN",     DriveToStade,  ref1=references[["FOX1"]])  
-createRel(StadeUnknown, "INVOLVED_IN",   DriveToStade,  ref1=references[["FOX1"]])  
 
 #Daesh core
 OverallOrganization = createNode(nov13, "Activity", name="Attack Organization")
