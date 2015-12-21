@@ -622,13 +622,6 @@ linkedToWanted = cypher(kblDB, query)
 linkedToWanted = unique(linkedToWanted)
 
 # query = '  
-# MATCH (p:Person)-[:ASSISTED]->(attacker1:Person)-[:ATTACKED]->(l:AttackSite)
-# WHERE p.status <> "free"
-# RETURN p.name, attacker1.name'
-# assistedAttacker = cypher(kblDB, query)
-# assistedAttacker = unique(assistedAttacker)
-
-# query = '  
 # MATCH (p1:Person)-[:ASSISTED]-(p2:Person)
 # WHERE (p1.status <> "free") AND (p2.status <> "free")
 # RETURN p1.name, p2.name'
@@ -665,14 +658,26 @@ names(linkedToWanted) <- c("n1", "n2")
 # names(assistedSuspect) <- c("n1", "n2")
 names(sharedSpaceWithAttacker) <- c("n1", "n2")
 names(sharedSiteWithSuspect) <- c("n1", "n2")
-#names(sharedLocalityWithSuspect) <- c("n1", "n2")
+names(sharedLocalityWithSuspect) <- c("n1", "n2")
 
-#terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, assistedAttacker, assistedSuspect, sharedSpaceWithAttacker, sharedSiteWithSuspect, sharedLocalityWithSuspect)
 terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSpaceWithAttacker, sharedSiteWithSuspect)
 terrorNetworkUndirected <- rbind(terrorNetwork, data.frame(n1=terrorNetwork[["n2"]], n2=terrorNetwork[["n1"]])) 
 terrorNetworkUndirected <- unique(terrorNetworkUndirected)
-
 print(terrorNetworkUndirected) 
 write.csv(terrorNetworkUndirected, file="~/nov13/nov13_terrorNetwork.csv", row.names=F)
+
+
+terrorNetworkExtended           <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSpaceWithAttacker, sharedSiteWithSuspect, sharedLocalityWithSuspect)
+terrorNetworkExtendedUndirected <- rbind(terrorNetworkExtended, data.frame(n1=terrorNetworkExtended[["n2"]], n2=terrorNetworkExtended[["n1"]])) 
+terrorNetworkExtendedUndirected <- unique(terrorNetworkExtendedUndirected)
+print(terrorNetworkExtendedUndirected) 
+write.csv(terrorNetworkExtendedUndirected, file="~/nov13/nov13_terrorNetworkExtended.csv", row.names=F)
+
+
+terrorNetworkLimited           <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement)
+terrorNetworkLimitedUndirected <- rbind(terrorNetworkLimited, data.frame(n1=terrorNetworkLimited[["n2"]], n2=terrorNetworkLimited[["n1"]])) 
+terrorNetworkLimitedUndirected <- unique(terrorNetworkLimitedUndirected)
+print(terrorNetworkLimitedUndirected) 
+write.csv(terrorNetworkLimitedUndirected, file="~/nov13/nov13_terrorNetworkLimited.csv", row.names=F)
 
 #browse(kblDB)
