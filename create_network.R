@@ -309,6 +309,7 @@ createRel(SalahAbdeslam,      "BEEN_IN", Molenbeek, ref1=references[["NBC2"]])
 #rented by SamirBouzid, but according to some sources, it was SoufianeKayal http://en.europeonline-magazine.eu/belgium-searching-for-two-new-suspects-linked-to-paris-attacks_427737.html
 createRel(SamirBouzid,     "BEEN_IN", Auvelais,   note="suspected hideout", ref1=references[["TL1"]])
 createRel(MohamedBakkali,  "BEEN_IN", Auvelais, ref1=references[["ST1"]])
+createRel(SoufianeKayal,   "BEEN_IN", Auvelais, ref1=references[["DM3"]])
 
 
 
@@ -445,11 +446,6 @@ createRel(AbdelhamidAbaaoud, "INVOLVED_IN", MissionInHungary, ref1=references[["
 createRel(SamirBouzid,       "LINKED_TO", HasnaAitboulahcen,   note="transfer money after the attack", ref1=references[["TL1"]])
 createRel(HasnaAitboulahcen, "LINKED_TO", MohamedS, note="knew", ref1=references[["F24a"]])
 createRel(MohamedS,          "LINKED_TO", JawadBendaoud, note="knew", ref1=references[["F24a"]])
-
-
-#Auvelias - planning site
-createRel(SoufianeKayal,  "BEEN_IN", Auvelais, ref1=references[["DM3"]])
-createRel(MohamedBakkali, "BEEN_IN", Auvelais, ref1=references[["ST1"]])
 
 
 #attacks
