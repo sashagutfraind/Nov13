@@ -35,7 +35,6 @@ createRel(SaïdKouachi, "ATTACKED", CharlieHebdo, attack_type="Shooting", ref1=r
 #https://en.wikipedia.org/wiki/2011_Li%C3%A8ge_attack
 #Nordine Amrani 
 
-
 #related attack on Lee Rigby was killed in Woolwich in March 2013 by Michael Adebowale and Michael Adebolajo 
 
 #Azeddine Kbir Bounekoub

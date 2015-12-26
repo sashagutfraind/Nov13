@@ -66,7 +66,10 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,DM2="http://www.dailymail.co.uk/news/article-3331781/Soldiers-stay-streets-Brussels-WEEK-schools-metro-remain-closed-terror-attack-fears-EU-staff-warned-stay-home.html"
                   ,LI1="http://www.linternaute.com/actualite/societe/1258168-abbdulakbak-b-ahmed-et-mohammed-almuhamed-un-terroriste-de-paris-infiltre-chez-les-migrants/"
                   ,FOX2="http://www.foxnews.com/world/2015/11/27/germany-arrests-man-reportedly-suspected-selling-guns-to-paris-attackers/"
-                  ,NYT4="http://www.nytimes.com/2015/12/01/world/europe/how-the-paris-attackers-honed-their-assault-through-trial-and-error.html?partner=rss&emc=rss&_r=0"
+                  ,NYT5="http://www.nytimes.com/2015/12/01/world/europe/how-the-paris-attackers-honed-their-assault-through-trial-and-error.html?partner=rss&emc=rss&_r=0"
+                  #wishlist not cited.  distinguish with NYT4
+                  ,NYT6=""
+                  ,NYT7="http://www.nytimes.com/2015/12/25/world/europe/paris-attacks-belgium.html?_r=0"
                   ,AT1="http://atimes.com/2015/11/paris-made-in-libya-not-syria/"
                   ,F24a="http://www.france24.com/en/20151205-paris-attacks-spotlight-turns-britain"
                   ,ST1="http://www.straitstimes.com/world/europe/paris-attacks-belgium-charges-2-new-suspects"
@@ -94,7 +97,7 @@ AbuMuhammadAlAdnani = createNode(kblDB, "Person", name="Abu Muhammad al-Adnani",
 AbuMuhammadAlShimali = createNode(kblDB, "Person", name="Abu-Muhammad al-Shimali", gender="Male", status="wanted", ref1=references[["GRD1"]])
 
 AbdelhamidAbaaoud = createNode(kblDB, "Person", name="Abdelhamid Abaaoud", age=27, gender="Male", nickname="Abu Omar al-Belgiki", nickname2="Abou Omar al-Soussi",  ref1=references[["DM1"]], status="dead", ref2=references[["WP1"]],  ref3=references[["FT1"]])
-
+AbdoullahC        = createNode(kblDB, "Person", name="Abdoullah C", age=30, gender="Male", ref1=references[["NYT7"]], status="arrested")
 AhmetDahmani = createNode(kblDB, "Person", name="Ahmet Dahmani", age=26, gender="Male", role="Scout", ref1=references[["CNN2"]], status="arrested")
 AhmetTahir = createNode(kblDB, "Person", name="Ahmet Tahir", age=29, gender="Male", ref1=references[["CNN2"]], status="arrested")
 
@@ -160,8 +163,14 @@ PierreN = createNode(kblDB, "Person", age=28, name="Pierre N", gender="Male", re
 #suspects in Austria posing as refugees
 #http://www.wsj.com/articles/austrian-police-arrest-two-men-in-connection-with-paris-terror-attacks-1450275648
 
-#more suspects in Molenbeek
-#http://news.yahoo.com/brussels-police-raid-home-arrest-paris-attacks-probe-200959907.html
+#Nov 18 attack in Sarajevo
+#http://www.timesofisrael.com/probable-islamist-kills-two-bosnian-soldiers-in-suicide-attack/
+#http://www.huffingtonpost.com/matt-olchawa/from-brussels-to-sarajevo_b_8640296.html
+#https://www.rt.com/news/326825-bosnia-isis-raid-arrests/
+#34-year-old man reported to be a member of an Islamist group,
+
+#Arrests in Orleans, possibly linked to KBL
+#http://www.cnn.com/2015/12/22/europe/france-terror-arrests/
 
 ###################
 # PAST PLOTS BY KBL
@@ -180,7 +189,7 @@ YounesAbaaoud     = createNode(kblDB, "Person", name="Younes Abaaoud",      age=
 YassineAbaaoud     = createNode(kblDB, "Person", name="Yassine Abaaoud",        gender="Male", ref1=references[["WSJ3"]], status="wanted")
 
 #father: OmarAbaaoud, http://www.theatlantic.com/international/archive/2015/11/who-was-abdelhamid-abaaoud-isis-paris/416739/
-AugUnknown = createNode(kblDB, "Person", name="August Spanish Recruit",   gender="Male", ref1=references[["NYT4"]], ref2=references[["LP2"]], status="arrested")
+AugUnknown = createNode(kblDB, "Person", name="August Recruit",   gender="Male", note="traveled with RedaHame in connection to the concert plot",  ref1=references[["NYT4"]], ref2=references[["LP2"]], status="arrested")
 RedaHame   = createNode(kblDB, "Person", name="Reda Hame", gender="Male", ref1=references[["NYT4"]], ref2=references[["LP2"]], status="arrested")
 
 #plots in Belgium
@@ -255,13 +264,13 @@ StDenis       = createNode(kblDB, "Site", name="St.Denis", location="8 rue du Ca
 #wishlist: second location in St.Denis
 
 #attack sites.  for casualties see WP2
-Arrondisement18  = createNode(kblDB, "AttackSite", name="Unknown in Arrondisement 18", killed=0, wounded=0, outcome="aborted")
+Arrondisement18  = createNode(kblDB, "AttackSite", name="Aborted Arrond. 18", killed=0, wounded=0, outcome="aborted")
 Bataclan         = createNode(kblDB, "AttackSite", name="Bataclan", killed=89, wounded=200)
 ComptoirVoltaire = createNode(kblDB, "AttackSite", name="Comptoir Voltaire", killed=0, wounded=3, ref1=references[["DM1"]])
 LaBonneBiere     = createNode(kblDB, "AttackSite", name="La Bonne Biere", killed=0, wounded=0)
 LaBelleEquipe    = createNode(kblDB, "AttackSite", name="La Belle Equipe", killed=19, wounded=9)
 LaCasaNostra     = createNode(kblDB, "AttackSite", name="La Casa Nostra", killed=5, wounded=8)
-LaDefense        = createNode(kblDB, "AttackSite", name="Unknown in La Defense", outcome="aborted", ref=references[["ABC1"]])
+LaDefense        = createNode(kblDB, "AttackSite", name="Aborted La Defense", outcome="aborted", ref1=references[["ABC1"]])
 LeCarillonBarAndLePetitCambodge    = createNode(kblDB, "AttackSite", name="Le Carillon Bar and Le Petit Cambodge", killed=15, injured=10)
 StadeDeFrance    = createNode(kblDB, "AttackSite", name="Stade de France", killed=1, wounded=0)
 
@@ -280,6 +289,8 @@ createRel(MohammedAlmahmod,   "BEEN_IN", Syria, ref1=references[["IND1"]])
 createRel(AhmetDahmani,     "BEEN_IN", Syria, ref1=references[["CNN2"]])
 createRel(MohammedVerd,     "BEEN_IN", Syria, ref1=references[["CNN2"]])
 createRel(AhmetTahir,       "BEEN_IN", Syria, ref1=references[["CNN2"]])
+createRel(AugUnknown, "BEEN_IN", Syria, ref1=references[["NYT4"]])
+createRel(RedaHame,   "BEEN_IN", Syria, ref1=references[["NYT4"]])
 
 #Known Turkey connections
 createRel(OmarMostefai,       "BEEN_IN", Turkey, date="2010", ref1=references[["DM1"]])
@@ -296,14 +307,16 @@ createRel(MohammedAlmahmod,     "BEEN_IN", Greece, ref1=references[["IND1"]])
 #createRel(AhmetDahmani,     "BEEN_IN", France, ref1=references[["CNN2"]])
 
 #known Molenbeek
-createRel(AbdelhamidAbaaoud,  "BEEN_IN", Molenbeek, ref1=references[["DM1"]])
-createRel(IbrahimAbdeslam,    "BEEN_IN", Molenbeek, ref1=references[["NBC2"]])
-createRel(SamirZ,    "BEEN_IN", Molenbeek, ref1=references[["ST1"]])
-createRel(PierreN,    "BEEN_IN", Molenbeek, ref1=references[["ST1"]])
+createRel(AbdelhamidAbaaoud,  "PRESENT_IN", Molenbeek, ref1=references[["DM1"]])
+createRel(IbrahimAbdeslam,    "PRESENT_IN", Molenbeek, ref1=references[["NBC2"]])
+createRel(AbdoullahC,         "PRESENT_IN", Molenbeek, ref1=references[["NYT7"]])
+createRel(SamirZ,             "PRESENT_IN", Molenbeek, ref1=references[["ST1"]])
+createRel(PierreN,            "PRESENT_IN", Molenbeek, ref1=references[["ST1"]])
+createRel(SalahAbdeslam,      "PRESENT_IN", Molenbeek, ref1=references[["NBC2"]])
+
 createRel(BilalHadfi,         "BEEN_IN", Syria, ref1=references[["DM1"]])
 createRel(OmarMostefai,       "BEEN_IN", Turkey, date="2010", ref1=references[["DM1"]])
 createRel(OmarMostefai,       "BEEN_IN", Syria, date="2013", ref1=references[["DM1"]])
-createRel(SalahAbdeslam,      "BEEN_IN", Molenbeek, ref1=references[["NBC2"]])
 
 #Auvelias - planning site
 #rented by SamirBouzid, but according to some sources, it was SoufianeKayal http://en.europeonline-magazine.eu/belgium-searching-for-two-new-suspects-linked-to-paris-attacks_427737.html
@@ -361,13 +374,14 @@ createRel(SalahAbdeslam,     "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=
 createRel(MohamedAmimour,    "LINKED_TO", SamyAmimour, note="father_of", ref1=references[["DM1"]])
 createRel(HasnaAitboulahcen, "LINKED_TO", AbdelhamidAbaaoud, note="cousin", ref1=references[["IBT2"]])
 createRel(SalahAbdeslam,     "LINKED_TO", AbdelhamidAbaaoud, note="friends", ref1=references[["CNN1"]])
+createRel(IbrahimAbdeslam,     "LINKED_TO", AbdelhamidAbaaoud, note="friends", ref1=references[["NYT5"]])
 
 #AbdelhamidAbaaoud family
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", YounesAbaaoud,    note="brother, recruited", ref1=references[["GRD1"]])
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", YassineAbaaoud,    note="brother, recruited", ref1=references[["GRD1"]])
 createRel(RedaHame,           "LINKED_TO", YassineAbaaoud,    note="recruited", ref1=references[["GRD1"]])
 
-createRel(AhmedAlmuhamed, "LINKED_TO", MohammedAlmahmod, note="traveled together or may be related",  ref=references[["IND1"]])
+createRel(AhmedAlmuhamed, "LINKED_TO", MohammedAlmahmod, note="traveled together or may be related",  ref1=references[["IND1"]])
 
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", OmarMostefai, note="uncharacterized", ref1=references[["NYT2"]])
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", BilalHadfi, note="led in Syria", ref1=references[["NYT2"]])
@@ -444,6 +458,7 @@ createRel(AbdelhamidAbaaoud, "INVOLVED_IN", MissionInHungary, ref1=references[["
 
 #StDenis safe house.  apparently pre-existing ties, rather than a joint mission
 createRel(SamirBouzid,       "LINKED_TO", HasnaAitboulahcen,   note="transfer money after the attack", ref1=references[["TL1"]])
+createRel(AbdoullahC,        "LINKED_TO", HasnaAitboulahcen,   note="unclear role", ref1=references[["NYT7"]])
 createRel(HasnaAitboulahcen, "LINKED_TO", MohamedS, note="knew", ref1=references[["F24a"]])
 createRel(MohamedS,          "LINKED_TO", JawadBendaoud, note="knew", ref1=references[["F24a"]])
 
@@ -497,33 +512,33 @@ createRel(StDenisUnknown,    "ATTACKED", LaDefense, attack_type="Suicide", ref1=
 # createRel(MehdiNemmouche, "CITIZEN_OF", France, ref1=references[["NYT2"]])
 # createRel(AyoubElKhazzani, "CITIZEN_OF", Morocco, ref1=references[["NYT2"]])
 
-AugustConcert  = createNode(kblDB, "Activity", name="Aborted concert hall plot in August", ref1=references[["NYT4"]])
+AugustConcert  = createNode(kblDB, "AttackSite", name="Aborted concert hall plot in August", attack_type="Unknown", ref1=references[["NYT4"]])
 JewishMuseum = createNode(kblDB, "AttackSite", name="Jewish Museum of Belgium")
 BrusselsParisTrain = createNode(kblDB, "AttackSite", name="Brussels Paris Train attempt", killed=0, wounded=2)
 VerviersPlot = createNode(kblDB, "AttackSite", name="Police attack plot in Verviers", killed=0, wounded=0, ref1=references[["DM1"]], ref2=references[["GRD1"]])
 
 #AugustConcert
-createRel(AugUnknown, "INVOLVED_IN", AugustConcert, attack_type="Unknown", ref1=references[["NYT4"]])
-createRel(RedaHame,   "INVOLVED_IN", AugustConcert, attack_type="Unknown", ref1=references[["NYT4"]])
-createRel(AbdelhamidAbaaoud, "INVOLVED_IN", AugustConcert, note="directed", ref1=references[["NYT4"]])
+createRel(AugUnknown, "ATTACKED", AugustConcert, ref1=references[["NYT4"]])
+createRel(RedaHame,   "ATTACKED", AugustConcert, ref1=references[["NYT4"]])
+createRel(AbdelhamidAbaaoud, "ATTACKED", AugustConcert, ref1=references[["NYT4"]])
 
 #BrusselsParisTrain
 createRel(AyoubElKhazzani, "ATTACKED", BrusselsParisTrain, attack_type="Shooting", ref1=references[["NYT2"]])
-createRel(AyoubElKhazzani, "BEEN_IN", Molenbeek, ref1=references[["NYT1"]])
 createRel(AyoubElKhazzani, "LINKED_TO", AbdelhamidAbaaoud, ref1=references[["NYT4"]])
+createRel(AyoubElKhazzani, "PRESENT_IN", Molenbeek, ref1=references[["NYT1"]])
 
 #VerviersPlot
 createRel(RedouaneHagaoui,  "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
 createRel(TarikJadaoun,     "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
 createRel(AbdelhamidAbaaoud,  "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
 
-createRel(RedouaneHagaoui,  "BEEN_IN", Molenbeek, ref1=references[["NYT3"]])
-createRel(TarikJadaoun,     "BEEN_IN", Molenbeek, ref1=references[["NYT3"]])
+createRel(RedouaneHagaoui,  "PRESENT_IN", Molenbeek, ref1=references[["NYT3"]])
+createRel(TarikJadaoun,     "PRESENT_IN", Molenbeek, ref1=references[["NYT3"]])
 
 #Brussels Jewish Museum
 createRel(MehdiNemmouche, "ATTACKED", JewishMuseum, attack_type="Shooting", ref1=references[["NYT2"]])
 createRel(MehdiNemmouche, "LINKED_TO", AbdelhamidAbaaoud, note="liaised", ref1=references[["NYT2"]])
-createRel(MehdiNemmouche, "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
+createRel(MehdiNemmouche, "PRESENT_IN", Molenbeek, ref1=references[["NYT2"]])
 
 
 " He said that Abaaoud worked in Isis’s internal security unit, known as EMNI, which has the task of sending European jihadis back to their homelands to carry out terrorist attacks. The unit is run by two Tunisians, he said.
@@ -589,6 +604,10 @@ write.csv(attackersAndSites, file="~/nov13/nov13_attackersAndSites.csv" )
 ####################################################################################################
 #Terror network of people is constructed using relationships to attackers or suspects, as follows
 ####################################################################################################
+query = 'MATCH n-[r]->m where NOT (n:Locality) AND NOT (n:Country) AND NOT (m:Locality) AND NOT (m:Country) RETURN n.name,labels(n),type(r),m.name,labels(m) '
+minimalNetwork = cypher(kblDB, query)
+write.csv(minimalNetwork, file="~/nov13/nov13_minimalNetwork.csv", row.names=F, sep=',')
+
 
 query = '  
 MATCH (attacker1:Person)-[:ATTACKED]->(l:AttackSite)<-[:ATTACKED]-(attacker2:Person)
@@ -639,7 +658,7 @@ sharedSiteWithSuspect = cypher(kblDB, query)
 sharedSiteWithSuspect = unique(sharedSiteWithSuspect)
 
 query = '  
-MATCH (p1:Person)-[:BEEN_IN]->(l:Locality)<-[:BEEN_IN]-(p2:Person)
+MATCH (p1:Person)-[:PRESENT_IN]->(l:Locality)<-[:PRESENT_IN]-(p2:Person)
 WHERE (p1.status <> "free") AND (p2.status <> "free")
 RETURN p1.name, p2.name'
 sharedLocalityWithSuspect = cypher(kblDB, query)
@@ -677,3 +696,12 @@ print(terrorNetworkLimitedUndirected)
 write.csv(terrorNetworkLimitedUndirected, file="~/nov13/nov13_terrorNetworkLimited.csv", row.names=F)
 
 #browse(kblDB)
+
+#querying the DB
+#===============
+#MATCH (n) RETURN n
+#MATCH n,s WHERE (n)-[:ATTACKED]->(s) RETURN n,s
+#MATCH n WHERE NOT (n:Locality) AND NOT (n:Country) RETURN n
+
+#extract all the data necessary for minimal network
+#MATCH n-[r]->m where NOT (n:Locality) AND NOT (n:Country) AND NOT (m:Locality) AND NOT (m:Country) RETURN n.name,labels(n),type(r),m.name,labels(m)

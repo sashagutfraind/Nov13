@@ -40,7 +40,7 @@ degrees <- degree(TN, mode="out")
 degrees <- sort(degrees)
 barchart(degrees, col="blue")
 quartz.save(paste0("~/nov13/TN_degrees.png"), dpi=300)
-
+#wishlist: improved figure
 
 query = '  
 MATCH (p:Person)
