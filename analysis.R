@@ -42,6 +42,13 @@ barchart(degrees, col="blue")
 quartz.save(paste0("~/nov13/TN_degrees.png"), dpi=300)
 #wishlist: improved figure
 
+betweennessTN <- betweenness(TN, directed=FALSE, normalized=T)
+betweennessTN <- sort(betweennessTN)
+barchart(betweennessTN, col="blue")
+quartz.save(paste0("~/nov13/TN_betweenness.png"), dpi=300)
+#wishlist: improved figure
+
+
 query = '  
 MATCH (p:Person)
 WHERE p.name IN {terrorMembers}
