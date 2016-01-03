@@ -7,17 +7,7 @@ createRel(MohammedMerah, "ATTACKED", ToulouseAndMontauban, attack_type="Shooting
 
 
 #motivated by Al-Q not DAESH
-FontenayAuxRoses = createNode(otherNetwork, "AttackSite", name="FontenayAuxRoses Shooting")
-HyperCacher = createNode(otherNetwork, "AttackSite", name="HyperCacher Shooting")
-Montrouge = createNode(otherNetwork, "AttackSite", name="Montrouge Shooting")
 CharlieHebdo = createNode(otherNetwork, "AttackSite", name="Charlie Hebdo", killed=12, wounded=11)
-
-#HyperCacher and related shootings
-AmedyCoulibaly     = createNode(otherNetwork, "Person", name="Amedy Coulibaly",  gender="Male", nickname="Abou Bassir Abdallah al-Ifriqi", ref1=references[["NYT2"]], status="dead")
-createRel(AmedyCoulibaly,  "ATTACKED", FontenayAuxRoses, ref1=references[["TODO"]])
-createRel(AmedyCoulibaly,  "ATTACKED", Montrouge, ref1=references[["TODO"]])
-createRel(AmedyCoulibaly,  "ATTACKED", HyperCacher, ref1=references[["TODO"]])
-createRel(AmedyCoulibaly,  "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
 
 #CharlieHebdo -  al-Qaeda in the Arabian Peninsula not DAESH
 ChérifKouachi   = createNode(otherNetwork, "Person", name="Chérif Kouachi",  gender="Male", status="dead")
@@ -25,9 +15,12 @@ SaïdKouachi     = createNode(otherNetwork, "Person", name="Saïd Kouachi",  gen
 #Djamel Begha - coordinator
 #18-year-old brother-in-law of Chérif Kouachi
 
-createRel(ChérifKouachi, "ATTACKED", CharlieHebdo, attack_type="Shooting", ref1=references[["TODO"]])
-createRel(SaïdKouachi, "ATTACKED", CharlieHebdo, attack_type="Shooting", ref1=references[["TODO"]])
+createRel(ChérifKouachi, "ATTACKED", CharlieHebdo, attack_type="Shooting", ref1=references[["TEL5"]])
+createRel(SaïdKouachi, "ATTACKED", CharlieHebdo, attack_type="Shooting", ref1=references[["TEL5"]])
+createRel(ChérifKouachi, "LINKED_TO", SaïdKouachi, note="brother", ref1=references[["TEL5"]])
 
+createRel(ChérifKouachi, "BEEN_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
+createRel(SaïdKouachi, "BEEN_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
 
 
 
