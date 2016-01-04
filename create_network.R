@@ -816,6 +816,13 @@ names(preNov13agents)<-c("name")
 write.csv(preNov13agents, file="~/nov13/preNov13agents.csv", row.names=F)
 
 
+query = '  
+MATCH (n:Person) RETURN n.name'
+allPersons = cypher(kblDB, query)
+names(allPersons)<-c("name")
+write.csv(allPersons, file="~/nov13/allPersons.csv", row.names=F)
+
+
 #browse(kblDB)
 
 #querying the DB
