@@ -17,9 +17,11 @@ netStatsE = cypher(kblDB, query)
 print(netStatsE)
 
 terrorNetworkUndirected <- read.csv("~/nov13/nov13_terrorNetwork.csv")
-TN <- graph_from_edgelist(as.matrix(terrorNetworkUndirected))
-TN <- as.undirected(TN, mode="collapse")
-terrorMembers <- unique(c(terrorNetworkUndirected[["n1"]], terrorNetworkUndirected[["n2"]]))  #for safety
+TN <- graph_from_edgelist(as.matrix(terrorNetworkUndirected), directed=F)
+TN <- TN + read.csv("~/nov13/allPersons.csv")$name
+TN <- simplify(TN)
+TN <- read_graph("~/nov13/ise_terrorNetwork.gml", format="gml")
+terrorMembers <- get.vertex.attribute(TN, "name")
 
 print(summary(TN))
 

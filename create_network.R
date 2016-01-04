@@ -817,11 +817,26 @@ write.csv(preNov13agents, file="~/nov13/preNov13agents.csv", row.names=F)
 
 
 query = '  
-MATCH (n:Person) RETURN n.name'
+MATCH (n:Person) RETURN n.name, n.age, n.gender, n.citizenship, n.status'
 allPersons = cypher(kblDB, query)
-names(allPersons)<-c("name")
+names(allPersons)<-c("name", "ageIn2015", "gender", "citizenship", "status")
 write.csv(allPersons, file="~/nov13/allPersons.csv", row.names=F)
 
+
+require(igraph)
+write_gml <- function(Vs, Es, fpath) {
+  stopifnot("name" %in% names(Vs))
+  stopifnot(names(Es)==c("n1", "n2"))
+  isols <- setdiff(setdiff(Vs$name, Es$n1), Es$n2)
+  G <- make_graph(edges=as.vector(t(Es)), directed=F, isolates=isols)
+  G <- simplify(G)
+  #wishlist: set other attribs
+  write_graph(G, file=fpath, format="gml")
+}
+
+write_gml(Vs=allPersons, Es=terrorNetworkUndirected,         fpath="~/nov13/ise_terrorNetwork.gml")
+write_gml(Vs=allPersons, Es=terrorNetworkLimitedUndirected,  fpath="~/nov13/ise_terrorNetworkLimited.gml")
+write_gml(Vs=allPersons, Es=terrorNetworkExtendedUndirected, fpath="~/nov13/ise_terrorNetworkExtended.gml")
 
 #browse(kblDB)
 
