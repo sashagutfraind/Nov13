@@ -789,7 +789,7 @@ names(sharedSpaceWithAttacker) <- c("n1", "n2")
 names(sharedSiteWithSuspect) <- c("n1", "n2")
 names(sharedLocalityWithSuspect) <- c("n1", "n2")
 
-terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSpaceWithAttacker, sharedSiteWithSuspect)
+terrorNetwork <-                   rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSpaceWithAttacker, sharedSiteWithSuspect)
 terrorNetworkUndirected <- rbind(terrorNetwork, data.frame(n1=terrorNetwork[["n2"]], n2=terrorNetwork[["n1"]])) 
 terrorNetworkUndirected <- unique(terrorNetworkUndirected)
 print(terrorNetworkUndirected) 
@@ -818,7 +818,7 @@ write.csv(preNov13agents, file="~/nov13/preNov13agents.csv", row.names=F)
 
 query = '  
 MATCH (n:Person) RETURN n.name, n.age, n.gender, n.citizenship, n.status'
-allPersons = cypher(kblDB, query)
+allPersons = data.table(cypher(kblDB, query))
 names(allPersons)<-c("name", "ageIn2015", "gender", "citizenship", "status")
 write.csv(allPersons, file="~/nov13/allPersons.csv", row.names=F)
 
@@ -832,11 +832,13 @@ write_gml <- function(Vs, Es, fpath) {
   G <- simplify(G)
   #wishlist: set other attribs
   write_graph(G, file=fpath, format="gml")
+  return(G)
 }
 
-write_gml(Vs=allPersons, Es=terrorNetworkUndirected,         fpath="~/nov13/ise_terrorNetwork.gml")
-write_gml(Vs=allPersons, Es=terrorNetworkLimitedUndirected,  fpath="~/nov13/ise_terrorNetworkLimited.gml")
-write_gml(Vs=allPersons, Es=terrorNetworkExtendedUndirected, fpath="~/nov13/ise_terrorNetworkExtended.gml")
+terrorPersons <- allPersons[status!="free"]
+TN <- write_gml(Vs=terrorPersons, Es=terrorNetworkUndirected,   fpath="~/nov13/ise_terrorNetwork.gml")
+write_gml(Vs=terrorPersons, Es=terrorNetworkLimitedUndirected,  fpath="~/nov13/ise_terrorNetworkLimited.gml")
+write_gml(Vs=terrorPersons, Es=terrorNetworkExtendedUndirected, fpath="~/nov13/ise_terrorNetworkExtended.gml")
 
 #browse(kblDB)
 
