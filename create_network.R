@@ -30,7 +30,11 @@ library(RNeo4j)
 
 #name of the database
 kblDB = startGraph("http://localhost:7474/db/data/", username="neo4j", password="1")  
-clear(kblDB, input=FALSE)  #wishlist: better called KBL
+clear(kblDB, input=FALSE)  
+
+#test code
+#t1 = createNode(kblDB, "testType", name="t1", dt=2015.1113, v1=2)
+#t2 = createNode(kblDB, "testType", name="t2", dt=2015.1113)
 
 references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html"
                   ,WSJ1="http://www.wsj.com/articles/attacker-tried-to-enter-paris-stadium-but-was-turned-away-1447520571"
@@ -108,6 +112,8 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,DM5="http://www.dailymail.co.uk/news/article-3392048/Casual-evil-Paris-killers-Chilling-new-film-mastermind-strolling-Bataclan-bloody-massacre-accomplice-saunters-cafe-seconds-detonating-suicide-vest.html"
                   ,LMD4="http://www.lemonde.fr/attaques-a-paris/article/2016/01/06/est-ce-que-tu-serais-pre-t-a-tirer-dans-la-foule_4842273_4809495.html"
                   ,IJR1="https://www.ijreview.com/2016/01/511381-second-deputy-to-isis-leader-abu-bakr-al-baghdadi-killed-in-iraqi-airstrike/"
+                  ,NYT9="http://www.nytimes.com/2016/01/12/world/europe/top-suspect-in-paris-attacks-had-traveled-to-britain-officials-say.html?_r=0"
+                  ,NYT10="http://www.nytimes.com/2016/01/14/world/europe/belgium-paris-attacks-safe-houses.html?_r=0"
                   )
 
 AbdeilahChouaa = createNode(kblDB, "Person", name="Abdeilah Chouaa", gender="Male", citizenship="Belgian-Moroccan",  status="arrested", ref1=references[["ST1"]])
@@ -318,14 +324,16 @@ Greece  = createNode(kblDB, "Country", name="Greece")
 Morocco = createNode(kblDB, "Country", name="Morocco")
 Syria = createNode(kblDB, "Country", name="Syria")
 Turkey = createNode(kblDB, "Country", name="Turkey")
+UK = createNode(kblDB, "Country", name="United Kingdon")
 
 #foci
 BazaroujFamily  = createNode(kblDB, "Focus", name="Bazarouj family")
 
 #localities / sites
-Alfortsville  = createNode(kblDB, "Site", name="Alfortsville apartment")
-Auvelais      = createNode(kblDB, "Site", name="Auvelias", role="suspected planning site and bomb making")
+AlfortsvilleApt  = createNode(kblDB, "Site", name="Alfortsville apartment")
+AuvelaisHouse = createNode(kblDB, "Site", name="Auvelias", note="rented in October", role="suspected planning site and bomb making")
 Bobigny       = createNode(kblDB, "Site", name="Bobigny apartment")
+CharleroiApt  = createNode(kblDB, "Site", name="Charleroi apartment", note="Rue du Fort. Rented in September", ref1=references[["NYT10"]])
 Molenbeek     = createNode(kblDB, "Locality", name="Molenbeek", location="various")
 NederOverHeembeek   = createNode(kblDB, "Locality", name="Neder-over-Heembeek", location="various")
 StDenis       = createNode(kblDB, "Site", name="St.Denis", address="8 rue du Carillon and rue Carnot", ref1=references[["NBC1"]])
@@ -333,7 +341,7 @@ SchaerbeekApt = createNode(kblDB, "Site", name="Schaerbeek bomb factory", addres
 #wishlist: second location in St.Denis
 
 #attack sites.  dates are approximate, if the attack was interdicted.
-#TODO: data is not recorded correctly in the DB
+#TODO: date is not recorded correctly in the DB
 #but this records it correctly: Arrondisement18  = createNode(kblDB, "AttackSite", attackDate=2015.1113, name="Aborted Arrond. 18", outcome="aborted") #killed=0, wounded=0
 Arrondisement18  = createNode(kblDB, "AttackSite", attackDate=2015.1113, name="Aborted Arrond. 18", outcome="aborted", killed=0, wounded=0)
 
@@ -373,6 +381,10 @@ createRel(MohammedVerd,     "BEEN_IN", Turkey, ref1=references[["CNN2"]])
 createRel(AhmetDahmani,     "BEEN_IN", Turkey, ref1=references[["CNN2"]])
 createRel(AhmetTahir,       "BEEN_IN", Turkey, ref1=references[["CNN2"]])
 
+#UK travel
+createRel(MohamedAbrini,       "BEEN_IN", UK, date=2015.07,  ref1=references[["NYT9"]])
+createRel(AbdelhamidAbaaoud,   "BEEN_IN", UK, date="unknown", ref1=references[["NYT9"]])
+
 #TODO: standardize date field
 
 #Greece transits
@@ -397,10 +409,13 @@ createRel(YoussefBazarouj,    "BEEN_IN", Molenbeek, ref1=references[["SOI1"]])
 
 
 #Auvelias - planning site
-#rented by SamirBouzid, but according to some sources, it was SoufianeKayal http://en.europeonline-magazine.eu/belgium-searching-for-two-new-suspects-linked-to-paris-attacks_427737.html
-createRel(SamirBouzid,     "PRESENT_IN", Auvelais,   note="suspected hideout", ref1=references[["TL1"]])
-createRel(MohamedBakkali,  "PRESENT_IN", Auvelais, ref1=references[["ST1"]])
-createRel(SoufianeKayal,   "PRESENT_IN", Auvelais, ref1=references[["DM3"]])
+createRel(MohamedBakkali,  "PRESENT_IN", AuvelaisHouse, ref1=references[["ST1"]], ref2=references[["NTY10"]])
+createRel(SoufianeKayal,   "PRESENT_IN", AuvelaisHouse, ref1=references[["DM3"]])
+
+#Charleroi: hideout?
+createRel(AbdelhamidAbaaoud,   "PRESENT_IN", CharleroiApt, ref1=references[["NYT10"]])
+createRel(BilalHadfi,   "PRESENT_IN", CharleroiApt, ref1=references[["NYT10"]])
+
 
 createRel(SalahAbdeslam,  "BEEN_IN", Morocco, ref1=references[["DM3"]])
 createRel(SalahAbdeslam,  "PRESENT_IN", SchaerbeekApt, date=2015.1314, ref1=references[["DM5"]])
@@ -413,7 +428,7 @@ createRel(StDenisUnknown,     "PRESENT_IN", StDenis, ref1=references[["CNN3"]])
 createRel(JawadBendaoud,      "PRESENT_IN", StDenis, ref1=references[["LOB1"]])
 
 #staging for attack
-createRel(SalahAbdeslam, "PRESENT_IN", Alfortsville, ref1=references[["DM1"]])
+createRel(SalahAbdeslam, "PRESENT_IN", AlfortsvilleApt, ref1=references[["DM1"]])
 #TODO: others were there too.  LM
 createRel(IbrahimAbdeslam, "PRESENT_IN", Bobigny, ref1=references[["DM1"]])
 createRel(SalahAbdeslam, "PRESENT_IN", Bobigny, ref1=references[["DM1"]])
