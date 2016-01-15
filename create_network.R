@@ -409,7 +409,7 @@ createRel(YoussefBazarouj,    "BEEN_IN", Molenbeek, ref1=references[["SOI1"]])
 
 
 #Auvelias - planning site
-createRel(MohamedBakkali,  "PRESENT_IN", AuvelaisHouse, ref1=references[["ST1"]], ref2=references[["NTY10"]])
+createRel(MohamedBakkali,  "PRESENT_IN", AuvelaisHouse, ref1=references[["ST1"]], ref2=references[["NYT10"]])
 createRel(SoufianeKayal,   "PRESENT_IN", AuvelaisHouse, ref1=references[["DM3"]])
 
 #Charleroi: hideout?
@@ -854,6 +854,7 @@ names(preNov13agents)<-c("name")
 write.csv(preNov13agents, file="~/nov13/preNov13agents.csv", row.names=F)
 
 
+require(data.table)
 query = '  
 MATCH (n:Person) RETURN n.name, n.age, n.gender, n.citizenship, n.status'
 allPersons = data.table(cypher(kblDB, query))
