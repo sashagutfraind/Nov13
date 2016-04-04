@@ -47,8 +47,10 @@
 "Unknown Brussels Metro Attacker",NA,"Male",NA,"wanted"
 "Unknown Brussels Airport Attacker - Man in White",NA,"Male",NA,"wanted"
 "Reda Kriket",NA,"Male",NA,"arrested"
-"Rabah N",NA,"Male",NA,"arrested"
-"Yassine A",33,"Male",NA,NA
+"Yassine A",33,"Male","Belgium",NA
+"Rabah N",34,"Male","Algiers","arrested"
+"Abderamane Ameroud",38,"Male","Algiers","arrested"
+"Anis Bahri",32,"Male","France","arrested"
 "Aboubaker A",NA,"Male",NA,"arrested"
 "Dusseldorf Suspect",28,"Male","Germany","arrested"
 "Giessen Suspect",28,"Male","Morocco","arrested"
@@ -56,7 +58,6 @@
 "Yoni Patric Mayne",NA,"Male","Belgium","wanted"
 "Djamal Eddine Ouali",40,"Male","Algiers","arrested"
 "Nicholas Moreau",NA,NA,NA,"arrested"
-"Anis B in Rotterdam",32,"Male","France","arrested"
 "Samir Z",20,"Male","France","arrested"
 "Pierre N",28,"Male","Belgium","arrested"
 "Charaffe al Mouadan",27,"Male",NA,"dead"
