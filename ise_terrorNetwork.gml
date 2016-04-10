@@ -1,4 +1,4 @@
-Creator "igraph version @VERSION@ Mon Apr  4 20:26:24 2016"
+Creator "igraph version @VERSION@ Sat Apr  9 14:56:33 2016"
 Version 1
 graph
 [
@@ -61,7 +61,7 @@ graph
   node
   [
     id 11
-    name "Unknown Brussels Airport Attacker - Man in White"
+    name "Mohamed Abrini"
   ]
   node
   [
@@ -76,7 +76,7 @@ graph
   node
   [
     id 14
-    name "Unknown Brussels Metro Attacker"
+    name "Osama Krayem"
   ]
   node
   [
@@ -196,147 +196,147 @@ graph
   node
   [
     id 38
-    name "Naim al-Hamed"
-  ]
-  node
-  [
-    id 39
     name "Dusseldorf Suspect"
   ]
   node
   [
-    id 40
-    name "Mohamed Abrini"
-  ]
-  node
-  [
-    id 41
+    id 39
     name "Younes Abaaoud"
   ]
   node
   [
-    id 42
+    id 40
     name "Yassine Abaaoud"
   ]
   node
   [
-    id 43
+    id 41
     name "Mohamed Belkaid"
   ]
   node
   [
-    id 44
-    name "Abdoullah C"
+    id 42
+    name "Abdoullah Courkzine"
   ]
   node
   [
-    id 45
+    id 43
     name "Sami Zarrouk"
   ]
   node
   [
-    id 46
+    id 44
     name "Unknown accomplice of Salah Abdeslam"
   ]
   node
   [
-    id 47
+    id 45
     name "Hamza Attou"
   ]
   node
   [
-    id 48
+    id 46
     name "Mohamed Amri"
   ]
   node
   [
-    id 49
+    id 47
     name "Boubaker al-Hakim"
   ]
   node
   [
-    id 50
+    id 48
     name "Abu Muhammad al-Shimali"
   ]
   node
   [
-    id 51
+    id 49
     name "Abu Muhammad al-Adnani"
   ]
   node
   [
-    id 52
+    id 50
     name "Fabian Clain"
   ]
   node
   [
-    id 53
+    id 51
     name "Mohamed Khoualed"
   ]
   node
   [
-    id 54
+    id 52
     name "Salah Ali Oulkadi"
   ]
   node
   [
-    id 55
+    id 53
     name "Abraimi Lazez"
   ]
   node
   [
-    id 56
+    id 54
     name "Ahmet Tahir"
   ]
   node
   [
-    id 57
+    id 55
     name "Mohammed Verd"
   ]
   node
   [
-    id 58
+    id 56
+    name "Arrested with Abrini"
+  ]
+  node
+  [
+    id 57
     name "Mohamed Bakkali"
   ]
   node
   [
-    id 59
+    id 58
     name "Jawad Bendaoud"
   ]
   node
   [
-    id 60
+    id 59
     name "Ayoub Bazarouj"
   ]
   node
   [
-    id 61
+    id 60
     name "Youssef Bazarouj"
   ]
   node
   [
-    id 62
+    id 61
     name "MohamedS"
   ]
   node
   [
-    id 63
+    id 62
     name "August Recruit"
   ]
   node
   [
-    id 64
+    id 63
     name "Reda Hame"
   ]
   node
   [
-    id 65
+    id 64
     name "Aboubaker O"
   ]
   node
   [
-    id 66
+    id 65
     name "Mohamed B"
+  ]
+  node
+  [
+    id 66
+    name "Bilal El Makhoukhi"
   ]
   node
   [
@@ -415,7 +415,17 @@ graph
   ]
   edge
   [
+    source 11
+    target 3
+  ]
+  edge
+  [
     source 12
+    target 3
+  ]
+  edge
+  [
+    source 14
     target 3
   ]
   edge
@@ -440,17 +450,17 @@ graph
   ]
   edge
   [
-    source 38
+    source 41
     target 3
   ]
   edge
   [
-    source 40
+    source 44
     target 3
   ]
   edge
   [
-    source 43
+    source 45
     target 3
   ]
   edge
@@ -460,27 +470,17 @@ graph
   ]
   edge
   [
-    source 47
+    source 51
     target 3
   ]
   edge
   [
-    source 48
+    source 52
     target 3
   ]
   edge
   [
     source 53
-    target 3
-  ]
-  edge
-  [
-    source 54
-    target 3
-  ]
-  edge
-  [
-    source 55
     target 3
   ]
   edge
@@ -580,17 +580,27 @@ graph
   ]
   edge
   [
+    source 39
+    target 4
+  ]
+  edge
+  [
+    source 40
+    target 4
+  ]
+  edge
+  [
     source 41
     target 4
   ]
   edge
   [
-    source 42
+    source 47
     target 4
   ]
   edge
   [
-    source 43
+    source 48
     target 4
   ]
   edge
@@ -605,22 +615,12 @@ graph
   ]
   edge
   [
-    source 51
+    source 58
     target 4
   ]
   edge
   [
-    source 52
-    target 4
-  ]
-  edge
-  [
-    source 59
-    target 4
-  ]
-  edge
-  [
-    source 40
+    source 11
     target 5
   ]
   edge
@@ -635,7 +635,7 @@ graph
   ]
   edge
   [
-    source 59
+    source 58
     target 6
   ]
   edge
@@ -675,27 +675,27 @@ graph
   ]
   edge
   [
+    source 14
+    target 10
+  ]
+  edge
+  [
     source 24
     target 10
   ]
   edge
   [
-    source 38
+    source 41
     target 10
   ]
   edge
   [
-    source 43
+    source 44
     target 10
   ]
   edge
   [
-    source 46
-    target 10
-  ]
-  edge
-  [
-    source 58
+    source 57
     target 10
   ]
   edge
@@ -705,22 +705,47 @@ graph
   ]
   edge
   [
+    source 14
+    target 11
+  ]
+  edge
+  [
+    source 22
+    target 11
+  ]
+  edge
+  [
+    source 52
+    target 11
+  ]
+  edge
+  [
+    source 53
+    target 11
+  ]
+  edge
+  [
+    source 56
+    target 11
+  ]
+  edge
+  [
     source 13
     target 12
   ]
   edge
   [
-    source 39
+    source 38
     target 12
   ]
   edge
   [
-    source 43
+    source 41
     target 12
   ]
   edge
   [
-    source 46
+    source 44
     target 12
   ]
   edge
@@ -745,8 +770,13 @@ graph
   ]
   edge
   [
-    source 39
-    target 13
+    source 44
+    target 14
+  ]
+  edge
+  [
+    source 56
+    target 14
   ]
   edge
   [
@@ -815,33 +845,38 @@ graph
   ]
   edge
   [
-    source 40
+    source 52
+    target 22
+  ]
+  edge
+  [
+    source 53
     target 22
   ]
   edge
   [
     source 54
-    target 22
+    target 23
   ]
   edge
   [
     source 55
-    target 22
-  ]
-  edge
-  [
-    source 56
     target 23
   ]
   edge
   [
-    source 57
-    target 23
-  ]
-  edge
-  [
-    source 43
+    source 41
     target 24
+  ]
+  edge
+  [
+    source 47
+    target 27
+  ]
+  edge
+  [
+    source 48
+    target 27
   ]
   edge
   [
@@ -855,27 +890,17 @@ graph
   ]
   edge
   [
-    source 51
-    target 27
-  ]
-  edge
-  [
-    source 52
-    target 27
-  ]
-  edge
-  [
-    source 43
+    source 41
     target 34
   ]
   edge
   [
-    source 44
+    source 42
     target 34
   ]
   edge
   [
-    source 59
+    source 58
     target 34
   ]
   edge
@@ -885,43 +910,28 @@ graph
   ]
   edge
   [
-    source 45
+    source 43
     target 35
   ]
   edge
   [
-    source 41
+    source 39
     target 36
   ]
   edge
   [
-    source 40
-    target 38
+    source 44
+    target 41
+  ]
+  edge
+  [
+    source 57
+    target 44
   ]
   edge
   [
     source 46
-    target 38
-  ]
-  edge
-  [
-    source 54
-    target 40
-  ]
-  edge
-  [
-    source 55
-    target 40
-  ]
-  edge
-  [
-    source 46
-    target 43
-  ]
-  edge
-  [
-    source 58
-    target 46
+    target 45
   ]
   edge
   [
@@ -930,42 +940,37 @@ graph
   ]
   edge
   [
+    source 49
+    target 47
+  ]
+  edge
+  [
+    source 50
+    target 47
+  ]
+  edge
+  [
+    source 49
+    target 48
+  ]
+  edge
+  [
+    source 50
+    target 48
+  ]
+  edge
+  [
     source 50
     target 49
   ]
   edge
   [
-    source 51
-    target 49
-  ]
-  edge
-  [
-    source 52
-    target 49
-  ]
-  edge
-  [
-    source 51
-    target 50
-  ]
-  edge
-  [
-    source 52
-    target 50
-  ]
-  edge
-  [
-    source 52
-    target 51
+    source 53
+    target 52
   ]
   edge
   [
     source 55
     target 54
-  ]
-  edge
-  [
-    source 57
-    target 56
   ]
 ]
