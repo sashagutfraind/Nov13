@@ -34,10 +34,15 @@ AbderahmaneAmeroud  = createNode(kblDB, "Person", name="Abderahmane Ameroud", ag
 
 
 #"Cannes-Torcy" group - an earlier plot from 2012
-#CNN4
+#CNN4, NYT17
+#One of the first clues that the Islamic State was getting into the business of international terrorism came at 12:10 p.m. on Jan. 3, 2014, when the Greek police pulled over a taxi in the town of Orestiada, less than four miles from the Turkish border. Inside was a 23-year-old French citizen named Ibrahim Boudina, 
 #Ibrahim Boudina, a 23-year-old French national born in Algiers
 #...Boudina had set off for Syria in late September 2012 with a childhood friend -- 
 #http://www.nytimes.com/2016/03/29/world/europe/isis-attacks-paris-brussels.html?_r=0
+
+#NYT17
+#It was in the summer of 2014 that the link to the terrorist organization’s hierarchy became explicit.
+#On June 22 of that year, a 24-year-old French citizen named Faiz Bouchrane, who had trained in Syria, was smuggled into neighboring Lebanon. He was planning to blow himself up at a Shiite target, and during interrogation, he let slip the name of the man who had ordered him to carry out the operation: Abu Muhammad al-Adnani.
 
 #Abdelkader Tliba, a French-Tunisian 
 #Jeremie Louis-Sidney
@@ -269,4 +274,7 @@ Abaaoud is said to have told the young Frenchman that he had managed to find 25k
 #more details on Chakib Akrouh including shootings
 #http://www.lemonde.fr/police-justice/article/2016/01/14/le-kamikaze-qui-s-etait-fait-exploser-lors-de-l-assaut-policier-a-saint-denis-identifie_4847657_1653578.html
 
+#links to Mumbai attacks
+#http://www.timesofisrael.com/austria-probes-link-between-paris-mumbai-attacks/
+#The 34-year-old was arrested in Austria in December along with an Algerian.
 

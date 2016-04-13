@@ -155,11 +155,17 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,TOI1="http://www.timesofisrael.com/abrini-arrest-highlights-paris-brussels-attacks-links/"
                   ,UST1="http://www.usatoday.com/story/news/2016/04/09/belgian-raids-net-6th-terror-suspect/82829644/"
                   ,REU2="http://www.reuters.com/article/us-belgium-blast-abrini-idUSKCN0X60Q2"
+                  ,BBN1="http://www.bloomberg.com/news/articles/2016-04-08/terror-suspect-abrini-detained-may-be-airport-bomber-vrt-says"
+                  ,GRD4="http://www.theguardian.com/world/2016/apr/11/brussels-terror-cell-planned-to-attack-euro-2016-tournament"
+                  ,NYT17="http://www.nytimes.com/2016/03/29/world/europe/isis-attacks-paris-brussels.html?_r=0"
+                  ,EXP3="http://www.expatica.com/be/news/Belgium-charges-new-suspects-over-Brussels-attacks_644751.html"
+                  ,GRD5="http://www.theguardian.com/world/2016/apr/12/brussels-bombings-two-more-charged"
+                  ,DN1="http://www.dutchnews.nl/news/archives/2016/03/rotterdam-terror-suspect-has-links-to-paris-brussels-attacks-nos/"
                   )
 
 AbdeilahChouaa = createNode(kblDB, "Person", name="Abdeilah Chouaa", gender="Male", citizenship="Belgium",  status="arrested", ref1=references[["ST1"]])
-AbuMuhammadAlAdnani = createNode(kblDB, "Person", name="Abu Muhammad al-Adnani", age=38, gender="Male", status="wanted", ref1=references[["SC1"]])
-AbuMuhammadAlShimali = createNode(kblDB, "Person", name="Abu Muhammad al-Shimali", gender="Male", status="wanted", ref1=references[["GRD1"]])
+AbuMuhammadAlAdnani = createNode(kblDB, "Person", name="Abu Muhammad al-Adnani", age=38, gender="Male", citizenship="TODO", status="wanted", ref1=references[["SC1"]])
+AbuMuhammadAlShimali = createNode(kblDB, "Person", name="Abu Muhammad al-Shimali", gender="Male", citizenship="TODO", role="ISIS transportation", status="wanted", ref1=references[["GRD1"]])
 
 AbdelhamidAbaaoud = createNode(kblDB, "Person", name="Abdelhamid Abaaoud", age=27, gender="Male", citizenship="Belgium", alias="Abu Omar al-Belgiki and Abou Omar al-Soussi",  role="leadership", status="dead", ref1=references[["DM1"]], ref2=references[["WP1"]],  ref3=references[["FT1"]])
 AbdoullahCourkzine    = createNode(kblDB, "Person", name="Abdoullah Courkzine", age=30, gender="Male", citizenship="Belgium", ref1=references[["NYT7"]], status="arrested")
@@ -171,59 +177,62 @@ BoubakerAlHakim = createNode(kblDB, "Person", name="Boubaker al-Hakim", gender="
 
 AyoubBazarouj     = createNode(kblDB, "Person", name="Ayoub Bazarouj",    age=22, gender="Male", citizenship="Belgium", ref1=references[["SOI1"]], status="arrested")
 #recently released: http://www.irishtimes.com/news/world/europe/paris-attacks-suspect-released-from-custody-by-belgian-court-1.2506936
-AliOulkadi        = createNode(kblDB, "Person", name="Salah Ali Oulkadi",       age=29, gender="Male", ref1=references[["DM2"]], status="arrested")
+AliOulkadi        = createNode(kblDB, "Person", name="Salah Ali Oulkadi",       age=31, gender="Male", citizenship="France", ref1=references[["AFP1"]], status="arrested")
+AugUnknown = createNode(kblDB, "Person", preNov13=TRUE, name="August Recruit", gender="Male", citizenship="Belgium", note="traveled with RedaHame in connection to the concert plot",  ref1=references[["NYT4"]], ref2=references[["LP2"]], refr=references[["LMD5"]], status="arrested", dateOfArrest=2015.0615)
 BilalHadfi        = createNode(kblDB, "Person", name="Bilal Hadfi",        age=20, gender="Male", citizenship="France", ref1=references[["DM1"]], status="dead")
 ChakibAkrouh      = createNode(kblDB, "Person", name="Chakib Akrouh",   gender="Male", age=25, citizenship="Belgium", status="dead", ref1=references[["LMD5"]])
-
-FabianClain       = createNode(kblDB, "Person", name="Fabian Clain",      age=36, gender="Male", alias="Omar", ref1=references[["LIR1"]], status="wanted")
+FabianClain       = createNode(kblDB, "Person", name="Fabian Clain",      age=36, gender="Male", alias="Omar", citizenship="France", ref1=references[["LIR1"]], status="wanted")
 FouedMohamedAggad = createNode(kblDB, "Person", name="Foued Mohamed-Aggad",  age=23, gender="Male", ref1=references[["DM1"]], citizenship="Belgium", ref2=references[["GRD2"]], status="dead")
 GelelAttar        = createNode(kblDB, "Person", name="Gelel Attar", gender="Male", age=26, citizenship="Belgium", ref1=references[["LMD6"]], status="arrested")
-HamzaAttou        = createNode(kblDB, "Person", name="Hamza Attou",         age=21,  gender="Male", ref1=references[["IBT1"]], status="arrested")
-IbrahimAbdeslam   = createNode(kblDB, "Person", name="Ibrahim Abdeslam",    age=31, gender="Male", citizenship="France", alias="Brahim", ref1=references[["DM1"]], status="dead")  #TODO: check citizenship
-JawadBendaoud       = createNode(kblDB, "Person", name="Jawad Bendaoud",      age=27, gender="Male", ref1=references[["LOB1"]], ref2=references[["CNN3"]], status="arrested")
-KhalidAlZerkani  = createNode(kblDB, "Person", name="Khalid al Zerkani", nickanem="Papa Noel", role="leadership", preNov13=TRUE, role="recruiter", ref1=references[["CNN6"]], status="arrested")
+HamzaAttou        = createNode(kblDB, "Person", name="Hamza Attou",         age=21,  gender="Male", citizenship="Belgium", role="explosives", ref1=references[["IBT1"]], ref2=references[["B7S71"]], ref3=references[["BFM1"]], status="arrested")
+IbrahimAbdeslam   = createNode(kblDB, "Person", name="Ibrahim Abdeslam",    age=31, gender="Male", citizenship="France", note="citizenship inferred", alias="Brahim", ref1=references[["DM1"]], status="dead") 
+IbrahimFarisi     = createNode(kblDB, "Person", name="Ibrahim Farisi",  age=28, DOB=1988, gender="Male", citizenship="TODO", role="support", ref1=references[["EXP3"]], ref2=references[["GRD5"]], status="arrested")
+JawadBendaoud       = createNode(kblDB, "Person", name="Jawad Bendaoud",      age=27, gender="Male", citizenship="France", ref1=references[["LOB1"]], ref2=references[["CNN3"]], status="arrested")
+KhalidAlZerkani  = createNode(kblDB, "Person", name="Khalid al Zerkani", nickanem="Papa Noel", citizenship="Belgium", role="leadership", preNov13=TRUE, role="recruiter", note="citizenship inferred", ref1=references[["CNN6"]], status="arrested")  
 LazezAbraimi      = createNode(kblDB, "Person", name="Abraimi Lazez",    age=39, gender="Male", citizenship="Belgium", ref1=references[["NYT4"]], status="arrested")
-#MohammadAbdeslam  = createNode(kblDB, "Person", name="Mohammad Abdeslam",          gender="Male",  ref1=references[["DM1"]], status="free")
+#MohammadAbdeslam  = createNode(kblDB, "Person", name="Mohammad Abdeslam",          gender="Male",  citizenship="TODO", ref1=references[["DM1"]], status="free")
 MohamedAbrini     = createNode(kblDB, "Person", name="Mohamed Abrini",       age=31, gender="Male", citizenship="Belgium", ref1=references[["ABC1"]], ref2=references[["TOI1"]], status="arrested")
-MohamedAmimour    = createNode(kblDB, "Person", name="Mohamed Amimour",     age=67, gender="Male", ref1=references[["DM1"]], status="free")
-MohamedBakkali    = createNode(kblDB, "Person", name="Mohamed Bakkali",       gender="Male", ref1=references[["ST1"]], status="wanted")
+#MohamedAmimour    = createNode(kblDB, "Person", name="Mohamed Amimour",     age=67, gender="Male", ref1=references[["DM1"]], status="free")
+MohamedBakkali    = createNode(kblDB, "Person", name="Mohamed Bakkali",       gender="Male", citizenship="TODO", ref1=references[["ST1"]], status="wanted")
 MohamedAmri       = createNode(kblDB, "Person", name="Mohamed Amri",         age=27, gender="Male", citizenship="France", ref1=references[["DM1"]], status="arrested")
-MohamedKhoualed   = createNode(kblDB, "Person", name="Mohamed Khoualed",     age=19, gender="Male", ref1=references[["TEL1"]], status="arrested")
+MohamedKhoualed   = createNode(kblDB, "Person", name="Mohamed Khoualed",     age=19, gender="Male", citizenship="TODO", ref1=references[["TEL1"]], status="arrested") #TODO: broken ref
 MohammedVerd = createNode(kblDB, "Person", name="Mohammed Verd", age=23, gender="Male", citizenship="Syria", ref1=references[["CNN2"]], status="arrested")
-NoureddineAbraimi      = createNode(kblDB, "Person", name="Noureddine Abraimi", age=29, gender="Male", citizenship="Belgium", ref1=references[["WSJ5"]], status="wanted")
+NoureddineAbraimi      = createNode(kblDB, "Person", name="Noureddine Abraimi", age=29, gender="Male", citizenship="Belgium", role="logistics", ref1=references[["WSJ5"]], status="wanted")
 OmarMostefai      = createNode(kblDB, "Person", name="Omar Ismaïl Mostefaï", age=29, gender="Male", citizenship="France", ref1=references[["DM1"]], status="dead")
+RedaHame          = createNode(kblDB, "Person", preNov13=TRUE, name="Reda Hame", gender="Male", citizenship="France", age=30, ref1=references[["NYT4"]], ref2=references[["LP2"]], ref4=references[["LMD4"]], status="arrested")
 SalahAbdeslam     = createNode(kblDB, "Person", name="Salah Abdeslam",       age=26, gender="Male", citizenship="France", ref1=references[["DM1"]], status="arrested")
-SAbdeslamAccomplice     = createNode(kblDB, "Person", name="Unknown accomplice of Salah Abdeslam",  alias="Monir Ahmed Alaaj and Amine Choukri",  gender="Male", ref1=references[["NYT12"]], status="arrested")
+SAbdeslamAccomplice     = createNode(kblDB, "Person", name="Unknown accomplice of Salah Abdeslam",  alias="Monir Ahmed Alaaj and Amine Choukri",  gender="Male", citizenship="TODO", ref1=references[["NYT12"]], status="arrested")
+SnailFarisi     = createNode(kblDB, "Person", name="Snail Farisi",  age=32, DOB=1984, gender="Male", citizenship="TODO", role="support", ref1=references[["EXP3"]], ref2=references[["GRD5"]], status="arrested")
 SamyAmimour       = createNode(kblDB, "Person", name="Samy Amimour",         age=28, gender="Male", citizenship="France", ref1=references[["DM1"]], status="dead")
 YoussefBazarouj   = createNode(kblDB, "Person", name="Youssef Bazarouj",  gender="Male", citizenship="Belgium", ref1=references[["SOI1"]], status="arrested")
-YounesAbaaoud     = createNode(kblDB, "Person", preNov13=TRUE, name="Younes Abaaoud",      age=13,      gender="Male", ref1=references[["GRD1"]], status="wanted")
-YassineAbaaoud     = createNode(kblDB, "Person", preNov13=TRUE, name="Yassine Abaaoud",        gender="Male", ref1=references[["WSJ3"]], status="wanted")
+YounesAbaaoud     = createNode(kblDB, "Person", preNov13=TRUE, name="Younes Abaaoud",      age=13,      gender="Male", citizenship="Belgium", ref1=references[["GRD1"]], status="wanted")
+YassineAbaaoud     = createNode(kblDB, "Person", preNov13=TRUE, name="Yassine Abaaoud",        gender="Male", citizenship="Belgium", ref1=references[["WSJ3"]], status="wanted")
 ZouhirMehdaoui     = createNode(kblDB, "Person", preNov13=TRUE, name="Zouhir Mehdaoui", age=29,    gender="Male", citizenship="Algeria", ref1=references[["LEX1"]], status="arreted")
 
 
 #the unknowns from Nov 13
 #AbbdulakbakB     = createNode(kblDB, "Person", name="AbbdulakbakB",  age=25, gender="Male", ref1=references[["DM1"]], ref2=references[["LI1"]], status="dead", note="possibly fake passport or a victim_s name")
-MohammedAlmahmod  = createNode(kblDB, "Person", name="Mohammed al-Mahmud ?", alias="Ali al-Iraqi ?", gender="Male",  ref1=references[["BBC1"]], ref2=references[["DBQ1"]], status="dead")
-AhmedAlmuhamed    = createNode(kblDB, "Person", name="Ahmed Almuhamed ?",    alias="Anashah al-Iraqi ?",  gender="Male", ref1=references[["DM1"]], ref2=references[["DBQ1"]], status="dead")
+MohammedAlmahmod  = createNode(kblDB, "Person", name="Mohammed al-Mahmud ?", alias="Ali al-Iraqi ?", gender="Male",  citizenship="TODO", ref1=references[["BBC1"]], ref2=references[["DBQ1"]], status="dead")
+AhmedAlmuhamed    = createNode(kblDB, "Person", name="Ahmed Almuhamed ?",    alias="Anashah al-Iraqi ?",  gender="Male", citizenship="TODO", ref1=references[["DM1"]], ref2=references[["DBQ1"]], status="dead")
 
-ZakariaJaffal         = createNode(kblDB, "Person", name="Zakaria Jaffak", age=29, gender="Male", ref1=references[["DW1"]], ref2=references[["B7S71"]], status="arrested")
+ZakariaJaffal = createNode(kblDB, "Person", name="Zakaria Jaffak", age=29, DOB=1986, gender="Male", citizenship="Belgium", ref1=references[["DW1"]], ref2=references[["B7S71"]], status="arrested")
+MustafaE      = createNode(kblDB, "Person", name="Mustafa E", age=34, DOB=1981, gender="Male", citizenship="Morocco", ref1=references[["DW1"]], status="arrested")
+createRel(MustafaE, "LINKED_TO", ZakariaJaffal, note="might be unrelated", ref1=references[["DW1"]])
+createRel(ZakariaJaffal, "LINKED_TO", AbdelhamidAbaaoud, ref1=references[["B7S71"]])
 
 #BrusselsUnknown  = createNode(kblDB, "Person", name="BrusselsUnknown", ref1=references[["WSJ2"]], status="arrested")
 #possibly one of the people below
 
-MohamedS         = createNode(kblDB, "Person", name="MohamedS", age=25, gender="Male", role="logistics", note="petty criminal assisted with finding safe house", ref1=references[["F24a"]], status="arrested")
+MohamedS         = createNode(kblDB, "Person", name="MohamedS", age=25, gender="Male", role="logistics", note="petty criminal assisted with finding safe house", citizenship="TODO", ref1=references[["F24a"]], status="arrested")
 #apparently not the BrusselsUnknown
 
-MohamedBelkaid    = createNode(kblDB, "Person", name="Mohamed Belkaid", age=35, alias = "Samir Bouzid", gender="Male",  ref1=references[["TL1"]], ref2=references[["NYT12"]], status="dead")
+MohamedBelkaid    = createNode(kblDB, "Person", name="Mohamed Belkaïd", age=35, alias = "Samir Bouzid", gender="Male", citizenship="Algeria", role="logistics", ref1=references[["TL1"]], ref2=references[["NYT12"]], ref3=references[["GRD"]], status="dead")
 
-HasnaAitboulahcen  = createNode(kblDB, "Person", name="Hasna Aitboulahcen", age=26, gender="Female",  status="dead", ref1=references[["LOB1"]], ref2=references[["NP1"]], ref3=references[["CNN3"]])
+HasnaAitboulahcen  = createNode(kblDB, "Person", name="Hasna Aitboulahcen", age=26, gender="Female",  status="dead", citizenship="TODO", ref1=references[["LOB1"]], ref2=references[["NP1"]], ref3=references[["CNN3"]])
 
 #Early 2015 plots
-RedouaneHagaoui  = createNode(kblDB, "Person", preNov13=TRUE, name="Redouane Hagaoui",      gender="Male", ref1=references[["TEL3"]], status="dead")
-TarikJadaoun     = createNode(kblDB, "Person", preNov13=TRUE, name="Tarik Jadaoun",            gender="Male", ref1=references[["TEL3"]], status="dead")
-
-AugUnknown = createNode(kblDB, "Person", preNov13=TRUE, name="August Recruit", gender="Male", citizenship="Belgium", note="traveled with RedaHame in connection to the concert plot",  ref1=references[["NYT4"]], ref2=references[["LP2"]], refr=references[["LMD5"]], status="arrested", dateOfArrest=2015.0615)
-RedaHame   = createNode(kblDB, "Person", preNov13=TRUE, name="Reda Hame", gender="Male", citizenship="France", age=30, ref1=references[["NYT4"]], ref2=references[["LP2"]], ref4=references[["LMD4"]], status="arrested")
+RedouaneHagaoui  = createNode(kblDB, "Person", preNov13=TRUE, name="Redouane Hagaoui", alias="Abu Khalid Al Maghribi", gender="Male", citizenship="Belgium", ref1=references[["DM2"]], status="dead")
+TarikJadaoun     = createNode(kblDB, "Person", preNov13=TRUE, name="Tarik Jadaoun", alias="Abu Hamza Belgiki", gender="Male", citizenship="Belgium", ref1=references[["DM2"]], status="dead")
 
 MehdiNemmouche       = createNode(kblDB, "Person", preNov13=TRUE, name="Mehdi Nemmouche",  gender="Male", citizenship="France", ref1=references[["LOB1"]], status="arrested")
 AyoubElKhazzani       = createNode(kblDB, "Person", preNov13=TRUE, name="Ayoub El Khazzani",  age=25, gender="Male", citizenship="Morocco", ref1=references[["LOB1"]], status="arrested")  #http://www.cnn.com/2015/08/24/europe/france-train-attack-what-we-know-about-suspect/
@@ -231,26 +240,25 @@ AyoubElKhazzani       = createNode(kblDB, "Person", preNov13=TRUE, name="Ayoub E
 
 #Brussels
 IbrahimElBakraoui = createNode(kblDB, "Person", name="Ibrahim El Bakraoui", preNov13=FALSE, age=29, gender="Male", citizenship="Belgium", ref1=references[["NYT13"]], status="dead")
-KhalidElBakraoui = createNode(kblDB, "Person", name="Khalid El Bakraoui", alias="Ibrahim Maaroufi", preNov13=FALSE, age=27, gender="Male", citizenship="Belgium", ref1=references[["NYT13"]], status="dead")
+KhalidElBakraoui = createNode(kblDB, "Person", name="Khalid El Bakraoui", alias="Ibrahim Maaroufi", preNov13=FALSE, age=27, gender="Male", citizenship="Belgium", role="logistics", ref1=references[["NYT13"]], status="dead")
 NajimLaachraoui = createNode(kblDB, "Person", name="Najim Laachraoui", alias="Soufiane Kayal", preNov13=FALSE, age=24, DOB="18/05/1991", gender="Male", citizenship="Belgium", role="weapons", ref1=references[["NBC3"]], ref2=references[["ITP1"]], status="dead")
 
 OsamaKrayem = createNode(kblDB, "Person", name="Osama Krayem", alias="Naim Al Ahmed", preNov13=FALSE, age=23, gender="Male", citizenship="Sweden",ref1=references[["TOI1"]], status="arrested")
-HerveBM = createNode(kblDB, "Person", name="Arrested with Abrini", preNov13=FALSE, gender="Male", ref1=references[["TOI1"]], status="arrested")
+HerveBM = createNode(kblDB, "Person", name="Arrested with Abrini", preNov13=FALSE, gender="Male", citizenship="TODO", ref1=references[["TOI1"]], status="arrested")
 
 #now free
 #FayçalCheffou = createNode(kblDB, "Person", name="Fayçal Cheffou", gender="Male", ref1=references[["NYT14"]], ref2=references[["NBC4"]], status="free")
 
 #"Kriket" independent cell
-RedaKriket = createNode(kblDB, "Person", name="Reda Kriket", gender="Male", ref1=references[["NYT14"]], status="arrested")
+RedaKriket = createNode(kblDB, "Person", name="Reda Kriket", gender="Male", citizenship="France", role="finance", ref1=references[["NYT14"]], ref1=references[["EXP3"]], status="arrested")
 #3 arrested in Belg
 YassineA = createNode(kblDB, "Person", name="Yassine A", age=33, DOB="1982.0504", gender="Male", citizenship="Belgium", ref1=references[["STT1"]])
 RabahN = createNode(kblDB, "Person", name="Rabah N", age=34, gender="Male", citizenship="Algeria", ref1=references[["NYT14"]], status="arrested")
 AbderahmaneAmeroud = createNode(kblDB, "Person", age=38, name="Abderamane Ameroud", gender="Male", citizenship="Algeria", ref1=references[["BBC2"]],  status="arrested")
 AnisBahri = createNode(kblDB, "Person", age=32, name="Anis Bahri", gender="Male", citizenship="France", ref1=references[["DN1"]],  status="arrested")
 
-
-AboubakerO = createNode(kblDB, "Person", name="Aboubaker O", gender="Male", ref1=references[["NYT14"]], status="arrested")
-MohamedB = createNode(kblDB, "Person", name="Mohamed B", gender="Male", ref1=references[["NYT14"]], status="arrested")
+AboubakerO = createNode(kblDB, "Person", name="Aboubaker O", gender="Male", citizenship="TODO", ref1=references[["NYT14"]], status="arrested")
+MohamedB = createNode(kblDB, "Person", name="Mohamed B", gender="Male", citizenship="TODO", ref1=references[["NYT14"]], status="arrested")
 #no other details provided for confidentiality reasons
 
 #associate of Bakraouis
@@ -285,16 +293,23 @@ BilalElMakhoukhi  = createNode(kblDB, "Person", name="Bilal El Makhoukhi", gende
 createRel(KhalidAlZerkani, "LINKED_TO", YoniPatricMayne, note="recruited", ref1=references[["CNN6"]])
 createRel(KhalidAlZerkani, "LINKED_TO", AnisBahri, note="recruited", ref1=references[["CNN6"]])  #source is not clear
 createRel(KhalidAlZerkani, "LINKED_TO", AbdelhamidAbaaoud, ref1=references[["CNN6"]])
-createRel(KhalidAlZerkani, "LINKED_TO", note="recruited", RedaKriket, ref1=references[["CNN6"]])
-createRel(KhalidAlZerkani, "LINKED_TO", GelelAttar, ref1=references[["HLN1"]])
+createRel(KhalidAlZerkani, "LINKED_TO", RedaKriket, note="recruited", ref1=references[["CNN6"]])
+createRel(KhalidAlZerkani, "LINKED_TO", GelelAttar, note="recruited", ref1=references[["HLN1"]])
+createRel(KhalidAlZerkani, "LINKED_TO", NajimLaachraoui, note="financed travel to Syria", ref1=references[["WSJ5"]])
+
+
+createRel(IbrahimFarisi, "LINKED_TO", SnailFarisi, note="brother", ref1=references[["EXP3"]])
+
+
+
 
 createRel(AbdelhamidAbaaoud, "LINKED_TO", MehdiNemmouche, ref1=references[["CNN6"]])
 
 
-SamiZarrouk = createNode(kblDB, "Person", name="Sami Zarrouk", gender="Male", age=32, status="wanted", ref1=references[["WSJ5"]])
+SamiZarrouk = createNode(kblDB, "Person", name="Sami Zarrouk", gender="Male", age=32, citizenship="Tunis", status="wanted", ref1=references[["WSJ5"]])
 createRel(KhalidAlZerkani, "LINKED_TO", SamiZarrouk, ref1=references[["WSJ5"]])
 
-NicholasMoreau = createNode(kblDB, "Person", name="Nicholas Moreau", status="arrested", ref1=references[["CNN6"]])
+NicholasMoreau = createNode(kblDB, "Person", name="Nicholas Moreau", gender="Male", citizenship="France", status="arrested", ref1=references[["CNN6"]])
 createRel(AbdelhamidAbaaoud, "LINKED_TO", NicholasMoreau, ref1=references[["CNN6"]])
 #been_to syria
 
@@ -306,7 +321,7 @@ createRel(AbdelhamidAbaaoud, "LINKED_TO", NicholasMoreau, ref1=references[["CNN6
 SamirZ = createNode(kblDB, "Person", age=20, name="Samir Z", gender="Male", citizenship="France", ref1=references[["IBT2"]], ref2=references[["ST1"]], ref3=references[["CBS2"]], ref4=references[["AFP1"]],  status="free")
 PierreN = createNode(kblDB, "Person", age=28, name="Pierre N", gender="Male", citizenship="Belgium", ref1=references[["IBT2"]], ref2=references[["ST1"]], status="arrested")
 
-CharaffeAlMouadan  = createNode(kblDB, "Person", name="Charaffe al Mouadan", alias="Souleymane", age=27, gender="Male", role="planner", status="dead", ref1=references[["LP3"]])
+CharaffeAlMouadan  = createNode(kblDB, "Person", name="Charaffe al Mouadan", alias="Souleymane", age=27, gender="Male", role="planner", citizenship="TODO", status="dead", ref1=references[["LP3"]])
 SamirBouabout  = createNode(kblDB, "Person", name="Samir Bouabout", age=28, citizenship="France", gender="Male",  status="wanted", ref1=references[["LMD8"]])
 
 ###################
@@ -315,7 +330,9 @@ SamirBouabout  = createNode(kblDB, "Person", name="Samir Bouabout", age=28, citi
 #by some accounts, the operation was done by ENMI rather than KBL
 #LP2, http://www.francetvinfo.fr/monde/proche-orient/offensive-jihadiste-en-irak/un-jihadiste-incarcere-en-france-detaille-comment-l-etat-islamique-deploie-son-reseau-d-espionnage_1055939.html
 
-createRel(AugUnknown, "LINKED_TO", RedaHame, ref1=references[["NYT4"]])
+FrenchRivieraPlot = createNode(kblDB, "AttackSite", attackDate=2015, name="French Riviera Plot", outcome="aborted", killed=0, wounded=0, ref=references[["NYT17"]])
+createRel(RedaHame, "ATTACKED", FrenchRivieraPlot, ref1=references[["NYT17"]])
+createRel(AugUnknown, "ATTACKED", FrenchRivieraPlot, ref1=references[["NYT17"]])
 
 
 ######
@@ -332,8 +349,8 @@ Syria = createNode(kblDB, "Country", name="Syria")
 Turkey = createNode(kblDB, "Country", name="Turkey")
 UK = createNode(kblDB, "Country", name="United Kingdon")
 
-#foci
-BazaroujFamily  = createNode(kblDB, "Focus", name="Bazarouj family")
+BazaroujFamily  = createNode(kblDB, "Activity", name="Bazarouj family")
+#question: to use LINKED_TO or BEEN_IN?  Activity or Location-like?
 
 #localities / sites
 AlfortvilleApt  = createNode(kblDB, "Site", name="Alfortville apartment in Appart’City")
@@ -341,6 +358,7 @@ AnderlechtArrest  = createNode(kblDB, "Site", name="Arrest site in Anderlecht ne
 AuvelaisHouse = createNode(kblDB, "Site", name="Auvelais, Belgium", note="rented in October", role="suspected planning site and bomb making")
 Bobigny       = createNode(kblDB, "Site", name="Bobigny apartment")
 CharleroiApt  = createNode(kblDB, "Site", name="Charleroi apartment", note="Rue du Fort. Rented in September", ref1=references[["NYT10"]])
+EtterbeekApt  = createNode(kblDB, "Site", name="Etterbeek apartment", note="rue des Casernes", ref1=references[["EXP3"]])
 ForestApt     = createNode(kblDB, "Site", name="Safehouse Apartment at Forest", address="Rue du Dries, Forest, Brussels", ref1=references[["NYT12"]])
 HouseInMolenbeek = createNode(kblDB, "Site", name="Safehouse at Molenbeek", address="Jouse on the Rue des Quatre-Vents, Molenbeek", ref1=references[["NYT12"]])
 Laeken        = createNode(kblDB, "Locality", name="Laeken, Brussels", ref1=references[["NYT13"]])
@@ -348,6 +366,9 @@ Molenbeek     = createNode(kblDB, "Locality", name="Molenbeek, Brussels", locati
 NederOverHeembeek   = createNode(kblDB, "Locality", name="Neder-over-Heembeek", location="various")
 StDenis       = createNode(kblDB, "Site", name="St.Denis", address="8 rue du Carillon and rue Carnot", ref1=references[["NBC1"]])
 SchaerbeekApt = createNode(kblDB, "Site", name="Schaerbeek bomb factory", address="Rue Henri Berge", ref1=references[["DM5"]])
+
+#SchaerbeekApt2 = createNode(kblDB, "Site", name="Schaerbeek safehouse", address="Rue Max Roos", ref1=references[["BBN1"]])
+#Used by airport attackers
 #wishlist: second location in St.Denis
 
 #attack sites.  dates are approximate, if the attack was interdicted.
@@ -384,6 +405,7 @@ createRel(IbrahimElBakraoui,  "BEEN_IN", Syria, date=2015.06, ref1=references[["
 createRel(MohammedAlmahmod,   "BEEN_IN", Syria, ref1=references[["IND1"]])
 createRel(MohammedVerd,     "BEEN_IN", Syria, ref1=references[["CNN2"]])
 createRel(NajimLaachraoui,  "BEEN_IN", Syria, date=2013, ref1=references[["NBC3"]])
+createRel(RedouaneHagaoui,   "BEEN_IN", Syria, ref1=references[["DM2"]])
 createRel(RedaHame,   "BEEN_IN", Syria, ref1=references[["NYT4"]])
 createRel(RedaKriket,  "BEEN_IN", Syria, date=2014, ref1=references[["NYT14"]])
 createRel(OmarMostefai,       "BEEN_IN", Syria, date="2013", ref1=references[["DM1"]])
@@ -426,6 +448,9 @@ createRel(AyoubBazarouj,      "BEEN_IN", Molenbeek, ref1=references[["SOI1"]])
 createRel(YoussefBazarouj,    "BEEN_IN", Molenbeek, ref1=references[["SOI1"]])
 createRel(ZakariaJaffal,  "BEEN_IN", Molenbeek, ref1=references[["DW1"]])
 
+createRel(KhalidAlZerkani, "BEEN_IN", Molenbeek, ref1=references[["DN1"]])
+createRel(SamiZarrouk, "BEEN_IN", Molenbeek, ref1=references[["WSJ5"]])
+
 
 #Auvelias - planning site
 createRel(MohamedBakkali,  "PRESENT_IN", AuvelaisHouse, ref1=references[["ST1"]], ref2=references[["NYT10"]])
@@ -434,7 +459,14 @@ createRel(NajimLaachraoui,   "PRESENT_IN", AuvelaisHouse, ref1=references[["DM3"
 
 createRel(AbdelhamidAbaaoud,   "PRESENT_IN", CharleroiApt, ref1=references[["NYT10"]])
 createRel(BilalHadfi,   "PRESENT_IN", CharleroiApt, ref1=references[["NYT10"]])
-createRel(IbrahimElBakraoui,  "PRESENT_IN", CharleroiApt, ref1=references[["NYT13"]])
+createRel(KhalidElBakraoui,  "PRESENT_IN", CharleroiApt, ref1=references[["NYT13"]])
+
+#EtterbeekApt
+createRel(SnailFarisi,  "PRESENT_IN", EtterbeekApt, ref1=references[["EXP3"]])
+createRel(IbrahimFarisi,  "PRESENT_IN", EtterbeekApt, ref1=references[["EXP3"]])
+createRel(KhalidElBakraoui,  "ATTACKED", EtterbeekApt, ref1=references[["UST1"]])
+createRel(OsamaKrayem,       "ATTACKED", EtterbeekApt, ref1=references[["UST1"]])
+
 
 #ForestApt
 createRel(SalahAbdeslam,    "PRESENT_IN", ForestApt, ref1=references[["NYT12"]])
@@ -509,7 +541,7 @@ createRel(SalahAbdeslam,     "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=
 #createRel(MohammadAbdeslam , "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
 createRel(YoussefBazarouj,     "LINKED_TO", AyoubBazarouj, note="brother", ref1=references[["SOI1"]])
 
-createRel(MohamedAmimour,    "LINKED_TO", SamyAmimour, note="father_of", ref1=references[["DM1"]])
+#createRel(MohamedAmimour,    "LINKED_TO", SamyAmimour, note="father_of", ref1=references[["DM1"]])
 createRel(HasnaAitboulahcen, "LINKED_TO", AbdelhamidAbaaoud, note="cousin", ref1=references[["IBT2"]])
 createRel(SalahAbdeslam,     "LINKED_TO", AbdelhamidAbaaoud, note="friends", ref1=references[["CNN1"]])
 createRel(IbrahimAbdeslam,     "LINKED_TO", AbdelhamidAbaaoud, note="friends", ref1=references[["NYT5"]])
@@ -518,7 +550,8 @@ createRel(IbrahimAbdeslam,     "LINKED_TO", AbdelhamidAbaaoud, note="friends", r
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", YounesAbaaoud,   note="brother, recruited", ref1=references[["GRD1"]])
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", YassineAbaaoud,  note="brother, recruited", ref1=references[["GRD1"]])
 
-createRel(AbdelhamidAbaaoud,  "LINKED_TO", RedaHame,        note="recruited", ref1=references[["GRD1"]])
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", RedaHame,  note="recruited", ref1=references[["GRD1"]])
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", AugUnknown, note="recruited", ref1=references[["NYT17"]])
 
 createRel(AhmedAlmuhamed, "LINKED_TO", MohammedAlmahmod, note="traveled together or may be related",  ref1=references[["IND1"]])
 
@@ -537,10 +570,10 @@ createRel(AhmetDahmani,     "LINKED_TO", SalahAbdeslam, ref1=references[["CNN4"]
 createRel(AbdeilahChouaa,    "LINKED_TO",  SalahAbdeslam, note="knew family", ref1=references[["VOA1"]])
 createRel(AbdeilahChouaa,    "LINKED_TO",  MohamedAbrini, note="particularly close", ref1=references[["VOA1"]])
 
-#foci
-createRel(SalahAbdeslam,     "AFFILIATED_WITH", BazaroujFamily, note="family friend", ref1=references[["SOI1"]])
-createRel(AyoubBazarouj,     "AFFILIATED_WITH", BazaroujFamily, note="member", ref1=references[["SOI1"]])
-createRel(YoussefBazarouj,   "AFFILIATED_WITH", BazaroujFamily, note="member", ref1=references[["SOI1"]])
+#foci - coded as INVOLVED_IN
+createRel(SalahAbdeslam,     "INVOLVED_IN", BazaroujFamily, note="family friend", ref1=references[["SOI1"]])
+createRel(AyoubBazarouj,     "INVOLVED_IN", BazaroujFamily, note="member", ref1=references[["SOI1"]])
+createRel(YoussefBazarouj,   "INVOLVED_IN", BazaroujFamily, note="member", ref1=references[["SOI1"]])
 
 
 #Ride1 to Bobigny in Renault Clio
@@ -585,6 +618,8 @@ EscapeFromParis = createNode(kblDB, "Activity", name="Escape from Paris")
 createRel(MohamedAmri,    "INVOLVED_IN", EscapeFromParis, ref1=references[["DM1"]])
 createRel(HamzaAttou,     "INVOLVED_IN", EscapeFromParis,  ref1=references[["DM1"]])
 createRel(SalahAbdeslam,  "INVOLVED_IN", EscapeFromParis,  ref1=references[["DM1"]])
+createRel(HamzaAttou,  "LINKED_TO", AliOulkadi,  ref1=references[["B7S71"]])
+
 
 #Daesh core
 OverallOrganization = createNode(kblDB, "Activity", name="Attack Organization")
@@ -702,6 +737,9 @@ createRel(AyoubElKhazzani, "BEEN_IN", Molenbeek, ref1=references[["NYT1"]])
 createRel(RedouaneHagaoui,  "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
 createRel(TarikJadaoun,     "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
 createRel(AbdelhamidAbaaoud,  "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
+createRel(NoureddineAbraimi,  "ATTACKED", VerviersPlot, ref1=references[["WSJ5"]])
+#WSJ5 TODO: reports Omar Damache and Khalid Ben Larbi as killed in the plot
+#Soufiene Amghar as arrested
 
 createRel(RedouaneHagaoui,  "BEEN_IN", Molenbeek, ref1=references[["NYT3"]])
 createRel(TarikJadaoun,     "BEEN_IN", Molenbeek, ref1=references[["NYT3"]])
@@ -724,13 +762,13 @@ createRel(MehdiNemmouche, "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
 #print("Export")
 ########################################################
 nov13nodes = cypher(kblDB, query='MATCH (p) return p.name') 
-write.csv(nov13nodes, file="~/nov13/nov13_nodes.csv")
+write.csv(nov13nodes, file="~/nov13/ise_nodes.csv")
 
 nov13persons = cypher(kblDB, query='MATCH (p:Person) return p.name') 
-write.csv(nov13persons, file="~/nov13/nov13_persons.csv")
+write.csv(nov13persons, file="~/nov13/ise_persons.csv")
 
 nov13relationships = cypher(kblDB, query='MATCH (n1)-[r]->(n2) return n1.name, type(r), n2.name') 
-write.csv(nov13relationships, file="~/nov13/nov13_relationships.csv" )
+write.csv(nov13relationships, file="~/nov13/ise_relationships.csv" )
 
 #requires neo4j database
 #browse(nov13)
@@ -741,7 +779,7 @@ RETURN p.name, s.name'
 attackersAndSites = cypher(kblDB, query)
 attackersAndSites = unique(attackersAndSites)
 print(attackersAndSites)  
-write.csv(attackersAndSites, file="~/nov13/nov13_attackersAndSites.csv" )
+write.csv(attackersAndSites, file="~/nov13/ise_attackersAndSites.csv" )
 
 
 ####################################################################################################
@@ -749,7 +787,7 @@ write.csv(attackersAndSites, file="~/nov13/nov13_attackersAndSites.csv" )
 ####################################################################################################
 query = 'MATCH n-[r]->m where NOT (n:Locality) AND NOT (n:Country) AND NOT (m:Locality) AND NOT (m:Country) RETURN n.name,labels(n),type(r),m.name,labels(m) '
 minimalNetwork = cypher(kblDB, query)
-write.csv(minimalNetwork, file="~/nov13/nov13_minimalNetwork.csv", row.names=F)
+write.csv(minimalNetwork, file="~/nov13/ise_minimalNetwork.csv", row.names=F)
 
 
 query = '  
@@ -793,19 +831,19 @@ RETURN p.name, attacker1.name'
 sharedSpaceWithAttacker = cypher(kblDB, query)
 sharedSpaceWithAttacker = unique(sharedSpaceWithAttacker)
 
-query = '  
-MATCH (p:Person)-[:AFFILIATED_WITH]->(l:Focus)<-[:AFFILIATED_WITH]-(attacker1:Person)-[:ATTACKED]->()
-WHERE p.status <> "free"
-RETURN p.name, attacker1.name'
-sharedAffiliationWithAttacker = cypher(kblDB, query)
-sharedAffiliationWithAttacker = unique(sharedAffiliationWithAttacker)
-
-query = '  
-MATCH (p1:Person)-[:AFFILIATED_WITH]->(l:Focus)<-[:AFFILIATED_WITH]-(p2:Person)
-WHERE p1.status <> "free" AND p2.status <> "free"
-RETURN p1.name, p2.name'
-sharedAffiliationWithSuspect = cypher(kblDB, query)
-sharedAffiliationWithSuspect = unique(sharedAffiliationWithSuspect)
+# query = '  
+# MATCH (p:Person)-[:AFFILIATED_WITH]->(l:Focus)<-[:AFFILIATED_WITH]-(attacker1:Person)-[:ATTACKED]->()
+# WHERE p.status <> "free"
+# RETURN p.name, attacker1.name'
+# sharedAffiliationWithAttacker = cypher(kblDB, query)
+# sharedAffiliationWithAttacker = unique(sharedAffiliationWithAttacker)
+# 
+# query = '  
+# MATCH (p1:Person)-[:AFFILIATED_WITH]->(l:Focus)<-[:AFFILIATED_WITH]-(p2:Person)
+# WHERE p1.status <> "free" AND p2.status <> "free"
+# RETURN p1.name, p2.name'
+# sharedAffiliationWithSuspect = cypher(kblDB, query)
+# sharedAffiliationWithSuspect = unique(sharedAffiliationWithSuspect)
 
 query = '  
 MATCH (p1:Person)-[r1]->(l:Site)<-[r2]-(p2:Person)
@@ -828,8 +866,8 @@ names(commonInvolvement) <- c("n1", "n2")
 names(linkedToWanted) <- c("n1", "n2")
 # names(assistedAttacker) <- c("n1", "n2")
 # names(assistedSuspect) <- c("n1", "n2")
-names(sharedAffiliationWithAttacker) <- c("n1", "n2")
-names(sharedAffiliationWithSuspect) <- c("n1", "n2")
+# names(sharedAffiliationWithAttacker) <- c("n1", "n2")
+# names(sharedAffiliationWithSuspect) <- c("n1", "n2")
 names(sharedSpaceWithAttacker) <- c("n1", "n2")
 names(sharedSiteWithSuspect) <- c("n1", "n2")
 names(sharedLocalityWithSuspect) <- c("n1", "n2")
@@ -838,27 +876,27 @@ terrorNetwork <-                   rbind(commonAttack, linkedToAttacker, linkedT
 terrorNetworkUndirected <- rbind(terrorNetwork, data.frame(n1=terrorNetwork[["n2"]], n2=terrorNetwork[["n1"]])) 
 terrorNetworkUndirected <- unique(terrorNetworkUndirected)
 print(terrorNetworkUndirected) 
-write.csv(terrorNetworkUndirected, file="~/nov13/nov13_terrorNetwork.csv", row.names=F)
+write.csv(terrorNetworkUndirected, file="~/nov13/ise_terrorNetwork.csv", row.names=F)
 
 
-terrorNetworkExtended           <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSpaceWithAttacker, sharedSiteWithSuspect, sharedLocalityWithSuspect, sharedAffiliationWithAttacker, sharedAffiliationWithSuspect)
+terrorNetworkExtended           <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSpaceWithAttacker, sharedSiteWithSuspect, sharedLocalityWithSuspect) #, sharedAffiliationWithAttacker, sharedAffiliationWithSuspect)
 terrorNetworkExtendedUndirected <- rbind(terrorNetworkExtended, data.frame(n1=terrorNetworkExtended[["n2"]], n2=terrorNetworkExtended[["n1"]])) 
 terrorNetworkExtendedUndirected <- unique(terrorNetworkExtendedUndirected)
 print(terrorNetworkExtendedUndirected) 
-write.csv(terrorNetworkExtendedUndirected, file="~/nov13/nov13_terrorNetworkExtended.csv", row.names=F)
+write.csv(terrorNetworkExtendedUndirected, file="~/nov13/ise_terrorNetworkExtended.csv", row.names=F)
 
 
 terrorNetworkLimited           <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement)
 terrorNetworkLimitedUndirected <- rbind(terrorNetworkLimited, data.frame(n1=terrorNetworkLimited[["n2"]], n2=terrorNetworkLimited[["n1"]])) 
 terrorNetworkLimitedUndirected <- unique(terrorNetworkLimitedUndirected)
 print(terrorNetworkLimitedUndirected) 
-write.csv(terrorNetworkLimitedUndirected, file="~/nov13/nov13_terrorNetworkLimited.csv", row.names=F)
+write.csv(terrorNetworkLimitedUndirected, file="~/nov13/ise_terrorNetworkLimited.csv", row.names=F)
 
 query = '  
 MATCH (n:Person) WHERE (n.preNov13=TRUE) RETURN n.name'
 preNov13agents = cypher(kblDB, query)
 names(preNov13agents)<-c("name")
-write.csv(preNov13agents, file="~/nov13/preNov13agents.csv", row.names=F)
+write.csv(preNov13agents, file="~/nov13/ise_preNov13agents.csv", row.names=F)
 
 
 require(data.table)
@@ -866,7 +904,7 @@ query = '
 MATCH (n:Person) RETURN n.name, n.age, n.gender, n.citizenship, n.status'
 allPersons = data.table(cypher(kblDB, query))
 names(allPersons)<-c("name", "ageIn2015", "gender", "citizenship", "status")
-write.csv(allPersons, file="~/nov13/allPersons.csv", row.names=F)
+write.csv(allPersons, file="~/nov13/ise_allPersons.csv", row.names=F)
 
 
 require(igraph)
