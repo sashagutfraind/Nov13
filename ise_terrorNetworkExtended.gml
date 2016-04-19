@@ -1,4 +1,4 @@
-Creator "igraph version @VERSION@ Tue Apr 12 21:52:43 2016"
+Creator "igraph version @VERSION@ Wed Apr 13 16:49:14 2016"
 Version 1
 graph
 [
@@ -51,12 +51,12 @@ graph
   node
   [
     id 9
-    name "Bilal Hadfi"
+    name "Mohammed al-Mahmud ?"
   ]
   node
   [
     id 10
-    name "Mohammed al-Mahmud ?"
+    name "Bilal Hadfi"
   ]
   node
   [
@@ -435,6 +435,11 @@ graph
   ]
   edge
   [
+    source 10
+    target 5
+  ]
+  edge
+  [
     source 11
     target 5
   ]
@@ -575,6 +580,11 @@ graph
   ]
   edge
   [
+    source 61
+    target 5
+  ]
+  edge
+  [
     source 7
     target 6
   ]
@@ -585,7 +595,7 @@ graph
   ]
   edge
   [
-    source 9
+    source 10
     target 6
   ]
   edge
@@ -700,11 +710,6 @@ graph
   ]
   edge
   [
-    source 46
-    target 6
-  ]
-  edge
-  [
     source 47
     target 6
   ]
@@ -726,6 +731,11 @@ graph
   edge
   [
     source 54
+    target 6
+  ]
+  edge
+  [
+    source 61
     target 6
   ]
   edge
@@ -790,11 +800,6 @@ graph
   ]
   edge
   [
-    source 46
-    target 7
-  ]
-  edge
-  [
     source 47
     target 7
   ]
@@ -825,17 +830,22 @@ graph
   ]
   edge
   [
+    source 11
+    target 10
+  ]
+  edge
+  [
     source 15
-    target 9
+    target 10
   ]
   edge
   [
     source 39
-    target 9
+    target 10
   ]
   edge
   [
-    source 11
+    source 61
     target 10
   ]
   edge
@@ -930,6 +940,11 @@ graph
   ]
   edge
   [
+    source 61
+    target 14
+  ]
+  edge
+  [
     source 16
     target 15
   ]
@@ -946,6 +961,11 @@ graph
   edge
   [
     source 40
+    target 15
+  ]
+  edge
+  [
+    source 61
     target 15
   ]
   edge
@@ -1085,11 +1105,6 @@ graph
   ]
   edge
   [
-    source 46
-    target 22
-  ]
-  edge
-  [
     source 47
     target 22
   ]
@@ -1135,11 +1150,6 @@ graph
   ]
   edge
   [
-    source 46
-    target 23
-  ]
-  edge
-  [
     source 47
     target 23
   ]
@@ -1176,11 +1186,6 @@ graph
   edge
   [
     source 45
-    target 24
-  ]
-  edge
-  [
-    source 46
     target 24
   ]
   edge
@@ -1265,11 +1270,6 @@ graph
   ]
   edge
   [
-    source 46
-    target 31
-  ]
-  edge
-  [
     source 47
     target 31
   ]
@@ -1300,11 +1300,6 @@ graph
   ]
   edge
   [
-    source 46
-    target 32
-  ]
-  edge
-  [
     source 47
     target 32
   ]
@@ -1326,11 +1321,6 @@ graph
   edge
   [
     source 45
-    target 34
-  ]
-  edge
-  [
-    source 46
     target 34
   ]
   edge
@@ -1375,11 +1365,6 @@ graph
   ]
   edge
   [
-    source 46
-    target 37
-  ]
-  edge
-  [
     source 47
     target 37
   ]
@@ -1400,11 +1385,6 @@ graph
   ]
   edge
   [
-    source 46
-    target 39
-  ]
-  edge
-  [
     source 47
     target 39
   ]
@@ -1420,18 +1400,8 @@ graph
   ]
   edge
   [
-    source 46
-    target 44
-  ]
-  edge
-  [
     source 47
     target 44
-  ]
-  edge
-  [
-    source 46
-    target 45
   ]
   edge
   [

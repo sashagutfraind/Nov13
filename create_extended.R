@@ -24,6 +24,9 @@ createRel(SaïdKouachi, "LINKED_TO", AmedyCoulibaly, note="friend", ref1=referen
 #http://www.theguardian.com/world/2015/jan/11/paris-gunman-amedy-coulibaly-allegiance-isis
 #al-Qaeda recruiter Djamel Beghal,
 
+#arms supplier
+#http://abcnews.go.com/International/wireStory/spain-police-arrest-suspect-tied-jan-2015-paris-38360132
+
 createRel(ChérifKouachi, "BEEN_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
 createRel(SaïdKouachi, "BEEN_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
 
@@ -278,3 +281,17 @@ Abaaoud is said to have told the young Frenchman that he had managed to find 25k
 #http://www.timesofisrael.com/austria-probes-link-between-paris-mumbai-attacks/
 #The 34-year-old was arrested in Austria in December along with an Algerian.
 
+#ISIS arrests in Denmark
+#http://www.cnn.com/2016/04/07/europe/copenhagen-suspected-isis-arrests/index.html
+
+#ISIS arrests in Germany
+#http://www.dw.com/en/german-police-arrest-nigerian-and-iraqi-over-suspected-links-to-is-militants/a-19172567
+
+#Pakistani bombmaker contracted by ISIS?
+#http://www.arabtimesonline.com/news/austria-probes-paris-mumbai-attacks-link-pakistani-suspect-identity-not-confi-rmed/
+
+#Arrests in the UK
+#http://www.bbc.com/news/uk-36052896
+
+#arms supplierfor Amady
+#https://www.thespainreport.com/articles/715-160413154107-spanish-police-arrest-french-arms-supplier-who-gave-paris-attacker-coulibaly-weapons

@@ -1,4 +1,4 @@
-Creator "igraph version @VERSION@ Tue Apr 12 21:52:43 2016"
+Creator "igraph version @VERSION@ Wed Apr 13 16:49:14 2016"
 Version 1
 graph
 [
@@ -51,12 +51,12 @@ graph
   node
   [
     id 9
-    name "Bilal Hadfi"
+    name "Mohammed al-Mahmud ?"
   ]
   node
   [
     id 10
-    name "Mohammed al-Mahmud ?"
+    name "Bilal Hadfi"
   ]
   node
   [
@@ -306,22 +306,22 @@ graph
   node
   [
     id 60
-    name "Jawad Bendaoud"
+    name "Ibrahim Farisi"
   ]
   node
   [
     id 61
-    name "Mohamed Bakkali"
+    name "Jawad Bendaoud"
   ]
   node
   [
     id 62
-    name "Snail Farisi"
+    name "Mohamed Bakkali"
   ]
   node
   [
     id 63
-    name "Ibrahim Farisi"
+    name "Snail Farisi"
   ]
   node
   [
@@ -425,6 +425,11 @@ graph
   ]
   edge
   [
+    source 10
+    target 5
+  ]
+  edge
+  [
     source 11
     target 5
   ]
@@ -510,7 +515,7 @@ graph
   ]
   edge
   [
-    source 9
+    source 10
     target 6
   ]
   edge
@@ -645,12 +650,12 @@ graph
   ]
   edge
   [
-    source 39
-    target 9
+    source 11
+    target 10
   ]
   edge
   [
-    source 11
+    source 39
     target 10
   ]
   edge
