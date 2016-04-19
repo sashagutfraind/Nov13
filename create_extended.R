@@ -3,7 +3,7 @@
 #2/2012 seems like a separate network
 ToulouseAndMontauban = createNode(kblDB, "AttackSite", name="Toulouse and Montauban shootings", killed=8, wounded=5)
 MohammedMerah       = createNode(kblDB, "Person", name="Mohammed Merah",      age=23, gender="Male", ref1=references[["LIR1"]], status="arrested")  #http://www.lemonde.fr/societe/live/2012/03/19/direct-la-fusillade-a-toulouse_1671851_3224.html
-createRel(MohammedMerah, "ATTACKED", ToulouseAndMontauban, attack_type="Shooting", ref1=references[["TODO"]])
+createRel(MohammedMerah, "INVOLVED_IN", ToulouseAndMontauban, attack_type="Shooting", ref1=references[["TODO"]])
 
 
 #motivated by Al-Q not DAESH
@@ -15,8 +15,8 @@ SaïdKouachi     = createNode(kblDB, "Person", name="Saïd Kouachi",  gender="Ma
 #Djamel Begha - coordinator
 #18-year-old brother-in-law of Chérif Kouachi
 
-createRel(ChérifKouachi, "ATTACKED", CharlieHebdo, attack_type="Shooting", ref1=references[["TEL5"]])
-createRel(SaïdKouachi, "ATTACKED", CharlieHebdo, attack_type="Shooting", ref1=references[["TEL5"]])
+createRel(ChérifKouachi, "INVOLVED_IN", CharlieHebdo, attack_type="Shooting", ref1=references[["TEL5"]])
+createRel(SaïdKouachi, "INVOLVED_IN", CharlieHebdo, attack_type="Shooting", ref1=references[["TEL5"]])
 createRel(ChérifKouachi, "LINKED_TO", SaïdKouachi, note="brother", ref1=references[["TEL5"]])
 
 createRel(ChérifKouachi, "LINKED_TO", AmedyCoulibaly, note="friend", ref1=references[["LMD7"]])
@@ -27,8 +27,8 @@ createRel(SaïdKouachi, "LINKED_TO", AmedyCoulibaly, note="friend", ref1=referen
 #arms supplier
 #http://abcnews.go.com/International/wireStory/spain-police-arrest-suspect-tied-jan-2015-paris-38360132
 
-createRel(ChérifKouachi, "BEEN_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
-createRel(SaïdKouachi, "BEEN_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
+createRel(ChérifKouachi, "PRESENT_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
+createRel(SaïdKouachi, "PRESENT_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
 
 AbderahmaneAmeroud  = createNode(kblDB, "Person", name="Abderahmane Ameroud", age=27, gender="Male", citizenship="Algers", ref1=references[["NYT14"]], status="arrested")
 #assisted assassination of Massoud in 2005
@@ -225,11 +225,11 @@ AmedyCoulibaly     = createNode(kblDB, "Person", name="Amedy Coulibaly",  preNov
 HayatBoumeddiene   = createNode(kblDB, "Person", name="Hayat Boumeddiene", preNov13=TRUE, age=26, gender="Female", ref1=references[["GRD2"]], status="wanted")
 
 
-createRel(AmedyCoulibaly,  "ATTACKED", Montrouge, ref1=references[["GRD3"]])
-createRel(AmedyCoulibaly,  "ATTACKED", HyperCacher, ref1=references[["GRD3"]])
+createRel(AmedyCoulibaly,  "INVOLVED_IN", Montrouge, ref1=references[["GRD3"]])
+createRel(AmedyCoulibaly,  "INVOLVED_IN", HyperCacher, ref1=references[["GRD3"]])
 
-createRel(AmedyCoulibaly,  "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
-createRel(HayatBoumeddiene,  "BEEN_IN", Syria, date="2015/01/08", ref1=references[["GRD3"]])
+createRel(AmedyCoulibaly,  "PRESENT_IN", Molenbeek, ref1=references[["NYT2"]])
+createRel(HayatBoumeddiene,  "PRESENT_IN", Syria, date="2015/01/08", ref1=references[["GRD3"]])
 
 createRel(AmedyCoulibaly, "LINKED_TO", HayatBoumeddiene, note="common-law wife", ref1=references[["GRD3"]])
 

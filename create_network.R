@@ -337,8 +337,8 @@ SamirBouabout  = createNode(kblDB, "Person", name="Samir Bouabout", age=28, citi
 #LP2, http://www.francetvinfo.fr/monde/proche-orient/offensive-jihadiste-en-irak/un-jihadiste-incarcere-en-france-detaille-comment-l-etat-islamique-deploie-son-reseau-d-espionnage_1055939.html
 
 FrenchRivieraPlot = createNode(kblDB, "AttackSite", attackDate=2015, name="French Riviera Plot", outcome="aborted", killed=0, wounded=0, ref=references[["NYT17"]])
-createRel(RedaHame, "ATTACKED", FrenchRivieraPlot, ref1=references[["NYT17"]])
-createRel(AugUnknown, "ATTACKED", FrenchRivieraPlot, ref1=references[["NYT17"]])
+createRel(RedaHame, "INVOLVED_IN", FrenchRivieraPlot, ref1=references[["NYT17"]])
+createRel(AugUnknown, "INVOLVED_IN", FrenchRivieraPlot, ref1=references[["NYT17"]])
 
 
 ######
@@ -356,7 +356,6 @@ Turkey = createNode(kblDB, "Country", name="Turkey")
 UK = createNode(kblDB, "Country", name="United Kingdon")
 
 BazaroujFamily  = createNode(kblDB, "Activity", name="Bazarouj family")
-#question: to use LINKED_TO or BEEN_IN?  Activity or Location-like?
 
 #localities / sites
 AlfortvilleApt  = createNode(kblDB, "Site", name="Alfortville apartment in Appart’City")
@@ -395,66 +394,66 @@ France2016plot    = createNode(kblDB, "AttackSite", attackDate=2016, name="Inter
 
 
 #Known Syria connections
-createRel(AbuMuhammadAlAdnani,  "BEEN_IN", Syria, ref1=references[["DM1"]])
-createRel(AbuMuhammadAlShimali, "BEEN_IN", Syria, ref1=references[["DM1"]])
-createRel(AhmedAlmuhamed,     "BEEN_IN", Syria, ref1=references[["IND1"]])
-createRel(AbdelhamidAbaaoud,  "BEEN_IN", Syria, ref1=references[["DM1"]])
-createRel(AhmetTahir,       "BEEN_IN", Syria, ref1=references[["CNN2"]])
-createRel(AugUnknown,       "BEEN_IN", Syria, ref1=references[["NYT4"]])
-createRel(BilalHadfi,         "BEEN_IN", Syria, ref1=references[["DM1"]])
-createRel(BilalElMakhoukhi,    "BEEN_IN", date=2012, Syria, ref1=references[["UST1"]])
-createRel(FabianClain,          "BEEN_IN", Syria, ref1=references[["DM1"]])
-createRel(FouedMohamedAggad,    "BEEN_IN", Syria, ref1=references[["GRD2"]])
-createRel(GelelAttar,         "BEEN_IN", Syria, ref1=references[["LMD6"]])
-createRel(IbrahimElBakraoui,  "BEEN_IN", Syria, date=2015.06, ref1=references[["NYT13"]])
-createRel(MohammedAlmahmod,   "BEEN_IN", Syria, ref1=references[["IND1"]])
-createRel(MohammedVerd,     "BEEN_IN", Syria, ref1=references[["CNN2"]])
-createRel(NajimLaachraoui,  "BEEN_IN", Syria, date=2013, ref1=references[["NBC3"]])
-createRel(RedouaneHagaoui,   "BEEN_IN", Syria, ref1=references[["DM2"]])
-createRel(RedaHame,   "BEEN_IN", Syria, ref1=references[["NYT4"]])
-createRel(RedaKriket,  "BEEN_IN", Syria, date=2014, ref1=references[["NYT14"]])
-createRel(OmarMostefai,       "BEEN_IN", Syria, date="2013", ref1=references[["DM1"]])
-createRel(SamyAmimour,        "BEEN_IN", Syria, ref1=references[["NEW2"]])
-createRel(SamiZarrouk, "BEEN_IN", Syria, date=2013, ref1=references[["WSJ5"]])
-createRel(YoniPatricMayne,        "BEEN_IN", Syria, date=2013, ref1=references[["CNN6"]])
-createRel(YoniPatricMayne,        "BEEN_IN", Syria, date=2014, ref1=references[["CNN6"]])
+createRel(AbuMuhammadAlAdnani,  "PRESENT_IN", Syria, ref1=references[["DM1"]])
+createRel(AbuMuhammadAlShimali, "PRESENT_IN", Syria, ref1=references[["DM1"]])
+createRel(AhmedAlmuhamed,     "PRESENT_IN", Syria, ref1=references[["IND1"]])
+createRel(AbdelhamidAbaaoud,  "PRESENT_IN", Syria, ref1=references[["DM1"]])
+createRel(AhmetTahir,       "PRESENT_IN", Syria, ref1=references[["CNN2"]])
+createRel(AugUnknown,       "PRESENT_IN", Syria, ref1=references[["NYT4"]])
+createRel(BilalHadfi,         "PRESENT_IN", Syria, ref1=references[["DM1"]])
+createRel(BilalElMakhoukhi,    "PRESENT_IN", date=2012, Syria, ref1=references[["UST1"]])
+createRel(FabianClain,          "PRESENT_IN", Syria, ref1=references[["DM1"]])
+createRel(FouedMohamedAggad,    "PRESENT_IN", Syria, ref1=references[["GRD2"]])
+createRel(GelelAttar,         "PRESENT_IN", Syria, ref1=references[["LMD6"]])
+createRel(IbrahimElBakraoui,  "PRESENT_IN", Syria, date=2015.06, ref1=references[["NYT13"]])
+createRel(MohammedAlmahmod,   "PRESENT_IN", Syria, ref1=references[["IND1"]])
+createRel(MohammedVerd,     "PRESENT_IN", Syria, ref1=references[["CNN2"]])
+createRel(NajimLaachraoui,  "PRESENT_IN", Syria, date=2013, ref1=references[["NBC3"]])
+createRel(RedouaneHagaoui,   "PRESENT_IN", Syria, ref1=references[["DM2"]])
+createRel(RedaHame,   "PRESENT_IN", Syria, ref1=references[["NYT4"]])
+createRel(RedaKriket,  "PRESENT_IN", Syria, date=2014, ref1=references[["NYT14"]])
+createRel(OmarMostefai,       "PRESENT_IN", Syria, date="2013", ref1=references[["DM1"]])
+createRel(SamyAmimour,        "PRESENT_IN", Syria, ref1=references[["NEW2"]])
+createRel(SamiZarrouk, "PRESENT_IN", Syria, date=2013, ref1=references[["WSJ5"]])
+createRel(YoniPatricMayne,        "PRESENT_IN", Syria, date=2013, ref1=references[["CNN6"]])
+createRel(YoniPatricMayne,        "PRESENT_IN", Syria, date=2014, ref1=references[["CNN6"]])
 
 
 
 #Known Turkey connections
-createRel(OmarMostefai,       "BEEN_IN", Turkey, date="2010", ref1=references[["DM1"]])
-createRel(AhmetDahmani,     "BEEN_IN", Turkey, ref1=references[["CNN2"]])
-createRel(AhmetTahir,       "BEEN_IN", Turkey, ref1=references[["CNN2"]])
+createRel(OmarMostefai,       "PRESENT_IN", Turkey, date="2010", ref1=references[["DM1"]])
+createRel(AhmetDahmani,     "PRESENT_IN", Turkey, ref1=references[["CNN2"]])
+createRel(AhmetTahir,       "PRESENT_IN", Turkey, ref1=references[["CNN2"]])
 
-createRel(DusseldorfSuspect,       "BEEN_IN", Turkey, ref1=references[["NYT15"]])
-createRel(IbrahimElBakraoui,       "BEEN_IN", Turkey, ref1=references[["NYT15"]])
+createRel(DusseldorfSuspect,       "PRESENT_IN", Turkey, ref1=references[["NYT15"]])
+createRel(IbrahimElBakraoui,       "PRESENT_IN", Turkey, ref1=references[["NYT15"]])
 
 
 #UK travel
-createRel(MohamedAbrini,       "BEEN_IN", UK, date=2015.07,  ref1=references[["NYT9"]])
-createRel(AbdelhamidAbaaoud,   "BEEN_IN", UK, date="unknown", ref1=references[["NYT9"]])
+createRel(MohamedAbrini,       "PRESENT_IN", UK, date=2015.07,  ref1=references[["NYT9"]])
+createRel(AbdelhamidAbaaoud,   "PRESENT_IN", UK, date="unknown", ref1=references[["NYT9"]])
 
 #Greece transits
-createRel(AbdelhamidAbaaoud,  "BEEN_IN", Greece, ref1=references[["EXP1"]])
-createRel(AhmedAlmuhamed,     "BEEN_IN", Greece, ref1=references[["EXP1"]])
-createRel(MohammedAlmahmod,     "BEEN_IN", Greece, ref1=references[["IND1"]])
+createRel(AbdelhamidAbaaoud,  "PRESENT_IN", Greece, ref1=references[["EXP1"]])
+createRel(AhmedAlmuhamed,     "PRESENT_IN", Greece, ref1=references[["EXP1"]])
+createRel(MohammedAlmahmod,     "PRESENT_IN", Greece, ref1=references[["IND1"]])
 
 #known Molenbeek or others
-createRel(AbdelhamidAbaaoud,  "BEEN_IN", Molenbeek, ref1=references[["DM1"]])
-createRel(IbrahimAbdeslam,    "BEEN_IN", Syria, ref1=references[["LMD3"]])
-createRel(IbrahimAbdeslam,    "BEEN_IN", Molenbeek, ref1=references[["NBC2"]])
-createRel(AbdoullahCourkzine,         "BEEN_IN", Molenbeek, ref1=references[["NYT7"]])
-createRel(SamirZ,             "BEEN_IN", Molenbeek, ref1=references[["ST1"]])
-createRel(SamiZarrouk, "BEEN_IN", Molenbeek, ref1=references[["WSJ5"]])
-createRel(PierreN,            "BEEN_IN", Molenbeek, ref1=references[["ST1"]])
-createRel(SalahAbdeslam,      "BEEN_IN", Molenbeek, ref1=references[["NBC2"]])
-createRel(BilalHadfi,         "BEEN_IN", NederOverHeembeek, ref1=references[["NYT8"]])
-createRel(AyoubBazarouj,      "BEEN_IN", Molenbeek, ref1=references[["SOI1"]])
-createRel(YoussefBazarouj,    "BEEN_IN", Molenbeek, ref1=references[["SOI1"]])
-createRel(ZakariaJaffal,  "BEEN_IN", Molenbeek, ref1=references[["DW1"]])
+createRel(AbdelhamidAbaaoud,  "PRESENT_IN", Molenbeek, ref1=references[["DM1"]])
+createRel(IbrahimAbdeslam,    "PRESENT_IN", Syria, ref1=references[["LMD3"]])
+createRel(IbrahimAbdeslam,    "PRESENT_IN", Molenbeek, ref1=references[["NBC2"]])
+createRel(AbdoullahCourkzine,         "PRESENT_IN", Molenbeek, ref1=references[["NYT7"]])
+createRel(SamirZ,             "PRESENT_IN", Molenbeek, ref1=references[["ST1"]])
+createRel(SamiZarrouk, "PRESENT_IN", Molenbeek, ref1=references[["WSJ5"]])
+createRel(PierreN,            "PRESENT_IN", Molenbeek, ref1=references[["ST1"]])
+createRel(SalahAbdeslam,      "PRESENT_IN", Molenbeek, ref1=references[["NBC2"]])
+createRel(BilalHadfi,         "PRESENT_IN", NederOverHeembeek, ref1=references[["NYT8"]])
+createRel(AyoubBazarouj,      "PRESENT_IN", Molenbeek, ref1=references[["SOI1"]])
+createRel(YoussefBazarouj,    "PRESENT_IN", Molenbeek, ref1=references[["SOI1"]])
+createRel(ZakariaJaffal,  "PRESENT_IN", Molenbeek, ref1=references[["DW1"]])
 
-createRel(KhalidAlZerkani, "BEEN_IN", Molenbeek, ref1=references[["DN1"]])
-createRel(SamiZarrouk, "BEEN_IN", Molenbeek, ref1=references[["WSJ5"]])
+createRel(KhalidAlZerkani, "PRESENT_IN", Molenbeek, ref1=references[["DN1"]])
+createRel(SamiZarrouk, "PRESENT_IN", Molenbeek, ref1=references[["WSJ5"]])
 
 
 #Auvelias - planning site
@@ -470,8 +469,8 @@ createRel(KhalidElBakraoui,  "PRESENT_IN", CharleroiApt, ref1=references[["NYT13
 #EtterbeekApt
 createRel(SnailFarisi,  "PRESENT_IN", EtterbeekApt, ref1=references[["EXP3"]])
 createRel(IbrahimFarisi,  "PRESENT_IN", EtterbeekApt, ref1=references[["EXP3"]])
-createRel(KhalidElBakraoui,  "ATTACKED", EtterbeekApt, ref1=references[["UST1"]])
-createRel(OsamaKrayem,       "ATTACKED", EtterbeekApt, ref1=references[["UST1"]])
+createRel(KhalidElBakraoui,  "INVOLVED_IN", EtterbeekApt, ref1=references[["UST1"]])
+createRel(OsamaKrayem,       "INVOLVED_IN", EtterbeekApt, ref1=references[["UST1"]])
 
 #ForestApt
 createRel(SalahAbdeslam,    "PRESENT_IN", ForestApt, ref1=references[["NYT12"]])
@@ -508,25 +507,25 @@ createRel(SalahAbdeslam, "PRESENT_IN", Bobigny, ref1=references[["DM1"]])
 createRel(SamyAmimour, "PRESENT_IN", Bobigny, ref1=references[["DM1"]])
 
 #lesser sites
-#createRel(HasnaAitboulahcen,  "BEEN_IN", AulnaySousBois, ref1=references[["CNN2"]]) #http://www.cnn.com/2015/11/19/europe/paris-attacks-at-a-glance/
-#createRel(MohamedKhoualed,  "BEEN_IN", Roubaix, ref1=references[["TEL1"]])
+#createRel(HasnaAitboulahcen,  "PRESENT_IN", AulnaySousBois, ref1=references[["CNN2"]]) #http://www.cnn.com/2015/11/19/europe/paris-attacks-at-a-glance/
+#createRel(MohamedKhoualed,  "PRESENT_IN", Roubaix, ref1=references[["TEL1"]])
 
 
 #Laeken cell
-createRel(IbrahimElBakraoui, "BEEN_IN", Laeken, ref1=references[["NYT13"]])
-createRel(KhalidElBakraoui, "BEEN_IN", Laeken, ref1=references[["NYT13"]])
+createRel(IbrahimElBakraoui, "PRESENT_IN", Laeken, ref1=references[["NYT13"]])
+createRel(KhalidElBakraoui, "PRESENT_IN", Laeken, ref1=references[["NYT13"]])
 
 
 #Kriket cell
-createRel(RedaKriket,  "ATTACKED", France2016plot, ref1=references[["NYT14"]])
-createRel(RabahN,      "ATTACKED", France2016plot, ref1=references[["NYT14"]])
-createRel(YassineA,    "ATTACKED", France2016plot, ref1=references[["STT1"]])
-createRel(AbderahmaneAmeroud,  "ATTACKED", France2016plot, ref1=references[["WP3"]])
-createRel(AnisBahri,   "ATTACKED", France2016plot, ref1=references[["WP3"]])
+createRel(RedaKriket,  "INVOLVED_IN", France2016plot, ref1=references[["NYT14"]])
+createRel(RabahN,      "INVOLVED_IN", France2016plot, ref1=references[["NYT14"]])
+createRel(YassineA,    "INVOLVED_IN", France2016plot, ref1=references[["STT1"]])
+createRel(AbderahmaneAmeroud,  "INVOLVED_IN", France2016plot, ref1=references[["WP3"]])
+createRel(AnisBahri,   "INVOLVED_IN", France2016plot, ref1=references[["WP3"]])
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", RedaKriket, ref1=references[["NYT15"]])
 
 
-createRel(RedaKriket,  "BEEN_IN", Syria, date="2014", ref1=references[["NYT15"]])
+createRel(RedaKriket,  "PRESENT_IN", Syria, date="2014", ref1=references[["NYT15"]])
 #another associate of Kriket: NYT15
 #In Brussels on Friday, the police arrested three men for questioning in connection with Mr. Kriket’s arrest.
 
@@ -537,11 +536,11 @@ createRel(RedaKriket,  "BEEN_IN", Syria, date="2014", ref1=references[["NYT15"]]
 #https://pietervanostaeyen.wordpress.com/2015/01/21/katibat-al-battar-and-the-belgian-fighters-in-syria/
 
 # #transit countries
-createRel(AbdelhamidAbaaoud,  "BEEN_IN", Greece, ref1=references[["EXP1"]])
-createRel(AhmedAlmuhamed,     "BEEN_IN", Greece, ref1=references[["EXP1"]])
+createRel(AbdelhamidAbaaoud,  "PRESENT_IN", Greece, ref1=references[["EXP1"]])
+createRel(AhmedAlmuhamed,     "PRESENT_IN", Greece, ref1=references[["EXP1"]])
 
-createRel(AhmetDahmani,     "BEEN_IN", Turkey, ref1=references[["CNN2"]])
-createRel(AhmetDahmani,     "BEEN_IN", Syria, ref1=references[["CNN2"]])
+createRel(AhmetDahmani,     "PRESENT_IN", Turkey, ref1=references[["CNN2"]])
+createRel(AhmetDahmani,     "PRESENT_IN", Syria, ref1=references[["CNN2"]])
 
 
 #friend and familiar affiliations
@@ -682,58 +681,58 @@ createRel(ZakariaJaffal,          "LINKED_TO", AbdelhamidAbaaoud, note="friend",
 createRel(ZouhirMehdaoui,    "LINKED_TO", AbdelhamidAbaaoud, note="friend", ref1=references[["LEX1"]])
 
 #attacks
-createRel(IbrahimAbdeslam, "ATTACKED", ComptoirVoltaire, attackType="SuicideBombing", ref1=references[["DM1"]])
+createRel(IbrahimAbdeslam, "INVOLVED_IN", ComptoirVoltaire, attackType="SuicideBombing", ref1=references[["DM1"]])
 
-createRel(OmarMostefai,    "ATTACKED",  Bataclan, attackType="SuicideBombing", ref1=references[["DM1"]])
-createRel(SamyAmimour,     "ATTACKED", Bataclan, attackType="Suicide", ref1=references[["DM1"]])
-createRel(FouedMohamedAggad, "ATTACKED", Bataclan, attackType="Suicide", ref1=references[["DM1"]])
+createRel(OmarMostefai,    "INVOLVED_IN",  Bataclan, attackType="SuicideBombing", ref1=references[["DM1"]])
+createRel(SamyAmimour,     "INVOLVED_IN", Bataclan, attackType="Suicide", ref1=references[["DM1"]])
+createRel(FouedMohamedAggad, "INVOLVED_IN", Bataclan, attackType="Suicide", ref1=references[["DM1"]])
 #only 3 detonated.  several (all?) shot.  Volkswagen Polo abandoned at site
 #some early reports from Bataclan report a 4th Female attacker/shooter and also AbbdulakbakB.  No evidence in later reports.
 
-createRel(AhmedAlmuhamed, "ATTACKED", StadeDeFrance, attackType="SuicideBombing", ref1=references[["DM1"]])
-createRel(BilalHadfi,     "ATTACKED", StadeDeFrance, attackType="SuicideBombing", ref1=references[["DM1"]])  
-createRel(MohammedAlmahmod, "ATTACKED", StadeDeFrance, attackType="SuicideBombing", note="detonated at nearby MacDonalds",  ref1=references[["DM1"]], ref2=references[["WSJ1"]])  
-createRel(SalahAbdeslam, "ATTACKED", StadeDeFrance, attackType="SuicideBombing", note="backed out",  ref1=references[["NYT18"]])  
+createRel(AhmedAlmuhamed, "INVOLVED_IN", StadeDeFrance, attackType="SuicideBombing", ref1=references[["DM1"]])
+createRel(BilalHadfi,     "INVOLVED_IN", StadeDeFrance, attackType="SuicideBombing", ref1=references[["DM1"]])  
+createRel(MohammedAlmahmod, "INVOLVED_IN", StadeDeFrance, attackType="SuicideBombing", note="detonated at nearby MacDonalds",  ref1=references[["DM1"]], ref2=references[["WSJ1"]])  
+createRel(SalahAbdeslam, "INVOLVED_IN", StadeDeFrance, attackType="SuicideBombing", note="backed out",  ref1=references[["NYT18"]])  
 # 
 #http://www.nytimes.com/2016/03/20/world/europe/paris-terror-attacks-suspect-belgium.html?_r=0
 
 #gunmen in a black Seat Leon.  possibly Abdeslam brothers + unknown (YoussefBazarouj?  SOI1)
 #http://www.lefigaro.fr/actualite-france/2015/11/18/01016-20151118ARTFIG00346-ce-que-l-on-sait-du-commando-qui-a-seme-la-terreur-a-paris.php
-createRel(IbrahimAbdeslam, "ATTACKED", LeCarillonBarAndLePetitCambodge, attackType="Shooting", ref1=references[["DM1"]])  
-createRel(SalahAbdeslam, "ATTACKED", LeCarillonBarAndLePetitCambodge, attackType="Shooting", ref1=references[["DM1"]])  
-createRel(AbdelhamidAbaaoud, "ATTACKED", LeCarillonBarAndLePetitCambodge, attackType="Shooting", ref1=references[["FOX1"]])  
+createRel(IbrahimAbdeslam, "INVOLVED_IN", LeCarillonBarAndLePetitCambodge, attackType="Shooting", ref1=references[["DM1"]])  
+createRel(SalahAbdeslam, "INVOLVED_IN", LeCarillonBarAndLePetitCambodge, attackType="Shooting", ref1=references[["DM1"]])  
+createRel(AbdelhamidAbaaoud, "INVOLVED_IN", LeCarillonBarAndLePetitCambodge, attackType="Shooting", ref1=references[["FOX1"]])  
 #they moved on... DM1
-createRel(IbrahimAbdeslam, "ATTACKED", LaCasaNostra, attackType="Shooting", ref1=references[["DM1"]])  
-createRel(SalahAbdeslam, "ATTACKED", LaCasaNostra, attackType="Shooting", ref1=references[["DM1"]])  
-createRel(AbdelhamidAbaaoud, "ATTACKED", LaCasaNostra, attackType="Shooting", ref1=references[["FOX1"]])  
+createRel(IbrahimAbdeslam, "INVOLVED_IN", LaCasaNostra, attackType="Shooting", ref1=references[["DM1"]])  
+createRel(SalahAbdeslam, "INVOLVED_IN", LaCasaNostra, attackType="Shooting", ref1=references[["DM1"]])  
+createRel(AbdelhamidAbaaoud, "INVOLVED_IN", LaCasaNostra, attackType="Shooting", ref1=references[["FOX1"]])  
 #they moved on... DM1
-createRel(IbrahimAbdeslam, "ATTACKED", LaBonneBiere, attackType="Shooting", ref1=references[["NEW2"]])  
-createRel(SalahAbdeslam, "ATTACKED", LaBonneBiere, attackType="Shooting", ref1=references[["NEW2"]])  
-createRel(AbdelhamidAbaaoud, "ATTACKED", LaBonneBiere, attackType="Shooting", ref1=references[["FOX1"]])  
+createRel(IbrahimAbdeslam, "INVOLVED_IN", LaBonneBiere, attackType="Shooting", ref1=references[["NEW2"]])  
+createRel(SalahAbdeslam, "INVOLVED_IN", LaBonneBiere, attackType="Shooting", ref1=references[["NEW2"]])  
+createRel(AbdelhamidAbaaoud, "INVOLVED_IN", LaBonneBiere, attackType="Shooting", ref1=references[["FOX1"]])  
 #they moved on... DM1
-createRel(IbrahimAbdeslam, "ATTACKED", LaBelleEquipe, attackType="Shooting", ref1=references[["DM1"]])  
-createRel(SalahAbdeslam, "ATTACKED", LaBelleEquipe, attackType="Shooting", ref1=references[["DM1"]])  
-createRel(AbdelhamidAbaaoud, "ATTACKED", LaBelleEquipe, attackType="Shooting", ref1=references[["FOX1"]])  
+createRel(IbrahimAbdeslam, "INVOLVED_IN", LaBelleEquipe, attackType="Shooting", ref1=references[["DM1"]])  
+createRel(SalahAbdeslam, "INVOLVED_IN", LaBelleEquipe, attackType="Shooting", ref1=references[["DM1"]])  
+createRel(AbdelhamidAbaaoud, "INVOLVED_IN", LaBelleEquipe, attackType="Shooting", ref1=references[["FOX1"]])  
 
 #suspected attack 1
-createRel(SalahAbdeslam, "ATTACKED", Arrondisement18, attackType="Unknown", ref1=references[["DM1"]])
+createRel(SalahAbdeslam, "INVOLVED_IN", Arrondisement18, attackType="Unknown", ref1=references[["DM1"]])
 
 #suspected attack 2
-createRel(AbdelhamidAbaaoud, "ATTACKED", LaDefense, attackType="SuicideBombing", ref1=references[["LMD5"]])
-createRel(ChakibAkrouh,      "ATTACKED", LaDefense, attackType="SuicideBombing", ref1=references[["LMD5"]])
+createRel(AbdelhamidAbaaoud, "INVOLVED_IN", LaDefense, attackType="SuicideBombing", ref1=references[["LMD5"]])
+createRel(ChakibAkrouh,      "INVOLVED_IN", LaDefense, attackType="SuicideBombing", ref1=references[["LMD5"]])
 
 #suspected attack 3?
 #+8 arrested in Saint Dennis with force 2015-11-18, http://www.nydailynews.com/news/world/paris-raid-killed-2-terror-suspects-time-article-1.2438743
 #TARGETED Airport, Shopping Mall
 
 #ZaventemAirport
-createRel(IbrahimElBakraoui,  "ATTACKED", ZaventemAirport, ref1=references[["NYT13"]])
-createRel(NajimLaachraoui,  "ATTACKED", ZaventemAirport, ref1=references[["NBC3"]])
-createRel(MohamedAbrini,  "ATTACKED", ZaventemAirport, ref1=references[["NYT13"]], ref2=references[["REU2"]])
+createRel(IbrahimElBakraoui,  "INVOLVED_IN", ZaventemAirport, ref1=references[["NYT13"]])
+createRel(NajimLaachraoui,  "INVOLVED_IN", ZaventemAirport, ref1=references[["NBC3"]])
+createRel(MohamedAbrini,  "INVOLVED_IN", ZaventemAirport, ref1=references[["NYT13"]], ref2=references[["REU2"]])
 
 #BrusselsMetro
-createRel(KhalidElBakraoui,  "ATTACKED", MaalbeckMetro, ref1=references[["UST1"]])
-createRel(OsamaKrayem,       "ATTACKED", MaalbeckMetro, ref1=references[["UST1"]])
+createRel(KhalidElBakraoui,  "INVOLVED_IN", MaalbeckMetro, ref1=references[["UST1"]])
+createRel(OsamaKrayem,       "INVOLVED_IN", MaalbeckMetro, ref1=references[["UST1"]])
 
 ######################
 #PREVIOUS PLOTS BY KBL
@@ -743,36 +742,36 @@ BrusselsParisTrain = createNode(kblDB, "AttackSite", attackDate=2015.0821, name=
 VerviersPlot       = createNode(kblDB, "AttackSite", attackDate=2015.0115, name="Police attack plot in Verviers", attackType="Shooting", killed=0, wounded=0, ref1=references[["DM1"]], ref2=references[["GRD1"]])
 
 #BrusselsParisTrain
-createRel(AyoubElKhazzani, "ATTACKED", BrusselsParisTrain, attackType="Shooting", ref1=references[["NYT2"]])
+createRel(AyoubElKhazzani, "INVOLVED_IN", BrusselsParisTrain, attackType="Shooting", ref1=references[["NYT2"]])
 createRel(AyoubElKhazzani, "LINKED_TO", AbdelhamidAbaaoud, ref1=references[["NYT4"]])
-createRel(AyoubElKhazzani, "BEEN_IN", Molenbeek, ref1=references[["NYT1"]])
+createRel(AyoubElKhazzani, "PRESENT_IN", Molenbeek, ref1=references[["NYT1"]])
 
 #VerviersPlot
-createRel(RedouaneHagaoui,  "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
-createRel(TarikJadaoun,     "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
-createRel(AbdelhamidAbaaoud,  "ATTACKED", VerviersPlot, ref1=references[["TEL3"]])
-createRel(NoureddineAbraimi,  "ATTACKED", VerviersPlot, ref1=references[["WSJ5"]])
+createRel(RedouaneHagaoui,  "INVOLVED_IN", VerviersPlot, ref1=references[["TEL3"]])
+createRel(TarikJadaoun,     "INVOLVED_IN", VerviersPlot, ref1=references[["TEL3"]])
+createRel(AbdelhamidAbaaoud,  "INVOLVED_IN", VerviersPlot, ref1=references[["TEL3"]])
+createRel(NoureddineAbraimi,  "INVOLVED_IN", VerviersPlot, ref1=references[["WSJ5"]])
 #WSJ5: reports Omar Damache and Khalid Ben Larbi as killed in the plot
 #Soufiene Amghar as arrested
 #corrected: LMD9: Souhaib El-Abdi, Marouan El-Bali, Mahmoud Najmi Arshad, Omar Damache, Walid Hamam - arrested
 #DSD1: massive details.  Khalid Ben Larbi and Sofiane Amghar are dead.
 #KCK1: Tarik Jadaoun escaped to Syria but claimed the attacks
 
-createRel(RedouaneHagaoui,  "BEEN_IN", Molenbeek, ref1=references[["NYT3"]])
-createRel(TarikJadaoun,     "BEEN_IN", Molenbeek, ref1=references[["NYT3"]])
+createRel(RedouaneHagaoui,  "PRESENT_IN", Molenbeek, ref1=references[["NYT3"]])
+createRel(TarikJadaoun,     "PRESENT_IN", Molenbeek, ref1=references[["NYT3"]])
 
-#"provided logistical support", but not actually attacked - code as link to the head of the plot
+#"provided logistical support", but not actually INVOLVED_IN - code as link to the head of the plot
 createRel(NoureddineAbraimi,  "LINKED_TO", AbdelhamidAbaaoud, ref1=references[["WSJ5"]])
 
 createRel(NoureddineAbraimi,  "LINKED_TO", LazezAbraimi, note="brother", ref1=references[["WSJ5"]])
 
-createRel(NoureddineAbraimi, "BEEN_IN", Molenbeek, ref1=references[["WSJ5"]])
-createRel(NoureddineAbraimi, "BEEN_IN", Syria, date=2014, ref1=references[["WSJ5"]])
+createRel(NoureddineAbraimi, "PRESENT_IN", Molenbeek, ref1=references[["WSJ5"]])
+createRel(NoureddineAbraimi, "PRESENT_IN", Syria, date=2014, ref1=references[["WSJ5"]])
 
 #Brussels Jewish Museum
-createRel(MehdiNemmouche, "ATTACKED", JewishMuseum, attackType="Shooting", ref1=references[["NYT2"]])
+createRel(MehdiNemmouche, "INVOLVED_IN", JewishMuseum, attackType="Shooting", ref1=references[["NYT2"]])
 createRel(MehdiNemmouche, "LINKED_TO", AbdelhamidAbaaoud, note="liaised", ref1=references[["NYT2"]])
-createRel(MehdiNemmouche, "BEEN_IN", Molenbeek, ref1=references[["NYT2"]])
+createRel(MehdiNemmouche, "PRESENT_IN", Molenbeek, ref1=references[["NYT2"]])
 
 
 ########################################################
@@ -791,7 +790,7 @@ write.csv(nov13relationships, file="~/nov13/ise_relationships.csv" )
 #browse(nov13)
 
 query = '  
-MATCH (p:Person)-[:ATTACKED]->(s:AttackSite)
+MATCH (p:Person)-[:INVOLVED_IN]->(s:AttackSite)
 RETURN p.name, s.name'
 attackersAndSites = cypher(kblDB, query)
 attackersAndSites = unique(attackersAndSites)
@@ -808,7 +807,7 @@ write.csv(minimalNetwork, file="~/nov13/ise_minimalNetwork.csv", row.names=F)
 
 
 query = '  
-MATCH (attacker1:Person)-[:ATTACKED]->(l:AttackSite)<-[:ATTACKED]-(attacker2:Person)
+MATCH (attacker1:Person)-[:INVOLVED_IN]->(l:AttackSite)<-[:INVOLVED_IN]-(attacker2:Person)
 RETURN attacker1.name, attacker2.name'
 commonAttack = cypher(kblDB, query)
 commonAttack = unique(commonAttack)
@@ -821,7 +820,7 @@ commonInvolvement = unique(commonInvolvement)
 
 
 query = '  
-MATCH (p:Person)-[:LINKED_TO]->(attacker1:Person)-[:ATTACKED]->(l:AttackSite)
+MATCH (p:Person)-[:LINKED_TO]->(attacker1:Person)-[:INVOLVED_IN]->(l:AttackSite)
 WHERE p.status <> "free"
 RETURN p.name, attacker1.name'
 linkedToAttacker = cypher(kblDB, query)
@@ -834,29 +833,22 @@ RETURN p1.name, p2.name'
 linkedToWanted = cypher(kblDB, query)
 linkedToWanted = unique(linkedToWanted)
 
-# query = '  
-# MATCH (p1:Person)-[:ASSISTED]-(p2:Person)
-# WHERE (p1.status <> "free") AND (p2.status <> "free")
-# RETURN p1.name, p2.name'
-# assistedSuspect = cypher(kblDB, query)
-# assistedSuspect = unique(assistedSuspect)
-
 query = '  
-MATCH (p:Person)-[r1]->(l:Site)<-[r2]-(attacker1:Person)-[:ATTACKED]->()
+MATCH (p:Person)-[r1]->(l:Site)<-[r2]-(attacker1:Person)-[:INVOLVED_IN]->(:AttackSite)
 WHERE p.status <> "free"
 RETURN p.name, attacker1.name'
 sharedSpaceWithAttacker = cypher(kblDB, query)
 sharedSpaceWithAttacker = unique(sharedSpaceWithAttacker)
 
 # query = '  
-# MATCH (p:Person)-[:AFFILIATED_WITH]->(l:Focus)<-[:AFFILIATED_WITH]-(attacker1:Person)-[:ATTACKED]->()
+# MATCH (p:Person)-[:INVOLVED_IN]->(l:Activity)<-[:INVOLVED_IN]-(attacker1:Person)-[:INVOLVED_IN]->()
 # WHERE p.status <> "free"
 # RETURN p.name, attacker1.name'
 # sharedAffiliationWithAttacker = cypher(kblDB, query)
 # sharedAffiliationWithAttacker = unique(sharedAffiliationWithAttacker)
 # 
 # query = '  
-# MATCH (p1:Person)-[:AFFILIATED_WITH]->(l:Focus)<-[:AFFILIATED_WITH]-(p2:Person)
+# MATCH (p1:Person)-[:INVOLVED_IN]->(l:Activity)<-[:INVOLVED_IN]-(p2:Person)
 # WHERE p1.status <> "free" AND p2.status <> "free"
 # RETURN p1.name, p2.name'
 # sharedAffiliationWithSuspect = cypher(kblDB, query)
@@ -870,7 +862,7 @@ sharedSiteWithSuspect = cypher(kblDB, query)
 sharedSiteWithSuspect = unique(sharedSiteWithSuspect)
 
 query = '  
-MATCH (p1:Person)-[:BEEN_IN]->(l:Locality)<-[:BEEN_IN]-(p2:Person)
+MATCH (p1:Person)-[:PRESENT_IN]->(l:Locality)<-[:PRESENT_IN]-(p2:Person)
 WHERE (p1.status <> "free") AND (p2.status <> "free")
 RETURN p1.name, p2.name'
 sharedLocalityWithSuspect = cypher(kblDB, query)
@@ -946,7 +938,7 @@ write_gml(Vs=terrorPersons, Es=terrorNetworkExtendedUndirected, fpath="~/nov13/i
 #querying the DB
 #===============
 #MATCH (n) RETURN n
-#MATCH n,s WHERE (n)-[:ATTACKED]->(s) RETURN n,s
+#MATCH n,s WHERE (n)-[:INVOLVED_IN]->(s) RETURN n,s
 #MATCH n WHERE NOT (n:Locality) AND NOT (n:Country) RETURN n
 
 #extract all the data necessary for minimal network
