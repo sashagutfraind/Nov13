@@ -26,10 +26,17 @@ You can also get the JSON file from the neo4j display
 
 
 TODO:
+NYT19: UK
+http://www.timesofisrael.com/court-thwarted-belgian-terror-cell-had-bomb-making-chemicals/
+http://www.timesofisrael.com/belgium-begins-trial-of-terror-cell-linked-to-paris-brussels-attacks/
+
+IND2: "Abou Ahmad" mastermind
+
 - recode the relationships
 - fix the preNov13 attrib
 - fix the Date
 - update the citizenship for actors
+- make the DB report the number of ndoes and edges
 '
 
 
@@ -167,6 +174,8 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,LMD9="http://www.lemonde.fr/societe/article/2016/03/23/quand-la-cellule-belge-de-verviers-projetait-un-attentat-dans-un-aeroport_4888395_3224.html"
                   ,DSD1="http://www.standaard.be/cnt/dmf20160405_02220019"
                   ,NYT18="http://www.nytimes.com/2016/03/20/world/europe/paris-terror-attacks-suspect-belgium.html?_r=0"
+                  ,NYT19="http://www.nytimes.com/2016/04/30/world/europe/britain-brussels-paris-attacks.html"
+                  ,IND2="http://www.independent.co.uk/news/world/europe/terror-threat-still-very-high-in-france-six-months-after-the-paris-attacks-a7028921.html"
                   )
 
 AbdeilahChouaa = createNode(kblDB, "Person", name="Abdeilah Chouaa", gender="Male", citizenship="Belgium",  status="arrested", ref1=references[["ST1"]])
@@ -178,7 +187,7 @@ AbdoullahCourkzine    = createNode(kblDB, "Person", name="Abdoullah Courkzine", 
 AhmetDahmani = createNode(kblDB, "Person", name="Ahmet Dahmani", age=26, gender="Male", citizenship="Belgium", role="Scout", ref1=references[["CNN2"]], status="arrested")
 AhmetTahir = createNode(kblDB, "Person", name="Ahmet Tahir", age=29, gender="Male", citizenship="Syria", ref1=references[["CNN2"]], status="arrested")
  
-BoubakerAlHakim = createNode(kblDB, "Person", name="Boubaker al-Hakim", gender="Male", citizenship="France", ref1=references[[""]], ref2=references[["NYT12"]], status="wanted")
+BoubakerAlHakim = createNode(kblDB, "Person", name="Boubaker al-Hakim", gender="Male", citizenship="France", ref1=references[["NYT12"]], status="wanted")
 
 
 AyoubBazarouj     = createNode(kblDB, "Person", name="Ayoub Bazarouj",    age=22, gender="Male", citizenship="Belgium", ref1=references[["SOI1"]], ref2=references[["EXP4"]], status="free")
@@ -249,8 +258,8 @@ IbrahimElBakraoui = createNode(kblDB, "Person", name="Ibrahim El Bakraoui", preN
 KhalidElBakraoui = createNode(kblDB, "Person", name="Khalid El Bakraoui", alias="Ibrahim Maaroufi", preNov13=FALSE, age=27, gender="Male", citizenship="Belgium", role="logistics", ref1=references[["NYT13"]], status="dead")
 NajimLaachraoui = createNode(kblDB, "Person", name="Najim Laachraoui", alias="Soufiane Kayal", preNov13=FALSE, age=24, DOB="18/05/1991", gender="Male", citizenship="Belgium", role="weapons", ref1=references[["NBC3"]], ref2=references[["ITP1"]], status="dead")
 
-OsamaKrayem = createNode(kblDB, "Person", name="Osama Krayem", alias="Naim Al Ahmed", preNov13=FALSE, age=23, gender="Male", citizenship="Sweden",ref1=references[["TOI1"]], status="arrested")
-HerveBM = createNode(kblDB, "Person", name="Arrested with Abrini", preNov13=FALSE, gender="Male", citizenship="Rwanda", ref1=references[["TOI1"]], ref2=references[["BBC3"]], status="arrested")
+OsamaKrayem = createNode(kblDB, "Person", name="Osama Krayem", alias="Naim Al Ahmed", gender="Male", age=23, citizenship="Sweden", preNov13=FALSE, ref1=references[["TOI1"]], status="arrested")
+HerveBM     = createNode(kblDB, "Person", name="Herve BM", gender="Male", citizenship="Rwanda", preNov13=FALSE, note="Arrested with Abrini", ref1=references[["TOI1"]], ref2=references[["BBC3"]], status="arrested")
 
 #now free
 #FayçalCheffou = createNode(kblDB, "Person", name="Fayçal Cheffou", gender="Male", ref1=references[["NYT14"]], ref2=references[["NBC4"]], status="free")
@@ -469,8 +478,8 @@ createRel(KhalidElBakraoui,  "PRESENT_IN", CharleroiApt, ref1=references[["NYT13
 #EtterbeekApt
 createRel(SnailFarisi,  "PRESENT_IN", EtterbeekApt, ref1=references[["EXP3"]])
 createRel(IbrahimFarisi,  "PRESENT_IN", EtterbeekApt, ref1=references[["EXP3"]])
-createRel(KhalidElBakraoui,  "INVOLVED_IN", EtterbeekApt, ref1=references[["UST1"]])
-createRel(OsamaKrayem,       "INVOLVED_IN", EtterbeekApt, ref1=references[["UST1"]])
+createRel(KhalidElBakraoui,  "PRESENT_IN", EtterbeekApt, ref1=references[["UST1"]])
+createRel(OsamaKrayem,       "PRESENT_IN", EtterbeekApt, ref1=references[["UST1"]])
 
 #ForestApt
 createRel(SalahAbdeslam,    "PRESENT_IN", ForestApt, ref1=references[["NYT12"]])
@@ -773,176 +782,4 @@ createRel(MehdiNemmouche, "INVOLVED_IN", JewishMuseum, attackType="Shooting", re
 createRel(MehdiNemmouche, "LINKED_TO", AbdelhamidAbaaoud, note="liaised", ref1=references[["NYT2"]])
 createRel(MehdiNemmouche, "PRESENT_IN", Molenbeek, ref1=references[["NYT2"]])
 
-
-########################################################
-#print("Export")
-########################################################
-nov13nodes = cypher(kblDB, query='MATCH (p) return p.name') 
-write.csv(nov13nodes, file="~/nov13/ise_nodes.csv")
-
-nov13persons = cypher(kblDB, query='MATCH (p:Person) return p.name') 
-write.csv(nov13persons, file="~/nov13/ise_persons.csv")
-
-nov13relationships = cypher(kblDB, query='MATCH (n1)-[r]->(n2) return n1.name, type(r), n2.name') 
-write.csv(nov13relationships, file="~/nov13/ise_relationships.csv" )
-
-#requires neo4j database
-#browse(nov13)
-
-query = '  
-MATCH (p:Person)-[:INVOLVED_IN]->(s:AttackSite)
-RETURN p.name, s.name'
-attackersAndSites = cypher(kblDB, query)
-attackersAndSites = unique(attackersAndSites)
-print(attackersAndSites)  
-write.csv(attackersAndSites, file="~/nov13/ise_attackersAndSites.csv" )
-
-
-####################################################################################################
-#Terror network of people is constructed using relationships to attackers or suspects, as follows
-####################################################################################################
-query = 'MATCH n-[r]->m where NOT (n:Locality) AND NOT (n:Country) AND NOT (m:Locality) AND NOT (m:Country) RETURN n.name,labels(n),type(r),m.name,labels(m) '
-minimalNetwork = cypher(kblDB, query)
-write.csv(minimalNetwork, file="~/nov13/ise_minimalNetwork.csv", row.names=F)
-
-
-query = '  
-MATCH (attacker1:Person)-[:INVOLVED_IN]->(l:AttackSite)<-[:INVOLVED_IN]-(attacker2:Person)
-RETURN attacker1.name, attacker2.name'
-commonAttack = cypher(kblDB, query)
-commonAttack = unique(commonAttack)
-
-query = '  
-MATCH (p1:Person)-[:INVOLVED_IN]->(l:Activity)<-[:INVOLVED_IN]-(p2:Person)
-RETURN p1.name, p2.name'
-commonInvolvement = cypher(kblDB, query)
-commonInvolvement = unique(commonInvolvement)
-
-
-query = '  
-MATCH (p:Person)-[:LINKED_TO]->(attacker1:Person)-[:INVOLVED_IN]->(l:AttackSite)
-WHERE p.status <> "free"
-RETURN p.name, attacker1.name'
-linkedToAttacker = cypher(kblDB, query)
-linkedToAttacker = unique(linkedToAttacker)
-
-query = '  
-MATCH (p1:Person)-[:LINKED_TO]->(p2:Person)
-WHERE (p1.status <> "free") AND (p2.status = "wanted" OR p2.status = "dead")
-RETURN p1.name, p2.name'
-linkedToWanted = cypher(kblDB, query)
-linkedToWanted = unique(linkedToWanted)
-
-query = '  
-MATCH (p:Person)-[r1]->(l:Site)<-[r2]-(attacker1:Person)-[:INVOLVED_IN]->(:AttackSite)
-WHERE p.status <> "free"
-RETURN p.name, attacker1.name'
-sharedSpaceWithAttacker = cypher(kblDB, query)
-sharedSpaceWithAttacker = unique(sharedSpaceWithAttacker)
-
-# query = '  
-# MATCH (p:Person)-[:INVOLVED_IN]->(l:Activity)<-[:INVOLVED_IN]-(attacker1:Person)-[:INVOLVED_IN]->()
-# WHERE p.status <> "free"
-# RETURN p.name, attacker1.name'
-# sharedAffiliationWithAttacker = cypher(kblDB, query)
-# sharedAffiliationWithAttacker = unique(sharedAffiliationWithAttacker)
-# 
-# query = '  
-# MATCH (p1:Person)-[:INVOLVED_IN]->(l:Activity)<-[:INVOLVED_IN]-(p2:Person)
-# WHERE p1.status <> "free" AND p2.status <> "free"
-# RETURN p1.name, p2.name'
-# sharedAffiliationWithSuspect = cypher(kblDB, query)
-# sharedAffiliationWithSuspect = unique(sharedAffiliationWithSuspect)
-
-query = '  
-MATCH (p1:Person)-[r1]->(l:Site)<-[r2]-(p2:Person)
-WHERE (p1.status <> "free") AND (p2.status <> "free")
-RETURN p1.name, p2.name'
-sharedSiteWithSuspect = cypher(kblDB, query)
-sharedSiteWithSuspect = unique(sharedSiteWithSuspect)
-
-query = '  
-MATCH (p1:Person)-[:PRESENT_IN]->(l:Locality)<-[:PRESENT_IN]-(p2:Person)
-WHERE (p1.status <> "free") AND (p2.status <> "free")
-RETURN p1.name, p2.name'
-sharedLocalityWithSuspect = cypher(kblDB, query)
-sharedLocalityWithSuspect = unique(sharedLocalityWithSuspect)
-
-#prepare to merge
-names(commonAttack) <- c("n1", "n2")
-names(linkedToAttacker) <- c("n1", "n2")
-names(commonInvolvement) <- c("n1", "n2")
-names(linkedToWanted) <- c("n1", "n2")
-# names(assistedAttacker) <- c("n1", "n2")
-# names(assistedSuspect) <- c("n1", "n2")
-# names(sharedAffiliationWithAttacker) <- c("n1", "n2")
-# names(sharedAffiliationWithSuspect) <- c("n1", "n2")
-names(sharedSpaceWithAttacker) <- c("n1", "n2")
-names(sharedSiteWithSuspect) <- c("n1", "n2")
-names(sharedLocalityWithSuspect) <- c("n1", "n2")
-
-terrorNetwork <-                   rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSpaceWithAttacker, sharedSiteWithSuspect)
-terrorNetworkUndirected <- rbind(terrorNetwork, data.frame(n1=terrorNetwork[["n2"]], n2=terrorNetwork[["n1"]])) 
-terrorNetworkUndirected <- unique(terrorNetworkUndirected)
-print(terrorNetworkUndirected) 
-write.csv(terrorNetworkUndirected, file="~/nov13/ise_terrorNetwork.csv", row.names=F)
-
-
-terrorNetworkExtended           <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSpaceWithAttacker, sharedSiteWithSuspect, sharedLocalityWithSuspect) #, sharedAffiliationWithAttacker, sharedAffiliationWithSuspect)
-terrorNetworkExtendedUndirected <- rbind(terrorNetworkExtended, data.frame(n1=terrorNetworkExtended[["n2"]], n2=terrorNetworkExtended[["n1"]])) 
-terrorNetworkExtendedUndirected <- unique(terrorNetworkExtendedUndirected)
-print(terrorNetworkExtendedUndirected) 
-write.csv(terrorNetworkExtendedUndirected, file="~/nov13/ise_terrorNetworkExtended.csv", row.names=F)
-
-
-terrorNetworkLimited           <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement)
-terrorNetworkLimitedUndirected <- rbind(terrorNetworkLimited, data.frame(n1=terrorNetworkLimited[["n2"]], n2=terrorNetworkLimited[["n1"]])) 
-terrorNetworkLimitedUndirected <- unique(terrorNetworkLimitedUndirected)
-print(terrorNetworkLimitedUndirected) 
-write.csv(terrorNetworkLimitedUndirected, file="~/nov13/ise_terrorNetworkLimited.csv", row.names=F)
-
-query = '  
-MATCH (n:Person) WHERE (n.preNov13=TRUE) RETURN n.name'
-preNov13agents = cypher(kblDB, query)
-names(preNov13agents)<-c("name")
-write.csv(preNov13agents, file="~/nov13/ise_preNov13agents.csv", row.names=F)
-
-
-require(data.table)
-query = '  
-MATCH (n:Person) RETURN n.name, n.age, n.gender, n.citizenship, n.status'
-allPersons = data.table(cypher(kblDB, query))
-names(allPersons)<-c("name", "ageIn2015", "gender", "citizenship", "status")
-write.csv(allPersons, file="~/nov13/ise_allPersons.csv", row.names=F)
-
-
-require(igraph)
-write_gml <- function(Vs, Es, fpath) {
-  stopifnot("name" %in% names(Vs))
-  stopifnot(names(Es)==c("n1", "n2"))
-  isols <- setdiff(setdiff(Vs$name, Es$n1), Es$n2)
-  G <- make_graph(edges=as.vector(t(Es)), directed=F, isolates=isols)
-  G <- simplify(G)
-  #wishlist: set other attribs
-  write_graph(G, file=fpath, format="gml")
-  return(G)
-}
-
-terrorPersons <- allPersons[status!="free"]
-TN <- write_gml(Vs=terrorPersons, Es=terrorNetworkUndirected,   fpath="~/nov13/ise_terrorNetwork.gml")
-write_gml(Vs=terrorPersons, Es=terrorNetworkLimitedUndirected,  fpath="~/nov13/ise_terrorNetworkLimited.gml")
-write_gml(Vs=terrorPersons, Es=terrorNetworkExtendedUndirected, fpath="~/nov13/ise_terrorNetworkExtended.gml")
-
-#browse(kblDB)
-
-#querying the DB
-#===============
-#MATCH (n) RETURN n
-#MATCH n,s WHERE (n)-[:INVOLVED_IN]->(s) RETURN n,s
-#MATCH n WHERE NOT (n:Locality) AND NOT (n:Country) RETURN n
-
-#extract all the data necessary for minimal network
-#MATCH n-[r]->m where NOT (n:Locality) AND NOT (n:Country) AND NOT (m:Locality) AND NOT (m:Country) RETURN n.name,labels(n),type(r),m.name,labels(m)
-
-#extract all nodes of the nov13 network
-#MATCH n WHERE (n.preNov13 IS NULL) RETURN n
+print("Database built!")
