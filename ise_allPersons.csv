@@ -1,73 +1,73 @@
-"name","ageIn2015","gender","citizenship","status"
-"Abdeilah Chouaa",NA,"Male","Belgium","arrested"
-"Abu Muhammad al-Adnani",38,"Male","TODO","wanted"
-"Abu Muhammad al-Shimali",NA,"Male","TODO","wanted"
-"Abdelhamid Abaaoud",27,"Male","Belgium","dead"
-"Abdoullah Courkzine",30,"Male","Belgium","arrested"
-"Ahmet Dahmani",26,"Male","Belgium","arrested"
-"Ahmet Tahir",29,"Male","Syria","arrested"
-"Boubaker al-Hakim",NA,"Male","France","wanted"
-"Ayoub Bazarouj",22,"Male","Belgium","free"
-"Salah Ali Oulkadi",31,"Male","France","arrested"
-"August Recruit",NA,"Male","Belgium","arrested"
-"Bilal Hadfi",20,"Male","France","dead"
-"Chakib Akrouh",25,"Male","Belgium","dead"
-"Fabian Clain",36,"Male","France","wanted"
-"Foued Mohamed-Aggad",23,"Male","Belgium","dead"
-"Gelel Attar",26,"Male","Belgium","arrested"
-"Hamza Attou",21,"Male","Belgium","arrested"
-"Ibrahim Abdeslam",31,"Male","France","dead"
-"Ibrahim Farisi",28,"Male","TODO","arrested"
-"Jawad Bendaoud",27,"Male","France","arrested"
-"Khalid al Zerkani",NA,NA,"Belgium","arrested"
-"Abraimi Lazez",39,"Male","Belgium","arrested"
-"Mohamed Abrini",31,"Male","Belgium","arrested"
-"Mohamed Bakkali",NA,"Male","TODO","wanted"
-"Mohamed Amri",27,"Male","France","arrested"
-"Mohamed Khoualed",19,"Male","France","arrested"
-"Mohammed Verd",23,"Male","Syria","arrested"
-"Noureddine Abraimi",29,"Male","Belgium","wanted"
-"Omar Ismaïl Mostefaï",29,"Male","France","dead"
-"Reda Hame",30,"Male","France","arrested"
-"Salah Abdeslam",26,"Male","France","arrested"
-"Unknown accomplice of Salah Abdeslam",NA,"Male","TODO","arrested"
-"Snail Farisi",32,"Male","TODO","arrested"
-"Samy Amimour",28,"Male","France","dead"
-"Youssef Bazarouj",NA,"Male","Belgium","arrested"
-"Younes Abaaoud",13,"Male","Belgium","wanted"
-"Yassine Abaaoud",NA,"Male","Belgium","wanted"
-"Zouhir Mehdaoui",29,"Male","Algeria","arreted"
-"Mohammed al-Mahmud ?",NA,"Male","TODO","dead"
-"Ahmed Almuhamed ?",NA,"Male","TODO","dead"
-"Zakaria Jaffak",29,"Male","Belgium","arrested"
-"Mustafa E",34,"Male","Morocco","arrested"
-"MohamedS",25,"Male","TODO","arrested"
-"Mohamed Belkaïd",35,"Male","Algeria","dead"
-"Hasna Aitboulahcen",26,"Female","TODO","dead"
-"Redouane Hagaoui",NA,"Male","Belgium","dead"
-"Tarik Jadaoun",NA,"Male","Belgium","dead"
-"Mehdi Nemmouche",NA,"Male","France","arrested"
-"Ayoub El Khazzani",25,"Male","Morocco","arrested"
-"Ibrahim El Bakraoui",29,"Male","Belgium","dead"
-"Khalid El Bakraoui",27,"Male","Belgium","dead"
-"Najim Laachraoui",24,"Male","Belgium","dead"
-"Osama Krayem",23,"Male","Sweden","arrested"
-"Arrested with Abrini",NA,"Male","Rwanda","arrested"
-"Reda Kriket",NA,"Male","France","arrested"
-"Yassine A",33,"Male","Belgium",NA
-"Rabah N",34,"Male","Algeria","arrested"
-"Abderamane Ameroud",38,"Male","Algeria","arrested"
-"Anis Bahri",32,"Male","France","arrested"
-"Aboubaker O",NA,"Male","TODO","arrested"
-"Mohamed B",NA,"Male","TODO","arrested"
-"Dusseldorf Suspect",28,"Male","Germany","arrested"
-"Giessen Suspect",28,"Male","Morocco","arrested"
-"Yoni Patric Mayne",25,"Male","Belgium","wanted"
-"Djamal Eddine Ouali",40,"Male","Algeria","arrested"
-"Bilal El Makhoukhi",NA,"Male","Belgium","arrested"
-"Sami Zarrouk",32,"Male","Tunis","wanted"
-"Nicholas Moreau",NA,"Male","France","arrested"
-"Samir Z",20,"Male","France","free"
-"Pierre N",28,"Male","Belgium","arrested"
-"Charaffe al Mouadan",27,"Male","TODO","dead"
-"Samir Bouabout",28,"Male","France","wanted"
+"p.name","p.age","p.citizenship","p.status","p.role","p.ref1","p.ref2"
+"Abdeilah Chouaa",NA,"Belgium","arrested",NA,"http://www.straitstimes.com/world/europe/paris-attacks-belgium-charges-2-new-suspects",NA
+"Abu Muhammad al-Adnani",38,"TODO","wanted",NA,"http://www.un.org/press/en/2014/sc11521.doc.htm",NA
+"Abu Muhammad al-Shimali",NA,"TODO","wanted","ISIS transportation","http://www.theguardian.com/world/2015/nov/19/abdelhamid-abaaoud-dead-paris-terror-leader-leaves-behind-countless-what-ifs",NA
+"Abdelhamid Abaaoud",27,"Belgium","dead","leadership","http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html","https://www.washingtonpost.com/world/2-attack-suspects-in-dead-after-french-police-raid-north-of-paris/2015/11/18/a2b6d52e-8d6a-11e5-934c-a369c80822c2_story.html"
+"Abdoullah Courkzine",30,"Belgium","arrested",NA,"http://www.nytimes.com/2015/12/25/world/europe/paris-attacks-belgium.html?_r=0",NA
+"Ahmet Dahmani",26,"Belgium","arrested","Scout","http://www.cnn.com/2015/11/21/world/paris-attacks/index.html",NA
+"Ahmet Tahir",29,"Syria","arrested",NA,"http://www.cnn.com/2015/11/21/world/paris-attacks/index.html",NA
+"Boubaker al-Hakim",NA,"France","wanted",NA,"http://www.nytimes.com/2016/03/19/world/europe/salah-abdeslam-belgium-apartment.html",NA
+"Ayoub Bazarouj",22,"Belgium","free",NA,"http://www.lesoir.be/1082419/article/actualite/belgique/2015-12-31/attentats-paris-qui-est-ayoub-bazarouj-interpelle-bruxelles-ce-mercredi","http://www.expatica.com/be/news/Penpix-of-Paris-terror-suspects_641155.html"
+"Salah Ali Oulkadi",31,"France","arrested",NA,"https://www.yahoo.com/news/penpix-paris-terror-suspects-190923864.html",NA
+"August Recruit",NA,"Belgium","arrested",NA,"http://www.nytimes.com/2015/11/23/world/europe/brussels-remains-on-highest-alert-level-as-manhunts-expand.html?_r=0","http://www.leparisien.fr/faits-divers/l-ombre-d-abaaoud-derriere-les-attentats-de-paris-17-11-2015-5285037.php"
+"Bilal Hadfi",20,"France","dead",NA,"http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html",NA
+"Chakib Akrouh",25,"Belgium","dead",NA,"http://www.lemonde.fr/police-justice/article/2016/01/14/le-kamikaze-qui-s-etait-fait-exploser-lors-de-l-assaut-policier-a-saint-denis-identifie_4847657_1653578.html",NA
+"Fabian Clain",36,"France","wanted",NA,"http://www.lesinrocks.com/2015/11/18/actualite/qui-est-fabien-clain-la-voix-de-daesh-11788443/",NA
+"Foued Mohamed-Aggad",23,"Belgium","dead",NA,"http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html","http://www.theguardian.com/world/2015/dec/09/paris-attacks-third-bataclan-attacker-identified-by-police"
+"Gelel Attar",26,"Belgium","arrested",NA,"http://www.lemonde.fr/attaques-a-paris/article/2016/01/18/un-belge-lie-aux-auteurs-des-attentats-du-13-novembre-arrete-au-maroc_4849263_4809495.html",NA
+"Hamza Attou",21,"Belgium","arrested","explosives","http://www.ibtimes.com/who-hamza-attou-mohammed-amri-everything-we-know-about-alleged-paris-terrorist-2188100","http://www.7sur7.be/7s7/fr/35522/Attaques-en-serie-a-Paris/article/detail/2651899/2016/03/19/Attentats-de-Paris-le-point-sur-l-enquete-infographie.dhtml"
+"Ibrahim Abdeslam",31,"France","dead",NA,"http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html",NA
+"Ibrahim Farisi",28,"TODO","arrested","support","http://www.expatica.com/be/news/Belgium-charges-new-suspects-over-Brussels-attacks_644751.html","http://www.theguardian.com/world/2016/apr/12/brussels-bombings-two-more-charged"
+"Jawad Bendaoud",27,"France","arrested",NA,"http://tempsreel.nouvelobs.com/attentats-terroristes-a-paris/20151118.OBS9764/assaut-de-saint-denis-jawad-le-chef-de-la-rue-qui-a-heberge-les-terroristes.html","http://www.cnn.com/2015/11/22/world/paris-attacks/"
+"Khalid al Zerkani",NA,"Belgium","arrested","recruiter","http://edition.cnn.com/2016/03/28/europe/brussels-paris-attacks-suspects-at-large/index.html",NA
+"Abraimi Lazez",39,"Belgium","arrested",NA,"http://www.nytimes.com/2015/11/23/world/europe/brussels-remains-on-highest-alert-level-as-manhunts-expand.html?_r=0",NA
+"Mohamed Abrini",31,"Belgium","arrested",NA,"http://abcnews.go.com/International/paris-ringleader-planned-attack-major-business-district-days/story?id=35398532","http://www.timesofisrael.com/abrini-arrest-highlights-paris-brussels-attacks-links/"
+"Mohamed Bakkali",NA,"TODO","wanted","logistics","http://www.straitstimes.com/world/europe/paris-attacks-belgium-charges-2-new-suspects",NA
+"Mohamed Amri",27,"France","arrested",NA,"http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html",NA
+"Mohamed Khoualed",19,"France","arrested",NA,"http://www.telegraph.co.uk/news/worldnews/europe/france/12004756/Paris-attacks-Abdelhamid-Abaaoud-police-France-terrorist-Islamic-State-flight-live.html#update-20151120-1528",NA
+"Mohammed Verd",23,"Syria","arrested",NA,"http://www.cnn.com/2015/11/21/world/paris-attacks/index.html",NA
+"Noureddine Abraimi",29,"Belgium","wanted","logistics","http://www.wsj.com/articles/investigators-home-in-on-scope-of-terror-network-behind-brussels-paris-attacks-1459728742",NA
+"Omar Ismaïl Mostefaï",29,"France","dead",NA,"http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html",NA
+"Reda Hame",30,"France","arrested",NA,"http://www.nytimes.com/2015/11/23/world/europe/brussels-remains-on-highest-alert-level-as-manhunts-expand.html?_r=0","http://www.leparisien.fr/faits-divers/l-ombre-d-abaaoud-derriere-les-attentats-de-paris-17-11-2015-5285037.php"
+"Salah Abdeslam",26,"France","arrested",NA,"http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html",NA
+"Unknown accomplice of Salah Abdeslam",NA,"TODO","arrested",NA,"http://www.nytimes.com/2016/03/19/world/europe/salah-abdeslam-belgium-apartment.html",NA
+"Snail Farisi",32,"TODO","arrested","support","http://www.expatica.com/be/news/Belgium-charges-new-suspects-over-Brussels-attacks_644751.html","http://www.theguardian.com/world/2016/apr/12/brussels-bombings-two-more-charged"
+"Samy Amimour",28,"France","dead",NA,"http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html",NA
+"Youssef Bazarouj",NA,"Belgium","arrested",NA,"http://www.lesoir.be/1082419/article/actualite/belgique/2015-12-31/attentats-paris-qui-est-ayoub-bazarouj-interpelle-bruxelles-ce-mercredi",NA
+"Younes Abaaoud",13,"Belgium","wanted",NA,"http://www.theguardian.com/world/2015/nov/19/abdelhamid-abaaoud-dead-paris-terror-leader-leaves-behind-countless-what-ifs",NA
+"Yassine Abaaoud",NA,"Belgium","wanted",NA,"http://www.wsj.com/articles/abdelhamid-abaaoud-alleged-mastermind-of-paris-attacks-is-dead-french-prosecutor-says-1447937255",NA
+"Zouhir Mehdaoui",29,"Algeria","arreted",NA,"http://www.lexpress.fr/actualite/societe/attentats-de-paris-l-homme-arrete-en-algerie-est-il-le-chauffeur-d-abaaoud_1770636.html",NA
+"Mohammed al-Mahmud ?",NA,"TODO","dead",NA,"http://www.bbc.com/news/world-europe-34896521","http://www.clarionproject.org/factsheets-files/Issue-13-the-rafidah.pdf"
+"Ahmed Almuhamed ?",NA,"TODO","dead",NA,"http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html","http://www.clarionproject.org/factsheets-files/Issue-13-the-rafidah.pdf"
+"Zakaria Jaffak",29,"Belgium","arrested",NA,"http://www.dw.com/en/belgium-police-arrest-two-suspects-linked-to-paris-attacks/a-18995606","http://www.7sur7.be/7s7/fr/35522/Attaques-en-serie-a-Paris/article/detail/2651899/2016/03/19/Attentats-de-Paris-le-point-sur-l-enquete-infographie.dhtml"
+"Mustafa E",34,"Morocco","arrested",NA,"http://www.dw.com/en/belgium-police-arrest-two-suspects-linked-to-paris-attacks/a-18995606",NA
+"MohamedS",25,"TODO","arrested","logistics","http://www.france24.com/en/20151205-paris-attacks-spotlight-turns-britain",NA
+"Mohamed Belkaïd",35,"Algeria","dead","logistics","http://www.thelocal.fr/20151205/belgium-seeks-two-new-dangerous-paris-attack-suspects","http://www.nytimes.com/2016/03/19/world/europe/salah-abdeslam-belgium-apartment.html"
+"Hasna Aitboulahcen",26,"TODO","dead",NA,"http://tempsreel.nouvelobs.com/attentats-terroristes-a-paris/20151118.OBS9764/assaut-de-saint-denis-jawad-le-chef-de-la-rue-qui-a-heberge-les-terroristes.html","http://news.nationalpost.com/news/woman-detonates-her-suicide-vest-as-police-storm-paris-suburb-in-hunt-for-mastermind"
+"Redouane Hagaoui",NA,"Belgium","dead",NA,"http://www.dailymail.co.uk/news/article-3331781/Soldiers-stay-streets-Brussels-WEEK-schools-metro-remain-closed-terror-attack-fears-EU-staff-warned-stay-home.html",NA
+"Tarik Jadaoun",NA,"Belgium","dead",NA,"http://www.dailymail.co.uk/news/article-3331781/Soldiers-stay-streets-Brussels-WEEK-schools-metro-remain-closed-terror-attack-fears-EU-staff-warned-stay-home.html",NA
+"Mehdi Nemmouche",NA,"France","arrested",NA,"http://tempsreel.nouvelobs.com/attentats-terroristes-a-paris/20151118.OBS9764/assaut-de-saint-denis-jawad-le-chef-de-la-rue-qui-a-heberge-les-terroristes.html",NA
+"Ayoub El Khazzani",25,"Morocco","arrested",NA,"http://tempsreel.nouvelobs.com/attentats-terroristes-a-paris/20151118.OBS9764/assaut-de-saint-denis-jawad-le-chef-de-la-rue-qui-a-heberge-les-terroristes.html",NA
+"Ibrahim El Bakraoui",29,"Belgium","dead",NA,"http://www.nytimes.com/2016/03/25/world/europe/expanding-portraits-of-brussels-bombers-ibrahim-and-khalid-el-bakraoui.html",NA
+"Khalid El Bakraoui",27,"Belgium","dead","logistics","http://www.nytimes.com/2016/03/25/world/europe/expanding-portraits-of-brussels-bombers-ibrahim-and-khalid-el-bakraoui.html",NA
+"Najim Laachraoui",24,"Belgium","dead","weapons","http://www.nbcnews.com/storyline/brussels-attacks/najim-laachraoui-what-we-know-about-suspected-bomb-maker-n543996","http://www.interpol.int/notice/search/wanted/2016-18544"
+"Osama Krayem",23,"Sweden","arrested",NA,"http://www.timesofisrael.com/abrini-arrest-highlights-paris-brussels-attacks-links/",NA
+"Herve BM",NA,"Rwanda","arrested",NA,"http://www.timesofisrael.com/abrini-arrest-highlights-paris-brussels-attacks-links/","http://www.bbc.com/news/world-europe-36005709"
+"Reda Kriket",NA,"France","arrested","finance","http://www.expatica.com/be/news/Belgium-charges-new-suspects-over-Brussels-attacks_644751.html",NA
+"Yassine A",33,"Belgium",NA,NA,"http://www.seattletimes.com/nation-world/belgian-charged-with-terrorism-in-new-french-attacks-case/?utm_source=RSS&utm_medium=Referral&utm_campaign=RSS_nation-world",NA
+"Rabah N",34,"Algeria","arrested",NA,"http://www.nytimes.com/2016/03/27/world/europe/brussels-attack-faycal-cheffou.html",NA
+"Abderamane Ameroud",38,"Algeria","arrested",NA,"http://www.bbc.com/news/world-europe-35903368",NA
+"Anis Bahri",32,"France","arrested",NA,"http://www.dutchnews.nl/news/archives/2016/03/rotterdam-terror-suspect-has-links-to-paris-brussels-attacks-nos/",NA
+"Aboubaker O",NA,"TODO","arrested",NA,"http://www.nytimes.com/2016/03/27/world/europe/brussels-attack-faycal-cheffou.html",NA
+"Mohamed B",NA,"TODO","arrested",NA,"http://www.nytimes.com/2016/03/27/world/europe/brussels-attack-faycal-cheffou.html",NA
+"Dusseldorf Suspect",28,"Germany","arrested",NA,"http://edition.cnn.com/2016/03/25/europe/brussels-investigation/index.html",NA
+"Giessen Suspect",28,"Morocco","arrested",NA,"http://www.nytimes.com/2016/03/26/world/europe/brussels-attacks-police.html",NA
+"Yoni Patric Mayne",25,"Belgium","wanted",NA,"http://edition.cnn.com/2016/03/28/europe/brussels-paris-attacks-suspects-at-large/index.html","http://www.wsj.com/articles/belgian-authorities-arrest-suspected-third-brussels-airport-attacks-officials-say-1460129257"
+"Djamal Eddine Ouali",40,"Algeria","arrested","logistics","http://www.dailymail.co.uk/news/article-3511323/Moment-armed-Italian-police-arrest-Algerian-man-wanted-Belgium-fake-ID-documents-used-Paris-Brussels-terrorists.html",NA
+"Bilal El Makhoukhi",NA,"Belgium","arrested",NA,"http://www.usatoday.com/story/news/2016/04/09/belgian-raids-net-6th-terror-suspect/82829644/",NA
+"Sami Zarrouk",32,"Tunis","wanted",NA,"http://www.wsj.com/articles/investigators-home-in-on-scope-of-terror-network-behind-brussels-paris-attacks-1459728742",NA
+"Nicholas Moreau",NA,"France","arrested",NA,"http://edition.cnn.com/2016/03/28/europe/brussels-paris-attacks-suspects-at-large/index.html",NA
+"Samir Z",20,"France","free",NA,"http://www.ibtimes.co.uk/paris-attacks-belgian-jihadist-abdelhamid-abbaoud-may-be-entrenched-saint-denis-flat-1529265","http://www.straitstimes.com/world/europe/paris-attacks-belgium-charges-2-new-suspects"
+"Pierre N",28,"Belgium","arrested",NA,"http://www.ibtimes.co.uk/paris-attacks-belgian-jihadist-abdelhamid-abbaoud-may-be-entrenched-saint-denis-flat-1529265","http://www.straitstimes.com/world/europe/paris-attacks-belgium-charges-2-new-suspects"
+"Charaffe al Mouadan",27,"TODO","dead","planner","http://www.leparisien.fr/faits-divers/attentats-du-13-novembre-l-ombre-d-un-jihadiste-francais-derriere-le-bataclan-21-12-2015-5391337.php",NA
+"Samir Bouabout",28,"France","wanted",NA,"http://www.lemonde.fr/police-justice/article/2016/01/15/deux-djihadistes-en-fuite-proches-d-un-kamikaze-du-bataclan-condamnes-a-5-et-3-ans-de-prison_4848338_1653578.html",NA

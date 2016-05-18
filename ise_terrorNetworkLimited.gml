@@ -1,4 +1,4 @@
-Creator "igraph version @VERSION@ Mon Apr 18 21:38:54 2016"
+Creator "igraph version @VERSION@ Tue May 17 21:58:10 2016"
 Version 1
 graph
 [
@@ -81,22 +81,22 @@ graph
   node
   [
     id 15
-    name "Osama Krayem"
-  ]
-  node
-  [
-    id 16
     name "Khalid El Bakraoui"
   ]
   node
   [
+    id 16
+    name "Osama Krayem"
+  ]
+  node
+  [
     id 17
-    name "Anis Bahri"
+    name "Abderamane Ameroud"
   ]
   node
   [
     id 18
-    name "Abderamane Ameroud"
+    name "Anis Bahri"
   ]
   node
   [
@@ -336,7 +336,7 @@ graph
   node
   [
     id 66
-    name "Arrested with Abrini"
+    name "Herve BM"
   ]
   node
   [
@@ -565,7 +565,7 @@ graph
   ]
   edge
   [
-    source 15
+    source 16
     target 6
   ]
   edge
@@ -670,7 +670,7 @@ graph
   ]
   edge
   [
-    source 15
+    source 16
     target 12
   ]
   edge
@@ -695,7 +695,7 @@ graph
   ]
   edge
   [
-    source 15
+    source 16
     target 13
   ]
   edge
@@ -715,7 +715,7 @@ graph
   ]
   edge
   [
-    source 16
+    source 15
     target 14
   ]
   edge
@@ -726,26 +726,26 @@ graph
   edge
   [
     source 16
-    target 15
-  ]
-  edge
-  [
-    source 48
     target 15
   ]
   edge
   [
     source 27
-    target 16
+    target 15
   ]
   edge
   [
     source 28
-    target 16
+    target 15
   ]
   edge
   [
     source 40
+    target 15
+  ]
+  edge
+  [
+    source 48
     target 16
   ]
   edge
@@ -770,11 +770,6 @@ graph
   ]
   edge
   [
-    source 37
-    target 17
-  ]
-  edge
-  [
     source 19
     target 18
   ]
@@ -786,6 +781,11 @@ graph
   edge
   [
     source 21
+    target 18
+  ]
+  edge
+  [
+    source 37
     target 18
   ]
   edge
