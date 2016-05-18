@@ -35,6 +35,7 @@ print(attackersAndSites)
 write.csv(attackersAndSites, file="~/nov13/ise_attackersAndSites.csv" )
 
 
+
 ####################################################################################################
 #Terror network of people is constructed using relationships to attackers or suspects, as follows
 ####################################################################################################
@@ -134,7 +135,48 @@ terrorNetworkAllTies[,sharedLocalityWithSuspect:=findPair(n1,n2,sharedLocalityWi
 write.csv(terrorNetworkAllTies, file="~/nov13/ise_networkTieDetails.csv", row.names=F)
 
 
-print("Networks...")
+####################################################################################################
+#Terror network members
+####################################################################################################
+#all rows are sorted alphabetically
+query = '  
+MATCH (a1:Person)-[:INVOLVED_IN]->(l:AttackSite)
+RETURN a1.name'
+attackerNodes = cypher(kblDB, query)
+attackerNodes = data.table(attackerNodes)[,.(node=a1.name)]
+attackerNodes = unique(attackerNodes)
+
+query = '  
+MATCH (a1:Person)-[:INVOLVED_IN]->(l:Activity)
+RETURN a1.name'
+involvedInActivityNodes = cypher(kblDB, query)
+involvedInActivityNodes = data.table(involvedInActivityNodes)[,.(node=a1.name)]
+involvedInActivityNodes = unique(involvedInActivityNodes)
+
+
+query = '  
+MATCH (p:Person)-[:LINKED_TO]->(attacker1:Person)-[:INVOLVED_IN]->(l:AttackSite)
+WHERE p.status <> "free"
+RETURN p.name'
+linkedToAttackerNodes = cypher(kblDB, query)
+linkedToAttackerNodes = data.table(linkedToAttackerNodes)[,.(node=p.name)]
+linkedToAttackerNodes = unique(linkedToAttackerNodes)
+
+terrorNetworkMembers <- rbind(attackerNodes, involvedInActivityNodes, linkedToAttackerNodes)
+numMembers <- nrow(terrorNetworkMembers)
+findNode <- function(p1, dt){(p1 %in% dt$node)}
+
+terrorNetworkMembers[,attackerNodes:=findNode(node, attackerNodes), by=1:numMembers]
+terrorNetworkMembers[,involvedInActivityNodes:=findNode(node, involvedInActivityNodes), by=1:numMembers]
+terrorNetworkMembers[,linkedToAttackerNodes:=findNode(node, linkedToAttackerNodes), by=1:numMembers]
+write.csv(terrorNetworkMembers, file="~/nov13/ise_networkNodeDetails.csv", row.names=F)
+
+#FIXME: incomplete
+browser()
+
+####################################################################################################
+#Network extracts
+####################################################################################################
 terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSiteWithAttacker, sharedSiteWithSuspect)
 terrorNetwork <- unique(terrorNetwork)
 print(terrorNetwork) 
