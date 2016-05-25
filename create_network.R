@@ -782,4 +782,10 @@ createRel(MehdiNemmouche, "INVOLVED_IN", JewishMuseum, attackType="Shooting", re
 createRel(MehdiNemmouche, "LINKED_TO", AbdelhamidAbaaoud, note="liaised", ref1=references[["NYT2"]])
 createRel(MehdiNemmouche, "PRESENT_IN", Molenbeek, ref1=references[["NYT2"]])
 
+#load the data sources
+# infoFiles <- list.files("~/academic/paris/media_references/")
+# for(fname in infoFiles) {
+#   createNode(kblDB, "InfoNode", name=fname)
+#   #optionally, parse and add full text
+# }
 print("Database built!")

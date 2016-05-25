@@ -25,6 +25,7 @@ print(summary(TN))
 
 #nice plot
 networkJS <- simpleNetwork(terrorNetworkUndirected)
+#TODO: add nodes which might be missing from terrorNetworkUndirected
 show(networkJS)
 saveNetwork(networkJS, "~/nov13/nov13_interactive_network.html", selfcontained=TRUE)
 

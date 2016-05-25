@@ -295,3 +295,9 @@ Abaaoud is said to have told the young Frenchman that he had managed to find 25k
 
 #arms supplierfor Amady
 #https://www.thespainreport.com/articles/715-160413154107-spanish-police-arrest-french-arms-supplier-who-gave-paris-attacker-coulibaly-weapons
+
+#Italian plot
+#http://www.timesofisrael.com/milan-prosecutor-is-ordered-italian-resident-to-attack-rome/
+#Authorities arrested the Moroccan-born man, identified as Abderrahim Moutahrrick, and his wife, Salma Bencharki. 
+#Another Moroccan man who was planning to travel with them, identified as Abderrahmane Khachia, 23, was arrested in the northern city of Varese
+#Prosecutors also issued arrest warrants for an Italian-Moroccan couple who left to join Islamic State last year with three small children. Romanelli said that the man, identified as Mohamed Koraichi, had become an Islamic State fighter and communicated the orders to carry out attacks in Italy while making arrangements for the other family to join Islamic State.

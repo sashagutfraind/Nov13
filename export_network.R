@@ -153,7 +153,6 @@ involvedInActivityNodes = cypher(kblDB, query)
 involvedInActivityNodes = data.table(involvedInActivityNodes)[,.(node=a1.name)]
 involvedInActivityNodes = unique(involvedInActivityNodes)
 
-
 query = '  
 MATCH (p:Person)-[:LINKED_TO]->(attacker1:Person)-[:INVOLVED_IN]->(l:AttackSite)
 WHERE p.status <> "free"
