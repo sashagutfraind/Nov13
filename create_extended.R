@@ -301,3 +301,6 @@ Abaaoud is said to have told the young Frenchman that he had managed to find 25k
 #Authorities arrested the Moroccan-born man, identified as Abderrahim Moutahrrick, and his wife, Salma Bencharki. 
 #Another Moroccan man who was planning to travel with them, identified as Abderrahmane Khachia, 23, was arrested in the northern city of Varese
 #Prosecutors also issued arrest warrants for an Italian-Moroccan couple who left to join Islamic State last year with three small children. Romanelli said that the man, identified as Mohamed Koraichi, had become an Islamic State fighter and communicated the orders to carry out attacks in Italy while making arrangements for the other family to join Islamic State.
+
+#RTBF has reported that the suspects were in contact with IS executioner Hicham Chaib, who was close to Fouad Belkacem, the former leader of Sharia4Belgium
+#https://news.vice.com/article/police-say-they-arrested-four-people-plotting-new-terror-attacks-in-belgium
