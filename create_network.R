@@ -1,7 +1,7 @@
 '
-The file below creates the dataset using the neo4j Database
+The file below creates the IS-E dataset using the neo4j Database
 
-1. Download the Neo4j community edition
+1. Download the Neo4j community edition (version >= 3.0.1)
 
 2. Unix/MacOSX or Windows, from the install dir run: 
 ./bin/neo4j start
@@ -27,16 +27,6 @@ You can also get the JSON file from the neo4j display
 notInNov13 = individuals who are believed to be not involved in the Paris-Brussels attacks operational network
 - includes ISIS fighters who left Europe before the attacks
 - includes unrelated ISIS cells
-
-future additional source material
-* NYT19: UK
-* http://www.timesofisrael.com/court-thwarted-belgian-terror-cell-had-bomb-making-chemicals/
-* http://www.timesofisrael.com/belgium-begins-trial-of-terror-cell-linked-to-paris-brussels-attacks/
-* IND2: "Abou Ahmad" mastermind
-* TDB1 additional attackers traveled through Itality 
-* B7S72
-* http://www.nytimes.com/interactive/2016/03/25/world/map-isis-attacks-around-the-world.html
-* LMD3 - Clio stop at Airport; stop at Charloi
 '
 
 
@@ -45,10 +35,6 @@ library(RNeo4j)
 #name of the database
 kblDB = startGraph("http://localhost:7474/db/data/", username="neo4j", password="1")  
 clear(kblDB, input=FALSE)  
-
-#test code
-#t1 = createNode(kblDB, "testType", name="t1", dt=2015.1113, v1=2)
-#t2 = createNode(kblDB, "testType", name="t2", dt=2015.1113)
 
 references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rented-home-ISIS-fanatics-plotted-nov13-massacre-Landlady-says-terrorists-plotted-atrocity-apartment-nice-proper-dressed-men-didn-t-beards.html"
                   ,WSJ1="http://www.wsj.com/articles/attacker-tried-to-enter-paris-stadium-but-was-turned-away-1447520571"
@@ -196,7 +182,7 @@ BoubakerAlHakim = createNode(kblDB, "Person", name="Boubaker al-Hakim", alias="A
 
 AyoubBazarouj     = createNode(kblDB, "Person", name="Ayoub Bazarouj",    age=22, gender="Male", citizenship="Belgium", ref1=references[["SOI1"]], ref2=references[["EXP4"]], status="free")
 #recently released: http://www.irishtimes.com/news/world/europe/paris-attacks-suspect-released-from-custody-by-belgian-court-1.2506936
-AliOulkadi        = createNode(kblDB, "Person", name="Salah Ali Oulkadi",       age=31, gender="Male", ref1=references[["AFP1"]], status="arrested")
+AliOulkadi        = createNode(kblDB, "Person", name="Salah Ali Oulkadi",       age=31, gender="Male", citizenship="unknown", ref1=references[["AFP1"]], status="arrested")
 AugUnknown = createNode(kblDB, "Person", notInNov13=TRUE, name="August Recruit", gender="Male", citizenship="Belgium", note="traveled with RedaHame in connection to the concert plot",  ref1=references[["NYT4"]], ref2=references[["LP2"]], refr=references[["LMD5"]], status="arrested", dateOfArrest=2015.0615)
 BilalHadfi        = createNode(kblDB, "Person", name="Bilal Hadfi",        age=20, gender="Male", citizenship="France", ref1=references[["DM1"]], status="dead")
 ChakibAkrouh      = createNode(kblDB, "Person", name="Chakib Akrouh",   gender="Male", age=25, citizenship="Belgium", status="dead", ref1=references[["LMD5"]])
@@ -271,7 +257,7 @@ HerveBM     = createNode(kblDB, "Person", name="Herve BM", gender="Male", citize
 #"Kriket" independent cell
 RedaKriket = createNode(kblDB, "Person", name="Reda Kriket", notInNov13=TRUE, age=34, gender="Male", citizenship="France", role="finance", ref1=references[["NYT14"]], ref1=references[["EXP3"]], status="arrested")
 #3 arrested in Belgium
-YassineA           = createNode(kblDB, "Person", notInNov13=TRUE, name="Yassine A", age=33, DOB="1982.0504", gender="Male", citizenship="Belgium", ref1=references[["STT1"]])
+YassineA           = createNode(kblDB, "Person", notInNov13=TRUE, name="Yassine A", age=33, DOB="1982.0504", gender="Male", citizenship="Belgium", ref1=references[["STT1"]],  status="arrested")
 RabahN             = createNode(kblDB, "Person", notInNov13=TRUE, name="Rabah N", age=34, gender="Male", citizenship="Algeria", ref1=references[["NYT14"]], status="arrested", note="Rebah M in some sources")
 AbderahmaneAmeroud = createNode(kblDB, "Person", notInNov13=TRUE, name="Abderamane Ameroud", age=38, gender="Male", citizenship="Algeria", ref1=references[["BBC2"]],  status="arrested")
 AnisBahri          = createNode(kblDB, "Person", notInNov13=TRUE, name="Anis Bahri", age=32, gender="Male", citizenship="France", ref1=references[["DN1"]],  status="arrested")
@@ -353,17 +339,17 @@ createRel(AugUnknown, "INVOLVED_IN", FrenchRivieraPlot, ref1=references[["NYT17"
 # Nodes
 ######
 
-#countries
+#countries (some countries not used)
 #Belgium = createNode(kblDB, "Country", name="Belgium")
 #Egypt  = createNode(kblDB, "Country", name="Egypt")
-Greece  = createNode(kblDB, "Country", name="Greece")
 #France = createNode(kblDB, "Country", name="France")
 #Morocco = createNode(kblDB, "Country", name="Morocco")
+Greece = createNode(kblDB, "Country", name="Greece")
 Syria = createNode(kblDB, "Country", name="Syria")
 Turkey = createNode(kblDB, "Country", name="Turkey")
 UK = createNode(kblDB, "Country", name="United Kingdon")
 
-BazaroujFamily  = createNode(kblDB, "Activity", name="Bazarouj family")
+BazaroujFamily  = createNode(kblDB, "Activity", name="Bazarouj family", note="likely primarily not radical")
 
 #localities / sites
 AlfortvilleApt  = createNode(kblDB, "Site", name="Alfortville apartment in Appart’City")
@@ -381,7 +367,6 @@ StDenis       = createNode(kblDB, "Site", name="St.Denis", address="8 rue du Car
 SchaerbeekApt = createNode(kblDB, "Site", name="Schaerbeek bomb factory", address="Rue Henri Berge", ref1=references[["DM5"]])
 SchaerbeekApt2 = createNode(kblDB, "Site", name="Schaerbeek safehouse", address="Rue Max Roos", ref1=references[["BBN1"]])
 #Used by airport attackers
-#wishlist: second location in St.Denis
 
 #attack sites.  dates are approximate, if the attack was interdicted.
 #but this records it correctly: Arrondisement18  = createNode(kblDB, "AttackSite", attackDate=2015.1113, name="Aborted Arrond. 18", outcome="aborted") #killed=0, wounded=0
@@ -531,14 +516,7 @@ createRel(YassineA,    "INVOLVED_IN", France2016plot, ref1=references[["STT1"]])
 createRel(AbderahmaneAmeroud,  "INVOLVED_IN", France2016plot, ref1=references[["WP3"]])
 createRel(AnisBahri,   "INVOLVED_IN", France2016plot, ref1=references[["WP3"]])
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", RedaKriket, ref1=references[["NYT15"]])
-
-
 createRel(RedaKriket,  "PRESENT_IN", Syria, date="2014", ref1=references[["NYT15"]])
-#another associate of Kriket: NYT15
-#In Brussels on Friday, the police arrested three men for questioning in connection with Mr. Kriket’s arrest.
-
-#other KBL fighters
-#https://pietervanostaeyen.wordpress.com/2015/01/21/katibat-al-battar-and-the-belgian-fighters-in-syria/
 
 # #transit countries
 createRel(AbdelhamidAbaaoud,  "PRESENT_IN", Greece, ref1=references[["EXP1"]])
@@ -637,7 +615,7 @@ createRel(AbuMuhammadAlShimali, "INVOLVED_IN", OverallOrganization, ref1=referen
 createRel(AbdelhamidAbaaoud,    "INVOLVED_IN", OverallOrganization, ref1=references[["GRD1"]])
 createRel(CharaffeAlMouadan,  "INVOLVED_IN", OverallOrganization, ref1=references[["LP3"]])
 createRel(BoubakerAlHakim,  "INVOLVED_IN", OverallOrganization, ref1=references[["NYT11"]])
-#TODO: all are based in Syria
+#wishlist: identify locations if different from Syria/Iraq
 
 MakingExplosives = createNode(kblDB, "Activity", name="Making Explosives")
 createRel(MohamedKhoualed,  "INVOLVED_IN", MakingExplosives, ref1=references[["TEL1"]])
@@ -692,7 +670,6 @@ createRel(BilalHadfi,     "INVOLVED_IN", StadeDeFrance, attackType="SuicideBombi
 createRel(MohammedAlmahmod, "INVOLVED_IN", StadeDeFrance, attackType="SuicideBombing", note="detonated at nearby MacDonalds",  ref1=references[["DM1"]], ref2=references[["WSJ1"]])  
 createRel(SalahAbdeslam, "INVOLVED_IN", StadeDeFrance, attackType="SuicideBombing", note="backed out",  ref1=references[["NYT18"]])  
 # 
-#http://www.nytimes.com/2016/03/20/world/europe/paris-terror-attacks-suspect-belgium.html?_r=0
 
 #gunmen in a black Seat Leon.  possibly Abdeslam brothers + unknown (YoussefBazarouj?  SOI1)
 #http://www.lefigaro.fr/actualite-france/2015/11/18/01016-20151118ARTFIG00346-ce-que-l-on-sait-du-commando-qui-a-seme-la-terreur-a-paris.php
@@ -749,11 +726,6 @@ createRel(RedouaneHagaoui,  "INVOLVED_IN", VerviersPlot, ref1=references[["TEL3"
 createRel(TarikJadaoun,     "INVOLVED_IN", VerviersPlot, ref1=references[["TEL3"]])
 createRel(AbdelhamidAbaaoud,  "INVOLVED_IN", VerviersPlot, ref1=references[["TEL3"]])
 createRel(NoureddineAbraimi,  "INVOLVED_IN", VerviersPlot, ref1=references[["WSJ5"]])
-#WSJ5: reports Omar Damache and Khalid Ben Larbi as killed in the plot
-#Soufiene Amghar as arrested
-#corrected: LMD9: Souhaib El-Abdi, Marouan El-Bali, Mahmoud Najmi Arshad, Omar Damache, Walid Hamam - arrested
-#DSD1: massive details.  Khalid Ben Larbi and Sofiane Amghar are dead.
-#KCK1: Tarik Jadaoun escaped to Syria but claimed the attacks
 
 createRel(RedouaneHagaoui,  "PRESENT_IN", Molenbeek, ref1=references[["NYT3"]])
 createRel(TarikJadaoun,     "PRESENT_IN", Molenbeek, ref1=references[["NYT3"]])
@@ -778,3 +750,4 @@ createRel(MehdiNemmouche, "PRESENT_IN", Molenbeek, ref1=references[["NYT2"]])
 #   #optionally, parse and add full text
 # }
 print("Database built!")
+

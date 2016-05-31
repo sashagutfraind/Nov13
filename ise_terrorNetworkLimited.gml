@@ -1,4 +1,4 @@
-Creator "igraph version @VERSION@ Tue May 17 21:58:10 2016"
+Creator "igraph version @VERSION@ Mon May 30 23:49:01 2016"
 Version 1
 graph
 [
@@ -26,7 +26,7 @@ graph
   node
   [
     id 4
-    name "Omar Ismaïl Mostefaï"
+    name "Omar Ismaël Mostefaï"
   ]
   node
   [
@@ -51,7 +51,7 @@ graph
   node
   [
     id 9
-    name "Mohammed al-Mahmud ?"
+    name "Mohammed al-Mahmud"
   ]
   node
   [
@@ -61,7 +61,7 @@ graph
   node
   [
     id 11
-    name "Ahmed Almuhamed ?"
+    name "Ahmed Almuhamed"
   ]
   node
   [
@@ -276,7 +276,7 @@ graph
   node
   [
     id 54
-    name "Fabian Clain"
+    name "Fabien Clain"
   ]
   node
   [

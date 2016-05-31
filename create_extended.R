@@ -1,3 +1,29 @@
+#possibly other individuals linked to IS-E
+#WSJ5: reports Omar Damache and Khalid Ben Larbi as killed in the plot
+#Soufiene Amghar as arrested
+#corrected: LMD9: Souhaib El-Abdi, Marouan El-Bali, Mahmoud Najmi Arshad, Omar Damache, Walid Hamam - arrested
+#DSD1: massive details.  Khalid Ben Larbi and Sofiane Amghar are dead.
+#KCK1: Tarik Jadaoun escaped to Syria but claimed the attacks
+
+#another associate of Kriket: NYT15
+#In Brussels on Friday, the police arrested three men for questioning in connection with Mr. Kriket’s arrest.
+#other KBL fighters
+#https://pietervanostaeyen.wordpress.com/2015/01/21/katibat-al-battar-and-the-belgian-fighters-in-syria/
+
+'
+future additional source material
+* NYT19: UK
+* http://www.timesofisrael.com/court-thwarted-belgian-terror-cell-had-bomb-making-chemicals/
+* http://www.timesofisrael.com/belgium-begins-trial-of-terror-cell-linked-to-paris-brussels-attacks/
+* IND2: "Abou Ahmad" mastermind
+* TDB1 additional attackers traveled through Itality 
+* B7S72
+* http://www.nytimes.com/interactive/2016/03/25/world/map-isis-attacks-around-the-world.html
+* LMD3 - Clio stop at Airport; stop at Charloi
+
+'
+
+
 #Islamist militants in France/Belgium but not connected to KBL
 
 #2/2012 seems like a separate network

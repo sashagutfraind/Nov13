@@ -171,7 +171,7 @@ terrorNetworkMembers[,linkedToAttackerNodes:=findNode(node, linkedToAttackerNode
 write.csv(terrorNetworkMembers, file="~/nov13/ise_networkNodeDetails.csv", row.names=F)
 
 #FIXME: incomplete
-browser()
+#browser()
 
 ####################################################################################################
 #Network extracts
@@ -197,10 +197,10 @@ minimalNetwork = cypher(kblDB, query)
 write.csv(minimalNetwork, file="~/nov13/ise_minimalDB.csv", row.names=F)
 
 query = '  
-MATCH (n:Person) WHERE (n.preNov13=TRUE) RETURN n.name'
-preNov13agents = cypher(kblDB, query)
-names(preNov13agents)<-c("name")
-write.csv(preNov13agents, file="~/nov13/ise_preNov13agents.csv", row.names=F)
+MATCH (n:Person) WHERE (n.notInNov13=TRUE) RETURN n.name'
+notInNov13agents = cypher(kblDB, query)
+names(notInNov13agents)<-c("name")
+write.csv(notInNov13agents, file="~/nov13/ise_notInNov13agents.csv", row.names=F)
 
 
 query = '  
@@ -241,11 +241,11 @@ write_gml(Vs=terrorPersons, Es=terrorNetworkExtended, fpath="~/nov13/ise_terrorN
 #querying the DB
 #===============
 #MATCH (n) RETURN n
-#MATCH n,s WHERE (n)-[:INVOLVED_IN]->(s) RETURN n,s
-#MATCH n WHERE NOT (n:Locality) AND NOT (n:Country) RETURN n
+#MATCH (n),(s) WHERE (n)-[:INVOLVED_IN]->(s) RETURN n,s
+#MATCH (n) WHERE NOT (n:Locality) AND NOT (n:Country) RETURN n
 
 #extract all the data necessary for minimal network
-#MATCH n-[r]->m where NOT (n:Locality) AND NOT (n:Country) AND NOT (m:Locality) AND NOT (m:Country) RETURN n.name,labels(n),type(r),m.name,labels(m)
+#MATCH (n)-[r]->(m) where NOT (n:Locality) AND NOT (n:Country) AND NOT (m:Locality) AND NOT (m:Country) RETURN n.name,labels(n),type(r),m.name,labels(m)
 
 #extract all nodes of the nov13 network
-#MATCH n WHERE (n.preNov13 IS NULL) RETURN n
+#MATCH (n) WHERE (n.notInNov13 IS NULL) RETURN n

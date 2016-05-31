@@ -1,0 +1,78 @@
+"node","attackerNodes","involvedInActivityNodes","linkedToAttackerNodes"
+"August Recruit",TRUE,FALSE,FALSE
+"Reda Hame",TRUE,FALSE,FALSE
+"Salah Abdeslam",TRUE,TRUE,TRUE
+"Foued Mohamed-Aggad",TRUE,FALSE,FALSE
+"Samy Amimour",TRUE,FALSE,FALSE
+"Omar Ismaël Mostefaï",TRUE,FALSE,FALSE
+"Ibrahim Abdeslam",TRUE,TRUE,TRUE
+"Abdelhamid Abaaoud",TRUE,TRUE,TRUE
+"Chakib Akrouh",TRUE,FALSE,FALSE
+"Mohammed al-Mahmud",TRUE,FALSE,FALSE
+"Bilal Hadfi",TRUE,TRUE,FALSE
+"Ahmed Almuhamed",TRUE,TRUE,TRUE
+"Mohamed Abrini",TRUE,TRUE,FALSE
+"Najim Laachraoui",TRUE,TRUE,FALSE
+"Ibrahim El Bakraoui",TRUE,FALSE,TRUE
+"Osama Krayem",TRUE,TRUE,TRUE
+"Khalid El Bakraoui",TRUE,FALSE,FALSE
+"Anis Bahri",TRUE,FALSE,FALSE
+"Abderamane Ameroud",TRUE,FALSE,FALSE
+"Yassine A",TRUE,FALSE,FALSE
+"Rabah N",TRUE,FALSE,FALSE
+"Reda Kriket",TRUE,FALSE,FALSE
+"Mehdi Nemmouche",TRUE,FALSE,TRUE
+"Ayoub El Khazzani",TRUE,FALSE,TRUE
+"Noureddine Abraimi",TRUE,FALSE,TRUE
+"Tarik Jadaoun",TRUE,FALSE,FALSE
+"Redouane Hagaoui",TRUE,FALSE,FALSE
+"Youssef Bazarouj",FALSE,TRUE,FALSE
+"Ayoub Bazarouj",FALSE,TRUE,FALSE
+"Salah Abdeslam",TRUE,TRUE,TRUE
+"Mohamed Abrini",TRUE,TRUE,FALSE
+"Ibrahim Abdeslam",TRUE,TRUE,TRUE
+"Osama Krayem",TRUE,TRUE,TRUE
+"Unknown accomplice of Salah Abdeslam",FALSE,TRUE,FALSE
+"Bilal El Makhoukhi",FALSE,TRUE,FALSE
+"Bilal Hadfi",TRUE,TRUE,FALSE
+"Ahmed Almuhamed",TRUE,TRUE,TRUE
+"Hamza Attou",FALSE,TRUE,FALSE
+"Mohamed Amri",FALSE,TRUE,FALSE
+"Boubaker al-Hakim",FALSE,TRUE,FALSE
+"Charaffe al Mouadan",FALSE,TRUE,TRUE
+"Abdelhamid Abaaoud",TRUE,TRUE,TRUE
+"Abu Muhammad al-Shimali",FALSE,TRUE,FALSE
+"Abu Muhammad al-Adnani",FALSE,TRUE,FALSE
+"Fabien Clain",FALSE,TRUE,FALSE
+"Mohamed Khoualed",FALSE,TRUE,FALSE
+"Abdeilah Chouaa",FALSE,TRUE,TRUE
+"Salah Ali Oulkadi",FALSE,TRUE,FALSE
+"Abraimi Lazez",FALSE,TRUE,FALSE
+"Ahmet Dahmani",FALSE,TRUE,TRUE
+"Ahmet Tahir",FALSE,TRUE,FALSE
+"Mohammed Verd",FALSE,TRUE,FALSE
+"Mohamed Belkaïd",FALSE,TRUE,FALSE
+"Najim Laachraoui",TRUE,TRUE,FALSE
+"Abdelhamid Abaaoud",TRUE,TRUE,TRUE
+"Abdeilah Chouaa",FALSE,TRUE,TRUE
+"Ahmet Dahmani",FALSE,TRUE,TRUE
+"Djamal Eddine Ouali",FALSE,FALSE,TRUE
+"Giessen Suspect",FALSE,FALSE,TRUE
+"Samir Bouabout",FALSE,FALSE,TRUE
+"Charaffe al Mouadan",FALSE,TRUE,TRUE
+"Salah Abdeslam",TRUE,TRUE,TRUE
+"Mehdi Nemmouche",TRUE,FALSE,TRUE
+"Noureddine Abraimi",TRUE,FALSE,TRUE
+"Ayoub El Khazzani",TRUE,FALSE,TRUE
+"Zouhir Mehdaoui",FALSE,FALSE,TRUE
+"Zakaria Jaffak",FALSE,FALSE,TRUE
+"Gelel Attar",FALSE,FALSE,TRUE
+"Ibrahim Abdeslam",TRUE,TRUE,TRUE
+"Hasna Aitboulahcen",FALSE,FALSE,TRUE
+"Khalid al Zerkani",FALSE,FALSE,TRUE
+"Yoni Patric Mayne",FALSE,FALSE,TRUE
+"Ahmed Almuhamed",TRUE,TRUE,TRUE
+"Pierre N",FALSE,FALSE,TRUE
+"Osama Krayem",TRUE,TRUE,TRUE
+"Dusseldorf Suspect",FALSE,FALSE,TRUE
+"Ibrahim El Bakraoui",TRUE,FALSE,TRUE
