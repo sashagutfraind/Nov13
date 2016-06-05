@@ -17,14 +17,12 @@ kblDB = startGraph("http://localhost:7474/db/data/", username="neo4j", password=
 ########################################################
 nov13nodes = cypher(kblDB, query='MATCH (p) return p.name') 
 write.csv(nov13nodes, file="~/nov13/ise_nodes.csv")
-#wishlist: add type
 
 nov13persons = cypher(kblDB, query='MATCH (p:Person) return p.name') 
 write.csv(nov13persons, file="~/nov13/ise_persons.csv")
 
 nov13relationships = cypher(kblDB, query='MATCH (n1)-[r]->(n2) return n1.name, type(r), n2.name') 
 write.csv(nov13relationships, file="~/nov13/ise_relationships.csv" )
-#wishlist: add type
 
 query = '  
 MATCH (p:Person)-[:INVOLVED_IN]->(s:AttackSite)
@@ -170,22 +168,22 @@ terrorNetworkMembers[,involvedInActivityNodes:=findNode(node, involvedInActivity
 terrorNetworkMembers[,linkedToAttackerNodes:=findNode(node, linkedToAttackerNodes), by=1:numMembers]
 write.csv(terrorNetworkMembers, file="~/nov13/ise_networkNodeDetails.csv", row.names=F)
 
-#FIXME: incomplete
-#browser()
-
 ####################################################################################################
 #Network extracts
 ####################################################################################################
+#IS-E
 terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSiteWithAttacker, sharedSiteWithSuspect)
 terrorNetwork <- unique(terrorNetwork)
 print(terrorNetwork) 
 write.csv(terrorNetwork, file="~/nov13/ise_terrorNetwork.csv", row.names=F)
 
+#IS-E restricted
 terrorNetworkLimited <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement)
 terrorNetworkLimited <- unique(terrorNetworkLimited)
 print(terrorNetworkLimited) 
 write.csv(terrorNetworkLimited, file="~/nov13/ise_terrorNetworkLimited.csv", row.names=F)
 
+#IS-E extended
 terrorNetworkExtended <- terrorNetworkAllTies[,.(n1,n2)]
 print(terrorNetworkExtended) 
 write.csv(terrorNetworkExtended, file="~/nov13/ise_terrorNetworkExtended.csv", row.names=F)
@@ -233,7 +231,6 @@ terrorPersons <- allPersons[p.status!="free"]
 TN <- write_gml(Vs=terrorPersons, Es=terrorNetwork,   fpath="~/nov13/ise_terrorNetwork.gml")
 write_gml(Vs=terrorPersons, Es=terrorNetworkLimited,  fpath="~/nov13/ise_terrorNetworkLimited.gml")
 write_gml(Vs=terrorPersons, Es=terrorNetworkExtended, fpath="~/nov13/ise_terrorNetworkExtended.gml")
-
 
 
 #browse(kblDB)

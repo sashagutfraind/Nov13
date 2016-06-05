@@ -21,6 +21,11 @@ future additional source material
 * http://www.nytimes.com/interactive/2016/03/25/world/map-isis-attacks-around-the-world.html
 * LMD3 - Clio stop at Airport; stop at Charloi
 
+* New plot: Germany arrests 3 suspected Syrian terrorists, foils possible Islamic State plot
+https://www.washingtonpost.com/world/europe/germany-arrests-3-suspected-syrian-terrorists-foils-alleged-islamic-state-plot/2016/06/02/31e29767-6df7-496b-aa47-5b8911459f13_story.html
+Germany’s chief federal prosecutor identified the three arrested Syrians only as 27-year-old Hamza C., 25-year-old Mahood B., and 31-year-old Abd Arahman A.K. 
+http://www.dw.com/en/details-of-d%C3%BCsseldorf-terror-plot-begin-to-emerge/a-19303630
+
 '
 
 
