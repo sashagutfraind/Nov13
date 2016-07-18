@@ -6,6 +6,8 @@
 
 Submissions of new data are encouraged
 
+Working paper is available by request.
+
 Please cite:
 ```A Graph Database Framework for Covert Network Analysis: An Application to the Islamic State Network in Europe``` 
 by A. Gutfraind and M. Genkin, Unpublished report 2016.  
