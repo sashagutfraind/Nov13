@@ -27,6 +27,42 @@ You can also get the JSON file from the neo4j display
 notInNov13 = individuals who are believed to be not involved in the Paris-Brussels attacks operational network
 - includes ISIS fighters who left Europe before the attacks
 - includes unrelated ISIS cells
+
+
+TODO: include these:
+The 29-year-old Algerian Adel Haddadi and the 35-year-old Pakistani Mohamad Usman were charged with "criminal conspiracy with terrorists", the source said of the men turned over earlier Friday by Austrian authorities.
+Investigators believe they travelled to the Greek island of Leros on October 3 on the same boat full of refugees as two men who took part in the November 13 attacks.
+Usman is reportedly thought to be a bomb maker 
+
+Salzburg prosecutors added Friday that two more men, a Moroccan and an Algerian arrested eight days after the others, remained in custody.
+In December prosecutors had said that the men, aged 25 and 40 at the time, were being held "because of indications of close contact" with the two now transferred to France.
+
+http://www.worldbulletin.net/world/175569/paris-attacks-accomplices-charged-in-france
+
+Additional details
+https://psmag.com/the-dark-side-of-privacy-how-isis-communications-go-undetected-890aec4e86c3#.9qvpwkoqb
+"Abu Ahmed was based in Raqqah"
+
+"Ibrahim Boudinah, a plotter captured in a Cannes safe house"
+
+"Abderrahim Moutaharrik, a Moroccan immigrant living north of Milan with his wife and two children."
+"Moutaharrik finally received an audio message from Koraichi via WhatsApp"
+"Moutaharrik and three other suspects 11 days later."
+
+Details on Adnani
+http://mobile.nytimes.com/2016/08/04/world/middleeast/isis-german-recruit-interview.html
+
+New documents
+http://edition.cnn.com/2016/09/05/politics/isis-suspects-terrorism-europe-documents/index.html
+-- Abid Tabaouni, was only arrested in July
+-- Two ISIS attackers who never reached France: Those two suspected ISIS operatives are identified in the documents as Algerian-born Adel Haddadi and his Pakistani travel partner, Muhammad Usman.
+
+Another ISIS network
+https://sites.google.com/site/ucinetsoftware/datasets/covert-networks/islamicstategroup
+
+30-40 supporters still at large
+http://www.cnn.com/2016/09/09/politics/isis-suspects-at-large-european-officials-say/index.html
+
 '
 
 

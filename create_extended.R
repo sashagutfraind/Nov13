@@ -10,6 +10,17 @@
 #other KBL fighters
 #https://pietervanostaeyen.wordpress.com/2015/01/21/katibat-al-battar-and-the-belgian-fighters-in-syria/
 
+#Sharia for Belgium
+#http://english.aawsat.com/2016/06/article55352191/belgian-court-jails-militants-travelled-syria-fight
+#AA1 
+
+#The 31-year-old Belgian national was identified only as Ali E.H.A.
+#providing safe houses
+#http://www.usatoday.com/story/news/2016/06/10/new-suspect-arrested-brussels-terror-attack/85690478/
+
+#Murder of Policeman and Partner
+#Larossi Abballa
+#http://www.bbc.com/news/world-europe-36537405
 '
 future additional source material
 * NYT19: UK
@@ -26,6 +37,52 @@ https://www.washingtonpost.com/world/europe/germany-arrests-3-suspected-syrian-t
 Germany’s chief federal prosecutor identified the three arrested Syrians only as 27-year-old Hamza C., 25-year-old Mahood B., and 31-year-old Abd Arahman A.K. 
 http://www.dw.com/en/details-of-d%C3%BCsseldorf-terror-plot-begin-to-emerge/a-19303630
 
+* 12 arrested in Belgium
+CNN2016-06-18
+
+* Details on the networks
+CDC2016-06-20
+https://www.ctc.usma.edu/posts/belgian-radical-networks-and-the-road-to-the-brussels-attacks
+
+* July 8
+Bilal C - aiding Abaood
+WSJ2016-07-08
+http://www.wsj.com/articles/germany-accuses-asylum-seeker-of-aiding-paris-attacks-leader-1467904592
+http://www.dailymail.co.uk/news/article-3681027/German-police-arrest-scout-showed-Paris-attacks-mastermind-smuggle-jihadists-Western-Europe.html
+
+* Farouk Ben Abes, Hoxha
+NBC2016-07-12 French Defend Decision Not to Warn Bataclan Despite Threats - NBC News.pdf
+http://www.lefigaro.fr/actualite-france/2016/07/08/01016-20160708ARTFIG00281-attentats-la-colere-des-parties-civiles-apres-la-reaction-de-cazeneuve.php
+
+* Mastermind?
+http://www.telegraph.co.uk/news/2016/07/13/true-paris-attacks-mastermind-still-at-large/
+
+* Nice attacks
+31-year-old Mohamed Lahouaiej-Bouhlel
+http://www.timesofisrael.com/paris-prosecutor-ex-wife-of-nice-terrorist-in-custody/
+84 killed
+
+* 17 year Afghan attacks on train in Germany
+http://www.timesofisrael.com/islamic-state-claims-its-fighter-was-germany-ax-attacker-was/
+
+* French mom, 3 daughters stabbed by Moroccan man in Alps resort 
+suspect 37, from the Yvelines region outside Paris
+http://www.timesofisrael.com/french-woman-3-daughters-stabbed-by-moroccan-man-in-alps-resort/
+
+* Mohammad Daleel - Ansbach concert attack
+http://www.cnn.com/2016/07/24/world/ansbach-germany-blast/
+
+
+* Killing of Hamel and hostage in a Church in Normandy
+Adel Kermiche
+http://www.timesofisrael.com/church-attacker-was-a-terror-suspect-19-under-house-arrest/
+http://www.bbc.com/news/world-europe-36892785
+
+Belgium attack on police
+http://www.timesofisrael.com/belgian-pm-machete-attack-on-police-may-be-terrorism/
+
+London - 1 killed 4 wounded
+http://www.timesofisrael.com/uk-police-charge-19-year-old-with-london-stabbings/
 '
 
 
@@ -190,6 +247,8 @@ AbderahmaneAmeroud  = createNode(kblDB, "Person", name="Abderahmane Ameroud", ag
 #arrested
 #http://www.independent.co.uk/news/world/europe/british-isis-fighter-aine-lesley-davies-arrested-on-eve-of-paris-attacks-planning-similar-atrocity-a6742201.html
 
+#Underreported attacks in Germany
+#https://www.ctc.usma.edu/posts/the-islamic-state-threat-to-germany-evidence-from-the-investigations
 
 ################
 #ADDITION NOTES
@@ -335,3 +394,9 @@ Abaaoud is said to have told the young Frenchman that he had managed to find 25k
 
 #RTBF has reported that the suspects were in contact with IS executioner Hicham Chaib, who was close to Fouad Belkacem, the former leader of Sharia4Belgium
 #https://news.vice.com/article/police-say-they-arrested-four-people-plotting-new-terror-attacks-in-belgium
+
+#Mourad Hamyd - linked to Charlie Hebdo
+#http://www.liberation.fr/france/2016/08/07/attentat-charlie-hebdo-le-beau-frere-de-kouachi-interpelle-en-turquie_1470761
+
+#large smuggling network
+#http://www.cnn.com/2016/09/13/europe/suspected-isis-arrests-germany/index.html
