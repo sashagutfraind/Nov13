@@ -39,17 +39,17 @@ write.csv(attackersAndSites, file="~/nov13/ise_attackersAndSites.csv" )
 ####################################################################################################
 #all rows are sorted alphabetically
 query = '  
-MATCH (a1:Person)-[:INVOLVED_IN]->(l:AttackSite)<-[:INVOLVED_IN]-(a2:Person)
-RETURN a1.name, a2.name'
+MATCH (p1:Person)-[:INVOLVED_IN]->(l:AttackSite)<-[:INVOLVED_IN]-(p2:Person)
+RETURN p1.name, p2.name'
 commonAttack = cypher(kblDB, query)
-commonAttack = data.table(commonAttack)[,.(n1=pmin(a1.name, a2.name),n2=pmax(a1.name, a2.name))]
+commonAttack = data.table(commonAttack)[,.(n1=pmin(p1.name, p2.name),n2=pmax(p1.name, p2.name))]
 commonAttack = unique(commonAttack)
 
 query = '  
-MATCH (a1:Person)-[:INVOLVED_IN]->(l:Activity)<-[:INVOLVED_IN]-(a2:Person)
-RETURN a1.name, a2.name'
+MATCH (p1:Person)-[:INVOLVED_IN]->(l:Activity)<-[:INVOLVED_IN]-(p2:Person)
+RETURN p1.name, p2.name'
 commonInvolvement = cypher(kblDB, query)
-commonInvolvement = data.table(commonInvolvement)[,.(n1=pmin(a1.name, a2.name),n2=pmax(a1.name, a2.name))]
+commonInvolvement = data.table(commonInvolvement)[,.(n1=pmin(p1.name, p2.name),n2=pmax(p1.name, p2.name))]
 commonInvolvement = unique(commonInvolvement)
 
 
@@ -138,17 +138,17 @@ write.csv(terrorNetworkAllTies, file="~/nov13/ise_networkTieDetails.csv", row.na
 ####################################################################################################
 #all rows are sorted alphabetically
 query = '  
-MATCH (a1:Person)-[:INVOLVED_IN]->(l:AttackSite)
-RETURN a1.name'
+MATCH (p1:Person)-[:INVOLVED_IN]->(l:AttackSite)
+RETURN p1.name'
 attackerNodes = cypher(kblDB, query)
-attackerNodes = data.table(attackerNodes)[,.(node=a1.name)]
+attackerNodes = data.table(attackerNodes)[,.(node=p1.name)]
 attackerNodes = unique(attackerNodes)
 
 query = '  
-MATCH (a1:Person)-[:INVOLVED_IN]->(l:Activity)
-RETURN a1.name'
+MATCH (p1:Person)-[:INVOLVED_IN]->(l:Activity)
+RETURN p1.name'
 involvedInActivityNodes = cypher(kblDB, query)
-involvedInActivityNodes = data.table(involvedInActivityNodes)[,.(node=a1.name)]
+involvedInActivityNodes = data.table(involvedInActivityNodes)[,.(node=p1.name)]
 involvedInActivityNodes = unique(involvedInActivityNodes)
 
 query = '  

@@ -63,6 +63,19 @@ https://sites.google.com/site/ucinetsoftware/datasets/covert-networks/islamicsta
 30-40 supporters still at large
 http://www.cnn.com/2016/09/09/politics/isis-suspects-at-large-european-officials-say/index.html
 
+Oussama Atar, a Belgian-Moroccan who French and Belgian intelligence believe coordinated the Paris and Brussels attacks from Syria
+TEL2016-11-07 http://www.telegraph.co.uk/news/2016/11/08/paris-and-brussels-terror-attacks-were-coordinated-by-syria-base/
+* 32-year-old 
+* the person behind Abou Amahad, a nom de guerre 
+* identified from a strip of several photograph as Oussama Atar by Adel Haddadi,
+* been based in Raqqa,
+* Atar is the cousin of Ibrahim and Khalid El Bakraoui - two brothers who blew themselves up in the March Brussels airport
+* Atar as the recruiting sergeant for two Iraqi nationals who blew themselves up outside the Stade de France football stadium outside Paris
+* audio conversations between the Bakraoui brothers and Atar discussing their terror plans
+* Another two cousins, Moustapha and Jawad Benhattal, were arrested on June 18 on suspicion of planning an attack in Belgium during a public screening of a Euro 2016 football match
+* met Isil leader Abu Bakr al-Baghdadi 
+* His younger brother Yacine was arrested after the attacks and police found traces of explosives on his face and clothes.
+
 '
 
 
