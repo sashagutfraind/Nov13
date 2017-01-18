@@ -400,3 +400,6 @@ Abaaoud is said to have told the young Frenchman that he had managed to find 25k
 
 #large smuggling network
 #http://www.cnn.com/2016/09/13/europe/suspected-isis-arrests-germany/index.html
+
+#7 arrested in France
+#http://www.timesofisrael.com/french-police-foil-terror-attack-arrest-7/

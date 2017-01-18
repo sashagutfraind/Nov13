@@ -76,6 +76,24 @@ TEL2016-11-07 http://www.telegraph.co.uk/news/2016/11/08/paris-and-brussels-terr
 * met Isil leader Abu Bakr al-Baghdadi 
 * His younger brother Yacine was arrested after the attacks and police found traces of explosives on his face and clothes.
 
+NYT2016-11-22 ISIS Operative Suspected in Paris and Brussels Attacks Is Identified - NYTimes.pdf
+The operative — who until recently was known only by his nom de guerre, Abu Souleymane al-Faransi — is a 27-year-old originally from Morocco whose real name is Abdelilah Himich
+Among the first clues was the testimony of one of the hostages inside the Bataclan concert hall in Paris, who said he had overheard one of the suicide bombers asking the other, “Should we call Souleymane?”
+After the March 22 attacks in Brussels, the Belgian capital, the police recovered a laptop belonging to one of the plotters and discovered recorded chats between the attackers and their handlers in Syria, including Abu Souleymane and another commander who went by the nom de guerre Abu Ahmad, according to Jean-Charles Brisard, who leads the Center for Analysis of Terrorism in Paris.
+
+Site: Birmigham Park
+Suspects: Anouar Haddouchi,  Zakaria Boufassil, Mohammed Ali Ahmed
+GRD2016-12-12
+https://www.theguardian.com/world/2016/dec/12/two-men-funded-brussels-bombing-suspect-mohamed-abrini-sentenced-zakaria-boufassil-mohammed-ali-ahmed
+
+Also, the French paper Parisien has been creating an interactive network and corresponding relationships of the bombers, check it out (double click on the name in the network to navigate it – on left you can click on types of relationship– top right they display the attributes; scroll below the network for details on the various relations):
+https://translate.google.com.sg/translate?hl=en&sl=fr&u=http://atelier.leparisien.fr/galaxie-djihadiste/profil/abdelhamid-abaaoud/P029&prev=search
+
+Wailid Hamman, estratega de varios ataques suicidas, Salah Gourmat y Sammy Djedou, estos dos últimos involucrados en la gestión del plan de ataques simultáneos ocurridos en París, Francia el 13 de noviembre 
+https://www.cibercuba.com/noticias/2016-12-13-u146802-tanques-pensantes-atentados-paris-habrian-sido-aniquilados-ejercito-eeuu
+
+Two associates of the attackers
+http://www.timesofisrael.com/belgium-charges-2-new-suspects-over-paris-attacks/
 '
 
 
@@ -371,6 +389,7 @@ SamirZ = createNode(kblDB, "Person", age=20, name="Samir Z", gender="Male", citi
 PierreN = createNode(kblDB, "Person", age=28, name="Pierre N", gender="Male", citizenship="Belgium", ref1=references[["IBT2"]], ref2=references[["ST1"]], status="arrested")
 
 CharaffeAlMouadan  = createNode(kblDB, "Person", name="Charaffe al Mouadan", alias="Souleymane", age=27, gender="Male", role="planner", citizenship="France", status="dead", ref1=references[["LP3"]])
+#TODO: Souleymane might be NYT2016-11-22 ISIS Operative Suspected in Paris and Brussels Attacks Is Identified - NYTimes.pdf
 SamirBouabout  = createNode(kblDB, "Person", name="Samir Bouabout", age=28, citizenship="France", gender="Male",  status="wanted", ref1=references[["LMD8"]])
 
 ###################
