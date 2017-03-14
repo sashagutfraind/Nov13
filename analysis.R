@@ -1,26 +1,59 @@
-library(igraph)
-library(networkD3)
-library(RNeo4j)
-library(lattice)
-kblDB = startGraph("http://localhost:7474/db/data/", username="neo4j", password="1")  
+#'
+#' Analysis of data
+#' 
+list.of.packages <- c('igraph', 'networkD3', 'RNeo4j', 'lattice')
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+lapply(list.of.packages, require, character.only = TRUE)
 
-print("DATABASE statistics:")
-query = '  
-MATCH (n)
-RETURN count(n)'
-netStatsN = cypher(kblDB, query)
-print(netStatsN)
+baseDir <- '~/repos/Nov13'
 
-query = '  
-MATCH ()-[r]->()
-RETURN count(r)'
-netStatsE = cypher(kblDB, query)
-print(netStatsE)
+kblDB = tryCatch(startGraph("http://localhost:7474/db/data/", username="neo4j", password="1"), error = function(e){NULL})  
+if(is.null(kblDB)) {
+  print('Database error!')
+} else {
+  print("DATABASE statistics:")
+  query = '  
+  MATCH (n)
+  RETURN count(n)'
+  netStatsN = cypher(kblDB, query)
+  print(netStatsN)
+  
+  query = '  
+  MATCH ()-[r]->()
+  RETURN count(r)'
+  netStatsE = cypher(kblDB, query)
+  print(netStatsE)
+  query = '  
+MATCH (p:Person)-[:CITIZEN_OF]->(c:Country)
+  WHERE p.name IN {terrorMembers}
+  RETURN p.name, c.name'
+  nameCitizenship = cypher(kblDB, query, terrorMembers=terrorMembers)
+  print((table(nameCitizenship$c.name)))
+  
+  query = '  
+MATCH (p:Person)
+  WHERE p.name IN {terrorMembers}
+  RETURN p.name, p.age, p.gender, p.citizenship'
+  nameAgeGenderCitizenship = cypher(kblDB, query, terrorMembers=terrorMembers)
+  
+  print(mean(nameAgeGenderCitizenship$p.age, na.rm=T))
+  print(summary(nameAgeGenderCitizenship$p.age))
+  
+  print(table(nameAgeGenderCitizenship$p.gender))
+  print(prop.table(table(nameAgeGenderCitizenship$p.gender)))
+  
+  print((table(nameAgeGenderCitizenship$p.citizenship)))
+  print(prop.table(table(nameAgeGenderCitizenship$p.citizenship)))
+}
 
-print("Operators network statistics:")
+systemName <- Sys.info()['sysname']
 
-#terrorNetworkUndirected <- read.csv("~/nov13/nov13_terrorNetwork.csv")
-TN <- read_graph("~/nov13/ise_terrorNetwork.gml", format="gml")
+
+print("Social network statistics:")
+
+#terrorNetworkUndirected <- read.csv(file.path(baseDir, "/nov13_terrorNetwork.csv"))
+TN <- read_graph(file.path(baseDir, "ise_terrorNetwork.gml"), format="gml")
 terrorMembers <- get.vertex.attribute(TN, "name")
 
 print(summary(TN))
@@ -30,41 +63,28 @@ terrorNetworkUndirected <- get.data.frame(TN, what="edges")
 networkJS <- simpleNetwork(terrorNetworkUndirected)
 #wishlist: add nodes which might be missing from terrorNetworkUndirected
 show(networkJS)
-saveNetwork(networkJS, "~/nov13/ise_interactive_network.html", selfcontained=TRUE)
-
-query = '  
-MATCH (p:Person)-[:CITIZEN_OF]->(c:Country)
-WHERE p.name IN {terrorMembers}
-RETURN p.name, c.name'
-nameCitizenship = cypher(kblDB, query, terrorMembers=terrorMembers)
-print((table(nameCitizenship$c.name)))
+saveNetwork(networkJS, file.path(baseDir, "ise_interactive_network.html"), selfcontained=TRUE)
 
 
 degrees <- degree(TN, mode="out")
 degrees <- sort(degrees)
 bc<-barchart(degrees, col="blue")
 print(bc)
-quartz.save(paste0("~/nov13/TN_degrees.tiff"), dpi=300, width=9, height=16)
+if(systemName == 'macOS') {
+  quartz.save(file.path(baseDir, "TN_degrees.tiff"), dpi=300, width=9, height=16)
+} else{
+  tiff(file.path(baseDir, "TN_degrees.tiff"))
+}
 
 betweennessTN <- betweenness(TN, directed=FALSE, normalized=T)
 betweennessTN <- sort(betweennessTN)
 bc<-barchart(betweennessTN, col="blue", xlab="betweenness")
 print(bc)
-quartz.save(paste0("~/nov13/TN_betweenness.tiff"), dpi=300, width=9, height=16)
+if(systemName == 'macOS') {
+  quartz.save(file.path(baseDir, "TN_betweenness.tiff"), dpi=300, width=9, height=16)
+} else{
+  tiff(file.path(baseDir, "TN_betweenness.tiff"))
+}
 
 
-query = '  
-MATCH (p:Person)
-WHERE p.name IN {terrorMembers}
-RETURN p.name, p.age, p.gender, p.citizenship'
-nameAgeGenderCitizenship = cypher(kblDB, query, terrorMembers=terrorMembers)
-
-print(mean(nameAgeGenderCitizenship$p.age, na.rm=T))
-print(summary(nameAgeGenderCitizenship$p.age))
-
-print(table(nameAgeGenderCitizenship$p.gender))
-print(prop.table(table(nameAgeGenderCitizenship$p.gender)))
-
-print((table(nameAgeGenderCitizenship$p.citizenship)))
-print(prop.table(table(nameAgeGenderCitizenship$p.citizenship)))
 
