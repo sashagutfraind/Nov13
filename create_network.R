@@ -29,21 +29,14 @@ notInNov13 = individuals who are believed to be not involved in the Paris-Brusse
 - includes unrelated ISIS cells
 
 
+TODO: ensure that all persons have a "name" property - needed for graph matching
+
 TODO: include these:
-The 29-year-old Algerian Adel Haddadi and the 35-year-old Pakistani Mohamad Usman were charged with "criminal conspiracy with terrorists", the source said of the men turned over earlier Friday by Austrian authorities.
-Investigators believe they travelled to the Greek island of Leros on October 3 on the same boat full of refugees as two men who took part in the November 13 attacks.
-Usman is reportedly thought to be a bomb maker 
 
-Salzburg prosecutors added Friday that two more men, a Moroccan and an Algerian arrested eight days after the others, remained in custody.
-In December prosecutors had said that the men, aged 25 and 40 at the time, were being held "because of indications of close contact" with the two now transferred to France.
 
-http://www.worldbulletin.net/world/175569/paris-attacks-accomplices-charged-in-france
 
-Additional details
+Plot in Milan
 https://psmag.com/the-dark-side-of-privacy-how-isis-communications-go-undetected-890aec4e86c3#.9qvpwkoqb
-"Abu Ahmed was based in Raqqah"
-
-"Ibrahim Boudinah, a plotter captured in a Cannes safe house"
 
 "Abderrahim Moutaharrik, a Moroccan immigrant living north of Milan with his wife and two children."
 "Moutaharrik finally received an audio message from Koraichi via WhatsApp"
@@ -52,34 +45,17 @@ https://psmag.com/the-dark-side-of-privacy-how-isis-communications-go-undetected
 Details on Adnani
 http://mobile.nytimes.com/2016/08/04/world/middleeast/isis-german-recruit-interview.html
 
-New documents
-http://edition.cnn.com/2016/09/05/politics/isis-suspects-terrorism-europe-documents/index.html
--- Abid Tabaouni, was only arrested in July
--- Two ISIS attackers who never reached France: Those two suspected ISIS operatives are identified in the documents as Algerian-born Adel Haddadi and his Pakistani travel partner, Muhammad Usman.
-
 Another ISIS network
 https://sites.google.com/site/ucinetsoftware/datasets/covert-networks/islamicstategroup
 
 30-40 supporters still at large
 http://www.cnn.com/2016/09/09/politics/isis-suspects-at-large-european-officials-say/index.html
 
-Oussama Atar, a Belgian-Moroccan who French and Belgian intelligence believe coordinated the Paris and Brussels attacks from Syria
-TEL2016-11-07 http://www.telegraph.co.uk/news/2016/11/08/paris-and-brussels-terror-attacks-were-coordinated-by-syria-base/
-* 32-year-old 
-* the person behind Abou Amahad, a nom de guerre 
-* identified from a strip of several photograph as Oussama Atar by Adel Haddadi,
-* been based in Raqqa,
-* Atar is the cousin of Ibrahim and Khalid El Bakraoui - two brothers who blew themselves up in the March Brussels airport
-* Atar as the recruiting sergeant for two Iraqi nationals who blew themselves up outside the Stade de France football stadium outside Paris
-* audio conversations between the Bakraoui brothers and Atar discussing their terror plans
-* Another two cousins, Moustapha and Jawad Benhattal, were arrested on June 18 on suspicion of planning an attack in Belgium during a public screening of a Euro 2016 football match
-* met Isil leader Abu Bakr al-Baghdadi 
-* His younger brother Yacine was arrested after the attacks and police found traces of explosives on his face and clothes.
-
 NYT2016-11-22 ISIS Operative Suspected in Paris and Brussels Attacks Is Identified - NYTimes.pdf
 The operative — who until recently was known only by his nom de guerre, Abu Souleymane al-Faransi — is a 27-year-old originally from Morocco whose real name is Abdelilah Himich
 Among the first clues was the testimony of one of the hostages inside the Bataclan concert hall in Paris, who said he had overheard one of the suicide bombers asking the other, “Should we call Souleymane?”
-After the March 22 attacks in Brussels, the Belgian capital, the police recovered a laptop belonging to one of the plotters and discovered recorded chats between the attackers and their handlers in Syria, including Abu Souleymane and another commander who went by the nom de guerre Abu Ahmad, according to Jean-Charles Brisard, who leads the Center for Analysis of Terrorism in Paris.
+After the March 22 attacks in Brussels, the Belgian capital, the police recovered a laptop belonging to one of the plotters and discovered recorded chats between the attackers and their handlers in Syria, 
+including Abu Souleymane and another commander who went by the nom de guerre Abu Ahmad, according to Jean-Charles Brisard, who leads the Center for Analysis of Terrorism in Paris.
 
 Site: Birmigham Park
 Suspects: Anouar Haddouchi,  Zakaria Boufassil, Mohammed Ali Ahmed
@@ -94,6 +70,14 @@ https://www.cibercuba.com/noticias/2016-12-13-u146802-tanques-pensantes-atentado
 
 Two associates of the attackers
 http://www.timesofisrael.com/belgium-charges-2-new-suspects-over-paris-attacks/
+
+SMH1 stabbing
+Youssef E.A.
+A Belgian citizen, identified only as Youssef E.A., born on August 4, 1985, was arrested and detained in connection with the March attacks, the federal prosecutor said late on Friday.
+Separately, a French probe is underway after Larossi Abballa, who swore allegiance to Islamic State, stabbed a policeman and his partner to death on Monday and may have planned similar attacks on rap stars, public figures and the media, according to investigators.
+In a video posted on social networks, Abballa, linked it to the soccer tournament, saying: "The Euros will be a graveyard."
+Abballa was killed by police inside the couples house near Paris.
+The Paris prosecutors office on Saturday said it is investigating and requesting detention of two other individuals, Charaf-Din Aberouz and Saad Rajraji, following the slaying. Aberouz, Rajraji and Abballa had been convicted in 2013 in a previous terror case.
 '
 
 
@@ -233,11 +217,20 @@ references = list(DM1="http://www.dailymail.co.uk/news/article-3321715/The-rente
                   ,DW2="http://www.dw.com/en/charaffe-al-mouadan-is-leader-with-links-to-paris-attacks-killed/a-18950253"
                   ,FTF2="http://www.france24.com/en/20151121-france-paris-attacks-hasna-aitboulahcen-party-girl-suspected-terrorist"
                   ,B7S72="http://www.7sur7.be/7s7/fr/32684/Menaces-terroristes-en-Belgique/article/detail/2703450/2016/05/13/Les-fiches-de-djihadistes-belges-de-l-EI-devoilees.dhtml"
+                  ,TEL6="http://www.telegraph.co.uk/news/2016/07/29/two-paris-attacks-suspects-extradited-to-france-from-austria/"
+                  ,CNN7="http://edition.cnn.com/2016/09/05/politics/isis-suspects-terrorism-europe-documents/index.html"
+                  ,PS1="https://psmag.com/the-dark-side-of-privacy-how-isis-communications-go-undetected-890aec4e86c3#.mmet00707"
+                  ,TEL7="http://www.telegraph.co.uk/news/2016/11/08/paris-and-brussels-terror-attacks-were-coordinated-by-syria-base/"
+                  ,SMH1="http://www.smh.com.au/world/terror-arrests-in-brussels-after-reported-plot-to-attack-euro-2016-football-fans-20160618-gpmhi2.html"
+                  ,EXUK1="http://www.express.co.uk/news/world/677201/Euro-2016-TERROR-plot-security-services-foil-French-suspect-plotting-attacks"
+                  ,NYT20="https://www.nytimes.com/2016/11/22/world/europe/isis-paris-brussels-attacks.html?_r=0"
                   )
 
 AbdeilahChouaa = createNode(kblDB, "Person", name="Abdeilah Chouaa", age=30, gender="Male", citizenship="Belgium",  status="arrested", ref1=references[["ST1"]])
 AbuMuhammadAlAdnani = createNode(kblDB, "Person", name="Abu Muhammad al-Adnani", age=38, gender="Male", citizenship="Syria", status="wanted", role="spokesperson", ref1=references[["SC1"]])
 AbuMuhammadAlShimali = createNode(kblDB, "Person", name="Abu Muhammad al-Shimali", gender="Male", citizenship="Saudi Arabia", role="ISIS transportation", status="wanted", ref1=references[["GRD1"]], ref2=references[["UNS2"]])
+
+AbuBakrAlBaghdadi = createNode(kblDB, "Person", name="Abu Bakr al-Baghdadi", gender="Male", citizenship="unknown", role="ISIS leader", status="wanted", ref1=references[["TEL7"]])
 
 AbdelhamidAbaaoud = createNode(kblDB, "Person", name="Abdelhamid Abaaoud", age=27, gender="Male", citizenship="Belgium", alias="Abu Omar al-Belgiki and Abou Omar al-Soussi",  role="leadership", status="dead", ref1=references[["DM1"]], ref2=references[["WP1"]],  ref3=references[["FT1"]])
 AbdoullahCourkzine    = createNode(kblDB, "Person", name="Abdoullah Courkzine", age=30, gender="Male", citizenship="Belgium", ref1=references[["NYT7"]], status="arrested")
@@ -245,7 +238,8 @@ AhmetDahmani = createNode(kblDB, "Person", name="Ahmet Dahmani", age=26, gender=
 AhmetTahir = createNode(kblDB, "Person", name="Ahmet Tahir", age=29, gender="Male", citizenship="Syria", ref1=references[["CNN2"]], status="arrested")
  
 BoubakerAlHakim = createNode(kblDB, "Person", name="Boubaker al-Hakim", alias="Abou Mouqatel", gender="Male", citizenship="France", ref1=references[["NYT12"]], status="wanted")
-
+SalimBenghalem = createNode(kblDB, "Person", name="SalimBenghalem", gender="Male", ref1=references[["PS1"]], status="wanted", role="commander")
+AbuSulaymanAlFaransi = createNode(kblDB, "Person", name="Abdelilah Himich", alias="Abu Sulayman al Fransi", age=27, gender="Male", ref1=references[["PS1"]], ref2=references[['NYT20']], status="wanted", role="commander")
 
 AyoubBazarouj     = createNode(kblDB, "Person", name="Ayoub Bazarouj",    age=22, gender="Male", citizenship="Belgium", ref1=references[["SOI1"]], ref2=references[["EXP4"]], status="free")
 #recently released: http://www.irishtimes.com/news/world/europe/paris-attacks-suspect-released-from-custody-by-belgian-court-1.2506936
@@ -284,8 +278,8 @@ ZouhirMehdaoui     = createNode(kblDB, "Person", notInNov13=TRUE, name="Zouhir M
 
 #the unknowns from Nov 13
 #AbbdulakbakB     = createNode(kblDB, "Person", name="AbbdulakbakB",  age=25, gender="Male", ref1=references[["DM1"]], ref2=references[["LI1"]], status="dead", note="possibly fake passport or a victim_s name")
-MohammedAlmahmod  = createNode(kblDB, "Person", name="Mohammed al-Mahmud", alias="Ali al-Iraqi ?", gender="Male",  citizenship="unknown", ref1=references[["BBC1"]], ref2=references[["DBQ1"]], status="dead")
-AhmedAlmuhamed    = createNode(kblDB, "Person", name="Ahmed Almuhamed",    alias="Anashah al-Iraqi ?",  gender="Male", citizenship="unknown", ref1=references[["DM1"]], ref2=references[["DBQ1"]], status="dead")
+MohammedAlmahmod  = createNode(kblDB, "Person", name="Mohammed al-Mahmud", alias="Ali al-Iraqi ?", gender="Male",  citizenship="Iraq", ref1=references[["BBC1"]], ref2=references[["DBQ1"]], ref3=references[["TEL7"]], status="dead")
+AhmedAlmuhamed    = createNode(kblDB, "Person", name="Ahmed Almuhamed",    alias="Anashah al-Iraqi ?",  gender="Male", citizenship="Iraq", ref1=references[["DM1"]], ref2=references[["DBQ1"]], ref3=references[["TEL7"]], status="dead")
 
 ZakariaJaffal = createNode(kblDB, "Person", name="Zakaria Jaffak", age=29, DOB=1986, gender="Male", citizenship="Belgium", ref1=references[["DW1"]], ref2=references[["B7S71"]], status="arrested")
 MustafaE      = createNode(kblDB, "Person", name="Mustafa E", age=34, DOB=1981, gender="Male", citizenship="Morocco", ref1=references[["DW1"]], status="arrested")
@@ -298,9 +292,22 @@ createRel(ZakariaJaffal, "LINKED_TO", AbdelhamidAbaaoud, ref1=references[["B7S71
 MohamedS         = createNode(kblDB, "Person", name="MohamedS", age=25, gender="Male", role="logistics", note="petty criminal assisted with finding safe house", citizenship="unknown", ref1=references[["FTF1"]], status="arrested")
 #apparently not the BrusselsUnknown
 
-MohamedBelkaid    = createNode(kblDB, "Person", name="Mohamed Belkaïd", age=35, alias = "Samir Bouzid", gender="Male", citizenship="Algeria", role="logistics", ref1=references[["TL1"]], ref2=references[["NYT12"]], ref3=references[["GRD"]], status="dead")
+MohamedBelkaid    = createNode(kblDB, "Person", name="Mohamed Belkaïd", age=35, alias = "Samir Bouzid", gender="Male", citizenship="Algeria", role="logistics", ref1=references[["TL1"]], ref2=references[["NYT12"]], ref3=references[["GRD"]], ref4=references[["PS1"]], status="dead")
 
 HasnaAitboulahcen  = createNode(kblDB, "Person", name="Hasna Aitboulahcen", age=26, DOB="August 12, 1989", gender="Female",  status="dead", citizenship="France", ref1=references[["LOB1"]], ref2=references[["NP1"]], ref3=references[["CNN3"]], ref4=references[["FTF2"]])
+
+#more arrests in 2016
+AdelHaddadi  = createNode(kblDB, "Person", name="Adel Haddadi", age=29, gender="Male",  status="arrested", citizenship="Algeria", ref1=references[["TEL6"]])
+MohamadUsman  = createNode(kblDB, "Person", name="Mohamad Usman", age=35, gender="Male",  status="arrested", citizenship="Pakistan", role="bomb maker", ref1=references[["TEL6"]], ref2=references[["CNN7"]])
+AbidTabaouni  = createNode(kblDB, "Person", name="Abid Tabaouni", age=25, gender="Male",  status="arrested", citizenship="Morocco", ref1=references[["CNN7"]], ref2=references[["TEL6"]], note="likely 25 based on TEL6")
+SalzburgFourth  = createNode(kblDB, "Person", name="Salzburg Fourth Suspect", age=40, gender="Male",  status="arrested", citizenship="Algeria", ref1=references[["TEL6"]])
+OussamaAtar  = createNode(kblDB, "Person", name="Oussama Atar", alias="Abu Ahmad", age=32, gender="Male", citizenship="Belgium", status="wanted", ref1=references[["CNN7"]], ref2=references[["TEL7"]], role="commander")
+
+#Euro 2016
+MoustaphaBenhattal = createNode(kblDB, "Person", name="Moustapha Benhattal", age=40, gender="Male", citizenship="Belgium", status="arrested",ref1=references[["SMH1"]])
+JawadBenhattal     = createNode(kblDB, "Person", name="Jawad Benhattal", age=29, gender="Male", citizenship="Belgium", status="arrested",ref1=references[["SMH1"]])
+SamirC             = createNode(kblDB, "Person", name="Samir C", age=27, gender="Male", citizenship="Belgium", status="arrested",ref1=references[["SMH1"]])
+UkraineSuspect     = createNode(kblDB, "Person", name="Ukraine Suspect", gender="Male", citizenship="France", status="arrested",ref1=references[["EXUK1"]])
 
 #Early 2015 plots
 RedouaneHagaoui  = createNode(kblDB, "Person", notInNov13=TRUE, name="Redouane Hagaoui", alias="Abu Khalid Al Maghribi", gender="Male", age=23, citizenship="Belgium", ref1=references[["DM2"]], status="dead")
@@ -308,6 +315,10 @@ TarikJadaoun     = createNode(kblDB, "Person", notInNov13=TRUE, name="Tarik Jada
 
 MehdiNemmouche       = createNode(kblDB, "Person", notInNov13=TRUE, name="Mehdi Nemmouche",  gender="Male", citizenship="France", ref1=references[["LOB1"]], status="arrested")
 AyoubElKhazzani       = createNode(kblDB, "Person", notInNov13=TRUE, name="Ayoub El Khazzani",  age=25, gender="Male", citizenship="Morocco", ref1=references[["LOB1"]], status="arrested")  #http://www.cnn.com/2015/08/24/europe/france-train-attack-what-we-know-about-suspect/
+
+
+TylerVilus       = createNode(kblDB, "Person", notInNov13=TRUE, name="Tyler Vilus",  gender="Male", citizenship="France", ref1=references[["PS1"]], status="arrested")
+IbrahimBoudinah       = createNode(kblDB, "Person", notInNov13=TRUE, name="Ibrahim Boudinah",  gender="Male", citizenship="France", ref1=references[["PS1"]], status="arrested")
 
 
 #Brussels
@@ -324,7 +335,7 @@ HerveBM     = createNode(kblDB, "Person", name="Herve BM", gender="Male", citize
 #"Kriket" independent cell
 RedaKriket = createNode(kblDB, "Person", name="Reda Kriket", notInNov13=TRUE, age=34, gender="Male", citizenship="France", role="finance", ref1=references[["NYT14"]], ref1=references[["EXP3"]], status="arrested")
 #3 arrested in Belgium
-YassineA           = createNode(kblDB, "Person", notInNov13=TRUE, name="Yassine A", age=33, DOB="1982.0504", gender="Male", citizenship="Belgium", ref1=references[["STT1"]],  status="arrested")
+YassineA           = createNode(kblDB, "Person", notInNov13=TRUE, name="Yassine Atar", age=33, DOB="1982.0504", gender="Male", citizenship="Belgium", ref1=references[["STT1"]],  ref1=references[["TEL7"]], status="arrested")
 RabahN             = createNode(kblDB, "Person", notInNov13=TRUE, name="Rabah N", age=34, gender="Male", citizenship="Algeria", ref1=references[["NYT14"]], status="arrested", note="Rebah M in some sources")
 AbderahmaneAmeroud = createNode(kblDB, "Person", notInNov13=TRUE, name="Abderamane Ameroud", age=38, gender="Male", citizenship="Algeria", ref1=references[["BBC2"]],  status="arrested")
 AnisBahri          = createNode(kblDB, "Person", notInNov13=TRUE, name="Anis Bahri", age=32, gender="Male", citizenship="France", ref1=references[["DN1"]],  status="arrested")
@@ -341,6 +352,8 @@ GiessenSuspect = createNode(kblDB, "Person", name="Giessen Suspect", gender="Mal
 createRel(GiessenSuspect, "LINKED_TO", SalahAbdeslam, ref1=references[["NYT15"]])
 createRel(GiessenSuspect, "LINKED_TO", KhalidElBakraoui, ref1=references[["NYT15"]])
 
+
+createRel(OussamaAtar, "LINKED_TO", NajimLaachraoui, ref1=references[["PS1"]])
 createRel(OsamaKrayem, "LINKED_TO", NajimLaachraoui, ref1=references[["NYT15"]])
 createRel(OsamaKrayem, "LINKED_TO", KhalidElBakraoui, ref1=references[["NYT15"]])
 createRel(OsamaKrayem, "LINKED_TO", MohamedAbrini, ref1=references[["NYT15"]])
@@ -373,6 +386,17 @@ createRel(IbrahimFarisi, "LINKED_TO", SnailFarisi, note="brother", ref1=referenc
 
 createRel(AbdelhamidAbaaoud, "LINKED_TO", MehdiNemmouche, ref1=references[["CNN6"]])
 
+
+#2016 revelations
+createRel(AbidTabaouni, "LINKED_TO", AbdelhamidAbaaoud, ref1=references[["CNN7"]])
+createRel(AbidTabaouni, "LINKED_TO", AdelHaddadi, ref1=references[["CNN7"]])
+createRel(OussamaAtar, "LINKED_TO", AdelHaddadi,  ref1=references[["CNN7"]])
+createRel(OussamaAtar, "LINKED_TO", AbidTabaouni, ref1=references[["CNN7"]])
+
+createRel(OussamaAtar, "LINKED_TO", AhmedAlmuhamed,  note="recruiter", ref1=references[["TEL7"]])
+createRel(OussamaAtar, "LINKED_TO", MohammedAlmahmod, note="recruiter", ref1=references[["TEL7"]])
+
+#associates
 SamiZarrouk = createNode(kblDB, "Person", notInNov13=TRUE, name="Sami Zarrouk", gender="Male", age=32, DOB="1983-09-13", citizenship="Tunis", status="wanted", ref1=references[["WSJ5"]])
 createRel(KhalidAlZerkani, "LINKED_TO", SamiZarrouk, ref1=references[["WSJ5"]])
 
@@ -416,6 +440,7 @@ Greece = createNode(kblDB, "Country", name="Greece")
 Syria = createNode(kblDB, "Country", name="Syria")
 Turkey = createNode(kblDB, "Country", name="Turkey")
 UK = createNode(kblDB, "Country", name="United Kingdon")
+#Pakistan
 
 BazaroujFamily  = createNode(kblDB, "Activity", name="Bazarouj family", note="likely primarily not radical")
 
@@ -451,12 +476,16 @@ StadeDeFrance    = createNode(kblDB, "AttackSite", attackDate=2015.1113, name="S
 
 ZaventemAirport  = createNode(kblDB, "AttackSite", attackDate=2016.0322, name="Brussels Airport Zaventem", killed=21, wounded=81)
 MaalbeckMetro    = createNode(kblDB, "AttackSite", attackDate=2016.0322, name="Maalbeck Metro", killed=14, wounded=220)
-France2016plot    = createNode(kblDB, "AttackSite", attackDate=2016, name="Interdicted plot in France led by Kriket")
+
+#full interdicted
+Euro2016plot     = createNode(kblDB, "AttackSite", attackDate=2016, name="Interdicted plot on the Euro 2016 championship")
+France2016plot   = createNode(kblDB, "AttackSite", attackDate=2016, name="Interdicted plot in France led by Kriket")
 
 
 #Known Syria connections
 createRel(AbuMuhammadAlAdnani,  "PRESENT_IN", Syria, ref1=references[["DM1"]])
 createRel(AbuMuhammadAlShimali, "PRESENT_IN", Syria, ref1=references[["DM1"]])
+createRel(OussamaAtar,             "PRESENT_IN", Syria, ref1=references[["CNN7"]])
 createRel(AhmedAlmuhamed,     "PRESENT_IN", Syria, ref1=references[["IND1"]])
 createRel(AbdelhamidAbaaoud,  "PRESENT_IN", Syria, ref1=references[["DM1"]])
 createRel(AhmetTahir,       "PRESENT_IN", Syria, ref1=references[["CNN2"]])
@@ -494,10 +523,6 @@ createRel(IbrahimElBakraoui,       "PRESENT_IN", Turkey, ref1=references[["NYT15
 createRel(MohamedAbrini,       "PRESENT_IN", UK, date=2015.07,  ref1=references[["NYT9"]])
 createRel(AbdelhamidAbaaoud,   "PRESENT_IN", UK, date="unknown", ref1=references[["NYT9"]])
 
-#Greece transits
-createRel(AbdelhamidAbaaoud,  "PRESENT_IN", Greece, ref1=references[["EXP1"]])
-createRel(AhmedAlmuhamed,     "PRESENT_IN", Greece, ref1=references[["EXP1"]])
-createRel(MohammedAlmahmod,     "PRESENT_IN", Greece, ref1=references[["IND1"]])
 
 #known Molenbeek or others
 createRel(AbdelhamidAbaaoud,  "PRESENT_IN", Molenbeek, ref1=references[["DM1"]])
@@ -586,7 +611,14 @@ createRel(AnisBahri,   "INVOLVED_IN", France2016plot, ref1=references[["WP3"]])
 createRel(AbdelhamidAbaaoud,  "LINKED_TO", RedaKriket, ref1=references[["NYT15"]])
 createRel(RedaKriket,  "PRESENT_IN", Syria, date="2014", ref1=references[["NYT15"]])
 
-# #transit countries
+
+#Euro plot
+createRel(MoustaphaBenhattal, "INVOLVED_IN", Euro2016plot, ref1=references[["SMH1"]])
+createRel(JawadBenhattal, "INVOLVED_IN", Euro2016plot, ref1=references[["SMH1"]])
+createRel(SamirC, "INVOLVED_IN", Euro2016plot, ref1=references[["SMH1"]])
+createRel(UkraineSuspect, "INVOLVED_IN", Euro2016plot, ref1=references[["EXUK1"]])
+
+#transit countries
 createRel(AbdelhamidAbaaoud,  "PRESENT_IN", Greece, ref1=references[["EXP1"]])
 createRel(AhmedAlmuhamed,     "PRESENT_IN", Greece, ref1=references[["EXP1"]])
 
@@ -594,8 +626,16 @@ createRel(AhmetDahmani,     "PRESENT_IN", Turkey, ref1=references[["CNN2"]])
 createRel(AhmetDahmani,     "PRESENT_IN", Syria, ref1=references[["CNN2"]])
 
 
+createRel(OussamaAtar, "LINKED_TO", AbuBakrAlBaghdadi, note="cellmates", ref1=references[["TEL7"]])
+
 #friend and familiar affiliations
 createRel(IbrahimElBakraoui, "LINKED_TO", KhalidElBakraoui, note="brother", ref1=references[["NYT13"]])
+createRel(OussamaAtar, "LINKED_TO", KhalidElBakraoui, note="cousin", ref1=references[["TEL7"]])
+createRel(OussamaAtar, "LINKED_TO", IbrahimElBakraoui, note="cousin", ref1=references[["TEL7"]])
+createRel(OussamaAtar, "LINKED_TO", MoustaphaBenhattal, note="cousin", ref1=references[["TEL7"]])
+createRel(OussamaAtar, "LINKED_TO", JawadBenhattal, note="cousin", ref1=references[["TEL7"]])
+createRel(OussamaAtar, "LINKED_TO", YassineA, note="brother", ref1=references[["TEL7"]])
+
 createRel(SalahAbdeslam,     "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
 #createRel(SalahAbdeslam,     "LINKED_TO", MohammadAbdeslam, note="brother", ref1=references[["DM1"]])
 #createRel(MohammadAbdeslam , "LINKED_TO", IbrahimAbdeslam, note="brother", ref1=references[["DM1"]])
@@ -630,6 +670,11 @@ createRel(AhmetDahmani,     "LINKED_TO", SalahAbdeslam, ref1=references[["CNN4"]
 createRel(AbdeilahChouaa,    "LINKED_TO",  SalahAbdeslam, note="knew family", ref1=references[["VOA1"]])
 createRel(AbdeilahChouaa,    "LINKED_TO",  MohamedAbrini, note="particularly close", ref1=references[["VOA1"]])
 
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", TylerVilus, ref1=references[["PS1"]])
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", IbrahimBoudinah, ref1=references[["PS1"]])
+createRel(AbdelhamidAbaaoud,  "LINKED_TO", AbuSulaymanAlFaransi, ref1=references[["NYT20"]])
+
+
 #foci - coded as INVOLVED_IN
 createRel(SalahAbdeslam,     "INVOLVED_IN", BazaroujFamily, note="family friend", ref1=references[["SOI1"]])
 createRel(AyoubBazarouj,     "INVOLVED_IN", BazaroujFamily, note="member", ref1=references[["SOI1"]])
@@ -641,6 +686,22 @@ DriveToBobigny = createNode(kblDB, "Activity", data=2015.1112, name="Drive to Bo
 createRel(SalahAbdeslam,   "INVOLVED_IN",  DriveToBobigny,  ref1=references[["DM5"]])
 createRel(IbrahimAbdeslam, "INVOLVED_IN",  DriveToBobigny,  ref1=references[["DM5"]])
 createRel(MohamedAbrini,   "INVOLVED_IN",  DriveToBobigny,  ref1=references[["DM5"]])
+
+#Greece transits
+GreeceBoat = createNode(kblDB, "Activity", date=2015.1003, name="Refugee boat to Leros - Greece")
+createRel(AbdelhamidAbaaoud,  "INVOLVED_IN", GreeceBoat, ref1=references[["EXP1"]])
+createRel(AhmedAlmuhamed,     "INVOLVED_IN", GreeceBoat, ref1=references[["EXP1"]])
+createRel(MohammedAlmahmod,     "INVOLVED_IN", GreeceBoat, ref1=references[["IND1"]])
+createRel(AdelHaddadi,     "INVOLVED_IN", GreeceBoat, ref1=references[["TEL6"]])
+createRel(MohamadUsman,     "INVOLVED_IN", GreeceBoat, ref1=references[["TEL6"]])
+
+
+#Salzburg migrant camp
+SalzburgCamp = createNode(kblDB, "Site", date=2016.12, name="Arrested in migrant camp in Salzburg")
+createRel(AdelHaddadi,     "PRESENT_IN", SalzburgCamp, ref1=references[["TEL6"]])
+createRel(MohamadUsman,     "PRESENT_IN", SalzburgCamp, ref1=references[["TEL6"]])
+createRel(AbidTabaouni,     "PRESENT_IN", SalzburgCamp, ref1=references[["CNN7"]])
+createRel(SalzburgFourth,     "PRESENT_IN", SalzburgCamp, ref1=references[["TEL6"]])
 
 #
 TripFromUlm = createNode(kblDB, "Activity", data=2015.10, name="trip from Ulm")
@@ -677,12 +738,17 @@ createRel(HamzaAttou,  "LINKED_TO", AliOulkadi,  ref1=references[["B7S71"]])
 
 #Daesh core
 OverallOrganization = createNode(kblDB, "Activity", name="Attack Organization")
+createRel(OussamaAtar,             "INVOLVED_IN", OverallOrganization, ref1=references[["CNN7"]])
 createRel(FabienClain,          "INVOLVED_IN", OverallOrganization, ref1=references[["DM1"]])
 createRel(AbuMuhammadAlAdnani,  "INVOLVED_IN", OverallOrganization, ref1=references[["NYT3"]], ref2=references[["NYT4"]])
 createRel(AbuMuhammadAlShimali, "INVOLVED_IN", OverallOrganization, ref1=references[["GRD1"]])
 createRel(AbdelhamidAbaaoud,    "INVOLVED_IN", OverallOrganization, ref1=references[["GRD1"]])
 createRel(CharaffeAlMouadan,  "INVOLVED_IN", OverallOrganization, ref1=references[["LP3"]])
 createRel(BoubakerAlHakim,  "INVOLVED_IN", OverallOrganization, ref1=references[["NYT11"]])
+createRel(SalimBenghalem,  "INVOLVED_IN", OverallOrganization, ref1=references[["PS1"]])
+createRel(AbuSulaymanAlFaransi,  "INVOLVED_IN", OverallOrganization, ref1=references[["PS1"]], ref2=references[['NYT20']], note='likely most closely involved')
+
+
 #wishlist: identify locations if different from Syria/Iraq
 
 MakingExplosives = createNode(kblDB, "Activity", name="Making Explosives")

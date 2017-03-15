@@ -16,13 +16,13 @@ kblDB = startGraph("http://localhost:7474/db/data/", username="neo4j", password=
 #print("Export")
 ########################################################
 nov13nodes = cypher(kblDB, query='MATCH (p) return p.name') 
-write.csv(nov13nodes, file="~/nov13/ise_nodes.csv")
+write.csv(nov13nodes, file="~/repos/nov13/ise_nodes.csv")
 
 nov13persons = cypher(kblDB, query='MATCH (p:Person) return p.name') 
-write.csv(nov13persons, file="~/nov13/ise_persons.csv")
+write.csv(nov13persons, file="~/repos/nov13/ise_persons.csv")
 
 nov13relationships = cypher(kblDB, query='MATCH (n1)-[r]->(n2) return n1.name, type(r), n2.name') 
-write.csv(nov13relationships, file="~/nov13/ise_relationships.csv" )
+write.csv(nov13relationships, file="~/repos/nov13/ise_relationships.csv" )
 
 query = '  
 MATCH (p:Person)-[:INVOLVED_IN]->(s:AttackSite)
@@ -30,7 +30,7 @@ RETURN p.name, s.name'
 attackersAndSites = cypher(kblDB, query)
 attackersAndSites = unique(attackersAndSites)
 print(attackersAndSites)  
-write.csv(attackersAndSites, file="~/nov13/ise_attackersAndSites.csv" )
+write.csv(attackersAndSites, file="~/repos/nov13/ise_attackersAndSites.csv" )
 
 
 
@@ -130,7 +130,7 @@ terrorNetworkAllTies[,commonInvolvement:=findPair(n1,n2,commonInvolvement), by=1
 terrorNetworkAllTies[,sharedSiteWithAttacker:=findPair(n1,n2,sharedSiteWithAttacker), by=1:totalTies]
 terrorNetworkAllTies[,sharedSiteWithSuspect:=findPair(n1,n2,sharedSiteWithSuspect), by=1:totalTies]
 terrorNetworkAllTies[,sharedLocalityWithSuspect:=findPair(n1,n2,sharedLocalityWithSuspect), by=1:totalTies]
-write.csv(terrorNetworkAllTies, file="~/nov13/ise_networkTieDetails.csv", row.names=F)
+write.csv(terrorNetworkAllTies, file="~/repos/nov13/ise_networkTieDetails.csv", row.names=F)
 
 
 ####################################################################################################
@@ -166,7 +166,7 @@ findNode <- function(p1, dt){(p1 %in% dt$node)}
 terrorNetworkMembers[,attackerNodes:=findNode(node, attackerNodes), by=1:numMembers]
 terrorNetworkMembers[,involvedInActivityNodes:=findNode(node, involvedInActivityNodes), by=1:numMembers]
 terrorNetworkMembers[,linkedToAttackerNodes:=findNode(node, linkedToAttackerNodes), by=1:numMembers]
-write.csv(terrorNetworkMembers, file="~/nov13/ise_networkNodeDetails.csv", row.names=F)
+write.csv(terrorNetworkMembers, file="~/repos/nov13/ise_networkNodeDetails.csv", row.names=F)
 
 ####################################################################################################
 #Network extracts
@@ -175,44 +175,44 @@ write.csv(terrorNetworkMembers, file="~/nov13/ise_networkNodeDetails.csv", row.n
 terrorNetwork <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement, sharedSiteWithAttacker, sharedSiteWithSuspect)
 terrorNetwork <- unique(terrorNetwork)
 print(terrorNetwork) 
-write.csv(terrorNetwork, file="~/nov13/ise_terrorNetwork.csv", row.names=F)
+write.csv(terrorNetwork, file="~/repos/nov13/ise_terrorNetwork.csv", row.names=F)
 
 #IS-E restricted
 terrorNetworkLimited <- rbind(commonAttack, linkedToAttacker, linkedToWanted, commonInvolvement)
 terrorNetworkLimited <- unique(terrorNetworkLimited)
 print(terrorNetworkLimited) 
-write.csv(terrorNetworkLimited, file="~/nov13/ise_terrorNetworkLimited.csv", row.names=F)
+write.csv(terrorNetworkLimited, file="~/repos/nov13/ise_terrorNetworkLimited.csv", row.names=F)
 
 #IS-E extended
 terrorNetworkExtended <- terrorNetworkAllTies[,.(n1,n2)]
 print(terrorNetworkExtended) 
-write.csv(terrorNetworkExtended, file="~/nov13/ise_terrorNetworkExtended.csv", row.names=F)
+write.csv(terrorNetworkExtended, file="~/repos/nov13/ise_terrorNetworkExtended.csv", row.names=F)
 
 
 #Snapshot of the database, focusing on the most important structure...
 query = 'MATCH (n)-[r]->(m) where NOT (n:Locality) AND NOT (n:Country) AND NOT (m:Locality) AND NOT (m:Country) RETURN n.name,labels(n),type(r),m.name,labels(m) '
 minimalNetwork = cypher(kblDB, query)
-write.csv(minimalNetwork, file="~/nov13/ise_minimalDB.csv", row.names=F)
+write.csv(minimalNetwork, file="~/repos/nov13/ise_minimalDB.csv", row.names=F)
 
 query = '  
 MATCH (n:Person) WHERE (n.notInNov13=TRUE) RETURN n.name'
 notInNov13agents = cypher(kblDB, query)
 names(notInNov13agents)<-c("name")
-write.csv(notInNov13agents, file="~/nov13/ise_notInNov13agents.csv", row.names=F)
+write.csv(notInNov13agents, file="~/repos/nov13/ise_notInNov13agents.csv", row.names=F)
 
 
 query = '  
 MATCH (p:Person) RETURN p.name, p.age, p.citizenship, p.status, p.role, p.ref1, p.ref2'
 allPersons = data.table(cypher(kblDB, query))
 #names(allPersons)<-c("name", "ageIn2015", "gender", "citizenship", "status")
-write.csv(allPersons, file="~/nov13/ise_allPersons.csv", row.names=F)
+write.csv(allPersons, file="~/repos/nov13/ise_allPersons.csv", row.names=F)
 
 
 print("Full report")
 query = '  
 MATCH (p:Person) RETURN p.name, p.age, p.citizenship, p.status, p.role, p.ref1, p.ref2'
 personsList = cypher(kblDB, query)
-write.csv(personsList, file="~/nov13/ise_personDetails.csv")
+write.csv(personsList, file="~/repos/nov13/ise_personDetails.csv")
 
 print("Write a GML...")
 require(igraph)
@@ -228,9 +228,11 @@ write_gml <- function(Vs, Es, fpath) {
 }
 
 terrorPersons <- allPersons[p.status!="free"]
-TN <- write_gml(Vs=terrorPersons, Es=terrorNetwork,   fpath="~/nov13/ise_terrorNetwork.gml")
-write_gml(Vs=terrorPersons, Es=terrorNetworkLimited,  fpath="~/nov13/ise_terrorNetworkLimited.gml")
-write_gml(Vs=terrorPersons, Es=terrorNetworkExtended, fpath="~/nov13/ise_terrorNetworkExtended.gml")
+stopifnot(!any(terrorPersons$p.name == ""))
+
+TN <- write_gml(Vs=terrorPersons, Es=terrorNetwork,   fpath="~/repos/nov13/ise_terrorNetwork.gml")
+write_gml(Vs=terrorPersons, Es=terrorNetworkLimited,  fpath="~/repos/nov13/ise_terrorNetworkLimited.gml")
+write_gml(Vs=terrorPersons, Es=terrorNetworkExtended, fpath="~/repos/nov13/ise_terrorNetworkExtended.gml")
 
 
 #browse(kblDB)

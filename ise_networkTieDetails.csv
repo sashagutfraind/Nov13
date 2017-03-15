@@ -1,8 +1,8 @@
 "n1","n2","commonAttack","linkedToAttacker","linkedToEachOther","linkedToWanted","commonInvolvement","sharedSiteWithAttacker","sharedSiteWithSuspect","sharedLocalityWithSuspect"
 "August Recruit","Reda Hame",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Foued Mohamed-Aggad","Samy Amimour",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-"Foued Mohamed-Aggad","Omar IsmaÃ«l MostefaÃ¯",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-"Omar IsmaÃ«l MostefaÃ¯","Samy Amimour",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Foued Mohamed-Aggad","Omar Ismaël Mostefaï",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Omar Ismaël Mostefaï","Samy Amimour",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Salah Abdeslam",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
 "Abdelhamid Abaaoud","Ibrahim Abdeslam",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
 "Ibrahim Abdeslam","Salah Abdeslam",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
@@ -11,21 +11,27 @@
 "Bilal Hadfi","Salah Abdeslam",TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Ahmed Almuhamed","Salah Abdeslam",TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Bilal Hadfi","Mohammed al-Mahmud",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-"Ahmed Almuhamed","Mohammed al-Mahmud",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+"Ahmed Almuhamed","Mohammed al-Mahmud",TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
 "Ahmed Almuhamed","Bilal Hadfi",TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Mohamed Abrini","Najim Laachraoui",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Ibrahim El Bakraoui","Mohamed Abrini",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Ibrahim El Bakraoui","Najim Laachraoui",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Khalid El Bakraoui","Osama Krayem",TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Samir C","Ukraine Suspect",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Jawad Benhattal","Ukraine Suspect",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Moustapha Benhattal","Ukraine Suspect",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Jawad Benhattal","Samir C",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Moustapha Benhattal","Samir C",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Jawad Benhattal","Moustapha Benhattal",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Abderamane Ameroud","Anis Bahri",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-"Anis Bahri","Yassine A",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Anis Bahri","Yassine Atar",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Anis Bahri","Rabah N",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Anis Bahri","Reda Kriket",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-"Abderamane Ameroud","Yassine A",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Abderamane Ameroud","Yassine Atar",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Abderamane Ameroud","Rabah N",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Abderamane Ameroud","Reda Kriket",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-"Rabah N","Yassine A",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-"Reda Kriket","Yassine A",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Rabah N","Yassine Atar",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Reda Kriket","Yassine Atar",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Rabah N","Reda Kriket",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Noureddine Abraimi",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
 "Noureddine Abraimi","Tarik Jadaoun",TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
@@ -41,8 +47,8 @@
 "Giessen Suspect","Salah Abdeslam",FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Samir Bouabout","Samy Amimour",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Charaffe al Mouadan","Samy Amimour",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-"Omar IsmaÃ«l MostefaÃ¯","Samir Bouabout",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-"Abdelhamid Abaaoud","Omar IsmaÃ«l MostefaÃ¯",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+"Omar Ismaël Mostefaï","Samir Bouabout",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+"Abdelhamid Abaaoud","Omar Ismaël Mostefaï",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Mehdi Nemmouche",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
 "Abdelhamid Abaaoud","Ayoub El Khazzani",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
 "Abdelhamid Abaaoud","Zouhir Mehdaoui",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
@@ -51,30 +57,41 @@
 "Abdelhamid Abaaoud","Charaffe al Mouadan",FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Gelel Attar",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Hasna Aitboulahcen",FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Abdelhamid Abaaoud","Abid Tabaouni",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Khalid al Zerkani",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
 "Abdelhamid Abaaoud","Yoni Patric Mayne",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Chakib Akrouh","Gelel Attar",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+"Mohammed al-Mahmud","Oussama Atar",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Bilal Hadfi","Pierre N",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Bilal Hadfi",FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE
+"Ahmed Almuhamed","Oussama Atar",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Abdeilah Chouaa","Mohamed Abrini",FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Mohamed Abrini","Osama Krayem",FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE
 "Khalid al Zerkani","Najim Laachraoui",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Djamal Eddine Ouali","Najim Laachraoui",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Najim Laachraoui","Osama Krayem",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+"Najim Laachraoui","Oussama Atar",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+"Ibrahim El Bakraoui","Oussama Atar",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Dusseldorf Suspect","Ibrahim El Bakraoui",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+"Khalid El Bakraoui","Oussama Atar",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Ibrahim El Bakraoui","Khalid El Bakraoui",FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE
 "Djamal Eddine Ouali","Khalid El Bakraoui",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Giessen Suspect","Khalid El Bakraoui",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Dusseldorf Suspect","Khalid El Bakraoui",FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+"Jawad Benhattal","Oussama Atar",FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Moustapha Benhattal","Oussama Atar",FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Anis Bahri","Khalid al Zerkani",FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Oussama Atar","Yassine Atar",FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Reda Kriket",FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 "Khalid al Zerkani","Reda Kriket",FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+"Abu Bakr al-Baghdadi","Oussama Atar",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+"Abdelhamid Abaaoud","Abdelilah Himich",FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Younes Abaaoud",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Yoni Patric Mayne","Younes Abaaoud",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Yassine Abaaoud",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-"Djamal Eddine Ouali","Mohamed BelkaÃ¯d",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+"Djamal Eddine Ouali","Mohamed Belkaïd",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Abdoullah Courkzine","Hasna Aitboulahcen",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
-"Hasna Aitboulahcen","Mohamed BelkaÃ¯d",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+"Hasna Aitboulahcen","Mohamed Belkaïd",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Khalid al Zerkani","Yoni Patric Mayne",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
 "Khalid al Zerkani","Sami Zarrouk",FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
 "Ayoub Bazarouj","Youssef Bazarouj",FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE
@@ -82,26 +99,55 @@
 "Ayoub Bazarouj","Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Ibrahim Abdeslam","Mohamed Abrini",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Mohamed Abrini","Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Adel Haddadi","Mohamad Usman",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE
+"Mohamad Usman","Mohammed al-Mahmud",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Ahmed Almuhamed","Mohamad Usman",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelhamid Abaaoud","Mohamad Usman",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Adel Haddadi","Mohammed al-Mahmud",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Adel Haddadi","Ahmed Almuhamed",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelhamid Abaaoud","Adel Haddadi",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelhamid Abaaoud","Mohammed al-Mahmud",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelhamid Abaaoud","Ahmed Almuhamed",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Osama Krayem","Unknown accomplice of Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Osama Krayem","Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Salah Abdeslam","Unknown accomplice of Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE
 "Hamza Attou","Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Mohamed Amri","Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Hamza Attou","Mohamed Amri",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelilah Himich","SalimBenghalem",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelilah Himich","Boubaker al-Hakim",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelilah Himich","Charaffe al Mouadan",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelilah Himich","Abu Muhammad al-Shimali",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelilah Himich","Abu Muhammad al-Adnani",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelilah Himich","Fabien Clain",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelilah Himich","Oussama Atar",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Boubaker al-Hakim","SalimBenghalem",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Charaffe al Mouadan","SalimBenghalem",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelhamid Abaaoud","SalimBenghalem",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abu Muhammad al-Shimali","SalimBenghalem",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abu Muhammad al-Adnani","SalimBenghalem",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Fabien Clain","SalimBenghalem",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Oussama Atar","SalimBenghalem",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Boubaker al-Hakim","Charaffe al Mouadan",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Boubaker al-Hakim",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abu Muhammad al-Shimali","Boubaker al-Hakim",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abu Muhammad al-Adnani","Boubaker al-Hakim",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Boubaker al-Hakim","Fabien Clain",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Boubaker al-Hakim","Oussama Atar",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abu Muhammad al-Shimali","Charaffe al Mouadan",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abu Muhammad al-Adnani","Charaffe al Mouadan",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Charaffe al Mouadan","Fabien Clain",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Charaffe al Mouadan","Oussama Atar",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Abu Muhammad al-Shimali",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Abu Muhammad al-Adnani",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Fabien Clain",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelhamid Abaaoud","Oussama Atar",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abu Muhammad al-Adnani","Abu Muhammad al-Shimali",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abu Muhammad al-Shimali","Fabien Clain",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abu Muhammad al-Shimali","Oussama Atar",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abu Muhammad al-Adnani","Fabien Clain",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abu Muhammad al-Adnani","Oussama Atar",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Fabien Clain","Oussama Atar",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Mohamed Khoualed","Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abdeilah Chouaa","Salah Ali Oulkadi",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abdeilah Chouaa","Abraimi Lazez",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
@@ -113,9 +159,9 @@
 "Ahmet Dahmani","Ahmet Tahir",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Ahmet Dahmani","Mohammed Verd",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Ahmet Tahir","Mohammed Verd",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
-"Abdelhamid Abaaoud","Mohamed BelkaÃ¯d",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Abdelhamid Abaaoud","Mohamed Belkaïd",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Abdelhamid Abaaoud","Najim Laachraoui",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
-"Mohamed BelkaÃ¯d","Najim Laachraoui",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+"Mohamed Belkaïd","Najim Laachraoui",FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
 "Herve BM","Osama Krayem",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
 "Herve BM","Mohamed Abrini",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
 "Najim Laachraoui","Unknown accomplice of Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
@@ -132,9 +178,9 @@
 "Ibrahim Farisi","Khalid El Bakraoui",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
 "Khalid El Bakraoui","Snail Farisi",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
 "Ibrahim El Bakraoui","Unknown accomplice of Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
-"Ibrahim El Bakraoui","Mohamed BelkaÃ¯d",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
+"Ibrahim El Bakraoui","Mohamed Belkaïd",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
 "Ibrahim El Bakraoui","Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
-"Mohamed BelkaÃ¯d","Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
+"Mohamed Belkaïd","Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
 "Chakib Akrouh","Jawad Bendaoud",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
 "Chakib Akrouh","Hasna Aitboulahcen",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
 "Abdelhamid Abaaoud","Jawad Bendaoud",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
@@ -143,8 +189,13 @@
 "Ibrahim El Bakraoui","Mohamed Bakkali",FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE
 "Mohamed Bakkali","Unknown accomplice of Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
 "Ibrahim Farisi","Snail Farisi",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
-"Mohamed BelkaÃ¯d","Unknown accomplice of Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+"Mohamed Belkaïd","Unknown accomplice of Salah Abdeslam",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
 "Hasna Aitboulahcen","Jawad Bendaoud",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+"Abid Tabaouni","Salzburg Fourth Suspect",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+"Mohamad Usman","Salzburg Fourth Suspect",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+"Adel Haddadi","Salzburg Fourth Suspect",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+"Abid Tabaouni","Mohamad Usman",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE
+"Abid Tabaouni","Adel Haddadi",FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE
 "Mehdi Nemmouche","Noureddine Abraimi",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
 "Mehdi Nemmouche","Tarik Jadaoun",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
 "Mehdi Nemmouche","Redouane Hagaoui",FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
