@@ -6,7 +6,7 @@
 #KCK1: Tarik Jadaoun escaped to Syria but claimed the attacks
 
 #another associate of Kriket: NYT15
-#In Brussels on Friday, the police arrested three men for questioning in connection with Mr. Kriket’s arrest.
+#In Brussels on Friday, the police arrested three men for questioning in connection with Mr. Kriket???s arrest.
 #other KBL fighters
 #https://pietervanostaeyen.wordpress.com/2015/01/21/katibat-al-battar-and-the-belgian-fighters-in-syria/
 
@@ -34,7 +34,7 @@ future additional source material
 
 * New plot: Germany arrests 3 suspected Syrian terrorists, foils possible Islamic State plot
 https://www.washingtonpost.com/world/europe/germany-arrests-3-suspected-syrian-terrorists-foils-alleged-islamic-state-plot/2016/06/02/31e29767-6df7-496b-aa47-5b8911459f13_story.html
-Germany’s chief federal prosecutor identified the three arrested Syrians only as 27-year-old Hamza C., 25-year-old Mahood B., and 31-year-old Abd Arahman A.K. 
+Germany???s chief federal prosecutor identified the three arrested Syrians only as 27-year-old Hamza C., 25-year-old Mahood B., and 31-year-old Abd Arahman A.K. 
 http://www.dw.com/en/details-of-d%C3%BCsseldorf-terror-plot-begin-to-emerge/a-19303630
 
 * 12 arrested in Belgium
@@ -83,6 +83,13 @@ http://www.timesofisrael.com/belgian-pm-machete-attack-on-police-may-be-terroris
 
 London - 1 killed 4 wounded
 http://www.timesofisrael.com/uk-police-charge-19-year-old-with-london-stabbings/
+
+Arests in Spain, possibly linked to Brussels attackers
+http://www.cbsnews.com/news/spain-arrests-isis-terror-raids-barcelona-brussels-france-attacks/
+
+Barcelona attacker might have links to Brussels
+https://www.nytimes.com/2017/08/23/world/europe/abdelbaki-essati-spain-attacks-imam.html?mcubz=3
+
 '
 
 
@@ -98,25 +105,25 @@ createRel(MohammedMerah, "INVOLVED_IN", ToulouseAndMontauban, attack_type="Shoot
 CharlieHebdo = createNode(kblDB, "AttackSite", name="Charlie Hebdo", killed=12, wounded=11)
 
 #CharlieHebdo -  al-Qaeda in the Arabian Peninsula not DAESH
-ChérifKouachi   = createNode(kblDB, "Person", name="Chérif Kouachi",  gender="Male", status="dead")
-SaïdKouachi     = createNode(kblDB, "Person", name="Saïd Kouachi",  gender="Male", status="dead")
+Ch??rifKouachi   = createNode(kblDB, "Person", name="Ch??rif Kouachi",  gender="Male", status="dead")
+Sa??dKouachi     = createNode(kblDB, "Person", name="Sa??d Kouachi",  gender="Male", status="dead")
 #Djamel Begha - coordinator
-#18-year-old brother-in-law of Chérif Kouachi
+#18-year-old brother-in-law of Ch??rif Kouachi
 
-createRel(ChérifKouachi, "INVOLVED_IN", CharlieHebdo, attack_type="Shooting", ref1=references[["TEL5"]])
-createRel(SaïdKouachi, "INVOLVED_IN", CharlieHebdo, attack_type="Shooting", ref1=references[["TEL5"]])
-createRel(ChérifKouachi, "LINKED_TO", SaïdKouachi, note="brother", ref1=references[["TEL5"]])
+createRel(Ch??rifKouachi, "INVOLVED_IN", CharlieHebdo, attack_type="Shooting", ref1=references[["TEL5"]])
+createRel(Sa??dKouachi, "INVOLVED_IN", CharlieHebdo, attack_type="Shooting", ref1=references[["TEL5"]])
+createRel(Ch??rifKouachi, "LINKED_TO", Sa??dKouachi, note="brother", ref1=references[["TEL5"]])
 
-createRel(ChérifKouachi, "LINKED_TO", AmedyCoulibaly, note="friend", ref1=references[["LMD7"]])
-createRel(SaïdKouachi, "LINKED_TO", AmedyCoulibaly, note="friend", ref1=references[["LMD7"]])
+createRel(Ch??rifKouachi, "LINKED_TO", AmedyCoulibaly, note="friend", ref1=references[["LMD7"]])
+createRel(Sa??dKouachi, "LINKED_TO", AmedyCoulibaly, note="friend", ref1=references[["LMD7"]])
 #http://www.theguardian.com/world/2015/jan/11/paris-gunman-amedy-coulibaly-allegiance-isis
 #al-Qaeda recruiter Djamel Beghal,
 
 #arms supplier
 #http://abcnews.go.com/International/wireStory/spain-police-arrest-suspect-tied-jan-2015-paris-38360132
 
-createRel(ChérifKouachi, "PRESENT_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
-createRel(SaïdKouachi, "PRESENT_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
+createRel(Ch??rifKouachi, "PRESENT_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
+createRel(Sa??dKouachi, "PRESENT_IN", Syria, date="summer 2014", ref1=references[["TEL5"]])
 
 AbderahmaneAmeroud  = createNode(kblDB, "Person", name="Abderahmane Ameroud", age=27, gender="Male", citizenship="Algers", ref1=references[["NYT14"]], status="arrested")
 #assisted assassination of Massoud in 2005
@@ -132,7 +139,7 @@ AbderahmaneAmeroud  = createNode(kblDB, "Person", name="Abderahmane Ameroud", ag
 #http://www.nytimes.com/2016/03/29/world/europe/isis-attacks-paris-brussels.html?_r=0
 
 #NYT17
-#It was in the summer of 2014 that the link to the terrorist organization’s hierarchy became explicit.
+#It was in the summer of 2014 that the link to the terrorist organization???s hierarchy became explicit.
 #On June 22 of that year, a 24-year-old French citizen named Faiz Bouchrane, who had trained in Syria, was smuggled into neighboring Lebanon. He was planning to blow himself up at a Shiite target, and during interrogation, he let slip the name of the man who had ordered him to carry out the operation: Abu Muhammad al-Adnani.
 
 #Abdelkader Tliba, a French-Tunisian 
@@ -182,7 +189,7 @@ AbderahmaneAmeroud  = createNode(kblDB, "Person", name="Abderahmane Ameroud", ag
 #released: http://www.irishtimes.com/news/world/europe/paris-attacks-suspect-released-from-custody-by-belgian-court-1.2506936
 
 #PEU1 - self radicalized but unlinked
-#Saïd Souati, 30, and Mohamed Karay, 27, belong to the Kamikaze Riders and lived in Anderlecht
+#Sa??d Souati, 30, and Mohamed Karay, 27, belong to the Kamikaze Riders and lived in Anderlecht
 #http://www.lalibre.be/actu/belgique/said-souati-l-homme-qui-voulait-commettre-un-attentat-a-bruxelles-5683041a3570ed3894d57cca
 
 
@@ -262,7 +269,7 @@ AbderahmaneAmeroud  = createNode(kblDB, "Person", name="Abderahmane Ameroud", ag
 #+addition connections to Reunion/Toulouse group and Mohamed Merah
 #http://www.lesinrocks.com/2015/11/18/actualite/qui-est-fabien-clain-la-voix-de-daesh-11788443/
 
-#+father and brother of Ismaeël
+#+father and brother of Ismae??l
 #http://pamelageller.com/2015/11/french-muslim-ismael-omar-mostefai-and-abbdulakbak-b-suicide-bombers-named-in-paris-terror-attack.html/
 
 #http://www.dailymail.co.uk/news/article-3331781/Soldiers-stay-streets-Brussels-WEEK-schools-metro-remain-closed-terror-attack-fears-EU-staff-warned-stay-home.html
@@ -334,8 +341,8 @@ HyperCacher = createNode(kblDB, "AttackSite", attackDate=2015.0109,  attackType=
 
 
 
-" He said that Abaaoud worked in Isis’s internal security unit, known as EMNI, which has the task of sending European jihadis back to their homelands to carry out terrorist attacks. The unit is run by two Tunisians, he said.
-Abaaoud is said to have told the young Frenchman that he had managed to find 25kg of explosives in Belgium, but that it was too difficult for him to return to his home country himself. He was in charge of selecting candidates, who could be paid as much as €50,000 for carrying out attacks, but it was the two unnamed Tunisians who had the final decision on who would be sent."
+" He said that Abaaoud worked in Isis???s internal security unit, known as EMNI, which has the task of sending European jihadis back to their homelands to carry out terrorist attacks. The unit is run by two Tunisians, he said.
+Abaaoud is said to have told the young Frenchman that he had managed to find 25kg of explosives in Belgium, but that it was too difficult for him to return to his home country himself. He was in charge of selecting candidates, who could be paid as much as ???50,000 for carrying out attacks, but it was the two unnamed Tunisians who had the final decision on who would be sent."
 #GRD1
 #+different names?
 
@@ -403,3 +410,6 @@ Abaaoud is said to have told the young Frenchman that he had managed to find 25k
 
 #7 arrested in France
 #http://www.timesofisrael.com/french-police-foil-terror-attack-arrest-7/
+
+#suspects in the hypercacher attack
+#http://www.timesofisrael.com/10-held-over-deadly-attack-on-paris-hyper-cacher-store/
